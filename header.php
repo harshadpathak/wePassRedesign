@@ -1,0 +1,65 @@
+<header
+    class="h-16 flex items-center justify-between px-margin-desktop sticky top-0 bg-surface/80 backdrop-blur-md border-b border-outline-variant z-40">
+    <div class="flex items-center flex-1 max-w-xl">
+    <div class="relative w-full group">
+        <span
+        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">search</span>
+        <input
+        class="w-full bg-surface-container-low border-outline-variant rounded-full py-2 pl-10 pr-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+        placeholder="Search pass templates..." type="text">
+    </div>
+    </div>
+    <div class="flex items-center gap-4 translate-x-[10px] translate-x-2" style="transform: translateX(5px);">
+    <button
+        class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container rounded-lg p-2 transition-all">help</button>
+    <div class="relative">
+        <button
+        class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container rounded-lg p-2 transition-all">notifications</button>
+        <span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border-2 border-surface"></span>
+    </div>
+    <div class="relative group">
+        <div
+        class="flex items-center gap-3 p-1.5 pr-3 rounded-full border border-outline-variant/30 hover:bg-surface-container-high hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer group/profile"
+        style="background-color: rgb(235, 238, 255); padding: 0.5rem 1rem 0.5rem 0.5rem; border-radius: 9999px;">
+        <div class="relative">
+            <div
+            class="w-9 h-9 rounded-full bg-brand-gradient flex items-center justify-center text-on-primary font-bold text-sm shadow-sm ring-2 ring-surface ring-offset-1 ring-offset-outline-variant/20">
+            HS
+            </div>
+            <div class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-surface rounded-full">
+            </div>
+        </div>
+        <div class="flex flex-col overflow-hidden">
+            <p
+            class="text-label-md leading-none truncate font-bold text-on-surface group-hover/profile:text-primary transition-colors">
+            Hardik Savani</p>
+            <p class="text-[10px] text-outline truncate mt-0.5 font-medium">savani@wepass.io</p>
+        </div>
+        <span
+            class="material-symbols-outlined text-outline text-[18px] ml-1 group-hover/profile:text-primary transition-transform duration-300 group-hover/profile:translate-y-0.5">expand_more</span>
+        </div>
+        <!-- Dropdown Menu -->
+        <div
+        class="absolute right-0 mt-2 w-56 border border-outline-variant/50 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden bg-white">
+        <div class="py-1.5">
+            <a class="flex items-center gap-3 px-4 py-2.5 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
+            href="#">
+            <span class="material-symbols-outlined text-secondary text-[20px]">person</span>
+            <span class="font-medium">View Profile</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-2.5 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
+            href="#">
+            <span class="material-symbols-outlined text-secondary text-[20px]">settings</span>
+            <span class="font-medium">Account Settings</span>
+            </a>
+            <div class="border-t border-outline-variant/30 my-1.5 mx-2"></div>
+            <a class="flex items-center gap-3 px-4 py-2.5 text-body-md text-error hover:bg-error-container/40 transition-colors"
+            href="#">
+            <span class="material-symbols-outlined text-[20px]">logout</span>
+            <span class="font-bold">Logout</span>
+            </a>
+        </div>
+        </div>
+    </div>
+    </div>
+</header>
