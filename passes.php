@@ -37,7 +37,7 @@
         </div>
       </div>
       <!-- Summary Cards / Tabs -->
-      <div class="border border-outline-variant/50 rounded-2xl p-4 w-full bg-surface-container-lowest">
+      <div class="border border-outline-variant hover:border-primary/50 rounded-2xl p-4 w-full bg-surface-container-lowest">
         <div class="flex flex-col md:flex-row items-stretch gap-6">
           <!-- Records Section -->
           <div class="flex-1 flex items-center gap-4">

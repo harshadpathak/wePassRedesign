@@ -28,7 +28,7 @@
             </div>
         </div>
         <!-- Information Banner -->
-        <div class="bg-white border border-outline-variant/50 rounded-2xl p-6 shadow-sm flex flex-col gap-4">
+        <div class="bg-white border border-outline-variant hover:border-primary/50 rounded-2xl p-6 flex flex-col gap-4">
             <div class="flex gap-6 items-start">
                 <div
                     class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
