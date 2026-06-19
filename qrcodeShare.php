@@ -79,31 +79,30 @@
         ];
       ?>
 
-      <!-- Toolbar -->
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
-            <span class="material-symbols-outlined text-[20px]">qr_code_scanner</span>
+      <!-- Main Card -->
+      <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+        <!-- Toolbar / Card Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 px-6 py-5 border-b border-outline-variant/60">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-[20px]">qr_code_scanner</span>
+            </div>
+            <h3 class="text-headline-md font-bold text-on-surface">QR Code Share</h3>
+            <span class="bg-primary/10 text-primary text-label-sm font-bold px-3 py-1 rounded-full">11 Passes</span>
           </div>
-          <h3 class="text-headline-md font-bold text-on-surface">QR Code Share</h3>
-          <span class="bg-primary/10 text-primary text-label-sm font-bold px-3 py-1 rounded-full">11 Passes</span>
+          <div class="relative w-full sm:max-w-xs">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+            <input type="text" placeholder="Search pass template..."
+              class="w-full bg-surface-container-low border-outline-variant rounded-lg py-2.5 pl-10 pr-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+          </div>
         </div>
-        <div class="relative w-full max-w-xs hidden md:block">
-          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
-          <input type="text" placeholder="Search pass template..."
-            class="w-full bg-white border border-outline-variant rounded-lg py-2.5 pl-10 pr-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-        </div>
-      </div>
 
-      <!-- QR Card Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- QR Card Grid -->
+        <div class="p-6 grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-5">
         <?php foreach ($rows as $row):
           $link = 'https://app.wepass.io/wallet/pass/' . $row['pass'];
         ?>
-        <div class="group relative bg-white rounded-2xl border border-outline-variant shadow-sm hover:shadow-lg hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden">
-          <!-- Accent bar -->
-          <span class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-
+        <div class="group relative bg-surface-container-low/30 rounded-2xl border border-outline-variant hover:border-primary/50 hover:bg-white transition-colors duration-200 flex flex-col overflow-hidden">
           <!-- Card Header -->
           <div class="flex items-center gap-3 p-5 pb-3 min-w-0">
             <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
@@ -163,10 +162,10 @@
           </div>
         </div>
         <?php endforeach; ?>
-      </div>
+        </div>
 
-      <!-- Pagination -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white rounded-2xl border border-outline-variant shadow-sm px-6 py-4">
+        <!-- Pagination -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
         <p class="text-label-md text-secondary">Showing <span class="font-semibold text-on-surface">1</span> to
           <span class="font-semibold text-on-surface">10</span> of
           <span class="font-semibold text-on-surface">11</span> results</p>
@@ -180,6 +179,7 @@
             <span class="material-symbols-outlined text-[18px]">chevron_right</span>
           </button>
         </nav>
+        </div>
       </div>
 
       <!-- Realtime note -->
