@@ -93,7 +93,9 @@
               <!-- Apple -->
               <div class="flex items-center gap-3 bg-white border border-outline-variant rounded-xl pl-3 pr-5 py-2.5 hover:border-on-surface/40 transition-colors">
                 <span class="w-9 h-9 rounded-lg bg-on-surface text-white flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]">phone_iphone</span>
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                    <path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/>
+                  </svg>
                 </span>
                 <div class="leading-tight">
                   <p class="text-label-sm font-semibold text-outline">Apple Wallet</p>
@@ -101,9 +103,14 @@
                 </div>
               </div>
               <!-- Google -->
-              <div class="flex items-center gap-3 bg-white border border-outline-variant rounded-xl pl-3 pr-5 py-2.5 hover:border-emerald-400/50 transition-colors">
-                <span class="w-9 h-9 rounded-lg bg-emerald-500 text-white flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]">android</span>
+              <div class="flex items-center gap-3 bg-white border border-outline-variant rounded-xl pl-3 pr-5 py-2.5 hover:border-primary/40 transition-colors">
+                <span class="w-9 h-9 rounded-lg bg-white border border-outline-variant/60 flex items-center justify-center shrink-0">
+                  <svg viewBox="0 0 24 24" class="w-5 h-5">
+                    <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47a5.54 5.54 0 0 1-2.4 3.64v3h3.86c2.26-2.09 3.56-5.17 3.56-8.88z"/>
+                    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09A11.997 11.997 0 0 0 12 24z"/>
+                    <path fill="#FBBC05" d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29A11.997 11.997 0 0 0 0 12c0 1.94.46 3.77 1.29 5.38l3.98-3.09z"/>
+                    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.69 1.29 6.62l3.98 3.09C6.22 6.86 8.87 4.75 12 4.75z"/>
+                  </svg>
                 </span>
                 <div class="leading-tight">
                   <p class="text-label-sm font-semibold text-outline">Google Wallet</p>
