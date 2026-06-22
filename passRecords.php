@@ -53,11 +53,11 @@
           <h2 class="font-display tracking-tight text-headline-lg font-bold">Pass Records</h2>
         </div>
         <div class="flex items-center gap-3">
-          <button type="button"
-            onclick="document.getElementById('filter-panel').classList.toggle('hidden')"
-            class="inline-flex items-center gap-2 bg-white border border-outline-variant text-on-surface font-semibold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-surface-container-low transition-all">
-            <span class="material-symbols-outlined text-[18px]">filter_list</span>
-            Filter
+          <button
+            class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm"
+            onclick="document.getElementById('filter-panel').classList.toggle('hidden')">
+            <span class="material-symbols-outlined text-[20px]">filter_alt</span>
+            <span class="">Filter</span>
           </button>
           <a href="#"
             class="inline-flex items-center gap-2 bg-white border border-outline-variant text-on-surface font-semibold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-surface-container-low transition-all">
@@ -142,48 +142,56 @@
       </div>
 
       <!-- Filter Panel -->
-      <div id="filter-panel"
-        class="bg-white rounded-2xl border border-outline-variant p-6 shadow-sm transition-all duration-300 overflow-hidden hidden">
-        <h3 class="text-primary font-display font-bold text-headline-md">Filter Pass Records</h3>
-        <p class="text-secondary text-body-md mt-1">Refine your search to find specific pass records</p>
-        <div class="border-t border-outline-variant/30 my-4"></div>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
-          <div class="md:col-span-4 space-y-2">
-            <label class="text-on-surface font-bold text-label-md">Search</label>
-            <input class="w-full bg-surface-container-low border-outline-variant rounded-lg py-2.5 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-              placeholder="Name, email, or pass ID..." type="text">
+      <!-- Table Container -->
+      <div
+        class="bg-white rounded-2xl border border-outline-variant p-6 mb-6 shadow-sm transition-all duration-300 overflow-hidden hidden"
+        id="filter-panel">
+        <div class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2">
+            <h3 class="text-primary font-display font-bold text-headline-md">Filter Pass Records</h3>
+            <p class="text-on-surface-variant text-body-md">Refine your search to find specific pass records</p>
           </div>
-          <div class="md:col-span-3 space-y-2">
-            <label class="text-on-surface font-bold text-label-md">Pass Status</label>
-            <select class="w-full js-select2" data-allow-clear="false">
-              <option>All Status</option>
-              <option>Active</option>
-              <option>Expired</option>
-              <option>Archived</option>
-            </select>
-          </div>
-          <div class="md:col-span-3 space-y-2">
-            <label class="text-on-surface font-bold text-label-md">Send Status</label>
-            <select class="w-full js-select2" data-allow-clear="false">
-              <option>All</option>
-              <option>Send</option>
-              <option>Pending</option>
-              <option>Failed</option>
-            </select>
-          </div>
-          <div class="md:col-span-2 flex items-center gap-3">
-            <button class="flex-1 flex items-center justify-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-md shadow-primary/20 hover:opacity-95 transition-all font-bold">
-              <span class="material-symbols-outlined text-[20px]">search</span>
-            </button>
-            <button class="flex-1 flex items-center justify-center gap-2 bg-surface border border-outline-variant text-secondary px-4 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold">
-              <span class="material-symbols-outlined text-[20px]">cancel</span>
-            </button>
+          <div class="border-t border-outline-variant/30"></div>
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+            <!-- Date Range -->
+            <div class="md:col-span-3 space-y-2">
+              <label class="text-on-surface font-bold text-label-md">Date Range</label>
+              <div class="relative">
+                <span
+                  class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
+                <input
+                  class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg py-2.5 pl-10 pr-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer"
+                  placeholder="Select date range" readonly="" type="text">
+              </div>
+            </div>
+            <!-- Search -->
+            <div class="md:col-span-3 space-y-2">
+              <label class="text-on-surface font-bold text-label-md">Search</label>
+              <div class="relative">
+                <input
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-2.5 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  placeholder="Search by name, ID, or keyword..." type="text">
+              </div>
+            </div>
+            <!-- Actions -->
+            <div class="md:col-span-3 flex items-center gap-3">
+              <button
+                class="flex-1 flex items-center justify-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-md shadow-primary/20 hover:opacity-95 transition-all font-bold">
+                <span class="material-symbols-outlined text-[20px]">search</span>
+                Search
+              </button>
+              <button
+                class="flex-1 flex items-center justify-center gap-2 bg-surface border border-outline-variant text-on-surface-variant px-4 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold">
+                <span class="material-symbols-outlined text-[20px]">cancel</span>
+                Clear
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Main Records Card -->
-      <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+      <div class="bg-white rounded-2xl border border-outline-variant shadow-sm">
         <div class="p-6 space-y-6">
           <!-- Info note -->
           <div class="flex items-start gap-3 bg-gradient-to-r from-blue-50 to-indigo-50/40 border border-primary/15 rounded-xl p-4">
@@ -220,20 +228,20 @@
           </div>
 
           <!-- Records Table -->
-          <div class="border border-outline-variant rounded-2xl overflow-hidden">
-            <div class="overflow-x-auto">
+          <div class="border border-outline-variant rounded-2xl">
+            <div class="overflow-x-auto [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
               <table class="w-full text-left border-collapse min-w-[1000px]">
                 <thead>
-                  <tr class="bg-surface-container-low/60 text-label-sm font-bold text-outline uppercase tracking-wider">
-                    <th class="px-5 py-4">Pass ID</th>
-                    <th class="px-5 py-4">Users</th>
-                    <th class="px-5 py-4">Last Updated</th>
-                    <th class="px-5 py-4">Record Created</th>
-                    <th class="px-5 py-4">Pass Status</th>
-                    <th class="px-5 py-4">Send Status</th>
-                    <th class="px-5 py-4">Expiration Date</th>
-                    <th class="px-5 py-4">Archive Date</th>
-                    <th class="px-5 py-4 text-right">Action</th>
+                  <tr class="px-5 py-4 text-outline uppercase tracking-widest border-b border-outline-variant">
+                    <th class="px-5 py-4 text-label-sm">Pass ID</th>
+                    <th class="px-5 py-4 text-label-sm">Users</th>
+                    <th class="px-5 py-4 text-label-sm">Last Updated</th>
+                    <th class="px-5 py-4 text-label-sm">Record Created</th>
+                    <th class="px-5 py-4 text-label-sm">Pass Status</th>
+                    <th class="px-5 py-4 text-label-sm">Send Status</th>
+                    <th class="px-5 py-4 text-label-sm">Expiration Date</th>
+                    <th class="px-5 py-4 text-label-sm">Archive Date</th>
+                    <th class="px-5 py-4 text-label-sm text-right">Action</th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-outline-variant/40">
@@ -253,41 +261,47 @@
                       <p class="text-label-sm text-outline"><?= htmlspecialchars($r['email']) ?></p>
                     </td>
                     <td class="px-5 py-4 align-middle">
-                      <p class="text-body-md font-semibold text-on-surface whitespace-nowrap"><?= htmlspecialchars($r['updated']) ?></p>
+                      <p class="text-body-md font-semibold text-on-surface-variant whitespace-nowrap"><?= htmlspecialchars($r['updated']) ?></p>
                       <p class="text-label-sm text-primary/70"><?= htmlspecialchars($r['updatedAgo']) ?></p>
                     </td>
                     <td class="px-5 py-4 align-middle">
-                      <p class="text-body-md text-secondary whitespace-nowrap"><?= htmlspecialchars($r['created']) ?></p>
+                      <p class="text-label-md text-on-surface-variant whitespace-nowrap"><?= htmlspecialchars($r['created']) ?></p>
                     </td>
                     <td class="px-5 py-4 align-middle">
-                      <span class="inline-flex items-center gap-1 bg-blue-50 text-primary text-label-sm font-bold px-2.5 py-1 rounded-full">
+                      <span class="inline-flex items-center gap-1 text-[10px] bg-blue-50 text-primary font-bold px-2 py-1 rounded-full">
                         <span class="w-1.5 h-1.5 rounded-full bg-primary"></span> <?= htmlspecialchars($r['pass']) ?>
                       </span>
                     </td>
                     <td class="px-5 py-4 align-middle">
-                      <span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-600 text-label-sm font-bold px-2.5 py-1 rounded-full">
+                      <span class="inline-flex items-center py-1 gap-1 rounded-full text-[10px] font-bold uppercase bg-blue-50 bg-emerald-50 text-emerald-600 whitespace-nowrap px-2">
                         <span class="material-symbols-outlined text-[14px]">check</span> <?= htmlspecialchars($r['send']) ?>
                       </span>
                     </td>
                     <td class="px-5 py-4 align-middle">
-                      <p class="text-body-md text-secondary whitespace-nowrap"><?= htmlspecialchars($r['exp']) ?></p>
+                      <p class="text-label-md text-on-surface-variant whitespace-nowrap"><?= htmlspecialchars($r['exp']) ?></p>
                     </td>
-                    <td class="px-5 py-4 align-middle text-secondary"><?= htmlspecialchars($r['archive']) ?></td>
+                    <td class="px-5 py-4 align-middle text-label-md text-on-surface-variant"><?= htmlspecialchars($r['archive']) ?></td>
                     <td class="px-5 py-4 align-middle text-right">
                       <div class="relative inline-block js-menu">
                         <button type="button" class="js-menu-toggle w-9 h-9 rounded-full text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">
                           <span class="material-symbols-outlined text-[20px]">more_vert</span>
                         </button>
-                        <div class="js-menu-panel hidden absolute right-0 mt-1 w-44 bg-white border border-outline-variant rounded-xl shadow-lg py-1.5 z-20">
-                          <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
-                            <span class="material-symbols-outlined text-[18px] text-primary">visibility</span> View Pass
-                          </button>
-                          <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
-                            <span class="material-symbols-outlined text-[18px] text-primary">forward_to_inbox</span> Resend Email
-                          </button>
-                          <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
-                            <span class="material-symbols-outlined text-[18px] text-primary">archive</span> Archive
-                          </button>
+                        <div class="js-menu-panel hidden absolute right-0 mt-1 w-44 bg-white border border-outline-variant rounded-xl shadow-lg py-1.5 z-50">
+                          <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
+                            <span class="font-medium">View Pass</span>
+                          </a>
+                          <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">forward_to_inbox</span>
+                            <span class="font-medium"> Resend Email</span>
+                          </a>
+                          <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-secondary text-[20px]">archive</span>
+                            <span class="font-medium"> Archive</span>
+                          </a>                                                    
                           <div class="my-1 border-t border-outline-variant/50"></div>
                           <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-error hover:bg-error/5 transition-colors">
                             <span class="material-symbols-outlined text-[18px]">delete</span> Delete

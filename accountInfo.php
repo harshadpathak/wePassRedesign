@@ -48,7 +48,7 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
             <!-- Date Range -->
             <div class="md:col-span-3 space-y-2">
-              <label class="text-on-surface font-bold text-label-md">Date Range</label>
+              <label class="text-on-surface font-semibold text-label-md">Date Range</label>
               <div class="relative">
                 <span
                   class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
@@ -105,15 +105,15 @@
       <!-- Account Settings -->
       <!-- <section class="bg-white rounded-2xl border border-outline-variant p-6 shadow-sm"> -->
 
-        <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 items-stretch">
+        <!-- <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 items-stretch"> -->
           <!-- Account Info -->
           <form class="bg-white rounded-2xl border border-outline-variant/70 bg-surface-container-low/40 p-6 flex flex-col h-full">
             <div class="flex items-center gap-2.5 mb-6">
               <span class="material-symbols-outlined text-primary text-[22px]">account_circle</span>
-              <h4 class="text-body-lg font-bold text-on-surface">Account Info</h4>
+              <h4 class="text-headline-md font-bold text-on-surface">Account Info</h4>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 flex-1">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-5 flex-1">
               <!-- Account Name -->
               <div class="space-y-2">
                 <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
@@ -228,86 +228,7 @@
               </button>
             </div>
           </form>
-
-          <!-- Brand Info -->
-          <form class=" bg-white rounded-2xl border border-outline-variant/70 bg-surface-container-low/40 p-6 flex flex-col h-full">
-            <div class="flex items-center gap-2.5 mb-6">
-              <span class="material-symbols-outlined text-primary text-[22px]">bookmark</span>
-              <h4 class="text-body-lg font-bold text-on-surface">Brand Info</h4>
-            </div>
-
-            <div class="space-y-5 flex-1">
-              <!-- Brand Name -->
-              <div class="space-y-2">
-                <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
-                  Brand Name <span class="text-error">*</span>
-                  <span class="group relative inline-flex">
-                    <span class="material-symbols-outlined text-[15px] text-outline">help</span>
-                    <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
-                      Give this account a brand name.
-                    </span>
-                  </span>
-                </label>
-                <input type="text" placeholder="Enter brand name"
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <!-- End User Support Phone -->
-                <div class="space-y-2">
-                  <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
-                    End User Support Phone
-                    <span class="group relative inline-flex">
-                      <span class="material-symbols-outlined text-[15px] text-outline">help</span>
-                      <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
-                        Assign the brand's customer support phone number to this account.
-                      </span>
-                    </span>
-                  </label>
-                  <input type="tel" placeholder="Enter support phone"
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-                </div>
-                <!-- End User Support Email -->
-                <div class="space-y-2">
-                  <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
-                    End User Support Email
-                    <span class="group relative inline-flex">
-                      <span class="material-symbols-outlined text-[15px] text-outline">help</span>
-                      <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
-                        Assign the brand's help email address to this account.
-                      </span>
-                    </span>
-                  </label>
-                  <input type="email" placeholder="Enter support email"
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-                </div>
-              </div>
-
-              <!-- End User Support Website -->
-              <div class="space-y-2">
-                <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
-                  End User Support Website
-                  <span class="group relative inline-flex">
-                    <span class="material-symbols-outlined text-[15px] text-outline">help</span>
-                    <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
-                      Set the brand's website for this account.
-                    </span>
-                  </span>
-                </label>
-                <input type="url" placeholder="Enter support website"
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-              </div>
-            </div>
-
-            <div class="flex justify-center mt-6 pt-5 border-t border-outline-variant/40">
-              <button type="submit"
-                class="flex items-center gap-2 bg-emerald-500 text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
-                <span class="material-symbols-outlined text-[20px]">save</span>
-                Save
-              </button>
-            </div>
-          </form>
-        </div>
+        <!-- </div> -->
       <!-- </section> -->
     </section>
     <?php include('footer.php'); ?>
