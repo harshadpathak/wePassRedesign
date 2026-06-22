@@ -147,9 +147,9 @@
                   <span class="material-symbols-outlined text-[20px]">more_vert</span>
                 </button>
                 <div class="js-menu-panel hidden absolute right-0 bottom-full mb-1 w-44 bg-white border border-outline-variant rounded-xl shadow-lg py-1.5 z-20">
-                  <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
+                  <a href="qrcodeShow.php" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
                     <span class="material-symbols-outlined text-[18px] text-primary">visibility</span> View Pass
-                  </button>
+                  </a>
                   <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
                     <span class="material-symbols-outlined text-[18px] text-primary">download</span> Download QR
                   </button>

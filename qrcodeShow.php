@@ -16,6 +16,16 @@
     <!-- Top App Bar -->
      <?php include('header.php'); ?>
     <!-- Canvas -->
+    <?php
+      $pass = [
+        'name' => 'Advertising 10',
+        'id'   => '5e8f3c4ecbcc8d65f9813e81aa6d254672d9abf8',
+        'pass' => '61e2711d1df5a9e1b80529b4b1411fee',
+        'date' => '17/06/2026 05:00:20',
+      ];
+      $link  = 'https://app.wepass.io/wallet/pass/' . $pass['pass'];
+      $embed = '<iframe src="https://app.wepass.io/panel/embed-code/' . $pass['pass'] . '" title="Wallet Pass" width="100%" height="200" frameborder="0" style="border: none; border-radius: 12px;"></iframe>';
+    ?>
     <section class="p-margin-desktop space-y-stack-lg pb-16">
       <!-- Breadcrumbs and Header -->
       <div class="flex items-end justify-between gap-4">
@@ -23,175 +33,126 @@
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
             <span class="material-symbols-outlined text-[14px] text-blue-600">home</span> <span class="text-blue-600 font-semibold">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-on-surface font-semibold">QR Code Share</span>
+            <span class="text-blue-600 font-semibold">Pass Distribution</span>
+            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <span class="text-on-surface font-semibold">Pass View</span>
           </nav>
-          <h2 class="font-display tracking-tight text-headline-lg font-bold">QR Code Share</h2>
+          <h2 class="font-display tracking-tight text-headline-lg font-bold">Pass View</h2>
         </div>
-        <button type="button"
+        <a href="#"
           class="inline-flex items-center gap-2 bg-white border border-outline-variant text-on-surface font-semibold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-surface-container-low transition-all">
-          <span class="material-symbols-outlined text-[18px]">filter_list</span>
-          Filter
-        </button>
+          <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+          Back
+        </a>
       </div>
 
-      <!-- Information Banner -->
-      <div class="bg-white border border-outline-variant/50 rounded-2xl p-6 shadow-sm flex flex-col gap-4">
-        <div class="flex gap-6 items-start">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
-            <span class="material-symbols-outlined text-[28px]">qr_code_2</span>
+      <!-- Pass Info Bar -->
+      <div class="bg-white rounded-2xl border border-outline-variant shadow-sm p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
+            <span class="material-symbols-outlined text-[26px]">wallet</span>
           </div>
-          <div class="flex-1">
-            <h3 class="text-headline-md font-bold text-on-surface tracking-tight">QR Code &amp; Link Share</h3>
-            <p class="text-body-md text-secondary mt-2 leading-relaxed">Distribute your Generic Advertising Pass
-              effortlessly. Each pass template listed below has a unique QR code and shareable link. Copy the link or
-              let recipients scan the QR code to add the pass directly to their wallet.</p>
+          <div>
+            <h3 class="text-headline-md font-bold text-on-surface tracking-tight"><?= htmlspecialchars($pass['name']) ?></h3>
+            <div class="flex items-center gap-2 mt-1">
+              <span class="text-label-md text-outline font-semibold">ID:</span>
+              <code class="text-label-md font-mono text-secondary bg-primary/10 px-2 py-0.5 rounded-md"><?= htmlspecialchars($pass['id']) ?></code>
+            </div>
           </div>
         </div>
-        <!-- Steps -->
-        <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
-            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <span class="text-body-md font-bold text-on-surface">Scan QR Code</span>
-          </div>
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
-            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <span class="text-body-md font-bold text-on-surface">Share Link</span>
-          </div>
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
-            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <span class="text-body-md font-bold text-on-surface">Add to Wallet</span>
-          </div>
+        <div class="inline-flex items-center gap-2 bg-white border border-outline-variant/60 rounded-lg px-4 py-2.5 self-start md:self-auto">
+          <span class="material-symbols-outlined text-outline text-[18px]">calendar_today</span>
+          <span class="text-label-md text-secondary">Created: <span class="font-bold text-on-surface"><?= htmlspecialchars($pass['date']) ?></span></span>
         </div>
       </div>
 
-      <!-- Table Card -->
+      <!-- Share Your Pass Card -->
       <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
         <!-- Card Header -->
-        <div class="flex items-center justify-between gap-4 px-6 py-5 border-b border-outline-variant/60">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
-              <span class="material-symbols-outlined text-[20px]">qr_code_scanner</span>
-            </div>
-            <h3 class="text-headline-md font-bold text-on-surface">QR Code Share</h3>
+        <div class="flex items-center gap-3 px-6 md:px-8 py-5 border-b border-outline-variant/60">
+          <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
+            <span class="material-symbols-outlined text-[20px]">share</span>
           </div>
-          <span class="bg-primary/10 text-primary text-label-md font-bold px-4 py-1.5 rounded-full">11 Passes</span>
+          <div>
+            <h3 class="text-headline-md font-bold text-on-surface tracking-tight">Share Your Pass</h3>
+            <p class="text-label-md text-secondary">Choose how you'd like to distribute this pass</p>
+          </div>
         </div>
 
-        <!-- Table -->
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse">
-            <thead>
-              <tr class="bg-surface-container-low/50 text-label-sm font-bold text-outline uppercase tracking-wider">
-                <th class="px-6 py-4">Pass Template</th>
-                <th class="px-6 py-4">Link</th>
-                <th class="px-6 py-4 whitespace-nowrap">Created At</th>
-                <th class="px-6 py-4 text-right">Action</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-outline-variant/40">
-              <?php
-                $rows = [
-                  ['name' => 'ADVERTISING 10', 'id' => '5e8f3c4ecbcc8d65f9813e81aa6d254672d9abf8', 'pass' => '61e2711d1df5a9e1b80529b4b1411fee', 'date' => '17/06/2026 05:00:20'],
-                  ['name' => 'ADVERTISING 9',  'id' => '835632a51a30b78c32b0446c6bead37788abbbc1', 'pass' => '1a93596a6e888f4b540f252660ce7f12', 'date' => '17/06/2026 04:58:25'],
-                  ['name' => 'ADVERTISING 8',  'id' => '9ae94ae46ec00a1d2fc4eae5133df9edf02823ce', 'pass' => 'f057e83884231e30c484cf12278adacd', 'date' => '16/06/2026 11:19:25'],
-                  ['name' => 'ADVERTISING 7',  'id' => '769583dc200724cc01b1f49945b68c70104b28aa', 'pass' => '132e690c7b21c5f094656',            'date' => '22/05/2026 05:50:47'],
-                  ['name' => 'ADVERTISING 6',  'id' => 'b4c96520f7a6ead9a3ae733eaae6e50237559b41', 'pass' => '605aa7c5a4f726d2cbfe5',            'date' => '08/05/2026 04:55:07'],
-                  ['name' => 'ADVERTISING 5',  'id' => '4ef576bc50a550f7341139b13a631d25d678a7c0', 'pass' => '836d15d927d72cb2b3a4a',            'date' => '07/05/2026 07:26:33'],
-                  ['name' => 'ADVERTISING-2',  'id' => '04fac92ade322189a0b05a9beb3f6255302b76b5', 'pass' => '60f76aafc401415978222',           'date' => '05/05/2026 09:48:12'],
-                  ['name' => 'ADVERTISING 4',  'id' => '476a414a7fb4968c67b1204486175f51d23aefca', 'pass' => 'c4b2b4b5b07103af30ee8',           'date' => '05/05/2026 06:43:26'],
-                  ['name' => 'ADVERTISING-1',  'id' => 'dc3eefe5f94317a5294e0123d0f7112762775520', 'pass' => '28f47d4274daf97b489a2',           'date' => '04/05/2026 06:10:48'],
-                  ['name' => 'ADVERTISING 3',  'id' => 'cbdc2bf11ca3bbdae73fa2b8bef495f4d9f50fe7', 'pass' => 'e8a2ee436ab78051e7730',           'date' => '01/05/2026 12:51:37'],
-                ];
-                foreach ($rows as $row):
-                  $link = 'https://app.wepass.io/wallet/pass/' . $row['pass'];
-              ?>
-              <tr class="group hover:bg-primary/5 transition-colors">
-                <!-- Pass Template -->
-                <td class="px-6 py-4 align-middle">
-                  <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                      <span class="material-symbols-outlined text-[18px]">style</span>
-                    </div>
-                    <div class="min-w-0">
-                      <p class="text-body-md font-bold text-on-surface"><?= htmlspecialchars($row['name']) ?></p>
-                      <p class="text-label-sm text-outline font-mono truncate max-w-[260px]">ID: <?= htmlspecialchars($row['id']) ?></p>
-                    </div>
-                  </div>
-                </td>
-                <!-- Link -->
-                <td class="px-6 py-4 align-middle">
-                  <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 rounded-lg border border-outline-variant bg-white p-1 flex items-center justify-center shrink-0">
-                      <img alt="QR code for <?= htmlspecialchars($row['name']) ?>" class="w-full h-full"
-                        src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&margin=0&data=<?= urlencode($link) ?>">
-                    </div>
-                    <code class="text-label-md text-secondary truncate max-w-[240px]"><?= htmlspecialchars($link) ?></code>
-                    <button type="button" data-copy="<?= htmlspecialchars($link) ?>"
-                      class="js-copy w-9 h-9 rounded-lg bg-blue-50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all shrink-0"
-                      title="Copy link">
-                      <span class="material-symbols-outlined text-[18px]">content_copy</span>
-                    </button>
-                  </div>
-                </td>
-                <!-- Created At -->
-                <td class="px-6 py-4 align-middle whitespace-nowrap">
-                  <div class="flex items-center gap-2 text-body-md text-secondary">
-                    <span class="material-symbols-outlined text-[18px] text-outline">schedule</span>
-                    <?= htmlspecialchars($row['date']) ?>
-                  </div>
-                </td>
-                <!-- Action -->
-                <td class="px-6 py-4 align-middle text-right">
-                  <div class="relative inline-block js-menu">
-                    <button type="button"
-                      class="js-menu-toggle w-9 h-9 rounded-full text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">
-                      <span class="material-symbols-outlined text-[20px]">more_vert</span>
-                    </button>
-                    <div class="js-menu-panel hidden absolute right-0 mt-1 w-44 bg-white border border-outline-variant rounded-xl shadow-lg py-1.5 z-20">
-                      <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
-                        <span class="material-symbols-outlined text-[18px] text-primary">visibility</span> View Pass
-                      </button>
-                      <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
-                        <span class="material-symbols-outlined text-[18px] text-primary">download</span> Download QR
-                      </button>
-                      <button type="button" data-copy="<?= htmlspecialchars($link) ?>" class="js-copy w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
-                        <span class="material-symbols-outlined text-[18px] text-primary">link</span> Copy Link
-                      </button>
-                      <div class="my-1 border-t border-outline-variant/50"></div>
-                      <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-error hover:bg-error/5 transition-colors">
-                        <span class="material-symbols-outlined text-[18px]">delete</span> Delete
-                      </button>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <?php endforeach; ?>
-            </tbody>
-          </table>
-        </div>
+        <div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-5 gap-6">
+          <!-- QR Code Feature (left) -->
+          <div class="lg:col-span-2">
+            <div class="h-full flex flex-col items-center text-center bg-gradient-to-b from-emerald-50 to-white border border-emerald-200/70 rounded-2xl p-6">
+              <span class="inline-flex items-center gap-1.5 bg-emerald-500/10 text-emerald-600 text-label-sm font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[16px]">qr_code_2</span> Scan QR
+              </span>
+              <div class="mt-5 p-4 rounded-2xl bg-white border border-outline-variant/60 shadow-sm">
+                <img alt="QR code for <?= htmlspecialchars($pass['name']) ?>" class="w-44 h-44 rounded-lg"
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&margin=0&data=<?= urlencode($link) ?>">
+              </div>
+              <p class="text-body-md text-secondary mt-5 leading-relaxed">Point your smartphone camera at this code for instant wallet access</p>
+              <div class="w-full mt-5 pt-5 border-t border-emerald-200/60 space-y-2.5 text-left">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-6 h-6 rounded-full bg-emerald-500/15 text-emerald-700 text-label-sm font-bold flex items-center justify-center shrink-0">1</span>
+                  <span class="text-label-md text-on-surface">Open your phone's camera app</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span class="w-6 h-6 rounded-full bg-emerald-500/15 text-emerald-700 text-label-sm font-bold flex items-center justify-center shrink-0">2</span>
+                  <span class="text-label-md text-on-surface">Point at the QR code</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span class="w-6 h-6 rounded-full bg-emerald-500/15 text-emerald-700 text-label-sm font-bold flex items-center justify-center shrink-0">3</span>
+                  <span class="text-label-md text-on-surface">Tap the notification to add pass</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <!-- Card Footer / Pagination -->
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
-          <p class="text-label-md text-secondary">Showing <span class="font-semibold text-on-surface">1</span> to
-            <span class="font-semibold text-on-surface">10</span> of
-            <span class="font-semibold text-on-surface">11</span> results</p>
-          <nav class="flex items-center gap-1.5">
-            <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-white disabled:opacity-40 disabled:cursor-not-allowed transition-all" disabled>
-              <span class="material-symbols-outlined text-[18px]">chevron_left</span>
-            </button>
-            <button type="button" class="w-9 h-9 rounded-lg bg-primary text-white font-bold text-label-md flex items-center justify-center shadow-sm">1</button>
-            <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-on-surface font-semibold text-label-md flex items-center justify-center hover:bg-white transition-all">2</button>
-            <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-white transition-all">
-              <span class="material-symbols-outlined text-[18px]">chevron_right</span>
-            </button>
-          </nav>
-        </div>
-      </div>
+          <!-- Link + Embed (right) -->
+          <div class="lg:col-span-3 space-y-6">
+            <!-- Share via Link -->
+            <div class="border border-outline-variant rounded-2xl p-5 hover:border-primary/50 transition-colors">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">link</span>
+                </div>
+                <div>
+                  <h4 class="text-body-lg font-bold text-on-surface">Share via Link</h4>
+                  <p class="text-label-md text-secondary">Copy and share this unique URL via email, SMS, or social media</p>
+                </div>
+              </div>
+              <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-4 bg-surface-container-low/50 border border-outline-variant/60 rounded-xl p-2.5">
+                <code class="flex-1 min-w-0 text-body-md font-mono text-secondary truncate px-2"><?= htmlspecialchars($link) ?></code>
+                <button type="button" data-copy="<?= htmlspecialchars($link) ?>"
+                  class="js-copy inline-flex items-center justify-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                  <span class="js-copy-label">Copy Link</span>
+                </button>
+              </div>
+            </div>
 
-      <!-- Realtime note -->
-      <div class="flex items-center justify-end gap-1.5 text-label-md text-outline">
-        <span class="material-symbols-outlined text-[16px] text-amber-500">bolt</span>
-        Data updates near real time
+            <!-- Embed Code -->
+            <div class="border border-outline-variant rounded-2xl p-5 hover:border-purple-400/60 transition-colors">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">code</span>
+                </div>
+                <div>
+                  <h4 class="text-body-lg font-bold text-on-surface">Embed Code</h4>
+                  <p class="text-label-md text-secondary">Add this code snippet to your website HTML to embed the pass</p>
+                </div>
+              </div>
+              <div class="mt-4 bg-[#1e1b2e] rounded-xl p-4 overflow-x-auto">
+                <code id="embed-code" class="block text-label-md font-mono text-purple-200 leading-relaxed break-all"><?= htmlspecialchars($embed) ?></code>
+              </div>
+              <button type="button" data-copy="<?= htmlspecialchars($embed) ?>"
+                class="js-copy inline-flex items-center justify-center gap-2 mt-4 bg-purple-500 text-white px-5 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-purple-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                <span class="js-copy-label">Copy Code</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <?php include('footer.php'); ?>
@@ -200,17 +161,16 @@
    <?php include('script.php'); ?>
   <script>
     (function () {
-      // Copy link to clipboard
       document.querySelectorAll('.js-copy').forEach(function (btn) {
         btn.addEventListener('click', function () {
           var text = btn.getAttribute('data-copy');
           if (!text) return;
+          var label = btn.querySelector('.js-copy-label');
           var done = function () {
-            var icon = btn.querySelector('.material-symbols-outlined');
-            if (!icon) return;
-            var prev = icon.textContent;
-            icon.textContent = 'check';
-            setTimeout(function () { icon.textContent = prev; }, 1500);
+            if (!label) return;
+            var prev = label.textContent;
+            label.textContent = 'Copied!';
+            setTimeout(function () { label.textContent = prev; }, 1500);
           };
           if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(text).then(done).catch(done);
@@ -222,25 +182,6 @@
           }
         });
       });
-
-      // Action dropdown menus
-      var menus = document.querySelectorAll('.js-menu');
-      function closeAll(except) {
-        menus.forEach(function (m) {
-          if (m !== except) m.querySelector('.js-menu-panel').classList.add('hidden');
-        });
-      }
-      menus.forEach(function (menu) {
-        var toggle = menu.querySelector('.js-menu-toggle');
-        var panel = menu.querySelector('.js-menu-panel');
-        toggle.addEventListener('click', function (e) {
-          e.stopPropagation();
-          var isHidden = panel.classList.contains('hidden');
-          closeAll(menu);
-          panel.classList.toggle('hidden', !isHidden);
-        });
-      });
-      document.addEventListener('click', function () { closeAll(null); });
     })();
   </script>
 </body>

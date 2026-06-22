@@ -67,41 +67,42 @@
       <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
         <!-- Stepper -->
         <div class="grid grid-cols-1 md:grid-cols-3 border-b border-outline-variant/60">
-          <!-- Step 1 (active) -->
-          <div class="relative flex items-center gap-4 p-6 bg-primary/5">
-            <div class="w-11 h-11 rounded-full bg-primary text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/30">
+          <!-- Step 1 -->
+          <div id="ind-1" class="step-ind relative flex items-center gap-4 p-6">
+            <div class="step-circle w-11 h-11 rounded-full flex items-center justify-center shrink-0" data-icon="cloud_upload">
               <span class="material-symbols-outlined text-[22px]">cloud_upload</span>
             </div>
             <div>
-              <p class="text-body-lg font-bold text-on-surface">Upload Your CSV File</p>
+              <p class="step-title text-body-lg font-bold">Upload Your CSV File</p>
               <p class="text-label-md text-secondary mt-0.5 leading-snug">Select a template and upload your recipient data</p>
             </div>
-            <span class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-3 h-3 rotate-45 bg-white border-t border-r border-outline-variant/60"></span>
+            <span class="step-arrow hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-3 h-3 rotate-45 bg-white border-t border-r border-outline-variant/60"></span>
           </div>
           <!-- Step 2 -->
-          <div class="flex items-center gap-4 p-6 border-t md:border-t-0 md:border-l border-outline-variant/60">
-            <div class="w-11 h-11 rounded-full border-2 border-outline-variant text-outline flex items-center justify-center shrink-0">
+          <div id="ind-2" class="step-ind relative flex items-center gap-4 p-6 border-t md:border-t-0 md:border-l border-outline-variant/60">
+            <div class="step-circle w-11 h-11 rounded-full flex items-center justify-center shrink-0" data-icon="swap_horiz">
               <span class="material-symbols-outlined text-[22px]">swap_horiz</span>
             </div>
             <div>
-              <p class="text-body-lg font-bold text-outline">Map CSV Fields</p>
+              <p class="step-title text-body-lg font-bold">Map CSV Fields</p>
               <p class="text-label-md text-secondary mt-0.5 leading-snug">Match your CSV columns to the required fields</p>
             </div>
+            <span class="step-arrow hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-3 h-3 rotate-45 bg-white border-t border-r border-outline-variant/60"></span>
           </div>
           <!-- Step 3 -->
-          <div class="flex items-center gap-4 p-6 border-t md:border-t-0 md:border-l border-outline-variant/60">
-            <div class="w-11 h-11 rounded-full border-2 border-outline-variant text-outline flex items-center justify-center shrink-0">
+          <div id="ind-3" class="step-ind flex items-center gap-4 p-6 border-t md:border-t-0 md:border-l border-outline-variant/60">
+            <div class="step-circle w-11 h-11 rounded-full flex items-center justify-center shrink-0" data-icon="download">
               <span class="material-symbols-outlined text-[22px]">download</span>
             </div>
             <div>
-              <p class="text-body-lg font-bold text-outline">Import</p>
+              <p class="step-title text-body-lg font-bold">Import</p>
               <p class="text-label-md text-secondary mt-0.5 leading-snug">Process and import your data</p>
             </div>
           </div>
         </div>
 
         <!-- Step 1 Body -->
-        <div class="p-6 md:p-8 space-y-8">
+        <div id="step-1" class="p-6 md:p-8 space-y-8">
           <!-- Info note -->
           <div class="relative overflow-hidden flex items-start gap-4 bg-gradient-to-r from-blue-50 to-indigo-50/40 border border-primary/15 rounded-2xl p-5">
             <span class="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-primary to-indigo-500"></span>
@@ -178,17 +179,99 @@
           </div>
         </div>
 
-        <!-- Footer Actions -->
+        <!-- Step 1 Footer -->
         <div class="flex items-center justify-between gap-4 px-6 md:px-8 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
-          <button type="button" class="hidden md:inline-flex items-center gap-1.5 text-secondary font-semibold text-label-md px-4 py-2.5 rounded-lg hover:bg-surface-container-low transition-all">
+          <button type="button" disabled class="inline-flex items-center gap-1.5 text-outline font-semibold text-label-md px-4 py-2.5 rounded-lg opacity-40 cursor-not-allowed">
             <span class="material-symbols-outlined text-[18px]">arrow_back</span>
-            Back
+            Previous
           </button>
-          <button type="button"
-            class="ml-auto inline-flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+          <button type="button" onclick="goToStep(2)"
+            class="inline-flex items-center gap-2 bg-brand-gradient text-on-primary px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
             Next
             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
           </button>
+        </div>
+
+        <!-- Step 2 Body (Map CSV Fields) -->
+        <div id="step-2" class="hidden">
+          <div class="p-6 md:p-8 pt-0 md:pt-0 space-y-6">
+            <!-- Info note -->
+            <div class="relative overflow-hidden flex items-start gap-4 bg-gradient-to-r from-blue-50 to-indigo-50/40 border border-primary/15 rounded-2xl p-5">
+              <span class="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-primary to-indigo-500"></span>
+              <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 ml-1">
+                <span class="material-symbols-outlined text-[22px]">info</span>
+              </div>
+              <p class="flex-1 text-body-md text-secondary leading-relaxed self-center">Map each field to the
+                corresponding column from your CSV file. Required fields are marked with an asterisk
+                (<span class="text-error font-bold">*</span>).</p>
+            </div>
+
+            <!-- Mapping Table -->
+            <div class="border border-outline-variant rounded-2xl overflow-hidden">
+              <!-- Head -->
+              <div class="hidden sm:grid grid-cols-12 gap-4 bg-surface-container-low/60 px-5 py-3 border-b border-outline-variant/60">
+                <div class="col-span-1 text-label-sm font-bold text-outline uppercase tracking-wider">#</div>
+                <div class="col-span-6 text-label-sm font-bold text-outline uppercase tracking-wider">Field Name</div>
+                <div class="col-span-5 text-label-sm font-bold text-outline uppercase tracking-wider">CSV Column</div>
+              </div>
+              <!-- Rows -->
+              <div class="divide-y divide-outline-variant/40">
+                <?php
+                  $csvColumns = ['first_name','last_name','email','card_balance_value','currency_code','gift_card_number','pass_expiration_date','card_pin_value','event_number','barcode_value'];
+                  $fields = [
+                    ['label' => 'First Name',          'required' => true,  'map' => 'first_name'],
+                    ['label' => 'Last Name',           'required' => false, 'map' => 'last_name'],
+                    ['label' => 'Email',               'required' => true,  'map' => 'email'],
+                    ['label' => 'Card Balance Value',  'required' => false, 'map' => 'card_balance_value'],
+                    ['label' => 'Currency Code',       'required' => false, 'map' => 'currency_code'],
+                    ['label' => 'Gift Card Number',    'required' => false, 'map' => 'gift_card_number'],
+                    ['label' => 'Pass Expiration Date','required' => false, 'map' => 'pass_expiration_date'],
+                    ['label' => 'Card PIN Value',      'required' => false, 'map' => 'card_pin_value'],
+                    ['label' => 'Event Number',        'required' => false, 'map' => 'event_number'],
+                    ['label' => 'Barcode Value',       'required' => false, 'map' => 'barcode_value'],
+                  ];
+                  foreach ($fields as $i => $field):
+                ?>
+                <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 sm:items-center px-5 py-3.5 hover:bg-primary/5 transition-colors">
+                  <div class="hidden sm:flex col-span-1">
+                    <span class="w-7 h-7 rounded-full bg-surface-container-low text-secondary text-label-sm font-bold flex items-center justify-center"><?= $i + 1 ?></span>
+                  </div>
+                  <div class="sm:col-span-6 flex items-center gap-2">
+                    <span class="sm:hidden w-7 h-7 rounded-full bg-surface-container-low text-secondary text-label-sm font-bold flex items-center justify-center shrink-0"><?= $i + 1 ?></span>
+                    <span class="text-body-md font-bold text-on-surface"><?= htmlspecialchars($field['label']) ?></span>
+                    <?php if ($field['required']): ?><span class="text-error font-bold">*</span><?php endif; ?>
+                    <span class="js-matched-badge ml-1 inline-flex items-center gap-1 bg-emerald-50 text-emerald-600 text-label-sm font-semibold px-2 py-0.5 rounded-full <?= $field['map'] ? '' : 'hidden' ?>">
+                      <span class="material-symbols-outlined text-[14px]">check_circle</span> Matched
+                    </span>
+                  </div>
+                  <div class="sm:col-span-5 relative">
+                    <select class="map-select w-full appearance-none bg-surface-container-low border-outline-variant rounded-lg py-3 pl-4 pr-10 text-body-md text-on-surface focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer">
+                      <option value="">-- Not mapped --</option>
+                      <?php foreach ($csvColumns as $col): ?>
+                      <option value="<?= htmlspecialchars($col) ?>" <?= $col === $field['map'] ? 'selected' : '' ?>><?= htmlspecialchars($col) ?></option>
+                      <?php endforeach; ?>
+                    </select>
+                    <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">expand_more</span>
+                  </div>
+                </div>
+                <?php endforeach; ?>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 Footer -->
+          <div class="flex items-center justify-between gap-4 px-6 md:px-8 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
+            <button type="button" onclick="goToStep(1)"
+              class="inline-flex items-center gap-1.5 bg-white border border-outline-variant text-on-surface font-semibold text-label-md px-4 py-2.5 rounded-lg hover:bg-surface-container-low transition-all">
+              <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+              Previous
+            </button>
+            <button type="button" onclick="goToStep(3)"
+              class="inline-flex items-center gap-2 bg-brand-gradient text-on-primary px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+              Next
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -197,6 +280,53 @@
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
   <script>
+    // ---- Wizard step navigation ----
+    var TOTAL_STEPS = 3;
+    function goToStep(step) {
+      // Toggle step bodies
+      for (var i = 1; i <= TOTAL_STEPS; i++) {
+        var body = document.getElementById('step-' + i);
+        if (body) body.classList.toggle('hidden', i !== step);
+      }
+      // Update stepper indicators
+      for (var s = 1; s <= TOTAL_STEPS; s++) {
+        var ind = document.getElementById('ind-' + s);
+        if (!ind) continue;
+        var circle = ind.querySelector('.step-circle');
+        var title = ind.querySelector('.step-title');
+        var arrow = ind.querySelector('.step-arrow');
+        var icon = circle.querySelector('.material-symbols-outlined');
+        var baseCircle = 'step-circle w-11 h-11 rounded-full flex items-center justify-center shrink-0';
+
+        ind.classList.remove('bg-primary/5');
+        if (arrow) arrow.classList.add('hidden');
+
+        if (s < step) {
+          // completed
+          circle.className = baseCircle + ' bg-emerald-500 text-white shadow-md shadow-emerald-500/30';
+          icon.textContent = 'check';
+          title.className = 'step-title text-body-lg font-bold text-on-surface';
+        } else if (s === step) {
+          // active
+          ind.classList.add('bg-primary/5');
+          circle.className = baseCircle + ' bg-primary text-white shadow-md shadow-primary/30';
+          icon.textContent = circle.getAttribute('data-icon');
+          title.className = 'step-title text-body-lg font-bold text-on-surface';
+          if (arrow) arrow.classList.remove('hidden');
+        } else {
+          // upcoming
+          circle.className = baseCircle + ' border-2 border-outline-variant text-outline';
+          icon.textContent = circle.getAttribute('data-icon');
+          title.className = 'step-title text-body-lg font-bold text-outline';
+        }
+      }
+      // Scroll wizard into view
+      var card = document.getElementById('step-' + step);
+      if (card && card.scrollIntoView) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    // Initialize on first step
+    document.addEventListener('DOMContentLoaded', function () { goToStep(1); });
+
     (function () {
       var input = document.getElementById('csv-input');
       var dropzone = document.getElementById('dropzone');
@@ -251,6 +381,16 @@
           input.files = files;
           showFile(files[0]);
         }
+      });
+
+      // Mapping: toggle "Matched" badge per row based on selection
+      document.querySelectorAll('.map-select').forEach(function (sel) {
+        sel.addEventListener('change', function () {
+          var row = sel.closest('.grid');
+          if (!row) return;
+          var badge = row.querySelector('.js-matched-badge');
+          if (badge) badge.classList.toggle('hidden', !sel.value);
+        });
       });
     })();
   </script>
