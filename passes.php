@@ -139,12 +139,12 @@
       </div>
       <?php
         $passes = [
-          ['name' => 'GIFTCARDLENA', 'type' => 'Gift Card',       'icon' => 'card_giftcard',       'records' => 1, 'installs' => 1],
-          ['name' => 'GIFTCARD1',    'type' => 'Gift Card',       'icon' => 'card_giftcard',       'records' => 1, 'installs' => 1],
-          ['name' => 'MEMBER10',     'type' => 'Membership Card', 'icon' => 'badge',               'records' => 2, 'installs' => 2],
-          ['name' => 'LOYALTY PRO',  'type' => 'Loyalty Card',    'icon' => 'loyalty',             'records' => 5, 'installs' => 4],
-          ['name' => 'EVENT VIP',    'type' => 'Event Ticket',    'icon' => 'confirmation_number', 'records' => 8, 'installs' => 6],
-          ['name' => 'ADVERTISING 3','type' => 'Advertising',     'icon' => 'campaign',            'records' => 3, 'installs' => 2],
+          ['name' => 'boarding kg-1', 'type' => 'Gift Card',       'icon' => 'card_giftcard',       'records' => 1, 'installs' => 1],
+          ['name' => 'loyalty-card-api-2',    'type' => 'Gift Card',       'icon' => 'card_giftcard',       'records' => 1, 'installs' => 1],
+          ['name' => 'loyalty-card-api-1',     'type' => 'Membership Card', 'icon' => 'badge',               'records' => 2, 'installs' => 2],
+          ['name' => 'Loyalty-Tier-19',  'type' => 'Loyalty Card',    'icon' => 'loyalty',             'records' => 5, 'installs' => 4],
+          ['name' => 'Gift-Card-26',    'type' => 'Event Ticket',    'icon' => 'confirmation_number', 'records' => 8, 'installs' => 6],
+          ['name' => 'Loyalty-Tier-jp-new','type' => 'Advertising',     'icon' => 'campaign',            'records' => 3, 'installs' => 2],
         ];
       ?>
 
@@ -171,7 +171,7 @@
               <span class="material-symbols-outlined text-[24px]"><?= htmlspecialchars($pass['icon']) ?></span>
             </div>
             <div class="min-w-0 flex-1">
-              <p class="text-body-lg font-bold text-on-surface truncate"><?= htmlspecialchars($pass['name']) ?></p>
+              <p class="text-body-lg font-bold text-on-surface truncate uppercase"><?= htmlspecialchars($pass['name']) ?></p>
               <span class="inline-flex items-center gap-1 mt-0.5 bg-surface-container-low text-secondary text-label-sm font-semibold px-2 py-0.5 rounded-full">
                 <span class="material-symbols-outlined text-[14px]">sell</span>
                 <?= htmlspecialchars($pass['type']) ?>

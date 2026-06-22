@@ -196,7 +196,7 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
     <!-- Footer Nav -->
     <div class="absolute bottom-0 left-0 w-full p-4 space-y-4 bg-surface">
     <!-- API Documentation -->
-    <a class="flex border-t items-center gap-3 px-4 py-2 hover:text-primary transition-colors group" href="#"
+    <a class="flex items-center gap-3 px-4 py-2 hover:text-primary transition-colors group" href="#"
         style="color: #94a3b8;">
         <span class="material-symbols-outlined text-[22px]">menu_book</span>
         <span class="font-display text-[14px]">API Documentation</span>
