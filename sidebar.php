@@ -19,6 +19,7 @@ $subActive = 'text-primary before:bg-primary';
 
 // Which submenu (if any) contains the active page
 $distActive = in_array($current, ['manualDistribution.php','importDistribution.php','qrcodeShare.php','qrcodeShow.php'], true);
+$companyActive = in_array($current, ['accountInfo.php','accountUsers.php'], true);
 ?>
 <aside
 class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline-variant dark:bg-inverse-surface z-50 transition-all duration-300 ease-in-out bg-surface">
@@ -117,21 +118,21 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
     <!-- Company -->
     <div class="group/nav mb-[30px] mb-4">
         <button
-        class="<?= $navBtn ?> <?= $linkIdle ?>"
+        class="<?= $navBtn ?> <?= $companyActive ? $linkActive : $linkIdle ?>"
         onclick="toggleSubmenu(this)">
         <span class="material-symbols-outlined">business_center</span>
         <span>Company</span>
         <span
-            class="ml-auto material-symbols-outlined text-sm transition-transform duration-200 chevron">chevron_right</span>
+            class="ml-auto material-symbols-outlined text-sm transition-transform duration-200 chevron <?= $companyActive ? 'rotate-90' : '' ?>">chevron_right</span>
         </button>
-        <div class="<?= $subWrap ?> hidden">
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <div class="<?= $subWrap ?> <?= $companyActive ? '' : 'hidden' ?>">
+        <a class="<?= $subBase ?> <?= $current === 'accountInfo.php' ? $subActive : $subIdle ?>"
+            href="accountInfo.php">
             <span class="material-symbols-outlined text-[18px]">person</span>
             <span>Account Info</span>
         </a>
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <a class="<?= $subBase ?> <?= $current === 'accountUsers.php' ? $subActive : $subIdle ?>"
+            href="accountUsers.php">
             <span class="material-symbols-outlined text-[18px]">group</span>
             <span>Account Users</span>
         </a>
