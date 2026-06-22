@@ -28,11 +28,11 @@
           <h2 class="font-display tracking-tight text-headline-lg font-bold">Account Users</h2>
         </div>
         <div class="flex items-center gap-3">
-          <button
+          <a href ="createUser.php"
             class="flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
             <span class="material-symbols-outlined text-sm">add</span>
             Create User
-          </button>
+          </a>
         </div>
       </div>
 

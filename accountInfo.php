@@ -38,9 +38,7 @@
       </div>
 
       <!-- Filter Panel -->
-      <div
-        class="bg-white rounded-2xl border border-outline-variant p-6 shadow-sm transition-all duration-300 overflow-hidden hidden"
-        id="filter-panel">
+      <div class="bg-white rounded-2xl border border-outline-variant p-6 shadow-sm transition-all duration-300 overflow-hidden hidden" id="filter-panel">
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <h3 class="text-primary font-display font-bold text-headline-md">Filter Reports</h3>
@@ -119,8 +117,13 @@
               <!-- Account Name -->
               <div class="space-y-2">
                 <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
-                  Account Name 
-                  <span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="Your registered account name. This cannot be changed.">help</span>
+                  Account Name
+                  <span class="group relative inline-flex">
+                    <span class="material-symbols-outlined text-[15px] text-outline">help</span>
+                    <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
+                      This is the account name.
+                    </span>
+                  </span>
                 </label>
                 <input type="text" value="Aatman Infotech" disabled
                   class="w-full bg-surface-container-high border-outline-variant rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
@@ -129,7 +132,12 @@
               <div class="space-y-2">
                 <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
                   Account Domain
-                  <span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="The primary domain associated with your account.">help</span>
+                  <span class="group relative inline-flex">
+                    <span class="material-symbols-outlined text-[15px] text-outline">help</span>
+                    <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
+                      The MMS content sent as an SMS link will be stored on this domain.
+                    </span>
+                  </span>
                 </label>
                 <input type="text" value="https://aatmaninfotech.com" disabled
                   class="w-full bg-surface-container-high border-outline-variant rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
@@ -138,7 +146,12 @@
               <div class="space-y-2">
                 <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
                   Timezone
-                  <span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="Used for scheduling and report timestamps.">help</span>
+                  <span class="group relative inline-flex">
+                    <span class="material-symbols-outlined text-[15px] text-outline">help</span>
+                    <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
+                      Choosing your time zone is important for features that rely on time, like scheduled delivery messages.
+                    </span>
+                  </span>
                 </label>
                 <select class="w-full js-select2" data-allow-clear="false">
                   <option value="Africa/Abidjan" selected>(GMT+00:00) Africa/Abidjan</option>
@@ -155,7 +168,12 @@
               <div class="space-y-2">
                 <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
                   Country
-                  <span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="Country where your business is registered.">help</span>
+                  <span class="group relative inline-flex">
+                    <span class="material-symbols-outlined text-[15px] text-outline">help</span>
+                    <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
+                      The default country code will show based on the country you select.
+                    </span>
+                  </span>
                 </label>
                 <select class="w-full js-select2" data-allow-clear="false">
                   <option value="AF" selected>Afghanistan</option>
@@ -172,7 +190,12 @@
               <div class="space-y-2">
                 <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
                   CSV Data Retention
-                  <span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="How long uploaded CSV data is kept before being deleted.">help</span>
+                  <span class="group relative inline-flex">
+                    <span class="material-symbols-outlined text-[15px] text-outline">help</span>
+                    <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
+                      You can import and export CSV files in our system.
+                    </span>
+                  </span>
                 </label>
                 <div class="flex items-stretch rounded-lg border border-outline-variant bg-surface-container-low overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
                   <input type="text" disabled
@@ -185,7 +208,12 @@
               <div class="space-y-2">
                 <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
                   Slug
-                  <span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="A short, URL-friendly identifier for your account.">help</span>
+                  <span class="group relative inline-flex">
+                    <span class="material-symbols-outlined text-[15px] text-outline">help</span>
+                    <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
+                      This is the account slug.
+                    </span>
+                  </span>
                 </label>
                 <input type="text" disabled
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-not-allowed">
@@ -213,7 +241,12 @@
               <div class="space-y-2">
                 <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
                   Brand Name <span class="text-error">*</span>
-                  <span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="The brand name shown to your end users on their passes.">help</span>
+                  <span class="group relative inline-flex">
+                    <span class="material-symbols-outlined text-[15px] text-outline">help</span>
+                    <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
+                      Give this account a brand name.
+                    </span>
+                  </span>
                 </label>
                 <input type="text" placeholder="Enter brand name"
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
@@ -224,7 +257,12 @@
                 <div class="space-y-2">
                   <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
                     End User Support Phone
-                    <span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="Phone number your end users can call for support.">help</span>
+                    <span class="group relative inline-flex">
+                      <span class="material-symbols-outlined text-[15px] text-outline">help</span>
+                      <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
+                        Assign the brand's customer support phone number to this account.
+                      </span>
+                    </span>
                   </label>
                   <input type="tel" placeholder="Enter support phone"
                     class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
@@ -233,7 +271,12 @@
                 <div class="space-y-2">
                   <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
                     End User Support Email
-                    <span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="Email address your end users can reach for support.">help</span>
+                    <span class="group relative inline-flex">
+                      <span class="material-symbols-outlined text-[15px] text-outline">help</span>
+                      <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
+                        Assign the brand's help email address to this account.
+                      </span>
+                    </span>
                   </label>
                   <input type="email" placeholder="Enter support email"
                     class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
@@ -244,7 +287,12 @@
               <div class="space-y-2">
                 <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
                   End User Support Website
-                  <span class="material-symbols-outlined text-[15px] text-outline cursor-help" title="Support or help center URL for your end users.">help</span>
+                  <span class="group relative inline-flex">
+                    <span class="material-symbols-outlined text-[15px] text-outline">help</span>
+                    <span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 w-max max-w-[240px] whitespace-normal text-center leading-snug rounded-lg border border-outline-variant/70 bg-surface-container-high/80 px-3 py-1.5 text-body-sm text-on-surface shadow-sm backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:opacity-100 z-20">
+                      Set the brand's website for this account.
+                    </span>
+                  </span>
                 </label>
                 <input type="url" placeholder="Enter support website"
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
