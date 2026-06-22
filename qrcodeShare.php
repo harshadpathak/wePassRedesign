@@ -27,11 +27,14 @@
           </nav>
           <h2 class="font-display tracking-tight text-headline-lg font-bold">QR Code Share</h2>
         </div>
-        <button type="button"
-          class="inline-flex items-center gap-2 bg-white border border-outline-variant text-on-surface font-semibold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-surface-container-low transition-all">
-          <span class="material-symbols-outlined text-[18px]">filter_list</span>
-          Filter
-        </button>
+        <div class="flex items-center gap-3">
+          <button
+            class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-4 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm"
+            onclick="document.getElementById('filter-panel').classList.toggle('hidden')">
+            <span class="material-symbols-outlined text-[20px]">filter_alt</span>
+            <span class="">Filter</span>
+          </button>
+        </div>
       </div>
 
       <!-- Information Banner -->
@@ -60,6 +63,54 @@
           <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
             <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
             <span class="text-body-md font-bold text-on-surface">Add to Wallet</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Panel -->
+      <div
+        class="bg-white rounded-2xl border border-outline-variant p-6 shadow-sm transition-all duration-300 overflow-hidden hidden"
+        id="filter-panel">
+        <div class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2">
+            <h3 class="text-primary font-display font-bold text-headline-md">Filter QR Code Share</h3>
+            <p class="text-on-surface-variant text-body-md">Refine your search to find specific passes</p>
+          </div>
+          <div class="border-t border-outline-variant/30"></div>
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+            <!-- Date Range -->
+            <div class="md:col-span-3 space-y-2">
+              <label class="text-on-surface font-bold text-label-md">Date Range</label>
+              <div class="relative">
+                <span
+                  class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
+                <input
+                  class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg py-2.5 pl-10 pr-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  placeholder="Select date range" readonly="" type="text">
+              </div>
+            </div>
+            <!-- Search -->
+            <div class="md:col-span-3 space-y-2">
+              <label class="text-on-surface font-bold text-label-md">Search</label>
+              <div class="relative">
+                <input
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-2.5 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  placeholder="Search by name, ID, or keyword..." type="text">
+              </div>
+            </div>
+            <!-- Actions -->
+            <div class="md:col-span-3 flex items-center gap-3">
+              <button
+                class="flex-1 flex items-center justify-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-md shadow-primary/20 hover:opacity-95 transition-all font-bold">
+                <span class="material-symbols-outlined text-[20px]">search</span>
+                Search
+              </button>
+              <button
+                class="flex-1 flex items-center justify-center gap-2 bg-surface border border-outline-variant text-on-surface-variant px-4 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold">
+                <span class="material-symbols-outlined text-[20px]">cancel</span>
+                Clear
+              </button>
+            </div>
           </div>
         </div>
       </div>

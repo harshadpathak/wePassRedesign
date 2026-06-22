@@ -140,8 +140,8 @@
       <!-- Filter Panel -->
       <div id="filter-panel"
         class="bg-white rounded-2xl border border-outline-variant p-6 shadow-sm transition-all duration-300 overflow-hidden hidden">
-        <h3 class="text-primary font-display font-bold text-headline-md">Filter Records</h3>
-        <p class="text-secondary text-body-md mt-1">Search by name, email, or pass ID</p>
+        <h3 class="text-primary font-display font-bold text-headline-md">Filter Pass Records</h3>
+        <p class="text-secondary text-body-md mt-1">Refine your search to find specific pass records</p>
         <div class="border-t border-outline-variant/30 my-4"></div>
         <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
           <div class="md:col-span-4 space-y-2">
