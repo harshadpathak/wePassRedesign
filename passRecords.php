@@ -89,9 +89,6 @@
           </div>
           <!-- Installed passes -->
           <div class="shrink-0 w-full lg:w-auto">
-            <p class="flex items-center gap-1.5 text-label-sm font-bold uppercase tracking-wider text-outline mb-3">
-              <span class="material-symbols-outlined text-[16px] text-primary">download</span> Active Installed Pass
-            </p>
             <div class="flex items-center gap-3">
               <!-- Apple -->
               <div class="flex items-center gap-3 bg-white border border-outline-variant rounded-xl pl-3 pr-5 py-2.5 hover:border-on-surface/40 transition-colors">
@@ -117,7 +114,7 @@
           </div>
         </div>
         <!-- Bottom: meta strip -->
-        <div class="flex flex-wrap items-center gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+        <div class="flex flex-wrap items-center gap-3 px-6 py-4 pt-0">
           <span class="inline-flex items-center gap-2 bg-primary/5 border border-primary/15 rounded-lg px-3 py-2">
             <span class="material-symbols-outlined text-[18px] text-primary">calendar_add_on</span>
             <span class="text-label-md text-outline">Created</span>
