@@ -108,7 +108,7 @@
             <!-- Primary Fields -->
             <div class="space-y-4 mb-8">
                 <div class="flex items-center gap-4">
-                    <h4 class="text-body-lg font-bold text-on-surface whitespace-nowrap">Primary Fields</h4>
+                    <h4 class="text-headline-md font-bold text-on-surface whitespace-nowrap">Primary Fields</h4>
                     <div class="flex-1 border-t border-outline-variant/40"></div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
@@ -161,7 +161,7 @@
             <!-- Additional Fields -->
             <div class="space-y-4">
                 <div class="flex items-center gap-4">
-                    <h4 class="text-body-lg font-bold text-on-surface whitespace-nowrap">Additional Fields</h4>
+                    <h4 class="text-headline-md font-bold text-on-surface whitespace-nowrap">Additional Fields</h4>
                     <div class="flex-1 border-t border-outline-variant/40"></div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">

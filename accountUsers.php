@@ -81,7 +81,7 @@
                     </div>
                     <div class="min-w-0">
                       <p class="text-body-md font-medium text-on-surface truncate">JENIL VORA</p>
-                      <p class="text-label-md text-on-surface-variant truncate">womaludy@mailinator.com</p>
+                      <p class="text-label-sm text-outline whitespace-nowrap font-medium ">womaludy@mailinator.com</p>
                     </div>
                   </div>
                 </td>
@@ -141,7 +141,7 @@
                     </div>
                     <div class="min-w-0">
                       <p class="text-body-md font-medium text-on-surface truncate">RAVI PATEL</p>
-                      <p class="text-label-md text-on-surface-variant truncate">ravipatel@mailinator.com</p>
+                      <p class="text-label-sm text-outline whitespace-nowrap font-medium ">ravipatel@mailinator.com</p>
                     </div>
                   </div>
                 </td>

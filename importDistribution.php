@@ -129,7 +129,7 @@
 
           <!-- Select Template -->
           <div class="space-y-2 max-w-md">
-            <label class="text-on-surface font-bold text-label-md">Select Template <span class="text-error">*</span></label>
+            <label class="text-on-surface font-semibold text-label-md">Select Template <span class="text-error">*</span></label>
             <select id="template-select" class="w-full js-select2" data-placeholder="-- Select Template --">
               <option></option>
               <option value="GENERIC-PASS-6">GENERIC-PASS-6</option>
@@ -139,7 +139,7 @@
 
           <!-- Choose CSV File -->
           <div class="space-y-2">
-            <label class="text-on-surface font-bold text-label-md">Choose CSV File <span class="text-error">*</span></label>
+            <label class="text-on-surface font-semibold text-label-md">Choose CSV File <span class="text-error">*</span></label>
 
             <label id="dropzone" for="csv-input"
               class="group relative flex flex-col items-center justify-center text-center gap-3 border-2 border-dashed border-outline-variant rounded-2xl px-6 py-14 cursor-pointer bg-surface-container-low/40 hover:border-primary hover:bg-primary/5 transition-all">
@@ -238,7 +238,7 @@
                   </div>
                   <div class="sm:col-span-6 flex items-center gap-2">
                     <span class="sm:hidden w-7 h-7 rounded-full bg-surface-container-low text-secondary text-label-sm font-bold flex items-center justify-center shrink-0"><?= $i + 1 ?></span>
-                    <span class="text-body-md font-bold text-on-surface"><?= htmlspecialchars($field['label']) ?></span>
+                    <span class="text-body-md font-semibold text-on-surface"><?= htmlspecialchars($field['label']) ?></span>
                     <?php if ($field['required']): ?><span class="text-error font-bold">*</span><?php endif; ?>
                     <span class="js-matched-badge ml-1 inline-flex items-center gap-1 bg-emerald-50 text-emerald-600 text-label-sm font-semibold px-2 py-0.5 rounded-full <?= $field['map'] ? '' : 'hidden' ?>">
                       <span class="material-symbols-outlined text-[14px]">check_circle</span> Matched
