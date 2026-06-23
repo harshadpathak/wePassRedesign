@@ -177,7 +177,7 @@
           <div class="p-5 pt-4 mt-auto space-y-4">
             <div class="flex items-center gap-2 bg-surface-container-low/60 border border-outline-variant/60 rounded-lg pl-3 pr-1.5 py-1.5">
               <span class="material-symbols-outlined text-outline text-[18px] shrink-0">link</span>
-              <code class="text-label-md text-secondary truncate flex-1"><?= htmlspecialchars($link) ?></code>
+              <code class="text-label-sm text-secondary break-all flex-1"><?= htmlspecialchars($link) ?></code>
               <button type="button" data-copy="<?= htmlspecialchars($link) ?>"
                 class="js-copy w-8 h-8 rounded-md bg-blue-50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all shrink-0"
                 title="Copy link">
