@@ -6,7 +6,7 @@ $current = basename($_SERVER['PHP_SELF']);
 $linkBase   = 'relative flex items-center gap-3 rounded-lg px-4 py-2.5 mx-3 mb-1 transition-all text-body-md font-semibold';
 $navBtn     = 'group/btn relative w-[calc(100%-24px)] flex items-center gap-3 rounded-lg px-4 py-2.5 mx-3 mb-1 transition-all text-body-md font-semibold';
 $linkActive = 'bg-primary/10 text-primary before:absolute before:-left-3 before:top-1/2 before:-translate-y-1/2 before:h-7 before:w-1 before:rounded-r-full before:bg-primary';
-$linkIdle   = 'text-secondary hover:bg-surface-container-high hover:text-on-surface';
+$linkIdle   = 'text-secondary hover:bg-surface-container-high hover:text-on-surface before:absolute before:-left-3 before:top-1/2 before:-translate-y-1/2 before:h-0 before:w-1 before:rounded-r-full before:bg-primary/50 before:transition-all hover:before:h-7';
 
 // Filled icon style helper for the active item
 $fill = "style=\"font-variation-settings: 'FILL' 1;\"";
@@ -23,20 +23,20 @@ $companyActive = in_array($current, ['accountInfo.php','accountUsers.php'], true
 ?>
 <aside
 class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline-variant dark:bg-inverse-surface z-50 transition-all duration-300 ease-in-out bg-surface">
-<div class="flex flex-col h-full py-stack-lg pt-6">
+<div class="flex flex-col h-full py-stack-lg pt-0">
     <!-- Brand Logo -->
-    <div class="px-6 mb-4 flex items-center gap-3">
+    <div class="px-6 py-3 flex items-center gap-3 pr-4">
     <div class="flex flex-col gap-1 transition-all"><img alt="WePass Logo"
         class="w-[140px] h-auto object-contain transition-all duration-300"
         src="https://drojrh3mlpzqs.cloudfront.net/9eda0c24-7ef8-4597-8d97-91cfa2d4d7d8/adminTheme/assets/images/logo-new.png">
     </div><button
-        class="ml-auto p-2 rounded-lg hover:bg-surface-container-high text-on-surface-variant transition-all"
+        class="ml-auto p-2 leading-none rounded-lg hover:bg-surface-container-high text-on-surface-variant transition-all"
         id="sidebar-toggle">
         <span class="material-symbols-outlined">menu_open</span>
     </button>
     </div>
     <!-- CTA -->
-    <div class="px-4 mb-4">
+    <div class="px-4 mb-4 mt-2">
     <button
         class="w-full flex items-center justify-center gap-2 bg-brand-gradient text-on-primary px-2 py-3 rounded-lg text-sm hover:opacity-90 transition-all active:scale-[0.98] shadow-md shadow-primary/20 font-bold">
         <span class="material-symbols-outlined">add</span>
@@ -194,11 +194,11 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
     </div>
     </nav>
     <!-- Footer Nav -->
-    <div class="absolute bottom-0 left-0 w-full p-4 space-y-4 bg-surface">
+    <div class="absolute bottom-0 left-0 w-full p-4 space-y-1 bg-surface">
     <!-- API Documentation -->
     <a class="flex items-center gap-3 px-4 py-2 hover:text-primary transition-colors group" href="#"
         style="color: #94a3b8;">
-        <span class="material-symbols-outlined text-[22px]">menu_book</span>
+        <span class="material-symbols-outlined text-[18px]">menu_book</span>
         <span class="font-display text-[14px]">API Documentation</span>
     </a>
 

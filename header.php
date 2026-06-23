@@ -19,21 +19,19 @@
     </div>
     <div class="relative group">
         <div
-        class="flex items-center gap-3 p-1.5 pr-3 rounded-full border border-outline-variant/30 hover:bg-surface-container-high hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer group/profile"
-        style="background-color: rgb(235, 238, 255); padding: 0.5rem 1rem 0.5rem 0.5rem; border-radius: 9999px;">
+        class="flex items-center gap-3 p-1.5 pr-3 transition-all duration-300 cursor-pointer group/profile"
+        style="padding: 0.5rem;">
         <div class="relative">
             <div
-            class="w-9 h-9 rounded-full bg-brand-gradient flex items-center justify-center text-on-primary font-bold text-sm shadow-sm ring-2 ring-surface ring-offset-1 ring-offset-outline-variant/20">
+            class="w-9 h-9 rounded-md bg-brand-gradient flex items-center justify-center text-on-primary font-bold text-sm shadow-sm ring-2 ring-surface ring-offset-1 ring-offset-outline-variant/20">
             HS
-            </div>
-            <div class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-surface rounded-full">
             </div>
         </div>
         <div class="flex flex-col overflow-hidden">
             <p
-            class="text-label-md leading-none truncate font-bold text-on-surface group-hover/profile:text-primary transition-colors">
+            class="text-[14px] leading-none truncate font-bold text-on-surface group-hover/profile:text-primary transition-colors">
             Hardik Savani</p>
-            <p class="text-[10px] text-outline truncate mt-0.5 font-medium">savani@wepass.io</p>
+            <p class="text-[12px] text-outline truncate mt-0.5 font-medium">savani@wepass.io</p>
         </div>
         <span
             class="material-symbols-outlined text-outline text-[18px] ml-1 group-hover/profile:text-primary transition-transform duration-300 group-hover/profile:translate-y-0.5">expand_more</span>
