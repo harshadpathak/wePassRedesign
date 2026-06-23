@@ -129,7 +129,7 @@
 
           <!-- Select Template -->
           <div class="space-y-2 max-w-md">
-            <label class="text-on-surface font-semibold text-label-md">Select Template <span class="text-error">*</span></label>
+            <label class="text-on-surface font-semibold text-label-md">Select Template: <span class="text-error">*</span></label>
             <select id="template-select" class="w-full js-select2" data-placeholder="-- Select Template --">
               <option></option>
               <option value="GENERIC-PASS-6">GENERIC-PASS-6</option>
@@ -139,7 +139,7 @@
 
           <!-- Choose CSV File -->
           <div class="space-y-2">
-            <label class="text-on-surface font-semibold text-label-md">Choose CSV File <span class="text-error">*</span></label>
+            <label class="text-on-surface font-semibold text-label-md">Choose CSV File: <span class="text-error">*</span></label>
 
             <label id="dropzone" for="csv-input"
               class="group relative flex flex-col items-center justify-center text-center gap-3 border-2 border-dashed border-outline-variant rounded-2xl px-6 py-14 cursor-pointer bg-surface-container-low/40 hover:border-primary hover:bg-primary/5 transition-all">
@@ -181,7 +181,7 @@
 
         <!-- Step 1 Footer -->
         <div class="flex items-center justify-between gap-4 px-6 md:px-8 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
-          <button type="button" disabled class="inline-flex items-center gap-1.5 text-outline font-semibold text-label-md px-4 py-2.5 rounded-lg opacity-40 cursor-not-allowed">
+          <button type="button" disabled class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm cursor-not-allowed">
             <span class="material-symbols-outlined text-[18px]">arrow_back</span>
             Previous
           </button>
@@ -262,7 +262,7 @@
           <!-- Step 2 Footer -->
           <div class="flex items-center justify-between gap-4 px-6 md:px-8 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
             <button type="button" onclick="goToStep(1)"
-              class="inline-flex items-center gap-1.5 bg-white border border-outline-variant text-on-surface font-semibold text-label-md px-4 py-2.5 rounded-lg hover:bg-surface-container-low transition-all">
+              class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
               <span class="material-symbols-outlined text-[18px]">arrow_back</span>
               Previous
             </button>

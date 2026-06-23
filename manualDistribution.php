@@ -226,20 +226,20 @@
                 <div class="recipient-row flex flex-col md:flex-row md:items-end gap-6">
                     <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="space-y-2">
-                            <label class="text-on-surface font-semibold text-label-md">First Name <span
+                            <label class="text-on-surface font-semibold text-label-md">First Name: <span
                                     class="text-error">*</span></label>
                             <input
                                 class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 placeholder="Enter first name" type="text">
                         </div>
                         <div class="space-y-2">
-                            <label class="text-on-surface font-semibold text-label-md">Last Name</label>
+                            <label class="text-on-surface font-semibold text-label-md">Last Name:</label>
                             <input
                                 class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 placeholder="Enter last name" type="text">
                         </div>
                         <div class="space-y-2">
-                            <label class="text-on-surface font-semibold text-label-md">Email <span
+                            <label class="text-on-surface font-semibold text-label-md">Email: <span
                                     class="text-error">*</span></label>
                             <input
                                 class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"

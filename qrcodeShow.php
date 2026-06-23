@@ -40,7 +40,7 @@
           <h2 class="font-display tracking-tight text-headline-lg font-bold">Pass View</h2>
         </div>
         <a href="#"
-          class="inline-flex items-center gap-2 bg-white border border-outline-variant text-on-surface font-semibold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-surface-container-low transition-all">
+          class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
           <span class="material-symbols-outlined text-[18px]">arrow_back</span>
           Back
         </a>

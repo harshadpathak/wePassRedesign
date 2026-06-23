@@ -60,7 +60,7 @@
             <span class="">Filter</span>
           </button>
           <a href="#"
-            class="inline-flex items-center gap-2 bg-white border border-outline-variant text-on-surface font-semibold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-surface-container-low transition-all">
+            class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
             <span class="material-symbols-outlined text-[18px]">arrow_back</span>
             Back
           </a>
@@ -155,7 +155,7 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
             <!-- Date Range -->
             <div class="md:col-span-3 space-y-2">
-              <label class="text-on-surface font-bold text-label-md">Date Range</label>
+              <label class="text-on-surface font-semibold text-label-md">Date Range:</label>
               <div class="relative">
                 <span
                   class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
@@ -166,7 +166,7 @@
             </div>
             <!-- Search -->
             <div class="md:col-span-3 space-y-2">
-              <label class="text-on-surface font-bold text-label-md">Search</label>
+              <label class="text-on-surface font-semibold text-label-md">Search:</label>
               <div class="relative">
                 <input
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
