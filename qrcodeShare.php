@@ -80,7 +80,7 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
             <!-- Date Range -->
             <div class="md:col-span-3 space-y-2">
-              <label class="text-on-surface font-bold text-label-md">Date Range</label>
+              <label class="text-on-surface font-semibold text-label-md">Date Range:</label>
               <div class="relative">
                 <span
                   class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
@@ -91,7 +91,7 @@
             </div>
             <!-- Search -->
             <div class="md:col-span-3 space-y-2">
-              <label class="text-on-surface font-bold text-label-md">Search</label>
+              <label class="text-on-surface font-semibold text-label-md">Search:</label>
               <div class="relative">
                 <input
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
