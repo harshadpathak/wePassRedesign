@@ -18,6 +18,7 @@ $subIdle   = 'text-on-surface-variant before:bg-outline-variant/60';
 $subActive = 'text-primary before:bg-primary';
 
 // Which submenu (if any) contains the active page
+$settingsActive = in_array($current, ['mailSettings.php','mailTemplate.php'], true);
 $distActive = in_array($current, ['manualDistribution.php','importDistribution.php','qrcodeShare.php','qrcodeShow.php'], true);
 $companyActive = in_array($current, ['accountInfo.php','accountUsers.php'], true);
 ?>
@@ -147,14 +148,14 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
     <!-- Settings -->
     <div class="group/nav mb-[30px] mb-4">
         <button
-        class="<?= $navBtn ?> <?= $linkIdle ?>"
+        class="<?= $navBtn ?> <?= $settingsActive ? $linkActive : $linkIdle ?>"
         onclick="toggleSubmenu(this)">
         <span class="material-symbols-outlined">settings</span>
         <span>Settings</span>
         <span
             class="ml-auto material-symbols-outlined text-sm transition-transform duration-200 chevron">chevron_right</span>
         </button>
-        <div class="<?= $subWrap ?> mb-6 hidden">
+        <div class="<?= $subWrap ?> <?= $settingsActive ? '' : 'hidden' ?>">
         <p class="-ml-4 pl-3 pr-2 py-1.5 text-[10px] font-bold uppercase tracking-widest text-outline bg-surface">Platform</p>
         <a class="<?= $subBase ?> <?= $subIdle ?>"
             href="#">
@@ -174,13 +175,13 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
             <span>Webhook URLs</span>
         </a>
         <p class="-ml-4 pl-3 pr-2 py-1.5 mt-2 text-[10px] font-bold uppercase tracking-widest text-outline bg-surface">Communication</p>
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <a class="<?= $subBase ?> <?= $current === 'mailSettings.php' ? $subActive : $subIdle ?>"
+            href="mailSettings.php">
             <span class="material-symbols-outlined text-[18px]">mail</span>
             <span>Mail Settings</span>
         </a>
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <a class="<?= $subBase ?> <?= $current === 'mailTemplate.php' ? $subActive : $subIdle ?>"
+            href="mailTemplate.php">
             <span class="material-symbols-outlined text-[18px]">description</span>
             <span>Mail Templates</span>
         </a>
@@ -217,7 +218,7 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
         </div>
 
         <!-- Admin Badge -->
-        <div class="absolute -right-1 -top-2">
+        <div class="absolute -right-2 -top-3">
         <span
             class="bg-blue-50 text-blue-600 text-[10px] font-bold px-3 py-1 rounded-full border border-blue-100 tracking-wider uppercase shadow-sm">Admin</span>
         </div>
