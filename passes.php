@@ -37,7 +37,7 @@
         </div>
       </div>
       <!-- Summary Cards / Tabs -->
-      <div class="border border-outline-variant hover:border-primary/50 rounded-2xl p-4 w-full bg-surface-container-lowest">
+      <div class="border border-outline-variant rounded-2xl p-4 w-full bg-surface-container-lowest">
         <div class="flex flex-col md:flex-row items-stretch gap-6">
           <!-- Records Section -->
           <div class="flex-1 flex items-center gap-4">
@@ -88,7 +88,7 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
             <!-- Date Range -->
             <div class="md:col-span-3 space-y-2">
-              <label class="text-on-surface font-bold text-label-md">Date Range</label>
+              <label class="text-on-surface font-bold text-label-md">Date Range:</label>
               <div class="relative">
                 <span
                   class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
@@ -99,7 +99,7 @@
             </div>
             <!-- Template Type -->
             <div class="md:col-span-3 space-y-2">
-              <label class="text-on-surface font-bold text-label-md">Template Type</label>
+              <label class="text-on-surface font-bold text-label-md">Template Type:</label>
               <div class="relative">
                 <select class="w-full js-select2">
                   <option>All Types</option>
@@ -114,7 +114,7 @@
             </div>
             <!-- Search -->
             <div class="md:col-span-3 space-y-2">
-              <label class="text-on-surface font-bold text-label-md">Search</label>
+              <label class="text-on-surface font-bold text-label-md">Search:</label>
               <div class="relative">
                 <input
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
