@@ -38,7 +38,7 @@
       </div>
 
       <!-- Information Banner -->
-      <div class="bg-white border border-outline-variant hover:border-primary/50 rounded-2xl p-6 flex flex-col gap-4">
+      <div class="bg-white border border-outline-variant rounded-2xl p-6 flex flex-col gap-4">
         <div class="flex gap-6 items-start">
           <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
             <span class="material-symbols-outlined text-[28px]">qr_code_2</span>
@@ -52,15 +52,15 @@
         </div>
         <!-- Steps -->
         <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
             <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
             <span class="text-body-md font-bold text-on-surface">Scan QR Code</span>
           </div>
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
             <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
             <span class="text-body-md font-bold text-on-surface">Share Link</span>
           </div>
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
             <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
             <span class="text-body-md font-bold text-on-surface">Add to Wallet</span>
           </div>
@@ -177,7 +177,7 @@
           <div class="p-5 pt-4 mt-auto space-y-4">
             <div class="flex items-center gap-2 bg-surface-container-low/60 border border-outline-variant/60 rounded-lg pl-3 pr-1.5 py-1.5">
               <span class="material-symbols-outlined text-outline text-[18px] shrink-0">link</span>
-              <code class="text-label-md text-secondary truncate flex-1"><?= htmlspecialchars($link) ?></code>
+              <code class="text-label-sm text-secondary break-all flex-1"><?= htmlspecialchars($link) ?></code>
               <button type="button" data-copy="<?= htmlspecialchars($link) ?>"
                 class="js-copy w-8 h-8 rounded-md bg-blue-50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all shrink-0"
                 title="Copy link">

@@ -220,7 +220,7 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
         <!-- Admin Badge -->
         <div class="absolute -right-2 -top-3">
         <span
-            class="bg-blue-50 text-blue-600 text-[10px] font-bold px-3 py-1 rounded-full border border-blue-100 tracking-wider uppercase shadow-sm">Admin</span>
+            class="bg-blue-50 text-blue-600 text-[10px] font-bold px-3 py-1 rounded-full border border-blue-100 tracking-wider uppercase shadow-sm">Manager</span>
         </div>
     </div>
     </div>
