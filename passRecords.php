@@ -160,7 +160,7 @@
                 <span
                   class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
                 <input
-                  class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg py-2.5 pl-10 pr-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer"
+                  class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer"
                   placeholder="Select date range" readonly="" type="text">
               </div>
             </div>
@@ -169,19 +169,19 @@
               <label class="text-on-surface font-bold text-label-md">Search</label>
               <div class="relative">
                 <input
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-2.5 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                   placeholder="Search by name, ID, or keyword..." type="text">
               </div>
             </div>
             <!-- Actions -->
             <div class="md:col-span-3 flex items-center gap-3">
               <button
-                class="flex-1 flex items-center justify-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-md shadow-primary/20 hover:opacity-95 transition-all font-bold">
+                class="flex-1 flex items-center justify-center gap-2 bg-brand-gradient text-on-primary px-4 py-3 rounded-lg text-[14px] shadow-md shadow-primary/20 hover:opacity-95 transition-all font-bold">
                 <span class="material-symbols-outlined text-[20px]">search</span>
                 Search
               </button>
               <button
-                class="flex-1 flex items-center justify-center gap-2 bg-surface border border-outline-variant text-on-surface-variant px-4 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold">
+                class="flex-1 flex items-center justify-center gap-2 bg-surface border border-outline-variant text-on-surface-variant px-4 py-3 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold">
                 <span class="material-symbols-outlined text-[20px]">cancel</span>
                 Clear
               </button>

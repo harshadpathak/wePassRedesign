@@ -218,7 +218,7 @@ body {
 <style>
 /* Match Select2 to the theme's text inputs (rounded-lg, surface-container-low, 14px) */
 .select2-container--default .select2-selection--single {
-    height: 48px;
+    height: 46.22px;
     display: flex;
     align-items: center;
     background-color: #f8fafc;        /* surface-container-low */
@@ -237,7 +237,7 @@ body {
     color: #94a3b8;                   /* muted placeholder */
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: 46px;
+    height: 45px;
     right: 12px;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
