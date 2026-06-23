@@ -18,7 +18,7 @@
     <!-- Canvas -->
     <?php
       $template = [
-        'name'     => 'gift-card-1-api',
+        'name'     => 'boarding kg-1',
         'mode'     => 'Personalized Unique',
         'type'     => 'Gift Card',
         'created'  => 'Jun 17, 2026',
@@ -76,7 +76,7 @@
               <span class="material-symbols-outlined text-[32px]">cards</span>
             </div>
             <div>
-              <h3 class="text-headline-lg font-bold text-on-surface tracking-tight"><?= htmlspecialchars($template['name']) ?></h3>
+              <h3 class="text-headline-lg font-bold text-on-surface tracking-tight uppercase"><?= htmlspecialchars($template['name']) ?></h3>
               <div class="flex flex-wrap items-center gap-2 mt-2">
                 <span class="inline-flex items-center gap-1.5 bg-primary text-white text-label-sm font-bold px-3 py-1 rounded-full">
                   <span class="material-symbols-outlined text-[16px]">badge</span> <?= htmlspecialchars($template['mode']) ?>
