@@ -19,6 +19,7 @@ $subActive = 'text-primary before:bg-primary';
 
 // Which submenu (if any) contains the active page
 $distActive = in_array($current, ['manualDistribution.php','importDistribution.php','qrcodeShare.php','qrcodeShow.php'], true);
+$geoActive = in_array($current, ['stores.php','campaigns.php'], true);
 $companyActive = in_array($current, ['accountInfo.php','accountUsers.php'], true);
 ?>
 <aside
@@ -95,21 +96,21 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
     <!-- GEO Locations -->
     <div class="group/nav mb-[30px] mb-4">
         <button
-        class="<?= $navBtn ?> <?= $linkIdle ?>"
+        class="<?= $navBtn ?> <?= $geoActive ? $linkActive : $linkIdle ?>"
         onclick="toggleSubmenu(this)">
         <span class="material-symbols-outlined">location_on</span>
         <span>GEO Locations</span>
         <span
-            class="ml-auto material-symbols-outlined text-sm transition-transform duration-200 chevron">chevron_right</span>
+            class="ml-auto material-symbols-outlined text-sm transition-transform duration-200 chevron <?= $geoActive ? 'rotate-90' : '' ?>">chevron_right</span>
         </button>
-        <div class="<?= $subWrap ?> hidden">
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <div class="<?= $subWrap ?> <?= $geoActive ? '' : 'hidden' ?>">
+        <a class="<?= $subBase ?> <?= $current === 'stores.php' ? $subActive : $subIdle ?>"
+            href="stores.php">
             <span class="material-symbols-outlined text-[18px]">store</span>
             <span>Stores</span>
         </a>
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <a class="<?= $subBase ?> <?= $current === 'campaigns.php' ? $subActive : $subIdle ?>"
+            href="campaigns.php">
             <span class="material-symbols-outlined text-[18px]">campaign</span>
             <span>Campaigns</span>
         </a>
