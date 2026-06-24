@@ -34,11 +34,13 @@
             <span class="material-symbols-outlined text-[20px]">filter_alt</span>
             <span>Filter</span>
           </button>
-          <button
-            class="flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
-            <span class="material-symbols-outlined text-sm">add</span>
-            <span>Create Store</span>
-          </button>
+          <div class="flex items-center gap-3">
+            <a href ="createStore.php"
+              class="flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+              <span class="material-symbols-outlined text-sm">add</span>
+              Create Store
+            </a>
+          </div>
         </div>
       </div>
 
@@ -212,7 +214,7 @@
                       class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white invisible opacity-0">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
+                          href="editStore.php">
                           <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
                           <span class="font-medium">Edit</span>
                         </a>
@@ -268,7 +270,7 @@
                       class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white invisible opacity-0">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
+                          href="editStore.php">
                           <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
                           <span class="font-medium">Edit</span>
                         </a>
@@ -324,7 +326,7 @@
                       class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white invisible opacity-0">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
+                          href="editStore.php">
                           <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
                           <span class="font-medium">Edit</span>
                         </a>

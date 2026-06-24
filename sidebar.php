@@ -20,7 +20,9 @@ $subActive = 'text-primary before:bg-primary';
 // Which submenu (if any) contains the active page
 $settingsActive = in_array($current, ['mailSettings.php','mailTemplate.php'], true);
 $distActive = in_array($current, ['manualDistribution.php','importDistribution.php','qrcodeShare.php','qrcodeShow.php'], true);
-$geoActive = in_array($current, ['stores.php','campaigns.php'], true);
+$geoActive = in_array($current, ['stores.php','createStore.php','editStore.php','campaigns.php','createCampaign.php','editCampaign.php'], true);
+$storesActive = in_array($current, ['stores.php','createStore.php','editStore.php'], true);
+$campaignsActive = in_array($current, ['campaigns.php','createCampaign.php','editCampaign.php'], true);
 $companyActive = in_array($current, ['accountInfo.php','accountUsers.php'], true);
 ?>
 <aside
@@ -105,12 +107,12 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
             class="ml-auto material-symbols-outlined text-sm transition-transform duration-200 chevron <?= $geoActive ? 'rotate-90' : '' ?>">chevron_right</span>
         </button>
         <div class="<?= $subWrap ?> <?= $geoActive ? '' : 'hidden' ?>">
-        <a class="<?= $subBase ?> <?= $current === 'stores.php' ? $subActive : $subIdle ?>"
+        <a class="<?= $subBase ?> <?= $storesActive ? $subActive : $subIdle ?>"
             href="stores.php">
             <span class="material-symbols-outlined text-[18px]">store</span>
             <span>Stores</span>
         </a>
-        <a class="<?= $subBase ?> <?= $current === 'campaigns.php' ? $subActive : $subIdle ?>"
+        <a class="<?= $subBase ?> <?= $campaignsActive ? $subActive : $subIdle ?>"
             href="campaigns.php">
             <span class="material-symbols-outlined text-[18px]">campaign</span>
             <span>Campaigns</span>
