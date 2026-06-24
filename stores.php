@@ -204,14 +204,14 @@
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">11/06/2026 09:52:34</td>
                 <!-- Action -->
                 <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block text-left group/action">
+                  <div class="relative inline-block js-menu">
                     <button
-                      class="material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high"
-                      onclick="this.nextElementSibling.classList.toggle('invisible'); this.nextElementSibling.classList.toggle('opacity-0')">
+                      type="button"
+                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
                       more_vert
                     </button>
                     <div
-                      class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white invisible opacity-0">
+                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
                           href="editStore.php">
@@ -260,14 +260,14 @@
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">11/06/2026 07:02:12</td>
                 <!-- Action -->
                 <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block text-left group/action">
+                  <div class="relative inline-block js-menu">
                     <button
-                      class="material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high"
-                      onclick="this.nextElementSibling.classList.toggle('invisible'); this.nextElementSibling.classList.toggle('opacity-0')">
+                      type="button"
+                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
                       more_vert
                     </button>
                     <div
-                      class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white invisible opacity-0">
+                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
                           href="editStore.php">
@@ -316,14 +316,14 @@
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">15/05/2026 12:30:00</td>
                 <!-- Action -->
                 <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block text-left group/action">
+                  <div class="relative inline-block js-menu">
                     <button
-                      class="material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high"
-                      onclick="this.nextElementSibling.classList.toggle('invisible'); this.nextElementSibling.classList.toggle('opacity-0')">
+                      type="button"
+                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
                       more_vert
                     </button>
                     <div
-                      class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white invisible opacity-0">
+                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
                           href="editStore.php">

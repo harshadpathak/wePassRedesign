@@ -44,11 +44,12 @@
       ?>
 
       <!-- About the WePass API -->
-      <div class="bg-gradient-to-br from-primary/[0.07] via-white to-white border border-outline-variant rounded-2xl p-6 flex flex-col gap-5">
+      <div class="bg-white border border-outline-variant rounded-2xl p-6 flex flex-col gap-5">
         <div class="flex gap-5 items-start">
-          <div class="w-12 h-12 bg-brand-gradient rounded-xl flex items-center justify-center text-white shrink-0 shadow-md shadow-primary/20">
-            <span class="material-symbols-outlined text-[26px]">info</span>
-          </div>
+        <div
+            class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
+            <span class="material-symbols-outlined text-[28px]">info</span>
+        </div>
           <div class="flex-1 min-w-0">
             <h3 class="text-headline-md font-bold text-on-surface tracking-tight">About the WePass API</h3>
             <p class="text-body-md text-secondary mt-2 leading-relaxed">
@@ -57,24 +58,26 @@
           </div>
         </div>
 
-        <!-- Base URL row -->
-        <div class="flex flex-col sm:flex-row sm:items-center gap-3 bg-white rounded-xl border border-outline-variant/70 p-2 pl-3">
-          <div class="flex items-center gap-3 flex-1 min-w-0">
-            <span class="text-label-sm font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1.5 rounded-lg shrink-0">Base URL</span>
-            <code id="base-url" class="text-body-md font-mono text-on-surface truncate">https://api.wepass.io/api/v1/</code>
+        <!-- Base URL row + Documentation link, side by side -->
+        <div class="flex flex-col  lg:flex-row lg:items-stretch gap-3">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-3 bg-surface-container-low rounded-xl border border-outline-variant/70 px-3 py-2 flex-1 min-w-0">
+            <div class="flex items-center gap-3 flex-1 min-w-0">
+              <span class="text-label-sm font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1.5 rounded-lg shrink-0">Base URL</span>
+              <code id="base-url" class="text-body-md font-mono text-on-surface truncate">https://api.wepass.io/api/v1/</code>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <button type="button" onclick="copyBaseUrl(this)"
+                class="inline-flex items-center gap-2 rounded-lg bg-white border border-outline-variant px-2.5 py-1 text-label-md font-bold text-secondary hover:bg-surface-container-high hover:text-on-surface active:scale-[0.98] transition-all">
+                <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                <span class="copy-label">Copy URL</span>
+              </button>
+            </div>
           </div>
-          <div class="flex items-center gap-2 shrink-0">
-            <button type="button" onclick="copyBaseUrl(this)"
-              class="inline-flex items-center gap-2 rounded-lg bg-surface-container-low border border-outline-variant px-3.5 py-2 text-label-md font-bold text-secondary hover:bg-surface-container-high hover:text-on-surface active:scale-[0.98] transition-all">
-              <span class="material-symbols-outlined text-[18px]">content_copy</span>
-              <span class="copy-label">Copy URL</span>
-            </button>
-            <a href="#"
-              class="inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/5 px-3.5 py-2 text-label-md font-bold text-primary hover:bg-primary/10 active:scale-[0.98] transition-all">
-              <span class="material-symbols-outlined text-[18px]">menu_book</span>
-              Read Documentation
-            </a>
-          </div>
+          <a href="#"
+            class="inline-flex items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/5 px-3.5 py-2 text-label-md font-bold text-primary hover:bg-primary/10 active:scale-[0.98] transition-all shrink-0">
+            <span class="material-symbols-outlined text-[18px]">menu_book</span>
+            Read Documentation
+          </a>
         </div>
       </div>
 
@@ -87,29 +90,28 @@
           </span>
           <div class="flex-1 min-w-0">
             <h3 class="text-headline-md font-bold text-on-surface">Access Keys</h3>
-            <p class="text-label-md text-on-surface-variant mt-0.5">Manage your API authentication keys</p>
+            <p class="text-label-md text-on-surface-variant">Manage your API authentication keys</p>
           </div>
+          <!-- Status legend -->
+          <!-- <div class="hidden md:flex items-center gap-1.5 pr-1 shrink-0">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 px-2.5 py-1 text-label-sm font-bold text-emerald-700">
+              <span class="relative flex w-2 h-2">
+                <span class="absolute inline-flex w-full h-full rounded-full bg-emerald-400 opacity-60 animate-ping"></span>
+                <span class="relative inline-flex w-2 h-2 rounded-full bg-emerald-500"></span>
+              </span>
+              Active
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-surface-container-low border border-outline-variant px-2.5 py-1 text-label-sm font-bold text-on-surface-variant">
+              <span class="w-2 h-2 rounded-full bg-outline"></span>
+              Inactive
+            </span>
+          </div> -->
+          <!-- <span class="hidden md:block w-px h-8 bg-outline-variant/70 shrink-0"></span> -->
           <button type="button"
             class="inline-flex items-center gap-2 bg-brand-gradient text-white px-4 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all shrink-0">
             <span class="material-symbols-outlined text-[20px]">add_circle</span>
             Create New Key
           </button>
-        </div>
-
-        <!-- Notice + legend -->
-        <div class="flex flex-col sm:flex-row sm:items-center gap-3 px-6 py-3 bg-surface-container-low/60 border-b border-outline-variant/70">
-          <p class="flex items-center gap-2 text-label-md text-on-surface-variant flex-1">
-            <span class="material-symbols-outlined text-[18px] text-amber-500">shield</span>
-            Keep your keys secret and never expose them in client-side code.
-          </p>
-          <div class="flex items-center gap-4 shrink-0">
-            <span class="flex items-center gap-1.5 text-label-md font-semibold text-on-surface-variant">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Active
-            </span>
-            <span class="flex items-center gap-1.5 text-label-md font-semibold text-on-surface-variant">
-              <span class="w-2 h-2 rounded-full bg-outline"></span> Inactive
-            </span>
-          </div>
         </div>
 
         <!-- Keys table -->
@@ -130,12 +132,12 @@
               <tr class="group hover:bg-surface-container-low/50 transition-colors">
                 <!-- Name -->
                 <td class="px-6 py-4">
-                  <span class="text-body-md font-bold text-on-surface"><?php echo htmlspecialchars($key['name']); ?></span>
+                  <span class="text-body-md font-semibold text-on-surface"><?php echo htmlspecialchars($key['name']); ?></span>
                 </td>
                 <!-- Key Secret -->
                 <td class="px-6 py-4">
                   <div class="flex items-center gap-2">
-                    <code class="font-mono text-body-md text-primary font-semibold">
+                    <code class="font-mono text-body-md text-primary/90 font-semibold">
                       <?php echo htmlspecialchars($key['prefix']); ?><?php echo htmlspecialchars($key['suffix']); ?>
                     </code>
                     <button type="button" onclick="copyText('<?php echo htmlspecialchars($key['prefix'] . $key['suffix']); ?>', this)"
@@ -156,14 +158,11 @@
                 <!-- Status -->
                 <td class="px-6 py-4">
                   <label class="inline-flex items-center gap-2.5 cursor-pointer select-none">
-                    <span class="relative inline-flex">
-                      <input type="checkbox" class="peer sr-only" <?php echo $key['active'] ? 'checked' : ''; ?>>
-                      <span class="w-9 h-5 rounded-full bg-outline-variant peer-checked:bg-emerald-500 transition-colors"></span>
-                      <span class="absolute left-0.5 top-0.5 w-4 h-4 rounded-full bg-white shadow-sm transition-transform peer-checked:translate-x-4"></span>
-                    </span>
-                    <span class="text-label-md font-bold <?php echo $key['active'] ? 'text-emerald-600' : 'text-outline'; ?>">
-                      <?php echo $key['active'] ? 'Active' : 'Inactive'; ?>
-                    </span>
+                    <input type="checkbox" class="peer sr-only" <?php echo $key['active'] ? 'checked' : ''; ?>>
+                    <span class="relative shrink-0 w-9 h-5 rounded-full bg-rose-500 peer-checked:bg-emerald-500 transition-colors
+                                 after:absolute after:left-0.5 after:top-0.5 after:w-4 after:h-4 after:rounded-full after:bg-white after:shadow-sm after:transition-transform peer-checked:after:translate-x-4"></span>
+                    <span class="inline-block w-16 text-label-md font-bold text-rose-700 peer-checked:hidden">Inactive</span>
+                    <span class="inline-block w-16 text-label-md font-bold text-emerald-600 hidden peer-checked:inline">Active</span>
                   </label>
                 </td>
                 <!-- Actions -->
@@ -189,9 +188,13 @@
             </tbody>
           </table>
         </div>
-
+        
         <!-- Card footer -->
         <div class="flex items-center justify-end px-6 py-3.5 border-t border-outline-variant/70 bg-surface-container-low/40">
+          <p class="flex items-center gap-2 text-label-md text-on-surface-variant flex-1">
+            <span class="material-symbols-outlined text-[18px] text-primary">shield</span>
+            Keep your keys secret and never expose them in client-side code.
+          </p>
           <span class="flex items-center gap-1.5 text-label-md text-on-surface-variant">
             <span class="material-symbols-outlined text-[16px] text-amber-500">bolt</span>
             Data updates near real time
@@ -221,25 +224,6 @@
         var url = document.getElementById('base-url').textContent.trim();
         navigator.clipboard.writeText(url).then(function () { flashCopied(btn, '.copy-label'); });
       }
-
-    // Action menus
-      var menus = document.querySelectorAll('.js-menu');
-      function closeAll(except) {
-        menus.forEach(function (m) {
-          if (m !== except) m.querySelector('.js-menu-panel').classList.add('hidden');
-        });
-      }
-      menus.forEach(function (menu) {
-        var toggle = menu.querySelector('.js-menu-toggle');
-        var panel = menu.querySelector('.js-menu-panel');
-        toggle.addEventListener('click', function (e) {
-          e.stopPropagation();
-          var isHidden = panel.classList.contains('hidden');
-          closeAll(menu);
-          panel.classList.toggle('hidden', !isHidden);
-        });
-      });
-      document.addEventListener('click', function () { closeAll(null); });
     </script>
     <?php include('footer.php'); ?>
   </main>

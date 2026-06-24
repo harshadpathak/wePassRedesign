@@ -42,9 +42,12 @@
           <!-- Google Wallet Notifications -->
           <div class="group rounded-2xl border border-outline-variant bg-white p-5 flex items-center gap-4 hover:shadow-md hover:border-primary/40 transition-all">
             <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-blue-50">
-              <svg viewBox="0 0 48 48" class="w-6 h-6" aria-hidden="true">
-                <path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C36.1 4.1 30.4 2 24 2 12 2 2 12 2 24s10 22 22 22c11 0 21-8 21-22 0-1.2-.1-2.3-.4-3.5z"/>
-              </svg>
+                <svg viewBox="0 0 24 24" class="w-6 h-6">
+                    <rect x="2.5"   y="2"   width="19" height="20"   rx="2.5" fill="#34A853"/>
+                    <rect x="2.5"   y="4"   width="19" height="18"   rx="2.5" fill="#FBBC05"/>
+                    <rect x="2.5" y="6.5" width="19" height="15.5" rx="2.5" fill="#EA4335"/>
+                    <path d="M2 12.2 C 5.5 10.2 8.5 13.8 12 14 C 15.5 14.2 18.5 10.5 22 10.8 L 22 19.5 Q 22 22 19.5 22 L 4.5 22 Q 2 22 2 19.5 Z" fill="#4285F4"/>
+                </svg>
             </div>
             <div class="min-w-0">
               <p class="text-label-md text-outline uppercase font-semibold">Google Wallet Notifications</p>
@@ -235,27 +238,6 @@
   </main>
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
-  <script>
-    (function () {
-      var menus = document.querySelectorAll('.js-menu');
-      function closeAll(except) {
-        menus.forEach(function (m) {
-          if (m !== except) m.querySelector('.js-menu-panel').classList.add('hidden');
-        });
-      }
-      menus.forEach(function (menu) {
-        var toggle = menu.querySelector('.js-menu-toggle');
-        var panel = menu.querySelector('.js-menu-panel');
-        toggle.addEventListener('click', function (e) {
-          e.stopPropagation();
-          var isHidden = panel.classList.contains('hidden');
-          closeAll(menu);
-          panel.classList.toggle('hidden', !isHidden);
-        });
-      });
-      document.addEventListener('click', function () { closeAll(null); });
-    })();
-  </script>
 </body>
 
 </html>

@@ -153,7 +153,7 @@
         <?php foreach ($rows as $row):
           $link = 'https://app.wepass.io/wallet/pass/' . $row['pass'];
         ?>
-        <div class="group relative bg-surface-container-low/30 rounded-2xl border border-outline-variant hover:border-primary/50 hover:bg-white transition-colors duration-200 flex flex-col overflow-hidden">
+        <div class="group relative bg-surface-container-low/30 rounded-2xl border border-outline-variant hover:border-primary/50 hover:bg-white transition-colors duration-200 flex flex-col overflow-hidden [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
           <!-- Card Header -->
           <div class="flex items-center gap-3 p-5 pb-3 min-w-0">
             <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
@@ -267,25 +267,6 @@
           }
         });
       });
-
-      // Action dropdown menus
-      var menus = document.querySelectorAll('.js-menu');
-      function closeAll(except) {
-        menus.forEach(function (m) {
-          if (m !== except) m.querySelector('.js-menu-panel').classList.add('hidden');
-        });
-      }
-      menus.forEach(function (menu) {
-        var toggle = menu.querySelector('.js-menu-toggle');
-        var panel = menu.querySelector('.js-menu-panel');
-        toggle.addEventListener('click', function (e) {
-          e.stopPropagation();
-          var isHidden = panel.classList.contains('hidden');
-          closeAll(menu);
-          panel.classList.toggle('hidden', !isHidden);
-        });
-      });
-      document.addEventListener('click', function () { closeAll(null); });
     })();
   </script>
 </body>
