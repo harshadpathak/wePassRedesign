@@ -38,10 +38,10 @@
           <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/70">
             <span class="w-11 h-11 rounded-xl bg-surface-container-low border border-outline-variant/70 flex items-center justify-center shrink-0">
                 <svg viewBox="0 0 24 24" class="w-6 h-6">
-                <rect x="2.5"   y="2"   width="19" height="20"   rx="2.5" fill="#34A853"/>
-                <rect x="2.5"   y="4"   width="19" height="18"   rx="2.5" fill="#FBBC05"/>
-                <rect x="2.5" y="6.5" width="19" height="15.5" rx="2.5" fill="#EA4335"/>
-                <path d="M2 12.2 C 5.5 10.2 8.5 13.8 12 14 C 15.5 14.2 18.5 10.5 22 10.8 L 22 19.5 Q 22 22 19.5 22 L 4.5 22 Q 2 22 2 19.5 Z" fill="#4285F4"/>
+                    <rect x="2.5"   y="2"   width="19" height="20"   rx="2.5" fill="#34A853"/>
+                    <rect x="2.5"   y="4"   width="19" height="18"   rx="2.5" fill="#FBBC05"/>
+                    <rect x="2.5" y="6.5" width="19" height="15.5" rx="2.5" fill="#EA4335"/>
+                    <path d="M2 12.2 C 5.5 10.2 8.5 13.8 12 14 C 15.5 14.2 18.5 10.5 22 10.8 L 22 19.5 Q 22 22 19.5 22 L 4.5 22 Q 2 22 2 19.5 Z" fill="#4285F4"/>
                 </svg>
             </span>
             <div class="flex-1 min-w-0">
@@ -58,10 +58,10 @@
           <div class="p-6 space-y-4 flex-1">
             <!-- <p class="text-label-sm font-bold uppercase tracking-wider text-outline">Configuration mode</p> -->
             <!-- Default -->
-            <label class="js-option relative block cursor-pointer rounded-xl border-2 border-outline-variant p-5 pr-12 transition-all duration-200 hover:border-outline hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary/[0.04] has-[:checked]:shadow-sm">
+            <label class="js-option relative block cursor-pointer rounded-xl border-2 border-outline-variant p-5 pr-12 transition-all duration-200 hover:border-primary/50 hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary/[0.04] has-[:checked]:shadow-sm">
               <input type="radio" name="google_mode" value="default" class="peer sr-only" checked>
-              <span class="absolute top-5 right-5 flex h-6 w-6 items-center justify-center rounded-full border-2 border-outline-variant bg-white transition-all peer-checked:border-primary peer-checked:bg-primary">
-                <span class="material-symbols-outlined text-[16px] text-white opacity-0 transition-opacity peer-checked:opacity-100">check</span>
+              <span class="check-badge absolute top-4 right-4 w-7 h-7 rounded-full bg-primary flex items-center justify-center shadow-sm transition-all opacity-0 scale-75 peer-checked:opacity-100 peer-checked:scale-100">
+                <span class="material-symbols-outlined text-[18px] text-white">check</span>
               </span>
               <div class="flex items-center gap-2 mb-3">
                 <span class="material-symbols-outlined text-[20px] text-primary">bolt</span>
@@ -76,10 +76,10 @@
             </label>
 
             <!-- Custom -->
-            <label class="js-option relative block cursor-pointer rounded-xl border-2 border-outline-variant p-5 pr-12 transition-all duration-200 hover:border-outline hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary/[0.04] has-[:checked]:shadow-sm">
+            <label class="js-option relative block cursor-pointer rounded-xl border-2 border-outline-variant p-5 pr-12 transition-all duration-200 hover:border-primary/50 hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary/[0.04] has-[:checked]:shadow-sm">
               <input type="radio" name="google_mode" value="custom" class="peer sr-only">
-              <span class="absolute top-5 right-5 flex h-6 w-6 items-center justify-center rounded-full border-2 border-outline-variant bg-white transition-all peer-checked:border-primary peer-checked:bg-primary">
-                <span class="material-symbols-outlined text-[16px] text-white opacity-0 transition-opacity peer-checked:opacity-100">check</span>
+              <span class="check-badge absolute top-4 right-4 w-7 h-7 rounded-full bg-primary flex items-center justify-center shadow-sm transition-all opacity-0 scale-75 peer-checked:opacity-100 peer-checked:scale-100">
+                <span class="material-symbols-outlined text-[18px] text-white">check</span>
               </span>
               <div class="flex items-center gap-2 mb-3">
                 <span class="material-symbols-outlined text-[20px] text-primary">tune</span>
@@ -93,7 +93,7 @@
             </label>
 
             <!-- Custom fields (revealed when Custom is selected) -->
-            <div class="js-custom-panel hidden rounded-xl border border-outline-variant bg-surface-container-low/40 p-5 space-y-5">
+            <div class="js-custom-panel hidden rounded-xl border border-outline-variant hover:border-primary/50 p-5 space-y-5">
               <!-- Issuer ID -->
               <div class="space-y-1.5">
                 <label class="block text-label-md font-semibold text-on-surface">Issuer ID: <span class="text-error">*</span></label>
@@ -181,10 +181,10 @@
           <div class="p-6 space-y-4 flex-1">
             <!-- <p class="text-label-sm font-bold uppercase tracking-wider text-outline">Configuration mode</p> -->
             <!-- Default -->
-            <label class="js-option relative block cursor-pointer rounded-xl border-2 border-outline-variant p-5 pr-12 transition-all duration-200 hover:border-outline hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary/[0.04] has-[:checked]:shadow-sm">
+            <label class="js-option relative block cursor-pointer rounded-xl border-2 border-outline-variant p-5 pr-12 transition-all duration-200 hover:border-primary/50 hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary/[0.04] has-[:checked]:shadow-sm">
               <input type="radio" name="apple_mode" value="default" class="peer sr-only" checked>
-              <span class="absolute top-5 right-5 flex h-6 w-6 items-center justify-center rounded-full border-2 border-outline-variant bg-white transition-all peer-checked:border-primary peer-checked:bg-primary">
-                <span class="material-symbols-outlined text-[16px] text-white opacity-0 transition-opacity peer-checked:opacity-100">check</span>
+              <span class="check-badge absolute top-4 right-4 w-7 h-7 rounded-full bg-primary flex items-center justify-center shadow-sm transition-all opacity-0 scale-75 peer-checked:opacity-100 peer-checked:scale-100">
+                <span class="material-symbols-outlined text-[18px] text-white">check</span>
               </span>
               <div class="flex items-center gap-2 mb-3">
                 <span class="material-symbols-outlined text-[20px] text-primary">bolt</span>
@@ -199,10 +199,10 @@
             </label>
 
             <!-- Custom -->
-            <label class="js-option relative block cursor-pointer rounded-xl border-2 border-outline-variant p-5 pr-12 transition-all duration-200 hover:border-outline hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary/[0.04] has-[:checked]:shadow-sm">
+            <label class="js-option relative block cursor-pointer rounded-xl border-2 border-outline-variant p-5 pr-12 transition-all duration-200 hover:border-primary/50 hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary/[0.04] has-[:checked]:shadow-sm">
               <input type="radio" name="apple_mode" value="custom" class="peer sr-only">
-              <span class="absolute top-5 right-5 flex h-6 w-6 items-center justify-center rounded-full border-2 border-outline-variant bg-white transition-all peer-checked:border-primary peer-checked:bg-primary">
-                <span class="material-symbols-outlined text-[16px] text-white opacity-0 transition-opacity peer-checked:opacity-100">check</span>
+              <span class="check-badge absolute top-4 right-4 w-7 h-7 rounded-full bg-primary flex items-center justify-center shadow-sm transition-all opacity-0 scale-75 peer-checked:opacity-100 peer-checked:scale-100">
+                <span class="material-symbols-outlined text-[18px] text-white">check</span>
               </span>
               <div class="flex items-center gap-2 mb-3">
                 <span class="material-symbols-outlined text-[20px] text-primary">tune</span>
@@ -216,7 +216,7 @@
             </label>
 
             <!-- Custom fields (revealed when Custom is selected) -->
-            <div class="js-custom-panel hidden rounded-xl border border-outline-variant bg-surface-container-low/40 p-5 space-y-5">
+            <div class="js-custom-panel hidden rounded-xl border border-outline-variant hover:border-primary/50 p-5 space-y-5">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <!-- Organization Name -->
                 <div class="space-y-1.5">
