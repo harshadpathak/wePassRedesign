@@ -141,7 +141,7 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
     </div>
     <!-- Billing -->
     <a class="<?= $linkBase ?> <?= $current === 'billing.php' ? $linkActive : $linkIdle ?>"
-        href="#">
+        href="billing.php">
         <span class="material-symbols-outlined" <?= $current === 'billing.php' ? $fill : '' ?>>description</span>
         <span>Billing</span>
     </a>
