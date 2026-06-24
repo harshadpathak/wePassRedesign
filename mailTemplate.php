@@ -29,7 +29,7 @@
         </div>
       </div>
         <!-- Information Banner -->
-        <div class="bg-white border border-outline-variant hover:border-primary/50 rounded-2xl p-6 flex flex-col gap-4">
+        <div class="bg-white border border-outline-variant rounded-2xl p-6 flex flex-col gap-4">
             <div class="flex gap-6 items-start">
                 <div
                     class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
@@ -44,28 +44,28 @@
             <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
                 <!-- Step 1 -->
                 <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
                     <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                         style="font-variation-settings: 'FILL' 1;">check_circle</span>
                     <span class="text-body-md font-bold text-on-surface">Mail Logo</span>
                 </div>
                 <!-- Step 2 -->
                 <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
                     <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                         style="font-variation-settings: 'FILL' 1;">check_circle</span>
                     <span class="text-body-md font-bold text-on-surface">Subject & Sender</span>
                 </div>
                 <!-- Step 3 -->
                 <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
                     <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                         style="font-variation-settings: 'FILL' 1;">check_circle</span>
                     <span class="text-body-md font-bold text-on-surface">Email Body</span>
                 </div>
                 <!-- Step 4 -->
                 <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
                     <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                         style="font-variation-settings: 'FILL' 1;">check_circle</span>
                     <span class="text-body-md font-bold text-on-surface">Download Button</span>
@@ -99,7 +99,7 @@
         <!-- Mail Templates Editor -->
         <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
           <!-- Card header -->
-          <div class="flex items-center gap-2.5 px-6 lg:px-8 py-4 border-b border-outline-variant/70">
+          <div class="flex items-center gap-2.5 px-6 py-5 border-b border-outline-variant/70">
             <span class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
               <span class="material-symbols-outlined text-[20px]">mail</span>
             </span>
@@ -154,7 +154,7 @@
               <?php foreach ($mailTabs as $i => $tab): $active = $i === 0; ?>
                 <form class="mail-panel <?php echo $active ? '' : 'hidden'; ?>" data-panel="<?php echo $tab['id']; ?>">
                   <!-- Panel header -->
-                  <div class="flex items-center gap-2.5 pb-4 mb-6 border-b border-outline-variant/70">
+                  <div class="flex items-center gap-2.5 pb-4 mb-4 border-b border-outline-variant/70">
                     <span class="material-symbols-outlined text-[22px] text-primary"><?php echo $tab['icon']; ?></span>
                     <h4 class="text-headline-md font-bold text-on-surface"><?php echo $tab['type'] === 'template' ? $tab['label'] . ' - Email Template' : $tab['label']; ?></h4>
                   </div>
@@ -203,20 +203,16 @@
 
                       <!-- Live email preview -->
                       <div>
-                        <!-- <div class="flex items-center gap-2 mb-2.5">
+                        <div class="flex items-center gap-2 mb-2.5">
                           <span class="material-symbols-outlined text-[18px] text-outline">visibility</span>
                           <span class="text-label-md font-bold tracking-wide text-outline uppercase">Live Preview</span>
-                        </div> -->
+                        </div>
                         <div class="rounded-2xl border border-outline-variant overflow-hidden shadow-sm bg-white">
                           <!-- Email body -->
                           <div class="bg-surface-container-low/60 p-4 sm:p-6">
                             <div class="mx-auto max-w-md rounded-xl overflow-hidden">
                               <!-- Logo header band (editable) -->
                               <!-- <div> -->
-                                <div class="flex items-center gap-2 mb-2">
-                                  <span class="material-symbols-outlined text-[16px] text-outline">visibility</span>
-                                  <span class="text-label-sm font-bold tracking-wide text-outline uppercase">Email Header Preview</span>
-                                </div>
                                 <div class="rounded-2xl border border-outline-variant bg-primary/5 px-6 py-10 flex items-center justify-center">
                                   <img src="<?php echo $mailLogo; ?>" alt="Mail logo preview" class="max-h-16 w-auto object-contain">
                                 </div>
