@@ -36,7 +36,7 @@
         </a>
       </div>
       <!-- Information Banner -->
-        <div class="bg-white border border-outline-variant hover:border-primary/50 rounded-2xl p-6 flex flex-col gap-4">
+        <div class="bg-white border border-outline-variant rounded-2xl p-6 flex flex-col gap-4">
             <div class="flex gap-6 items-start">
                 <div
                     class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
@@ -51,21 +51,21 @@
             <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
                 <!-- Step 1 -->
                 <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
                     <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                         style="font-variation-settings: 'FILL' 1;">check_circle</span>
                     <span class="text-body-md font-bold text-on-surface">Enter Name & Email</span>
                 </div>
                 <!-- Step 2 -->
                 <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
                     <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                         style="font-variation-settings: 'FILL' 1;">check_circle</span>
                     <span class="text-body-md font-bold text-on-surface">Assign Role</span>
                 </div>
                 <!-- Step 3 -->
                 <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
                     <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                         style="font-variation-settings: 'FILL' 1;">check_circle</span>
                     <span class="text-body-md font-bold text-on-surface">Send Invitation</span>

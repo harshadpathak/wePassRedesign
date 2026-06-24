@@ -43,41 +43,39 @@
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Default SMTP -->
             <label data-mode-card="default"
-              class="mode-card group relative flex flex-col overflow-hidden rounded-2xl border-2 border-primary bg-white p-6 cursor-pointer transition-all hover:shadow-lg has-[:checked]:ring-4 has-[:checked]:ring-primary/10">
+              class="mode-card group relative flex flex-col overflow-hidden rounded-3xl border-2 border-primary bg-white p-6 cursor-pointer transition-all duration-200 hover:-translate-y-1">
               <input type="radio" name="delivery_mode" value="default" class="sr-only peer" checked>
-              <!-- Top accent bar -->
-              <!-- <span class="absolute inset-x-0 top-0 h-1.5 bg-brand-gradient"></span> -->
               <!-- Selected badge -->
               <span class="check-badge absolute top-4 right-4 w-7 h-7 rounded-full bg-primary flex items-center justify-center shadow-sm transition-all">
                 <span class="material-symbols-outlined text-[18px] text-white">check</span>
               </span>
 
               <!-- Header: icon left, title + description -->
-              <div class="flex items-start gap-3.5 mb-5 pr-8">
-                <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-blue-50">
-                  <span class="material-symbols-outlined text-[28px] text-primary">dns</span>
+              <div class="flex items-start gap-3.5 mb-5 pr-8 mt-1">
+                <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-brand-gradient text-white shadow-md shadow-primary/20">
+                  <span class="material-symbols-outlined text-[26px]">dns</span>
                 </div>
                 <div class="min-w-0">
                   <div class="flex items-center gap-2 flex-wrap">
                     <h4 class="text-headline-md font-bold text-on-surface">Default SMTP</h4>
-                    <span class="rounded-full bg-emerald-50 px-2 text-label-sm font-bold text-emerald-600">DEFAULT</span>
+                    <span class="rounded-full bg-emerald-50 border border-emerald-100 px-2 py-0.5 text-label-sm font-bold text-emerald-600">DEFAULT</span>
                   </div>
-                  <p class="text-body-md text-on-surface-variant leading-relaxed">Uses WePass-managed mail servers for standard delivery.</p>
+                  <p class="text-body-md text-on-surface-variant leading-relaxed mt-0.5">Uses WePass-managed mail servers for standard delivery.</p>
                 </div>
               </div>
 
               <div class="border-t border-outline-variant/70 pt-5 mb-5">
                 <ul class="space-y-3.5 text-body-md text-on-surface">
                   <li class="flex items-center gap-3">
-                    <span class="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-emerald-600">bolt</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-emerald-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-emerald-600">bolt</span></span>
                     No setup required
                   </li>
                   <li class="flex items-center gap-3">
-                    <span class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-primary">groups</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-primary">groups</span></span>
                     Suitable for low to medium volume
                   </li>
                   <li class="flex items-center gap-3">
-                    <span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">tune</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">tune</span></span>
                     Limited customization
                   </li>
                 </ul>
@@ -90,77 +88,83 @@
 
             <!-- Email Provider (DISABLED) -->
             <div data-mode-card="provider" aria-disabled="true"
-              class="mode-card relative flex flex-col rounded-2xl border-2 border-outline-variant bg-surface-container-low/50 p-6 opacity-70 select-none">
+              class="mode-card relative flex flex-col overflow-hidden rounded-3xl border-2 border-dashed border-outline-variant bg-surface-container-low/40 p-6 select-none">
               <input type="radio" name="delivery_mode" value="provider" class="sr-only" disabled>
+              <!-- Coming soon ribbon -->
+              <span class="absolute top-4 right-4 inline-flex items-center gap-1 rounded-full bg-surface-container-high border border-outline-variant/60 px-2.5 py-0.5 text-label-sm font-bold text-outline">
+                <span class="material-symbols-outlined text-[14px]">lock</span> Soon
+              </span>
 
               <!-- Header: icon left, title + description -->
               <div class="flex items-start gap-3.5 mb-5 pr-20">
-                <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-surface-container-high">
-                  <span class="material-symbols-outlined text-[28px] text-outline">hub</span>
+                <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-surface-container-high">
+                  <span class="material-symbols-outlined text-[26px] text-outline">hub</span>
                 </div>
                 <div class="min-w-0">
                   <h4 class="text-headline-md font-bold text-on-surface-variant">Email Provider</h4>
-                  <p class="text-body-md text-on-surface-variant leading-relaxed">Connect your existing email service using secure authentication – no SMTP credentials required.</p>
+                  <p class="text-body-md text-on-surface-variant leading-relaxed mt-0.5">Connect your existing email service using secure authentication – no SMTP credentials required.</p>
                 </div>
               </div>
 
               <div class="border-t border-outline-variant/70 pt-5 mb-5">
                 <ul class="space-y-3.5 text-body-md text-on-surface-variant">
                   <li class="flex items-center gap-3">
-                    <span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">trending_up</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">trending_up</span></span>
                     Uses your provider's sending reputation
                   </li>
                   <li class="flex items-center gap-3">
-                    <span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">lock</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">lock</span></span>
                     OAuth-based secure connection
                   </li>
                   <li class="flex items-center gap-3">
-                    <span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">key_off</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">key_off</span></span>
                     No host, port, or passwords
                   </li>
                 </ul>
               </div>
 
               <div class="mt-auto space-y-3">
-                <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-label-md font-semibold text-outline">
-                  <span class="flex items-center gap-1.5 grayscale">🐵 Mailchimp</span>
-                  <span class="flex items-center gap-1.5 grayscale">⚡ SendGrid</span>
-                  <span class="flex items-center gap-1.5 grayscale">☁️ amazon SES</span>
+                <div class="flex flex-wrap items-center justify-center gap-2 text-label-sm font-semibold text-outline">
+                  <span class="inline-flex items-center gap-1.5 bg-white border border-outline-variant/60 rounded-full px-3 py-1">🐵 Mailchimp</span>
+                  <span class="inline-flex items-center gap-1.5 bg-white border border-outline-variant/60 rounded-full px-3 py-1">⚡ SendGrid</span>
+                  <span class="inline-flex items-center gap-1.5 bg-white border border-outline-variant/60 rounded-full px-3 py-1">☁️ Amazon SES</span>
                 </div>
-                <div class="rounded-xl bg-emerald-50 py-3 text-center text-label-md font-bold text-emerald-600">Recommended for production use</div>
+                <div class="flex items-center justify-center gap-2 rounded-xl bg-emerald-50 border border-emerald-100 py-3 text-label-md font-bold text-emerald-600">
+                  <span class="material-symbols-outlined text-[18px]">recommend</span> Recommended for production use
+                </div>
               </div>
             </div>
 
             <!-- Custom SMTP -->
             <label data-mode-card="custom"
-              class="mode-card group relative flex flex-col rounded-2xl border-2 border-outline-variant bg-white p-6 cursor-pointer transition-all hover:border-primary/40 hover:shadow-lg">
+              class="mode-card group relative flex flex-col overflow-hidden rounded-3xl border-2 border-outline-variant bg-white p-6 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-tertiary/50">
               <input type="radio" name="delivery_mode" value="custom" class="sr-only peer">
               <span class="check-badge absolute top-4 right-4 w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center transition-all opacity-0">
                 <span class="material-symbols-outlined text-[18px] text-white">check</span>
               </span>
               <!-- Header: icon left, title + description -->
-              <div class="flex items-start gap-3.5 mb-5 pr-8">
-                <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-orange-50">
-                  <span class="material-symbols-outlined text-[28px] text-tertiary">tune</span>
+              <div class="flex items-start gap-3.5 mb-5 pr-8 mt-1">
+                <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-orange-50 text-tertiary group-hover:bg-tertiary group-hover:text-white transition-colors">
+                  <span class="material-symbols-outlined text-[26px]">tune</span>
                 </div>
                 <div class="min-w-0">
                   <h4 class="text-headline-md font-bold text-on-surface">Custom SMTP</h4>
-                  <p class="text-body-md text-on-surface-variant leading-relaxed">Configure a custom mail server manually.</p>
+                  <p class="text-body-md text-on-surface-variant leading-relaxed mt-0.5">Configure a custom mail server manually.</p>
                 </div>
               </div>
 
               <div class="border-t border-outline-variant/70 pt-5 mb-5">
                 <ul class="space-y-3.5 text-body-md text-on-surface">
                   <li class="flex items-center gap-3">
-                    <span class="w-6 h-6 rounded-full bg-orange-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-tertiary">settings_ethernet</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-orange-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-tertiary">settings_ethernet</span></span>
                     Full control over delivery
                   </li>
                   <li class="flex items-center gap-3">
-                    <span class="w-6 h-6 rounded-full bg-orange-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-tertiary">key</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-orange-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-tertiary">key</span></span>
                     Requires SMTP credentials
                   </li>
                   <li class="flex items-center gap-3">
-                    <span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">tune</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">tune</span></span>
                     Advanced configuration
                   </li>
                 </ul>

@@ -180,7 +180,7 @@
         </div>
 
         <!-- Step 1 Footer -->
-        <div class="flex items-center justify-between gap-4 px-6 md:px-8 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
+        <div id="step-1-footer" class="flex items-center justify-between gap-4 px-6 md:px-8 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
           <button type="button" disabled class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm cursor-not-allowed">
             <span class="material-symbols-outlined text-[18px]">arrow_back</span>
             Previous
@@ -196,7 +196,7 @@
         <div id="step-2" class="hidden">
           <div class="p-6 md:p-8 pt-0 md:pt-0 space-y-6">
             <!-- Info note -->
-            <div class="relative overflow-hidden flex items-start gap-4 bg-gradient-to-r from-blue-50 to-indigo-50/40 border border-primary/15 rounded-2xl p-5">
+            <div class="relative overflow-hidden flex items-start gap-4 bg-gradient-to-r from-blue-50 to-indigo-50/40 border border-primary/15 rounded-2xl p-5 mt-4">
               <span class="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-primary to-indigo-500"></span>
               <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 ml-1">
                 <span class="material-symbols-outlined text-[22px]">info</span>
@@ -288,6 +288,9 @@
         var body = document.getElementById('step-' + i);
         if (body) body.classList.toggle('hidden', i !== step);
       }
+      // Step 1 footer only on step 1
+      var step1Footer = document.getElementById('step-1-footer');
+      if (step1Footer) step1Footer.classList.toggle('hidden', step !== 1);
       // Update stepper indicators
       for (var s = 1; s <= TOTAL_STEPS; s++) {
         var ind = document.getElementById('ind-' + s);
