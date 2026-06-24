@@ -137,8 +137,8 @@
           </div>
         </div>
       </div>
-      <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden shadow-sm">
-        <div class="overflow-x-auto">
+      <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden shadow-sm [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
+        <div class="overflow-x-auto [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
           <table class="w-full text-left border-collapse">
             <thead class="bg-surface-container-low/50">
               <tr>
@@ -182,14 +182,14 @@
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">22/05/2026 17:03:55</td>
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
                 <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block text-left group/action">
+                  <div class="relative inline-block js-menu">
                     <button
-                      class="material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high"
-                      onclick="this.nextElementSibling.classList.toggle('invisible'); this.nextElementSibling.classList.toggle('opacity-0')">
+                      type="button"
+                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
                       more_vert
                     </button>
                     <div
-                      class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white invisible opacity-0">
+                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
                           href="#">
@@ -239,14 +239,14 @@
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">19/05/2026 23:25:14</td>
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
                 <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block text-left group/action">
+                  <div class="relative inline-block js-menu">
                     <button
-                      class="material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high"
-                      onclick="this.nextElementSibling.classList.toggle('invisible'); this.nextElementSibling.classList.toggle('opacity-0')">
+                      type="button"
+                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
                       more_vert
                     </button>
                     <div
-                      class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl opacity-0 invisible transition-all duration-200 z-50 overflow-hidden bg-white">
+                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
                           href="#">
@@ -297,14 +297,14 @@
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">19/05/2026 22:56:31</td>
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
                 <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block text-left group/action">
+                  <div class="relative inline-block js-menu">
                     <button
-                      class="material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high"
-                      onclick="this.nextElementSibling.classList.toggle('invisible'); this.nextElementSibling.classList.toggle('opacity-0')">
+                      type="button"
+                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
                       more_vert
                     </button>
                     <div
-                      class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl opacity-0 invisible transition-all duration-200 z-50 overflow-hidden bg-white">
+                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
                           href="#">
@@ -355,14 +355,14 @@
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">19/05/2026 21:59:10</td>
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
                 <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block text-left group/action">
+                  <div class="relative inline-block js-menu">
                     <button
-                      class="material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high"
-                      onclick="this.nextElementSibling.classList.toggle('invisible'); this.nextElementSibling.classList.toggle('opacity-0')">
+                      type="button"
+                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
                       more_vert
                     </button>
                     <div
-                      class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl opacity-0 invisible transition-all duration-200 z-50 overflow-hidden bg-white">
+                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
                           href="#">
@@ -413,14 +413,14 @@
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">18/05/2026 22:39:36</td>
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
                 <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block text-left group/action">
+                  <div class="relative inline-block js-menu">
                     <button
-                      class="material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high"
-                      onclick="this.nextElementSibling.classList.toggle('invisible'); this.nextElementSibling.classList.toggle('opacity-0')">
+                      type="button"
+                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
                       more_vert
                     </button>
                     <div
-                      class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl opacity-0 invisible transition-all duration-200 z-50 overflow-hidden bg-white">
+                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
                           href="#">
@@ -471,14 +471,14 @@
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">18/05/2026 22:15:18</td>
                 <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
                 <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block text-left group/action">
+                  <div class="relative inline-block js-menu">
                     <button
-                      class="material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high"
-                      onclick="this.nextElementSibling.classList.toggle('invisible'); this.nextElementSibling.classList.toggle('opacity-0')">
+                      type="button"
+                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
                       more_vert
                     </button>
                     <div
-                      class="absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl opacity-0 invisible transition-all duration-200 z-50 overflow-hidden bg-white">
+                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
                           href="#">

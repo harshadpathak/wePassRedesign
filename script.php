@@ -21,6 +21,33 @@ document.querySelectorAll('tbody tr').forEach(row => {
 });
 </script>
 <script>
+// Shared row action menus (apiKeys pattern) — used across all pages.
+(function () {
+    var menus = document.querySelectorAll('.js-menu');
+    if (!menus.length) return;
+    function closeAll(except) {
+        menus.forEach(function (m) {
+            if (m !== except) {
+                var p = m.querySelector('.js-menu-panel');
+                if (p) p.classList.add('hidden');
+            }
+        });
+    }
+    menus.forEach(function (menu) {
+        var toggle = menu.querySelector('.js-menu-toggle');
+        var panel = menu.querySelector('.js-menu-panel');
+        if (!toggle || !panel) return;
+        toggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var isHidden = panel.classList.contains('hidden');
+            closeAll(menu);
+            panel.classList.toggle('hidden', !isHidden);
+        });
+    });
+    document.addEventListener('click', function () { closeAll(null); });
+})();
+</script>
+<script>
 document.getElementById('sidebar-toggle').addEventListener('click', function () {
     const sidebar = document.querySelector('aside');
     sidebar.classList.toggle('sidebar-collapsed');

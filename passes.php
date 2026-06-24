@@ -164,7 +164,7 @@
         <!-- Pass Card Grid -->
         <div class="p-6 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
         <?php foreach ($passes as $pass): ?>
-        <div class="group relative bg-surface-container-low/30 rounded-2xl border border-outline-variant hover:border-primary/50 hover:bg-white transition-colors duration-200 flex flex-col overflow-hidden">
+        <div class="group relative bg-surface-container-low/30 rounded-2xl border border-outline-variant hover:border-primary/50 hover:bg-white transition-colors duration-200 flex flex-col overflow-hidden [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
           <!-- Header -->
           <div class="flex items-center gap-4 p-5">
             <div class="w-12 h-12 rounded-xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
@@ -247,27 +247,6 @@
   </main>
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
-  <script>
-    (function () {
-      var menus = document.querySelectorAll('.js-menu');
-      function closeAll(except) {
-        menus.forEach(function (m) {
-          if (m !== except) m.querySelector('.js-menu-panel').classList.add('hidden');
-        });
-      }
-      menus.forEach(function (menu) {
-        var toggle = menu.querySelector('.js-menu-toggle');
-        var panel = menu.querySelector('.js-menu-panel');
-        toggle.addEventListener('click', function (e) {
-          e.stopPropagation();
-          var isHidden = panel.classList.contains('hidden');
-          closeAll(menu);
-          panel.classList.toggle('hidden', !isHidden);
-        });
-      });
-      document.addEventListener('click', function () { closeAll(null); });
-    })();
-  </script>
 </body>
 
 </html>

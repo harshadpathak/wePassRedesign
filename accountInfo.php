@@ -238,27 +238,6 @@
   </main>
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
-  <script>
-    (function () {
-      var menus = document.querySelectorAll('.js-menu');
-      function closeAll(except) {
-        menus.forEach(function (m) {
-          if (m !== except) m.querySelector('.js-menu-panel').classList.add('hidden');
-        });
-      }
-      menus.forEach(function (menu) {
-        var toggle = menu.querySelector('.js-menu-toggle');
-        var panel = menu.querySelector('.js-menu-panel');
-        toggle.addEventListener('click', function (e) {
-          e.stopPropagation();
-          var isHidden = panel.classList.contains('hidden');
-          closeAll(menu);
-          panel.classList.toggle('hidden', !isHidden);
-        });
-      });
-      document.addEventListener('click', function () { closeAll(null); });
-    })();
-  </script>
 </body>
 
 </html>
