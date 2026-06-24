@@ -18,8 +18,11 @@ $subIdle   = 'text-on-surface-variant before:bg-outline-variant/60';
 $subActive = 'text-primary before:bg-primary';
 
 // Which submenu (if any) contains the active page
-$settingsActive = in_array($current, ['mailSettings.php','mailTemplate.php'], true);
+$settingsActive = in_array($current, ['walletAPISettings.php','webhookURLs.php','apiKeys.php','mailSettings.php','mailTemplate.php'], true);
 $distActive = in_array($current, ['manualDistribution.php','importDistribution.php','qrcodeShare.php','qrcodeShow.php'], true);
+$geoActive = in_array($current, ['stores.php','createStore.php','editStore.php','campaigns.php','createCampaign.php','editCampaign.php'], true);
+$storesActive = in_array($current, ['stores.php','createStore.php','editStore.php'], true);
+$campaignsActive = in_array($current, ['campaigns.php','createCampaign.php','editCampaign.php'], true);
 $companyActive = in_array($current, ['accountInfo.php','accountUsers.php'], true);
 ?>
 <aside
@@ -96,21 +99,21 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
     <!-- GEO Locations -->
     <div class="group/nav mb-[30px] mb-4">
         <button
-        class="<?= $navBtn ?> <?= $linkIdle ?>"
+        class="<?= $navBtn ?> <?= $geoActive ? $linkActive : $linkIdle ?>"
         onclick="toggleSubmenu(this)">
         <span class="material-symbols-outlined">location_on</span>
         <span>GEO Locations</span>
         <span
-            class="ml-auto material-symbols-outlined text-sm transition-transform duration-200 chevron">chevron_right</span>
+            class="ml-auto material-symbols-outlined text-sm transition-transform duration-200 chevron <?= $geoActive ? 'rotate-90' : '' ?>">chevron_right</span>
         </button>
-        <div class="<?= $subWrap ?> hidden">
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <div class="<?= $subWrap ?> <?= $geoActive ? '' : 'hidden' ?>">
+        <a class="<?= $subBase ?> <?= $storesActive ? $subActive : $subIdle ?>"
+            href="stores.php">
             <span class="material-symbols-outlined text-[18px]">store</span>
             <span>Stores</span>
         </a>
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <a class="<?= $subBase ?> <?= $campaignsActive ? $subActive : $subIdle ?>"
+            href="campaigns.php">
             <span class="material-symbols-outlined text-[18px]">campaign</span>
             <span>Campaigns</span>
         </a>
@@ -157,20 +160,20 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
         </button>
         <div class="<?= $subWrap ?> <?= $settingsActive ? '' : 'hidden' ?>">
         <p class="-ml-4 pl-3 pr-2 py-1.5 text-[10px] font-bold uppercase tracking-widest text-outline bg-surface">Platform</p>
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <a class="<?= $subBase ?> <?= $current === 'walletAPISettings.php' ? $subActive : $subIdle ?>"
+            href="walletAPISettings.php">
             <span class="material-symbols-outlined text-[18px]">credit_card</span>
             <span>Wallet API Settings</span>
         </a>
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <a class="<?= $subBase ?> <?= $current === 'apiKeys.php' ? $subActive : $subIdle ?>"
+            href="apiKeys.php">
             <span class="material-symbols-outlined text-[18px]">key</span>
             <span>API Keys</span>
             <span
             class="ml-auto text-[9px] font-bold uppercase tracking-wider bg-amber-50 text-amber-700 px-1.5 py-0.5 rounded border border-amber-100">Sensitive</span>
         </a>
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <a class="<?= $subBase ?> <?= $current === 'webhookURLs.php' ? $subActive : $subIdle ?>"
+            href="webhookURLs.php">
             <span class="material-symbols-outlined text-[18px]">link</span>
             <span>Webhook URLs</span>
         </a>
