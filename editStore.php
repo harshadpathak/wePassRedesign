@@ -36,19 +36,16 @@
         </a>
       </div>
 
-      <form class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
-        <!-- ============ BASIC INFORMATION ============ -->
-        <div class="p-6 space-y-6">
-          <!-- Section bar with toggles -->
-          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-surface-container-low/60 border border-outline-variant/50 rounded-xl px-4 py-3">
+      <form class="space-y-stack-lg">
+        <!-- ===== Store Form Card ===== -->
+        <div class="bg-white rounded-2xl border border-outline-variant p-6 shadow-sm">
+          <!-- Basic Information header -->
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">storefront</span>
+              <div class="w-8 h-8 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">storefront</span>
               </div>
-              <div class="min-w-0">
-                <h4 class="text-body-lg font-bold text-on-surface leading-tight">Basic Information</h4>
-                <p class="text-label-md text-secondary">Store name, wallet message and image</p>
-              </div>
+              <h3 class="text-headline-md font-bold text-on-surface">Basic Information</h3>
             </div>
             <div class="flex items-center gap-2.5">
               <!-- Active -->
@@ -138,20 +135,16 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- ============ LOCATION ============ -->
-        <div class="border-t border-outline-variant/60 p-6 space-y-5">
-          <!-- Section bar -->
-          <div class="flex items-center gap-3 bg-surface-container-low/60 border border-outline-variant/50 rounded-xl px-4 py-3">
-            <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+          <!-- Divider -->
+          <div class="border-t border-outline-variant/40 my-6"></div>
+          <!-- Location header -->
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-8 h-8 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-[20px]">location_on</span>
             </div>
-            <div class="min-w-0">
-              <h4 class="text-body-lg font-bold text-on-surface leading-tight">Location</h4>
-              <p class="text-label-md text-secondary">Search and select the store address. We&rsquo;ll fill the details automatically.</p>
-            </div>
+            <h3 class="text-headline-md font-bold text-on-surface">Location</h3>
           </div>
+          <div class="space-y-5">
 
           <!-- Search -->
           <div class="space-y-2">
@@ -183,7 +176,7 @@
           <!-- Map + Selected details -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
             <!-- Map placeholder -->
-            <div class="relative h-72 rounded-xl border border-outline-variant bg-surface-container-low/50 overflow-hidden flex items-center justify-center bg-[radial-gradient(circle_at_1px_1px,theme(colors.outline-variant)_1px,transparent_0)] [background-size:24px_24px]">
+            <div class="relative h-72 rounded-xl border border-outline-variant bg-surface-container-low/50 overflow-hidden flex items-center justify-center bg-[radial-gradient(circle_at_1px_1px,theme(colors.outline-variant)_1px,transparent_0)] [background-size:24px_24px] hover:border-primary/50 transition-colors">
               <span id="mapHint" class="hidden inline-flex items-center gap-2 bg-white border border-outline-variant/60 text-primary px-4 py-2.5 rounded-full text-label-md font-bold shadow-sm hover:shadow-md transition-shadow">
                 <span class="material-symbols-outlined text-[18px]">search</span>
                 Search an address to drop the pin
@@ -198,7 +191,7 @@
             </div>
 
             <!-- Details panel -->
-            <div class="h-72 rounded-xl border border-outline-variant bg-white p-5 overflow-hidden">
+            <div class="h-72 rounded-xl border border-outline-variant bg-white p-5 overflow-hidden hover:border-primary/50 transition-colors">
               <!-- EMPTY state -->
               <div id="locEmpty" class="hidden h-full flex-col justify-center">
                 <div class="flex items-center gap-2 text-on-surface mb-2">
@@ -231,7 +224,7 @@
                 <!-- Coordinate cards (2x2) -->
                 <div class="grid grid-cols-2 gap-2.5 mt-3 flex-1">
                   <!-- Latitude -->
-                  <div class="rounded-xl border border-outline-variant/60 bg-surface-container-low/30 p-3 flex flex-col justify-center min-w-0 hover:border-primary/40 hover:bg-white transition-colors">
+                  <div class="rounded-xl border border-outline-variant/60 bg-surface-container-low/30 p-3 flex flex-col justify-center min-w-0 hover:border-primary/50 hover:bg-white transition-colors">
                     <div class="flex items-center gap-2">
                       <span class="w-6 h-6 rounded-md bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                         <span class="material-symbols-outlined text-[15px]">my_location</span>
@@ -241,7 +234,7 @@
                     <p id="latVal" class="text-body-md font-semibold text-on-surface mt-1.5 truncate">22.25797520</p>
                   </div>
                   <!-- Longitude -->
-                  <div class="rounded-xl border border-outline-variant/60 bg-surface-container-low/30 p-3 flex flex-col justify-center min-w-0 hover:border-primary/40 hover:bg-white transition-colors">
+                  <div class="rounded-xl border border-outline-variant/60 bg-surface-container-low/30 p-3 flex flex-col justify-center min-w-0 hover:border-primary/50 hover:bg-white transition-colors">
                     <div class="flex items-center gap-2">
                       <span class="w-6 h-6 rounded-md bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
                         <span class="material-symbols-outlined text-[15px]">explore</span>
@@ -251,7 +244,7 @@
                     <p id="lngVal" class="text-body-md font-semibold text-on-surface mt-1.5 truncate">70.78807400</p>
                   </div>
                   <!-- Place ID -->
-                  <div class="rounded-xl border border-outline-variant/60 bg-surface-container-low/30 p-3 flex flex-col justify-center min-w-0 hover:border-primary/40 hover:bg-white transition-colors">
+                  <div class="rounded-xl border border-outline-variant/60 bg-surface-container-low/30 p-3 flex flex-col justify-center min-w-0 hover:border-primary/50 hover:bg-white transition-colors">
                     <div class="flex items-center gap-2">
                       <span class="w-6 h-6 rounded-md bg-violet-50 text-violet-600 flex items-center justify-center shrink-0">
                         <span class="material-symbols-outlined text-[15px]">tag</span>
@@ -261,7 +254,7 @@
                     <p id="placeVal" class="text-body-md font-semibold text-on-surface mt-1.5 truncate">&mdash;</p>
                   </div>
                   <!-- Source -->
-                  <div class="rounded-xl border border-outline-variant/60 bg-surface-container-low/30 p-3 flex flex-col justify-center min-w-0 hover:border-primary/40 hover:bg-white transition-colors">
+                  <div class="rounded-xl border border-outline-variant/60 bg-surface-container-low/30 p-3 flex flex-col justify-center min-w-0 hover:border-primary/50 hover:bg-white transition-colors">
                     <div class="flex items-center gap-2">
                       <span class="w-6 h-6 rounded-md bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                         <span class="material-symbols-outlined text-[15px]">public</span>
@@ -345,7 +338,7 @@
           </div>
 
           <!-- Location Summary -->
-          <div class="bg-surface-container-low/60 border border-outline-variant/50 rounded-xl p-5">
+          <div class="bg-surface-container-low/60 border border-outline-variant/50 rounded-xl p-5 hover:border-primary/50 transition-colors">
             <div class="flex items-center gap-2 mb-4">
               <span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
               <h4 class="text-body-lg font-bold text-on-surface">Location summary</h4>
@@ -393,15 +386,16 @@
               </div>
             </div>
           </div>
-        </div>
+          </div>
 
-        <!-- ============ FOOTER ============ -->
-        <div class="flex items-center justify-center gap-3 px-6 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
-          <button type="submit"
-            class="inline-flex items-center gap-2 bg-emerald-500 text-white px-6 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
-            <span class="material-symbols-outlined text-[20px]">save</span>
-            Submit
-          </button>
+          <!-- Footer -->
+          <div class="flex justify-center mt-8 pt-6 border-t border-outline-variant/30">
+            <button type="submit"
+              class="flex items-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+              <span class="material-symbols-outlined">save</span>
+              Update Store
+            </button>
+          </div>
         </div>
       </form>
     </section>
