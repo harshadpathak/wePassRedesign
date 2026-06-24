@@ -18,7 +18,7 @@ $subIdle   = 'text-on-surface-variant before:bg-outline-variant/60';
 $subActive = 'text-primary before:bg-primary';
 
 // Which submenu (if any) contains the active page
-$settingsActive = in_array($current, ['mailSettings.php','mailTemplate.php'], true);
+$settingsActive = in_array($current, ['walletAPISettings.php','webhookURLs.php','apiKeys.php','mailSettings.php','mailTemplate.php'], true);
 $distActive = in_array($current, ['manualDistribution.php','importDistribution.php','qrcodeShare.php','qrcodeShow.php'], true);
 $companyActive = in_array($current, ['accountInfo.php','accountUsers.php'], true);
 ?>
@@ -157,20 +157,20 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
         </button>
         <div class="<?= $subWrap ?> <?= $settingsActive ? '' : 'hidden' ?>">
         <p class="-ml-4 pl-3 pr-2 py-1.5 text-[10px] font-bold uppercase tracking-widest text-outline bg-surface">Platform</p>
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <a class="<?= $subBase ?> <?= $current === 'walletAPISettings.php' ? $subActive : $subIdle ?>"
+            href="walletAPISettings.php">
             <span class="material-symbols-outlined text-[18px]">credit_card</span>
             <span>Wallet API Settings</span>
         </a>
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <a class="<?= $subBase ?> <?= $current === 'apiKeys.php' ? $subActive : $subIdle ?>"
+            href="apiKeys.php">
             <span class="material-symbols-outlined text-[18px]">key</span>
             <span>API Keys</span>
             <span
             class="ml-auto text-[9px] font-bold uppercase tracking-wider bg-amber-50 text-amber-700 px-1.5 py-0.5 rounded border border-amber-100">Sensitive</span>
         </a>
-        <a class="<?= $subBase ?> <?= $subIdle ?>"
-            href="#">
+        <a class="<?= $subBase ?> <?= $current === 'webhookURLs.php' ? $subActive : $subIdle ?>"
+            href="webhookURLs.php">
             <span class="material-symbols-outlined text-[18px]">link</span>
             <span>Webhook URLs</span>
         </a>

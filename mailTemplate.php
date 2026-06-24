@@ -203,20 +203,16 @@
 
                       <!-- Live email preview -->
                       <div>
-                        <!-- <div class="flex items-center gap-2 mb-2.5">
+                        <div class="flex items-center gap-2 mb-2.5">
                           <span class="material-symbols-outlined text-[18px] text-outline">visibility</span>
                           <span class="text-label-md font-bold tracking-wide text-outline uppercase">Live Preview</span>
-                        </div> -->
+                        </div>
                         <div class="rounded-2xl border border-outline-variant overflow-hidden shadow-sm bg-white">
                           <!-- Email body -->
                           <div class="bg-surface-container-low/60 p-4 sm:p-6">
                             <div class="mx-auto max-w-md rounded-xl overflow-hidden">
                               <!-- Logo header band (editable) -->
                               <!-- <div> -->
-                                <div class="flex items-center gap-2 mb-2">
-                                  <span class="material-symbols-outlined text-[16px] text-outline">visibility</span>
-                                  <span class="text-label-sm font-bold tracking-wide text-outline uppercase">Email Header Preview</span>
-                                </div>
                                 <div class="rounded-2xl border border-outline-variant bg-primary/5 px-6 py-10 flex items-center justify-center">
                                   <img src="<?php echo $mailLogo; ?>" alt="Mail logo preview" class="max-h-16 w-auto object-contain">
                                 </div>
