@@ -23,7 +23,7 @@
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
             <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-blue-600 font-semibold">Account Users</span>
+            <span class="text-gray font-normal">Account Users</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
             <span class="text-gray-500 font-normal">User Create</span>
           </nav>

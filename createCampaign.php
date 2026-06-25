@@ -23,7 +23,7 @@
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
             <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <a href="campaigns.php" class="text-blue-600 font-semibold">Campaigns</a>
+            <span class="text-gray font-normal">Campaigns</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
             <span class="text-gray-500 font-normal">Create Campaign</span>
           </nav>

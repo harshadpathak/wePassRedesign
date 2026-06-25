@@ -56,13 +56,15 @@
       <div class="flex items-end justify-between gap-4">
         <div class="space-y-1">
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
-            <span class="material-symbols-outlined text-[14px] text-blue-600">home</span> <span class="text-blue-600 font-semibold">Dashboard</span>
+            <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-blue-600 font-semibold">Passes</span>
+            <span class="text-gray font-normal">Passes</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-blue-600 font-semibold">Push Message</span>
+            <span class="text-gray font-normal">Pass installs</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-on-surface font-semibold">Notification Details</span>
+            <span class="text-gray font-normal">Push Message</span>
+            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <span class="text-gray-500 font-normal">Notification Details</span>
           </nav>
           <h2 class="font-display tracking-tight text-headline-lg font-bold">Notification Details</h2>
         </div>
