@@ -22,7 +22,7 @@
         <div class="space-y-1">
           <nav class="flex items-center gap-2 text-label-sm text-outline">
             <span class="material-symbols-outlined text-[14px] text-primary">home</span>
-            <span class="text-on-surface font-semibold">Dashboard</span>
+            <span class="text-gray-500 font-normal">Dashboard</span>
           </nav>
           <h2 class="font-display tracking-tight text-headline-lg font-bold">Dashboard</h2>
         </div>

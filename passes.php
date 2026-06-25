@@ -21,9 +21,9 @@
       <div class="flex items-end justify-between">
         <div class="space-y-1">
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
-            <span class="material-symbols-outlined text-[14px] text-blue-600">home</span> <span class="text-blue-600 font-semibold">Dashboard</span>
+            <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-on-surface font-semibold">Passes</span>
+            <span class="text-gray-500 font-normal">Passes</span>
           </nav>
           <h2 class="font-display tracking-tight text-headline-lg font-bold">Passes</h2>
         </div>
@@ -206,7 +206,7 @@
               <span class="material-symbols-outlined ml-auto text-amber-500/70 text-[20px] group-hover/stat:translate-x-0.5 transition-transform">arrow_forward</span>
             </a>
             <!-- Installs -->
-            <button type="button"
+            <a href="passInstalls.php"
               class="group/stat w-full flex items-center gap-4 bg-emerald-50 border border-emerald-200 rounded-xl p-3 hover:bg-emerald-100 hover:border-emerald-300 transition-all">
               <span class="w-11 h-11 rounded-lg bg-emerald-500/15 text-emerald-600 flex items-center justify-center shrink-0">
                 <span class="material-symbols-outlined text-[22px]">install_mobile</span>
@@ -216,7 +216,7 @@
                 <p class="text-headline-md font-bold text-emerald-700"><?= (int) $pass['installs'] ?></p>
               </div>
               <span class="material-symbols-outlined ml-auto text-emerald-500/70 text-[20px] group-hover/stat:translate-x-0.5 transition-transform">arrow_forward</span>
-            </button>
+            </a>
           </div>
         </div>
         <?php endforeach; ?>

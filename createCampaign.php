@@ -21,11 +21,11 @@
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div class="space-y-1">
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
-            <span class="material-symbols-outlined text-[14px] text-blue-600">home</span> <span class="text-blue-600 font-semibold">Dashboard</span>
+            <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
             <a href="campaigns.php" class="text-blue-600 font-semibold">Campaigns</a>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-on-surface font-semibold">Create Campaign</span>
+            <span class="text-gray-500 font-normal">Create Campaign</span>
           </nav>
           <h2 class="font-display tracking-tight text-headline-lg font-bold">Create Campaign</h2>
         </div>
