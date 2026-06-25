@@ -45,24 +45,25 @@
           </div>
           <div class="flex-1">
             <h3 class="text-headline-md font-bold text-on-surface tracking-tight">QR Code &amp; Link Share</h3>
-            <p class="text-body-md text-secondary mt-2 leading-relaxed">Distribute your Generic Advertising Pass
+            <p class="text-body-md text-secondary leading-relaxed">Distribute your Generic Advertising Pass
               effortlessly. Each pass template listed below has a unique QR code and shareable link. Copy the link or
-              let recipients scan the QR code to add the pass directly to their wallet.</p>
-          </div>
-        </div>
-        <!-- Steps -->
-        <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <span class="text-body-md font-bold text-on-surface">Scan QR Code</span>
-          </div>
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <span class="text-body-md font-bold text-on-surface">Share Link</span>
-          </div>
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <span class="text-body-md font-bold text-on-surface">Add to Wallet</span>
+              let recipients scan the QR code to add the pass directly to their wallet.
+            </p>
+            <!-- Steps -->
+            <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3 mt-4">
+              <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="text-body-md font-bold text-on-surface">Scan QR Code</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="text-body-md font-bold text-on-surface">Share Link</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="text-body-md font-bold text-on-surface">Add to Wallet</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

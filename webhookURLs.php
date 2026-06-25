@@ -49,27 +49,26 @@
           </div>
           <div class="flex-1 min-w-0">
             <h3 class="text-headline-md font-bold text-on-surface tracking-tight">About Webhooks</h3>
-            <p class="text-body-md text-secondary mt-2 leading-relaxed">
+            <p class="text-body-md text-secondary leading-relaxed">
               Webhooks let WePass notify your application in real time whenever a pass event occurs. WePass sends a <span class="font-bold text-on-surface">POST</span> request to your configured endpoint URL so your systems always stay in sync. Make sure your endpoint returns <span class="font-bold text-on-surface">HTTP 200</span> within 15 seconds to acknowledge each delivery.
             </p>
-          </div>
-        </div>
-
-        <!-- Event types -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/70 px-4 py-3">
-            <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 px-2.5 py-1 text-label-sm font-bold text-emerald-700 shrink-0">
-              <span class="material-symbols-outlined text-[16px]">add_circle</span>
-              Install
-            </span>
-            <p class="text-body-md text-secondary leading-snug">Fired when a user adds your pass to their Apple or Google Wallet.</p>
-          </div>
-          <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/70 px-4 py-3">
-            <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-rose-50 border border-rose-200/70 px-2.5 py-1 text-label-sm font-bold text-rose-700 shrink-0">
-              <span class="material-symbols-outlined text-[16px]">do_not_disturb_on</span>
-              Uninstall
-            </span>
-            <p class="text-body-md text-secondary leading-snug">Fired when a user removes the pass from their wallet.</p>
+            <!-- Event types -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+              <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/70 px-3 py-2">
+                <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 px-2.5 py-1 text-label-sm font-bold text-emerald-700 shrink-0">
+                  <span class="material-symbols-outlined text-[16px]">add_circle</span>
+                  Install
+                </span>
+                <p class="text-body-md text-secondary leading-snug">Fired when a user adds your pass to their Apple or Google Wallet.</p>
+              </div>
+              <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/70 px-3 py-2">
+                <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-rose-50 border border-rose-200/70 px-2.5 py-1 text-label-sm font-bold text-rose-700 shrink-0">
+                  <span class="material-symbols-outlined text-[16px]">do_not_disturb_on</span>
+                  Uninstall
+                </span>
+                <p class="text-body-md text-secondary leading-snug">Fired when a user removes the pass from their wallet.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Default SMTP -->
             <label data-mode-card="default"
-              class="mode-card group relative flex flex-col overflow-hidden rounded-3xl border-2 border-primary bg-white p-6 cursor-pointer transition-all duration-200 hover:-translate-y-1">
+              class="mode-card group relative flex flex-col overflow-hidden rounded-3xl border-2 border-primary bg-white p-6 cursor-pointer">
               <input type="radio" name="delivery_mode" value="default" class="sr-only peer" checked>
               <!-- Selected badge -->
               <span class="check-badge absolute top-4 right-4 w-7 h-7 rounded-full bg-primary flex items-center justify-center shadow-sm transition-all">
@@ -67,7 +67,7 @@
               <div class="border-t border-outline-variant/70 pt-5 mb-5">
                 <ul class="space-y-3.5 text-body-md text-on-surface">
                   <li class="flex items-center gap-3">
-                    <span class="w-7 h-7 rounded-lg bg-emerald-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-emerald-600">bolt</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-primary">bolt</span></span>
                     No setup required
                   </li>
                   <li class="flex items-center gap-3">
@@ -75,7 +75,7 @@
                     Suitable for low to medium volume
                   </li>
                   <li class="flex items-center gap-3">
-                    <span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">tune</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-primary">tune</span></span>
                     Limited customization
                   </li>
                 </ul>
@@ -136,20 +136,20 @@
             </div>
 
             <!-- Custom SMTP -->
-            <label data-mode-card="custom"
-              class="mode-card group relative flex flex-col overflow-hidden rounded-3xl border-2 border-outline-variant bg-white p-6 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:border-tertiary/50">
+            <label data-mode-card="custom" data-accent="tertiary"
+              class="mode-card group relative flex flex-col overflow-hidden rounded-3xl border-2 border-outline-variant bg-white p-6 cursor-pointer">
               <input type="radio" name="delivery_mode" value="custom" class="sr-only peer">
               <span class="check-badge absolute top-4 right-4 w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center transition-all opacity-0">
                 <span class="material-symbols-outlined text-[18px] text-white">check</span>
               </span>
               <!-- Header: icon left, title + description -->
               <div class="flex items-start gap-3.5 mb-5 mt-1">
-                <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-orange-50 text-tertiary group-hover:bg-tertiary group-hover:text-white transition-colors">
+                <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-tertiary text-white">
                   <span class="material-symbols-outlined text-[26px]">tune</span>
                 </div>
                 <div class="min-w-0">
                   <h4 class="text-headline-md font-bold text-on-surface">Custom SMTP</h4>
-                  <p class="text-body-md text-on-surface-variant leading-relaxed mt-0.5">Configure a custom mail server manually.</p>
+                  <p class="text-body-md text-on-surface-variant leading-relaxed mt-0.5">Configure Custom SMTP by adding your mail server details.</p>
                 </div>
               </div>
 
@@ -164,7 +164,7 @@
                     Requires SMTP credentials
                   </li>
                   <li class="flex items-center gap-3">
-                    <span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">tune</span></span>
+                    <span class="w-7 h-7 rounded-lg bg-orange-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-tertiary">tune</span></span>
                     Advanced configuration
                   </li>
                 </ul>
@@ -338,16 +338,19 @@
           if (card.getAttribute('aria-disabled') === 'true') return; // skip disabled provider card
           var badge = card.querySelector('.check-badge');
           var heading = card.querySelector('h4');
+          var accent = card.getAttribute('data-accent') === 'tertiary' ? 'tertiary' : 'primary';
+          var borderCls = 'border-' + accent;
+          var badgeCls = 'bg-' + accent;
           if (checked) {
-            card.classList.add('border-primary');
+            card.classList.add(borderCls);
             card.classList.remove('border-outline-variant');
             if (heading) heading.classList.remove('text-on-surface-variant');
             if (heading) heading.classList.add('text-on-surface');
-            if (badge) { badge.classList.remove('opacity-0', 'bg-surface-container-high'); badge.classList.add('bg-primary'); }
+            if (badge) { badge.classList.remove('opacity-0', 'bg-surface-container-high'); badge.classList.add(badgeCls); }
           } else {
-            card.classList.remove('border-primary');
+            card.classList.remove(borderCls);
             card.classList.add('border-outline-variant');
-            if (badge) { badge.classList.add('opacity-0', 'bg-surface-container-high'); badge.classList.remove('bg-primary'); }
+            if (badge) { badge.classList.add('opacity-0', 'bg-surface-container-high'); badge.classList.remove(badgeCls); }
           }
         }
 

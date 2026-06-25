@@ -57,7 +57,7 @@
         </div>
         <div class="flex-1">
           <h3 class="text-headline-md font-bold text-on-surface tracking-tight">How Billing Works</h3>
-          <p class="text-body-md text-secondary mt-2 leading-relaxed">Your plan limits are managed by your
+          <p class="text-body-md text-secondary leading-relaxed">Your plan limits are managed by your
             <a href="#" class="text-primary font-semibold">administrator</a>. If you need additional resources or want
             to upgrade your plan, please contact your <a href="#" class="text-primary font-semibold">account
             administrator</a>.</p>

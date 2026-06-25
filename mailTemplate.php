@@ -143,7 +143,7 @@
                   <p class="text-label-sm font-bold tracking-wide text-outline uppercase">Pass Templates</p>
                   <span class="inline-flex items-center justify-center min-w-5 h-5 px-1.5 rounded-full bg-primary/10 text-primary text-label-sm font-bold"><?php echo count($templateTabs); ?></span>
                 </div>
-                <div class="mail-tabs-scroll lg:max-h-80 overflow-y-auto space-y-1 pr-1.5">
+                <div class="space-y-1 pr-1.5">
                   <?php foreach ($templateTabs as $tab) { $renderTab($tab); } ?>
                 </div>
               </div>
@@ -156,7 +156,7 @@
                   <!-- Panel header -->
                   <div class="flex items-center gap-2.5 pb-4 mb-4 border-b border-outline-variant/70">
                     <span class="material-symbols-outlined text-[22px] text-primary"><?php echo $tab['icon']; ?></span>
-                    <h4 class="text-headline-md font-bold text-on-surface"><?php echo $tab['type'] === 'template' ? $tab['label'] . ' - Email Template' : $tab['label']; ?></h4>
+                    <h4 class="text-headline-md font-bold text-on-surface"><?php echo $tab['type'] === 'template' ? $tab['label'] : $tab['label']; ?></h4>
                   </div>
 
                   <?php if ($tab['type'] === 'logo'): ?>
@@ -304,9 +304,16 @@
                   <?php endif; ?>
 
                   <!-- Panel actions -->
-                  <div class="flex justify-center mt-8 pt-6 border-t border-outline-variant/70">
+                  <div class="flex flex-wrap items-center <?php echo $tab['type'] === 'template' ? 'justify-between' : 'justify-center'; ?> gap-3 mt-8 pt-6 border-t border-outline-variant/70">
+                    <?php if ($tab['type'] === 'template'): ?>
+                    <button type="button"
+                      class="flex items-center gap-2 bg-white border border-outline-variant/70 text-on-surface px-8 py-3 rounded-lg text-[14px] font-bold shadow-sm hover:bg-surface-container-low active:scale-[0.98] transition-all">
+                      <span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+                      Test Mail
+                    </button>
+                    <?php endif; ?>
                     <button type="submit"
-                      class="flex items-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                      class="<?php echo $tab['type'] === 'template' ? 'ml-auto' : ''; ?> flex items-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
                       <span class="material-symbols-outlined text-[18px]">save</span>
                       Submit
                     </button>

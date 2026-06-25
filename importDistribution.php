@@ -37,28 +37,29 @@
           </div>
           <div class="flex-1">
             <h3 class="text-headline-md font-bold text-on-surface tracking-tight">How Import Distribution Works</h3>
-            <p class="text-body-md text-secondary mt-2 leading-relaxed">Bulk distribute digital wallet passes by
+            <p class="text-body-md text-secondary leading-relaxed">Bulk distribute digital wallet passes by
               importing recipient data from CSV or Excel files. Upload your file with recipient information, map the
-              columns to pass fields, and distribute passes to multiple recipients at once.</p>
-          </div>
-        </div>
-        <!-- Steps -->
-        <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <span class="text-body-md font-bold text-on-surface">Upload File</span>
-          </div>
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <span class="text-body-md font-bold text-on-surface">Map Columns</span>
-          </div>
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <span class="text-body-md font-bold text-on-surface">Preview Data</span>
-          </div>
-          <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            <span class="text-body-md font-bold text-on-surface">Distribute</span>
+              columns to pass fields, and distribute passes to multiple recipients at once.
+            </p>
+            <!-- Steps -->
+            <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3 mt-4">
+              <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="text-body-md font-bold text-on-surface">Upload File</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="text-body-md font-bold text-on-surface">Map Columns</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="text-body-md font-bold text-on-surface">Preview Data</span>
+              </div>
+              <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="text-body-md font-bold text-on-surface">Distribute</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

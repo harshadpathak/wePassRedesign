@@ -52,32 +52,31 @@
         </div>
           <div class="flex-1 min-w-0">
             <h3 class="text-headline-md font-bold text-on-surface tracking-tight">About the WePass API</h3>
-            <p class="text-body-md text-secondary mt-2 leading-relaxed">
+            <p class="text-body-md text-secondary leading-relaxed">
               Our REST API lets you automate your entire pass workflow using your API key. You can <span class="font-bold text-on-surface">generate templates</span> to define the design and structure of your passes, <span class="font-bold text-on-surface">create passes</span> from those templates to issue them to your customers, and <span class="font-bold text-on-surface">update passes</span> at any time to change their content or keep information current. You can also configure a <span class="font-bold text-on-surface">webhook</span> to receive real-time notifications about pass events, so your application always stays in sync. Just include your API key with each request to securely authenticate and start integrating these features into your own application.
             </p>
-          </div>
-        </div>
-
-        <!-- Base URL row + Documentation link, side by side -->
-        <div class="flex flex-col  lg:flex-row lg:items-stretch gap-3">
-          <div class="flex flex-col sm:flex-row sm:items-center gap-3 bg-surface-container-low rounded-xl border border-outline-variant/70 px-3 py-2 flex-1 min-w-0">
-            <div class="flex items-center gap-3 flex-1 min-w-0">
-              <span class="text-label-sm font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1.5 rounded-lg shrink-0">Base URL</span>
-              <code id="base-url" class="text-body-md font-mono text-on-surface truncate">https://api.wepass.io/api/v1/</code>
+            <!-- Base URL row + Documentation link, side by side -->
+            <div class="flex flex-col lg:flex-row lg:items-stretch gap-3 mt-4">
+              <div class="flex flex-col sm:flex-row sm:items-center gap-3 bg-surface-container-low rounded-xl border border-outline-variant/70 px-3 py-2 flex-1 min-w-0">
+                <div class="flex items-center gap-3 flex-1 min-w-0">
+                  <span class="text-label-sm font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1.5 rounded-lg shrink-0">Base URL</span>
+                  <code id="base-url" class="text-body-md font-mono text-on-surface truncate">https://api.wepass.io/api/v1/</code>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <button type="button" onclick="copyBaseUrl(this)"
+                    class="inline-flex items-center gap-2 rounded-lg bg-white border border-outline-variant px-2.5 py-1 text-label-md font-bold text-secondary hover:bg-surface-container-high hover:text-on-surface active:scale-[0.98] transition-all">
+                    <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                    <span class="copy-label">Copy URL</span>
+                  </button>
+                </div>
+              </div>
+              <a href="#"
+                class="inline-flex items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/5 px-3.5 py-2 text-label-md font-bold text-primary hover:bg-primary/10 active:scale-[0.98] transition-all shrink-0">
+                <span class="material-symbols-outlined text-[18px]">menu_book</span>
+                Read Documentation
+              </a>
             </div>
-            <div class="flex items-center gap-2 shrink-0">
-              <button type="button" onclick="copyBaseUrl(this)"
-                class="inline-flex items-center gap-2 rounded-lg bg-white border border-outline-variant px-2.5 py-1 text-label-md font-bold text-secondary hover:bg-surface-container-high hover:text-on-surface active:scale-[0.98] transition-all">
-                <span class="material-symbols-outlined text-[18px]">content_copy</span>
-                <span class="copy-label">Copy URL</span>
-              </button>
-            </div>
           </div>
-          <a href="#"
-            class="inline-flex items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/5 px-3.5 py-2 text-label-md font-bold text-primary hover:bg-primary/10 active:scale-[0.98] transition-all shrink-0">
-            <span class="material-symbols-outlined text-[18px]">menu_book</span>
-            Read Documentation
-          </a>
         </div>
       </div>
 
