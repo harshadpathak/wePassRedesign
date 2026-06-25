@@ -243,7 +243,7 @@
             <div class="flex justify-end px-6 lg:px-8 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
               <button type="submit"
                 class="inline-flex items-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
-                <span class="material-symbols-outlined text-[18px]">task_alt</span>
+                <span class="material-symbols-outlined text-[19px]">save</span>
                 Update Password
               </button>
             </div>

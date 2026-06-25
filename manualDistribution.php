@@ -134,7 +134,7 @@
                     </div>
                     <!-- Gift Card Number -->
                     <div class="space-y-2">
-                        <label class="text-on-surface font-semibold text-label-md">Gift Card Number: <span
+                        <label class="text-on-surface font-semibold text-label-md">Gift Card Number:<span
                                 class="text-error">*</span></label>
                         <input
                             class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
@@ -142,7 +142,7 @@
                     </div>
                     <!-- Pass Expiration Date -->
                     <div class="space-y-2">
-                        <label class="text-on-surface font-semibold text-label-md">Pass Expiration Date: <span
+                        <label class="text-on-surface font-semibold text-label-md">Pass Expiration Date:<span
                                 class="text-error">*</span></label>
                         <input
                             class="js-datetime w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
@@ -150,7 +150,7 @@
                     </div>
                     <!-- Barcode Value -->
                     <div class="space-y-2">
-                        <label class="text-on-surface font-semibold text-label-md">Barcode Value: <span
+                        <label class="text-on-surface font-semibold text-label-md">Barcode Value:<span
                                 class="text-error">*</span></label>
                         <textarea rows="2"
                             class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y">1246897531</textarea>
@@ -226,7 +226,7 @@
                 <div class="recipient-row flex flex-col md:flex-row md:items-end gap-6">
                     <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="space-y-2">
-                            <label class="text-on-surface font-semibold text-label-md">First Name: <span
+                            <label class="text-on-surface font-semibold text-label-md">First Name:<span
                                     class="text-error">*</span></label>
                             <input
                                 class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
@@ -239,7 +239,7 @@
                                 placeholder="Enter last name" type="text">
                         </div>
                         <div class="space-y-2">
-                            <label class="text-on-surface font-semibold text-label-md">Email: <span
+                            <label class="text-on-surface font-semibold text-label-md">Email:<span
                                     class="text-error">*</span></label>
                             <input
                                 class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"

@@ -206,7 +206,7 @@
               <span class="material-symbols-outlined ml-auto text-amber-500/70 text-[20px] group-hover/stat:translate-x-0.5 transition-transform">arrow_forward</span>
             </a>
             <!-- Installs -->
-            <button type="button"
+            <a href="passInstalls.php"
               class="group/stat w-full flex items-center gap-4 bg-emerald-50 border border-emerald-200 rounded-xl p-3 hover:bg-emerald-100 hover:border-emerald-300 transition-all">
               <span class="w-11 h-11 rounded-lg bg-emerald-500/15 text-emerald-600 flex items-center justify-center shrink-0">
                 <span class="material-symbols-outlined text-[22px]">install_mobile</span>
@@ -216,7 +216,7 @@
                 <p class="text-headline-md font-bold text-emerald-700"><?= (int) $pass['installs'] ?></p>
               </div>
               <span class="material-symbols-outlined ml-auto text-emerald-500/70 text-[20px] group-hover/stat:translate-x-0.5 transition-transform">arrow_forward</span>
-            </button>
+            </a>
           </div>
         </div>
         <?php endforeach; ?>
@@ -225,21 +225,18 @@
         <!-- Pagination -->
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
         <p class="text-label-md text-secondary">Showing <span class="font-semibold text-on-surface">1</span> to
-          <span class="font-semibold text-on-surface">6</span> of
-          <span class="font-semibold text-on-surface">793</span> entries</p>
-        <div class="flex items-center gap-1.5">
-          <button class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low disabled:opacity-40 disabled:cursor-not-allowed transition-all" disabled>
+          <span class="font-semibold text-on-surface">10</span> of
+          <span class="font-semibold text-on-surface">11</span> results</p>
+        <nav class="flex items-center gap-1.5">
+          <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low disabled:opacity-40 disabled:cursor-not-allowed transition-all" disabled>
             <span class="material-symbols-outlined text-[18px]">chevron_left</span>
           </button>
-          <button class="w-9 h-9 rounded-lg bg-primary text-white font-bold text-label-md flex items-center justify-center shadow-sm">1</button>
-          <button class="w-9 h-9 rounded-lg border border-outline-variant text-on-surface font-semibold text-label-md flex items-center justify-center hover:bg-surface-container-low transition-all">2</button>
-          <button class="w-9 h-9 rounded-lg border border-outline-variant text-on-surface font-semibold text-label-md flex items-center justify-center hover:bg-surface-container-low transition-all">3</button>
-          <span class="px-1 text-outline">...</span>
-          <button class="w-9 h-9 rounded-lg border border-outline-variant text-on-surface font-semibold text-label-md flex items-center justify-center hover:bg-surface-container-low transition-all">159</button>
-          <button class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low transition-all">
+          <button type="button" class="w-9 h-9 rounded-lg bg-primary text-white font-bold text-label-md flex items-center justify-center shadow-sm">1</button>
+          <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-on-surface font-semibold text-label-md flex items-center justify-center hover:bg-surface-container-low transition-all">2</button>
+          <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low transition-all">
             <span class="material-symbols-outlined text-[18px]">chevron_right</span>
           </button>
-        </div>
+        </nav>
         </div>
       </div>
     </section>

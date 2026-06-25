@@ -47,64 +47,40 @@
       <!-- Summary Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <!-- Total Stores -->
-        <div class="bg-white rounded-xl border border-outline-variant hover:border-primary/50 shadow-sm p-4 flex items-center gap-4 transition-colors">
+        <div class="bg-surface-container-lowest p-4 rounded-xl border border-primary/40 shadow-sm flex items-center gap-4 cursor-pointer relative overflow-hidden group">
           <div class="bg-primary/10 text-primary p-2.5 rounded-lg flex items-center justify-center shrink-0">
             <span class="material-symbols-outlined">storefront</span>
           </div>
           <div class="min-w-0">
-            <p class="text-label-sm text-outline font-medium truncate">Total Stores</p>
-            <p class="text-headline-md font-bold">3</p>
+            <p class="text-label-sm text-outline font-medium">Total Stores</p>
+            <p class="text-headline-md text-primary font-bold">3</p>
           </div>
         </div>
 
         <!-- Status (Active / Inactive) -->
-        <div class="bg-white rounded-xl border border-outline-variant hover:border-primary/50 shadow-sm p-4 flex items-center transition-colors">
+        <div class="bg-white rounded-xl border border-outline-variant shadow-sm p-4 flex items-center transition-colors">
           <!-- Active -->
           <div class="flex-1 flex items-center gap-2.5 min-w-0">
             <div class="bg-emerald-50 text-emerald-600 p-2.5 rounded-lg flex items-center justify-center shrink-0">
               <span class="material-symbols-outlined [font-variation-settings:'FILL'_1]">toggle_on</span>
             </div>
             <div class="min-w-0">
-              <p class="text-label-sm text-outline font-medium truncate">Active</p>
+              <p class="text-label-sm text-outline font-medium">Active</p>
               <p class="text-headline-md font-bold">2</p>
             </div>
           </div>
-          <!-- Divider -->
-          <div class="self-stretch w-px bg-outline-variant/30 mx-3"></div>
+        </div>
+
+        <!-- Default (Yes / No) -->
+        <div class="bg-white rounded-xl border border-outline-variant shadow-sm p-4 flex items-center transition-colors">
           <!-- Inactive -->
           <div class="flex-1 flex items-center gap-2.5 min-w-0">
             <div class="bg-rose-50 text-rose-600 p-2.5 rounded-lg flex items-center justify-center shrink-0">
               <span class="material-symbols-outlined [font-variation-settings:'FILL'_1]">toggle_off</span>
             </div>
             <div class="min-w-0">
-              <p class="text-label-sm text-outline font-medium truncate">Inactive</p>
+              <p class="text-label-sm text-outline font-medium">Inactive</p>
               <p class="text-headline-md font-bold">1</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Default (Yes / No) -->
-        <div class="bg-white rounded-xl border border-outline-variant hover:border-primary/50 shadow-sm p-4 flex items-center transition-colors">
-          <!-- Yes -->
-          <div class="flex-1 flex items-center gap-2.5 min-w-0">
-            <div class="bg-emerald-50 text-emerald-600 p-2.5 rounded-lg flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined">check_circle</span>
-            </div>
-            <div class="min-w-0">
-              <p class="text-label-sm text-outline font-medium truncate">Yes</p>
-              <p class="text-headline-md font-bold">1</p>
-            </div>
-          </div>
-          <!-- Divider -->
-          <div class="self-stretch w-px bg-outline-variant/30 mx-3"></div>
-          <!-- No -->
-          <div class="flex-1 flex items-center gap-2.5 min-w-0">
-            <div class="bg-rose-50 text-rose-600 p-2.5 rounded-lg flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined">cancel</span>
-            </div>
-            <div class="min-w-0">
-              <p class="text-label-sm text-outline font-medium truncate">No</p>
-              <p class="text-headline-md font-bold">2</p>
             </div>
           </div>
         </div>
@@ -344,18 +320,21 @@
             </tbody>
           </table>
 
-        <!-- Footer / Pagination -->
+        <!-- Pagination -->
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
-          <p class="text-label-sm text-outline">Showing 1 to 3 of 3 Stores</p>
-          <div class="flex items-center gap-1.5">
-            <button class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low disabled:opacity-40 disabled:cursor-not-allowed transition-all" disabled>
+          <p class="text-label-md text-secondary">Showing <span class="font-semibold text-on-surface">1</span> to
+            <span class="font-semibold text-on-surface">10</span> of
+            <span class="font-semibold text-on-surface">11</span> results</p>
+          <nav class="flex items-center gap-1.5">
+            <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low disabled:opacity-40 disabled:cursor-not-allowed transition-all" disabled>
               <span class="material-symbols-outlined text-[18px]">chevron_left</span>
             </button>
-            <button class="w-9 h-9 rounded-lg bg-primary text-white font-bold text-label-md flex items-center justify-center shadow-sm">1</button>
-            <button class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low disabled:opacity-40 disabled:cursor-not-allowed transition-all" disabled>
+            <button type="button" class="w-9 h-9 rounded-lg bg-primary text-white font-bold text-label-md flex items-center justify-center shadow-sm">1</button>
+            <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-on-surface font-semibold text-label-md flex items-center justify-center hover:bg-surface-container-low transition-all">2</button>
+            <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low transition-all">
               <span class="material-symbols-outlined text-[18px]">chevron_right</span>
             </button>
-          </div>
+          </nav>
         </div>
       </div>
     </section>

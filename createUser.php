@@ -23,7 +23,7 @@
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
             <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-blue-600 font-semibold">Account Users</span>
+            <span class="text-gray font-normal">Account Users</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
             <span class="text-gray-500 font-normal">User Create</span>
           </nav>
@@ -81,7 +81,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <!-- Name -->
                     <div class="space-y-2">
-                        <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">
+                        <label class="flex items-center text-on-surface font-semibold text-label-md">
                             Name: <span class="text-red-500">*</span>
                         </label>
                         <div class="relative">
@@ -91,7 +91,7 @@
                     </div>
                     <!-- Email -->
                     <div class="space-y-2">
-                        <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">
+                        <label class="flex items-center text-on-surface font-semibold text-label-md">
                             Email: <span class="text-red-500">*</span>
                         </label>
                         <div class="relative">
@@ -101,7 +101,7 @@
                     </div>
                     <!-- Role -->
                     <div class="space-y-2">
-                        <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">
+                        <label class="flex items-center text-on-surface font-semibold text-label-md">
                             Role: <span class="text-red-500">*</span>
                         </label>
                         <select class="w-full js-select2" data-placeholder="Select Role" data-allow-clear="false">

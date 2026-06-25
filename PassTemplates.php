@@ -45,7 +45,6 @@
       <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
         <div
           class="bg-surface-container-lowest p-4 rounded-xl border border-primary/40 shadow-sm flex items-center gap-4 cursor-pointer relative overflow-hidden group">
-          <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
           <div class="bg-brand-gradient text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
             <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">apps</span>
           </div>
@@ -55,7 +54,7 @@
           </div>
         </div>
         <div
-          class="bg-white p-4 rounded-xl border border-outline-variant hover:border-primary/50 transition-colors flex items-center gap-4 cursor-pointer">
+          class="bg-white p-4 rounded-xl border border-outline-variant  transition-colors flex items-center gap-4 cursor-pointer">
           <div class="bg-secondary-container text-secondary p-2.5 rounded-lg flex items-center justify-center">
             <span class="material-symbols-outlined">person</span>
           </div>
@@ -65,7 +64,7 @@
           </div>
         </div>
         <div
-          class="bg-white p-4 rounded-xl border border-outline-variant hover:border-primary/50 transition-colors flex items-center gap-4 cursor-pointer">
+          class="bg-white p-4 rounded-xl border border-outline-variant transition-colors flex items-center gap-4 cursor-pointer">
           <div class="bg-tertiary-container/40 text-tertiary p-2.5 rounded-lg flex items-center justify-center">
             <span class="material-symbols-outlined">campaign</span>
           </div>
@@ -159,7 +158,8 @@
                   Action</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-outline-variant/30"><!-- Row 1 -->
+            <tbody class="divide-y divide-outline-variant/30">
+              <!-- Row 1 -->
               <tr class="hover:bg-surface-container-low transition-colors group">
                 <td class="px-6 py-4">
                   <div class="flex items-center gap-4">
@@ -202,7 +202,7 @@
                           <span class="font-medium">Edit</span>
                         </a>
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
+                          href="geoLocation.php">
                           <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
                           <span class="font-medium">GEO location</span>
                         </a>
@@ -259,7 +259,7 @@
                           <span class="font-medium">Edit</span>
                         </a>
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
+                          href="geoLocation.php">
                           <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
                           <span class="font-medium">GEO location</span>
                         </a>
@@ -317,7 +317,7 @@
                           <span class="font-medium">Edit</span>
                         </a>
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
+                          href="geoLocation.php">
                           <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
                           <span class="font-medium">GEO location</span>
                         </a>
@@ -375,7 +375,7 @@
                           <span class="font-medium">Edit</span>
                         </a>
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
+                          href="geoLocation.php">
                           <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
                           <span class="font-medium">GEO location</span>
                         </a>
@@ -433,7 +433,7 @@
                           <span class="font-medium">Edit</span>
                         </a>
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
+                          href="geoLocation.php">
                           <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
                           <span class="font-medium">GEO location</span>
                         </a>
@@ -491,7 +491,7 @@
                           <span class="font-medium">Edit</span>
                         </a>
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
+                          href="geoLocation.php">
                           <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
                           <span class="font-medium">GEO location</span>
                         </a>
@@ -510,33 +510,20 @@
           </table>
         </div>
         <!-- Pagination -->
-        <div
-          class="px-6 py-4 flex items-center justify-between border-t border-outline-variant bg-surface-container-lowest">
-          <p class="text-label-sm text-outline">Showing 1 to 5 of 793 entries</p>
-          <div class="flex items-center gap-2">
-            <button class="p-2 rounded-lg hover:bg-surface-container text-outline disabled:opacity-30" disabled="">
-              <span class="material-symbols-outlined">first_page</span>
-            </button>
-            <button class="p-2 rounded-lg hover:bg-surface-container text-outline disabled:opacity-30" disabled="">
-              <span class="material-symbols-outlined">chevron_left</span>
-            </button>
-            <div class="flex items-center gap-1">
-              <button class="w-8 h-8 rounded-lg bg-brand-gradient text-on-primary text-[14px] shadow-sm">1</button>
-              <button
-                class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface-variant text-[14px] font-bold transition-colors">2</button>
-              <button
-                class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface-variant text-[14px] font-bold transition-colors">3</button>
-              <span class="mx-1 text-outline">...</span>
-              <button
-                class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface-variant text-[14px] font-bold transition-colors">159</button>
-            </div>
-            <button class="p-2 rounded-lg hover:bg-surface-container text-on-surface-variant">
-              <span class="material-symbols-outlined">chevron_right</span>
-            </button>
-            <button class="p-2 rounded-lg hover:bg-surface-container text-on-surface-variant">
-              <span class="material-symbols-outlined">last_page</span>
-            </button>
-          </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+        <p class="text-label-md text-secondary">Showing <span class="font-semibold text-on-surface">1</span> to
+          <span class="font-semibold text-on-surface">10</span> of
+          <span class="font-semibold text-on-surface">11</span> results</p>
+        <nav class="flex items-center gap-1.5">
+          <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low disabled:opacity-40 disabled:cursor-not-allowed transition-all" disabled>
+            <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+          </button>
+          <button type="button" class="w-9 h-9 rounded-lg bg-primary text-white font-bold text-label-md flex items-center justify-center shadow-sm">1</button>
+          <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-on-surface font-semibold text-label-md flex items-center justify-center hover:bg-surface-container-low transition-all">2</button>
+          <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low transition-all">
+            <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+          </button>
+        </nav>
         </div>
       </div>
     </section>

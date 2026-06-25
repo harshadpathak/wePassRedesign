@@ -96,7 +96,7 @@
             <div class="js-custom-panel hidden rounded-xl border border-outline-variant hover:border-primary/50 p-5 space-y-5">
               <!-- Issuer ID -->
               <div class="space-y-1.5">
-                <label class="block text-label-md font-semibold text-on-surface">Issuer ID: <span class="text-error">*</span></label>
+                <label class="block text-label-md font-semibold text-on-surface">Issuer ID:<span class="text-error">*</span></label>
                 <input type="text" placeholder="Enter Issuer ID" required
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <!-- What is Issuer ID? -->
@@ -111,7 +111,7 @@
 
               <!-- Configuration File (JSON) -->
               <div class="space-y-1.5">
-                <label class="block text-label-md font-semibold text-on-surface">Configuration File (JSON): <span class="text-error">*</span></label>
+                <label class="block text-label-md font-semibold text-on-surface">Configuration File (JSON):<span class="text-error">*</span></label>
                 <label class="flex items-center gap-3 rounded-lg border border-dashed border-outline-variant bg-white px-4 py-3 cursor-pointer hover:border-primary hover:bg-primary/[0.03] transition-all">
                   <span class="material-symbols-outlined text-primary">upload_file</span>
                   <div class="flex-1 min-w-0">
@@ -220,7 +220,7 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <!-- Organization Name -->
                 <div class="space-y-1.5">
-                  <label class="block text-label-md font-semibold text-on-surface">Organization Name: <span class="text-error">*</span></label>
+                  <label class="block text-label-md font-semibold text-on-surface">Organization Name:<span class="text-error">*</span></label>
                   <input type="text" placeholder="Enter Organization Name" required
                     class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <p class="flex items-center gap-1.5 text-label-sm text-on-surface-variant">
@@ -229,7 +229,7 @@
                 </div>
                 <!-- Team Identifier -->
                 <div class="space-y-1.5">
-                  <label class="block text-label-md font-semibold text-on-surface">Team Identifier: <span class="text-error">*</span></label>
+                  <label class="block text-label-md font-semibold text-on-surface">Team Identifier:<span class="text-error">*</span></label>
                   <input type="text" placeholder="Enter Team Identifier" required
                     class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <p class="flex items-center gap-1.5 text-label-sm text-on-surface-variant">
@@ -240,7 +240,7 @@
 
               <!-- Certificate Password -->
               <div class="space-y-1.5">
-                <label class="block text-label-md font-semibold text-on-surface">Certificate Password: <span class="text-error">*</span></label>
+                <label class="block text-label-md font-semibold text-on-surface">Certificate Password:<span class="text-error">*</span></label>
                 <input type="password" placeholder="Enter certificate password" required
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <p class="flex items-center gap-1.5 text-label-sm text-on-surface-variant">
@@ -250,7 +250,7 @@
 
               <!-- Pass Type Identifier -->
               <div class="space-y-1.5">
-                <label class="block text-label-md font-semibold text-on-surface">Pass Type Identifier: <span class="text-error">*</span></label>
+                <label class="block text-label-md font-semibold text-on-surface">Pass Type Identifier:<span class="text-error">*</span></label>
                 <input type="text" placeholder="pass.com.yourcompany.passname" required
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <div class="mt-2 py-4 space-y-1.5">
@@ -262,7 +262,7 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <!-- Apple Certificate -->
                 <div class="space-y-1.5">
-                  <label class="block text-label-md font-semibold text-on-surface">Apple Certificate: <span class="text-error">*</span></label>
+                  <label class="block text-label-md font-semibold text-on-surface">Apple Certificate:<span class="text-error">*</span></label>
                   <label class="flex items-center gap-3 rounded-lg border border-dashed border-outline-variant bg-white px-4 py-3 cursor-pointer hover:border-primary hover:bg-primary/[0.03] transition-all">
                     <span class="material-symbols-outlined text-primary">upload_file</span>
                     <div class="flex-1 min-w-0">
