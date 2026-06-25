@@ -278,6 +278,15 @@ body {
     padding: 0.5rem 0.75rem;
     font-size: 14px;
 }
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    height: 26px;
+    margin-top: -5px;
+    margin-right: 12px;
+    padding-right: 0px;
+}
 .select2-container--default .select2-search--dropdown .select2-search__field:focus {
     outline: none;
     border-color: #5573ff;

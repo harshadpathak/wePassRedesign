@@ -274,7 +274,7 @@
                     <div class="space-y-6">
                       <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6">
                         <div class="space-y-2">
-                          <label class="text-on-surface font-semibold text-label-md">Subject: <span class="text-error">*</span></label>
+                          <label class="text-on-surface font-semibold text-label-md">Subject:<span class="text-error">*</span></label>
                           <input type="text" placeholder="Your <?php echo $tab['label']; ?> is ready"
                             class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                         </div>
@@ -286,7 +286,7 @@
                       </div>
 
                       <div class="space-y-2">
-                        <label class="text-on-surface font-semibold text-label-md">Body: <span class="text-error">*</span></label>
+                        <label class="text-on-surface font-semibold text-label-md">Body:<span class="text-error">*</span></label>
                         <textarea rows="6" placeholder="Write the message your recipients will see in the email body…"
                           class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
                         <!-- <p class="flex items-center gap-1.5 text-label-md text-on-surface-variant">
@@ -296,7 +296,7 @@
                       </div>
 
                       <div class="space-y-2 grid grid-cols-1">
-                        <label class="text-on-surface font-semibold text-label-md">View Pass Button Name: <span class="text-error">*</span></label>
+                        <label class="text-on-surface font-semibold text-label-md">View Pass Button Name:<span class="text-error">*</span></label>
                         <input type="text" placeholder="Add to Wallet"
                           class="w-full max-w-md bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                       </div>

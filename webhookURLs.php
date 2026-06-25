@@ -124,7 +124,7 @@
             </thead>
             <tbody class="divide-y divide-outline-variant/70">
               <?php foreach ($webhooks as $hook): ?>
-              <tr class="group hover:bg-surface-container-low/50 transition-colors">
+              <tr class="group hover:bg-surface-container-low transition-colors">
                 <!-- Name / URL -->
                 <td class="px-6 py-3 align-middle">
                   <p class="text-body-md font-bold text-on-surface"><?php echo htmlspecialchars($hook['name']); ?></p>

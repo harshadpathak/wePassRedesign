@@ -50,7 +50,7 @@
           <!-- Template + Title -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="space-y-2">
-              <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Pass Template: <span class="text-red-500">*</span></label>
+              <label class="flex items-center text-on-surface font-semibold text-label-md">Pass Template: <span class="text-red-500">*</span></label>
               <select class="w-full js-select2" data-placeholder="Select pass template">
                 <option></option>
                 <option value="gift-card-49" selected>Gift-Card-49</option>
@@ -60,7 +60,7 @@
               </select>
             </div>
             <div class="space-y-2">
-              <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Title: <span class="text-red-500">*</span></label>
+              <label class="flex items-center text-on-surface font-semibold text-label-md">Title: <span class="text-red-500">*</span></label>
               <input type="text" placeholder="e.g. Winter Promo 2026" required value="Monsoon Offer"
                 class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
             </div>
@@ -77,7 +77,7 @@
           </div>
           <div class="space-y-5">
             <div class="space-y-2">
-              <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Campaign Delivery: <span class="text-red-500">*</span></label>
+              <label class="flex items-center text-on-surface font-semibold text-label-md">Campaign Delivery: <span class="text-red-500">*</span></label>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <!-- Send Now -->
                 <label data-delivery-card class="relative flex items-center gap-3 rounded-xl border bg-white p-4 cursor-pointer border-outline-variant hover:border-primary/40 transition-all">
@@ -109,7 +109,7 @@
             <!-- Timezone + dates -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="space-y-2">
-                <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Timezone: <span class="text-red-500">*</span></label>
+                <label class="flex items-center text-on-surface font-semibold text-label-md">Timezone: <span class="text-red-500">*</span></label>
                 <select class="w-full js-select2" data-placeholder="Select timezone">
                   <option></option>
                   <option value="Asia/Kolkata" selected>(GMT+5:30) Asia/Kolkata</option>
@@ -121,7 +121,7 @@
               <div class="hidden md:block"></div>
               <!-- Start Date (Schedule only) -->
               <div class="js-schedule-only hidden space-y-2">
-                <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Start Date: <span class="text-red-500">*</span></label>
+                <label class="flex items-center text-on-surface font-semibold text-label-md">Start Date: <span class="text-red-500">*</span></label>
                 <div class="relative">
                   <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px] pointer-events-none z-10">calendar_month</span>
                   <input type="text" id="startDate" placeholder="dd-mm-yyyy" readonly
@@ -130,7 +130,7 @@
               </div>
               <!-- Start Time (Schedule only) -->
               <div class="js-schedule-only hidden space-y-2">
-                <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Start Time: <span class="text-red-500">*</span></label>
+                <label class="flex items-center text-on-surface font-semibold text-label-md">Start Time: <span class="text-red-500">*</span></label>
                 <select id="startTime" disabled class="w-full js-select2" data-placeholder="Select start time">
                   <option></option>
                   <option value="24:00">12:00 AM</option>
@@ -145,7 +145,7 @@
               </div>
               <!-- End Date -->
               <div class="space-y-2">
-                <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">End Date: <span class="text-red-500">*</span></label>
+                <label class="flex items-center text-on-surface font-semibold text-label-md">End Date: <span class="text-red-500">*</span></label>
                 <div class="relative">
                   <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px] pointer-events-none z-10">calendar_month</span>
                   <input type="text" id="endDate" placeholder="dd-mm-yyyy" readonly value="30-06-2026"
@@ -154,7 +154,7 @@
               </div>
               <!-- End Time -->
               <div class="space-y-2">
-                <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">End Time: <span class="text-red-500">*</span></label>
+                <label class="flex items-center text-on-surface font-semibold text-label-md">End Time: <span class="text-red-500">*</span></label>
                 <select id="endTime" class="w-full js-select2" data-placeholder="Select end time">
                   <option></option>
                   <option value="24:00">12:00 AM</option>

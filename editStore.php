@@ -73,7 +73,7 @@
             <div class="flex flex-col gap-5">
               <!-- Store Name -->
               <div class="space-y-2">
-                <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">
+                <label class="flex items-center text-on-surface font-semibold text-label-md">
                   Store Name: <span class="text-red-500">*</span>
                 </label>
                 <input type="text" placeholder="e.g. Thermi Flagship Store" required value="Aatman Infotech"
@@ -82,7 +82,7 @@
 
               <!-- Apple Wallet Location Message -->
               <div class="flex flex-col flex-1 space-y-2">
-                <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">
+                <label class="flex items-center text-on-surface font-semibold text-label-md">
                   Apple Wallet Location Message: <span class="text-red-500">*</span>
                 </label>
                 <div class="relative flex-1">
@@ -148,7 +148,7 @@
 
           <!-- Search -->
           <div class="space-y-2">
-            <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">
+            <label class="flex items-center text-on-surface font-semibold text-label-md">
               Search location: <span class="text-red-500">*</span>
             </label>
             <div class="relative">
@@ -283,7 +283,7 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <!-- Address -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Address: <span class="text-red-500">*</span></label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">Address: <span class="text-red-500">*</span></label>
                   <input type="text" id="advAddress" placeholder="Auto-filled from search" value="701, Aatman Infotech, Wings Business Bay, Umiya Chowk, Rajkot, 360004"
                     class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <div id="addrHint" class="hidden">
@@ -296,13 +296,13 @@
                 </div>
                 <!-- Postal Code -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Postal Code:</label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">Postal Code:</label>
                   <input type="text" placeholder="Postal code" value="360004"
                     class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 </div>
                 <!-- Country -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Country: <span class="text-red-500">*</span></label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">Country: <span class="text-red-500">*</span></label>
                   <select id="advCountry" class="w-full js-select2" data-placeholder="-- Select Country --">
                     <option></option>
                     <option value="India" selected>India</option>
@@ -312,19 +312,19 @@
                 </div>
                 <!-- City -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">City: <span class="text-red-500">*</span></label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">City: <span class="text-red-500">*</span></label>
                   <input type="text" id="advCity" placeholder="City" value="Rajkot"
                     class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 </div>
                 <!-- Latitude -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Latitude: <span class="text-red-500">*</span></label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">Latitude: <span class="text-red-500">*</span></label>
                   <input type="text" id="advLat" readonly value="22.25797520"
                     class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-on-surface-variant cursor-not-allowed">
                 </div>
                 <!-- Longitude -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Longitude: <span class="text-red-500">*</span></label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">Longitude: <span class="text-red-500">*</span></label>
                   <input type="text" id="advLng" readonly value="70.78807400"
                     class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-on-surface-variant cursor-not-allowed">
                 </div>

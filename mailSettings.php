@@ -216,7 +216,7 @@
               <!-- <h4 class="text-label-sm font-bold tracking-wider text-outline uppercase">Connection</h4> -->
 
               <div class="space-y-2">
-                <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
+                <label class="flex items-center text-on-surface font-semibold text-label-md">
                   Mail Mailer: <span class="text-error">*</span>
                   <span class="group relative inline-flex">
                     <span class="material-symbols-outlined text-[15px] text-outline">help</span>
@@ -233,13 +233,13 @@
               </div>
 
               <div class="space-y-2">
-                <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">Mail Host: <span class="text-error">*</span></label>
+                <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Host: <span class="text-error">*</span></label>
                 <input type="text" placeholder="smtp.gmail.com"
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
 
               <div class="space-y-2">
-                <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">Mail Encryption: <span class="text-error">*</span></label>
+                <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Encryption: <span class="text-error">*</span></label>
                 <select class="w-full js-select2" data-placeholder="Select Encryption" data-allow-clear="false">
                   <option></option>
                   <option value="ssl">ssl</option>
@@ -250,7 +250,7 @@
               </div>
 
               <div class="space-y-2">
-                <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">Mail Port: <span class="text-error">*</span></label>
+                <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Port: <span class="text-error">*</span></label>
                 <input type="text" placeholder="465"
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <p class="text-label-md text-on-surface-variant">Common ports: 465 (SSL), 587 (TLS)</p>
@@ -262,7 +262,7 @@
               <!-- <h4 class="text-label-sm font-bold tracking-wider text-outline uppercase">Authentication</h4> -->
 
               <div class="space-y-2">
-                <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
+                <label class="flex items-center text-on-surface font-semibold text-label-md">
                   Mail Username: <span class="text-error">*</span>
                     <span class="group relative inline-flex">
                         <span class="material-symbols-outlined text-[15px] text-outline">help</span>
@@ -277,7 +277,7 @@
               </div>
 
               <div class="space-y-2">
-                <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">Mail Password: <span class="text-error">*</span></label>
+                <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Password: <span class="text-error">*</span></label>
                 <div class="flex items-stretch rounded-lg border border-outline-variant bg-surface-container-low overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
                   <input type="password" placeholder="••••••••••••••••" id="smtp-password"
                     class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:border-primary transition-all focus:ring-0 focus:outline-none">
@@ -299,7 +299,7 @@
               </div>
 
               <div class="space-y-2">
-                <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">Mail From Address: <span class="text-error">*</span></label>
+                <label class="flex items-center text-on-surface font-semibold text-label-md">Mail From Address: <span class="text-error">*</span></label>
                 <input type="email" placeholder="example@gmail.com"
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <p class="text-label-md text-on-surface-variant">This address appears as the sender in all outbound emails.</p>

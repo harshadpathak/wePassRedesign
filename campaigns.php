@@ -45,89 +45,59 @@
       </div>
 
       <!-- Summary Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <!-- Role -->
-        <div class="bg-white rounded-xl border border-outline-variant hover:border-primary/50 shadow-sm p-4 flex items-center transition-colors">
-          <!-- Active -->
-          <div class="flex-1 flex items-center gap-2.5 min-w-0">
-            <div class="bg-amber-100 text-amber-700 p-2.5 rounded-lg flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[22px]">bolt</span>
-            </div>
-            <div class="min-w-0">
-              <p class="text-body-md text-on-surface">Send Now</p>
-            </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <!-- Total Campaigns -->
+        <div class="bg-surface-container-lowest p-4 rounded-xl border border-primary/40 shadow-sm flex items-center gap-4 cursor-pointer relative overflow-hidden group">
+          <div class="bg-primary/10 text-primary p-2.5 rounded-lg flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined">storefront</span>
           </div>
-          <!-- Divider -->
-          <div class="self-stretch w-px bg-outline-variant/30 mx-3"></div>
-          <!-- Inactive -->
-          <div class="flex-1 flex items-center gap-2.5 min-w-0">
-            <div class="bg-indigo-100 text-indigo-700 p-2.5 rounded-lg flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[22px]">calendar_month</span>
-            </div>
-            <div class="min-w-0">
-              <p class="text-body-md text-on-surface">Schedule</p>
-            </div>
+          <div class="min-w-0">
+            <p class="text-label-sm text-outline font-medium">Total Campaigns</p>
+            <p class="text-headline-md text-primary font-bold">5</p>
           </div>
         </div>
 
-        <!-- Status (Complete / Running / Pending) -->
-        <div class="bg-white rounded-xl border border-outline-variant hover:border-primary/50 shadow-sm p-4 flex items-center transition-colors">
+        <!-- Complete -->
+        <div class="bg-white rounded-xl border border-outline-variant shadow-sm p-4 flex items-center transition-colors">
           <!-- Complete -->
           <div class="flex-1 flex items-center gap-2.5 min-w-0">
             <div class="bg-indigo-50 text-indigo-600 p-2.5 rounded-lg flex items-center justify-center shrink-0">
               <span class="material-symbols-outlined [font-variation-settings:'FILL'_1]">check_circle</span>
             </div>
             <div class="min-w-0">
-              <p class="text-body-md text-on-surface">Complete</p>
+              <p class="text-label-sm text-outline font-medium">Completed</p>
+              <p class="text-headline-md font-bold">5</p>
             </div>
           </div>
-          <!-- Divider -->
-          <div class="self-stretch w-px bg-outline-variant/30 mx-3"></div>
+        </div>
+
+        <!-- Running -->
+        <div class="bg-white rounded-xl border border-outline-variant shadow-sm p-4 flex items-center transition-colors">
           <!-- Running -->
           <div class="flex-1 flex items-center gap-2.5 min-w-0">
             <div class="bg-emerald-50 text-emerald-600 p-2.5 rounded-lg flex items-center justify-center shrink-0">
               <span class="material-symbols-outlined [font-variation-settings:'FILL'_1]">play_circle</span>
             </div>
             <div class="min-w-0">
-              <p class="text-body-md text-on-surface">Running</p>
-            </div>
+              <p class="text-label-sm text-outline font-medium">Running</p>
+              <p class="text-headline-md font-bold">5</p>
+            </div>            
           </div>
-          <!-- Divider -->
-          <div class="self-stretch w-px bg-outline-variant/30 mx-3"></div>
+        </div>
+
+        <!-- Pending -->
+        <div class="bg-white rounded-xl border border-outline-variant shadow-sm p-4 flex items-center transition-colors">
           <!-- Pending -->
           <div class="flex-1 flex items-center gap-2.5 min-w-0">
             <div class="bg-amber-50 text-amber-600 p-2.5 rounded-lg flex items-center justify-center shrink-0">
               <span class="material-symbols-outlined [font-variation-settings:'FILL'_1]">hourglass_top</span>
             </div>
             <div class="min-w-0">
-              <p class="text-body-md text-on-surface">Pending</p>
-            </div>
+              <p class="text-label-sm text-outline font-medium">Pending</p>
+              <p class="text-headline-md font-bold">5</p>
+            </div>            
           </div>
-        </div>
-
-        <!-- Enabled -->
-        <div class="bg-white rounded-xl border border-outline-variant hover:border-primary/50 shadow-sm p-4 flex items-center transition-colors">
-          <!-- Yes -->
-          <div class="flex-1 flex items-center gap-2.5 min-w-0">
-            <div class="bg-emerald-50 text-emerald-600 p-2.5 rounded-lg flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined">check_circle</span>
-            </div>
-            <div class="min-w-0">
-              <p class="text-body-md text-on-surface">Enabled</p>
-            </div>
-          </div>
-          <!-- Divider -->
-          <div class="self-stretch w-px bg-outline-variant/30 mx-3"></div>
-          <!-- No -->
-          <div class="flex-1 flex items-center gap-2.5 min-w-0">
-            <div class="bg-rose-50 text-rose-600 p-2.5 rounded-lg flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined">cancel</span>
-            </div>
-            <div class="min-w-0">
-              <p class="text-body-md text-on-surface">Disabled</p>
-            </div>
-          </div>
-        </div>
+        </div>        
       </div>
 
       <!-- Filter Panel -->

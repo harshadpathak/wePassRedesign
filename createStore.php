@@ -48,14 +48,6 @@
               <h3 class="text-headline-md font-bold text-on-surface">Basic Information</h3>
             </div>
             <div class="flex items-center gap-2.5">
-              <!-- Active -->
-              <label class="inline-flex items-center gap-2.5 bg-white border border-outline-variant/60 rounded-lg pl-3 pr-2.5 py-2 cursor-pointer select-none hover:border-primary/50 transition-colors">
-                <span class="inline-flex items-center gap-1.5">
-                  <span class="text-[13px] font-semibold text-on-surface">Active</span>
-                </span>
-                <input type="checkbox" class="sr-only peer" checked>
-                <span class="relative w-9 h-5 rounded-full bg-outline-variant peer-checked:bg-emerald-500 transition-colors after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:h-4 after:w-4 after:rounded-full after:bg-white after:shadow after:transition-all peer-checked:after:translate-x-4"></span>
-              </label>
               <!-- Default -->
               <label class="inline-flex items-center gap-2.5 bg-white border border-outline-variant/60 rounded-lg pl-3 pr-2.5 py-2 cursor-pointer select-none hover:border-primary/50 transition-colors">
                 <span class="inline-flex items-center gap-1.5">
@@ -73,16 +65,15 @@
             <div class="flex flex-col gap-5">
               <!-- Store Name -->
               <div class="space-y-2">
-                <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">
-                  Store Name: <span class="text-red-500">*</span>
-                </label>
+                <label class="flex items-center text-on-surface font-semibold text-label-md">
+                  Store Name:<span class="text-red-500">*</span></label>
                 <input type="text" placeholder="e.g. Thermi Flagship Store" required
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
 
               <!-- Apple Wallet Location Message -->
               <div class="flex flex-col flex-1 space-y-2">
-                <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">
+                <label class="flex items-center text-on-surface font-semibold text-label-md">
                   Apple Wallet Location Message: <span class="text-red-500">*</span>
                 </label>
                 <div class="relative flex-1">
@@ -148,7 +139,7 @@
 
           <!-- Search -->
           <div class="space-y-2">
-            <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">
+            <label class="flex items-center text-on-surface font-semibold text-label-md">
               Search location: <span class="text-red-500">*</span>
             </label>
             <div class="relative">
@@ -282,7 +273,7 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <!-- Address -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Address: <span class="text-red-500">*</span></label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">Address: <span class="text-red-500">*</span></label>
                   <input type="text" id="advAddress" placeholder="Auto-filled from search"
                     class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <div id="addrHint" class="hidden">
@@ -295,13 +286,13 @@
                 </div>
                 <!-- Postal Code -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Postal Code:</label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">Postal Code:</label>
                   <input type="text" placeholder="Postal code" disabled
                     class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 </div>
                 <!-- Country -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Country: <span class="text-red-500">*</span></label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">Country: <span class="text-red-500">*</span></label>
                   <select id="advCountry" class="w-full js-select2" data-placeholder="-- Select Country --">
                     <option></option>
                     <option value="India">India</option>
@@ -311,19 +302,19 @@
                 </div>
                 <!-- City -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">City: <span class="text-red-500">*</span></label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">City: <span class="text-red-500">*</span></label>
                   <input type="text" id="advCity" placeholder="City"
                     class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 </div>
                 <!-- Latitude -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Latitude: <span class="text-red-500">*</span></label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">Latitude: <span class="text-red-500">*</span></label>
                   <input type="text" id="advLat" readonly value="&mdash;"
                     class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-on-surface-variant cursor-not-allowed">
                 </div>
                 <!-- Longitude -->
                 <div class="space-y-2">
-                  <label class="flex items-center gap-1 text-on-surface font-semibold text-label-md">Longitude: <span class="text-red-500">*</span></label>
+                  <label class="flex items-center text-on-surface font-semibold text-label-md">Longitude: <span class="text-red-500">*</span></label>
                   <input type="text" id="advLng" readonly value="&mdash;"
                     class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-on-surface-variant cursor-not-allowed">
                 </div>
