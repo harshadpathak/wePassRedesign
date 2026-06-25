@@ -30,7 +30,7 @@
       </div>
 
       <!-- Wallet settings grid -->
-      <div class="grid grid-cols-1 xl:grid-cols-2 gap-stack-lg">
+      <div class="grid grid-cols-1 xl:grid-cols-2 gap-stack-lg items-start">
 
         <!-- ============ GOOGLE WALLET ============ -->
         <form class="js-wallet bg-white rounded-2xl border border-outline-variant shadow-sm flex flex-col">
@@ -100,7 +100,7 @@
                 <input type="text" placeholder="Enter Issuer ID" required
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <!-- What is Issuer ID? -->
-                <div class="mt-2 rounded-lg border border-outline-variant/70 bg-surface-container-low/60 p-4 space-y-2">
+                <div class="mt-2 py-4 space-y-2">
                   <p class="flex items-center gap-2 text-label-md font-bold text-on-surface">
                     <span class="material-symbols-outlined text-[18px] text-on-surface-variant">info</span>What is Issuer ID?
                   </p>
@@ -122,7 +122,7 @@
                   <input type="file" accept=".json" required class="sr-only">
                 </label>
                 <!-- What is Configuration File? -->
-                <div class="mt-2 rounded-lg border border-outline-variant/70 bg-surface-container-low/60 p-4 space-y-2">
+                <div class="mt-2 py-4 space-y-2">
                   <p class="flex items-center gap-2 text-label-md font-bold text-on-surface">
                     <span class="material-symbols-outlined text-[18px] text-on-surface-variant">info</span>What is Configuration File?
                   </p>
@@ -253,7 +253,7 @@
                 <label class="block text-label-md font-semibold text-on-surface">Pass Type Identifier: <span class="text-error">*</span></label>
                 <input type="text" placeholder="pass.com.yourcompany.passname" required
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-                <div class="mt-2 rounded-lg border border-outline-variant/70 bg-surface-container-low/60 p-4 space-y-1.5">
+                <div class="mt-2 py-4 space-y-1.5">
                   <p class="text-label-md text-on-surface-variant"><span class="font-semibold text-on-surface">How to get:</span> Apple Developer → Certificates, IDs &amp; Profiles → Identifiers → Pass Type IDs</p>
                   <p class="text-label-md text-on-surface-variant"><span class="font-semibold text-on-surface">Format:</span> <code class="rounded bg-primary/10 px-1.5 py-0.5 text-label-sm font-mono text-primary">pass.com.yourcompany.passname</code></p>
                 </div>
