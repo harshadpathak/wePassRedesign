@@ -183,7 +183,7 @@
             <div class="w-8 h-8 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
               <span class="material-symbols-outlined text-[20px]">storefront</span>
             </div>
-            <h3 class="text-headline-md font-bold text-on-surface">Stores</h3>
+            <h3 class="text-headline-md font-bold text-on-surface">Manage Stores</h3>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
