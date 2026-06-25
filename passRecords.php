@@ -44,11 +44,11 @@
       <div class="flex items-end justify-between gap-4">
         <div class="space-y-1">
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
-            <span class="material-symbols-outlined text-[14px] text-blue-600">home</span> <span class="text-blue-600 font-semibold">Dashboard</span>
+            <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-blue-600 font-semibold">Passes</span>
+            <span class="text-gray font-normal">Passes</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-on-surface font-semibold">Pass Records</span>
+            <span class="text-gray-500 font-normal">Pass Records</span>
           </nav>
           <h2 class="font-display tracking-tight text-headline-lg font-bold">Pass Records</h2>
         </div>
@@ -59,7 +59,7 @@
             <span class="material-symbols-outlined text-[20px]">filter_alt</span>
             <span class="">Filter</span>
           </button>
-          <a href="#"
+          <a href="passes.php"
             class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
             <span class="material-symbols-outlined text-[18px]">arrow_back</span>
             Back
