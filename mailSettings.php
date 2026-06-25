@@ -51,7 +51,7 @@
               </span>
 
               <!-- Header: icon left, title + description -->
-              <div class="flex items-start gap-3.5 mb-5 pr-8 mt-1">
+              <div class="flex items-start gap-3.5 mb-5 mt-1">
                 <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-brand-gradient text-white shadow-md shadow-primary/20">
                   <span class="material-symbols-outlined text-[26px]">dns</span>
                 </div>
@@ -96,13 +96,13 @@
               </span>
 
               <!-- Header: icon left, title + description -->
-              <div class="flex items-start gap-3.5 mb-5 pr-20">
+              <div class="flex items-start gap-3.5 mb-5">
                 <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-surface-container-high">
                   <span class="material-symbols-outlined text-[26px] text-outline">hub</span>
                 </div>
                 <div class="min-w-0">
                   <h4 class="text-headline-md font-bold text-on-surface-variant">Email Provider</h4>
-                  <p class="text-body-md text-on-surface-variant leading-relaxed mt-0.5">Connect your existing email service using secure authentication – no SMTP credentials required.</p>
+                  <p class="text-body-md text-on-surface-variant leading-relaxed mt-0.5">Connect your email securely — no SMTP credentials needed.</p>
                 </div>
               </div>
 
@@ -143,7 +143,7 @@
                 <span class="material-symbols-outlined text-[18px] text-white">check</span>
               </span>
               <!-- Header: icon left, title + description -->
-              <div class="flex items-start gap-3.5 mb-5 pr-8 mt-1">
+              <div class="flex items-start gap-3.5 mb-5 mt-1">
                 <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-orange-50 text-tertiary group-hover:bg-tertiary group-hover:text-white transition-colors">
                   <span class="material-symbols-outlined text-[26px]">tune</span>
                 </div>

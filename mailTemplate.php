@@ -37,38 +37,38 @@
                 </div>
                 <div class="flex-1">
                     <h3 class="text-headline-md font-bold text-on-surface tracking-tight">About Mail Templates</h3>
-                    <p class="text-body-md text-secondary mt-2 leading-relaxed">Customize and manage email templates for each pass type. Set subject lines, sender titles, body content, and upload a branded logo for your email header.</p>
-                </div>
-            </div>
-            <!-- Steps -->
-            <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
-                <!-- Step 1 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Mail Logo</span>
-                </div>
-                <!-- Step 2 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Subject & Sender</span>
-                </div>
-                <!-- Step 3 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Email Body</span>
-                </div>
-                <!-- Step 4 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Download Button</span>
+                    <p class="text-body-md text-secondary leading-relaxed">Customize and manage email templates for each pass type. Set subject lines, sender titles, body content, and upload a branded logo for your email header.</p>
+                    <!-- Steps -->
+                    <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3 mt-4">
+                        <!-- Step 1 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-on-surface">Mail Logo</span>
+                        </div>
+                        <!-- Step 2 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-on-surface">Subject & Sender</span>
+                        </div>
+                        <!-- Step 3 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-on-surface">Email Body</span>
+                        </div>
+                        <!-- Step 4 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-on-surface">Download Button</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
