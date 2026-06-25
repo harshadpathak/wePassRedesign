@@ -85,7 +85,7 @@
                     <span id="walletMsgCount">0</span> / 120
                   </span>
                 </div>
-                <p class="text-label-md text-outline">This short text will be shown on the back of the Apple Wallet pass when the user is near this location.</p>
+                <p class="text-label-md text-gray-400">This short text will be shown on the back of the Apple Wallet pass when the user is near this location.</p>
               </div>
             </div>
 
@@ -94,7 +94,7 @@
               <!-- Store Image -->
               <div class="space-y-2">
                 <label class="flex items-center gap-1.5 text-on-surface font-semibold text-label-md">
-                  Store Image: <span class="text-outline font-medium">(Optional)</span>
+                  Store Image: <span class="text-gray-400 font-medium">(Optional)</span>
                 </label>
                 <label class="group flex items-center gap-3 w-full h-[46px] bg-surface-container-low border border-outline-variant rounded-lg px-3 cursor-pointer hover:border-primary hover:bg-primary/5 transition-all">
                   <input type="file" id="storeImage" accept="image/png, image/jpeg" class="sr-only">
@@ -120,7 +120,7 @@
                     <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
                     <span class="text-body-md font-bold">Tips</span>
                   </div>
-                  <p class="text-body-md text-on-surface-variant">Keep it short and action-focused.</p>
+                  <p class="text-body-md text-gray-500">Keep it short and action-focused.</p>
                   <p class="text-body-md text-on-surface mt-2"><span class="font-bold">Example:</span> &ldquo;You are near our store. Tap to view your pass.&rdquo;</p>
                 </div>
               </div>
@@ -148,7 +148,7 @@
                 class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-11 pr-4 py-3 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
             </div>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <p class="text-label-md text-outline">Examples: &ldquo;Leof. Georgikis Scholis 27, Thermi&rdquo;, &ldquo;Thermi Greece&rdquo;, &ldquo;Phoenix Centre Thermi&rdquo;</p>
+              <p class="text-label-md text-gray-400">Examples: &ldquo;Leof. Georgikis Scholis 27, Thermi&rdquo;, &ldquo;Thermi Greece&rdquo;, &ldquo;Phoenix Centre Thermi&rdquo;</p>
               <button type="button" id="useMyLocation"
                 class="self-start sm:self-auto inline-flex items-center gap-1.5 bg-white border border-outline-variant/60 text-primary px-3 py-1.5 rounded-lg text-label-md font-bold hover:bg-primary/5 transition-all shadow-sm shrink-0">
                 <span class="material-symbols-outlined text-[18px]">my_location</span>
@@ -188,7 +188,7 @@
                   <span class="material-symbols-outlined text-outline text-[22px]">location_on</span>
                   <p class="text-body-lg font-bold">No location selected</p>
                 </div>
-                <p class="text-body-md text-secondary">Use the search box above to find your store. Once you pick a result, its address, postal code, city, country and exact coordinates appear here automatically &mdash; no need to look anything up.</p>
+                <p class="text-body-md text-gray-500">Use the search box above to find your store. Once you pick a result, its address, postal code, city, country and exact coordinates appear here automatically &mdash; no need to look anything up.</p>
               </div>
 
               <!-- SELECTED state -->
@@ -320,7 +320,7 @@
                 </div>
               </div>
               <!-- Coordinates helper -->
-              <p class="flex items-center gap-1.5 text-label-md text-outline">
+              <p class="flex items-center gap-1.5 text-label-md text-gray-400">
                 <span class="material-symbols-outlined text-[16px]">lock</span>
                 Latitude &amp; longitude are derived from the selected place &mdash; they can&rsquo;t be typed. Drag the map pin to fine-tune.
               </p>
@@ -340,7 +340,7 @@
                   <span class="material-symbols-outlined text-[20px]">home_pin</span>
                 </div>
                 <div class="min-w-0">
-                  <p class="text-label-sm text-outline font-medium">Address</p>
+                  <p class="text-label-sm text-gray-500 font-medium">Address</p>
                   <p id="sumAddress" class="text-body-md font-semibold text-on-surface line-clamp-2">&mdash;</p>
                 </div>
               </div>
@@ -350,7 +350,7 @@
                   <span class="material-symbols-outlined text-[20px]">public</span>
                 </div>
                 <div class="min-w-0">
-                  <p class="text-label-sm text-outline font-medium">Country / City</p>
+                  <p class="text-label-sm text-gray-500 font-medium">Country / City</p>
                   <p id="sumCountryCity" class="text-body-md font-semibold text-on-surface truncate">&mdash;</p>
                 </div>
               </div>
@@ -360,7 +360,7 @@
                   <span class="material-symbols-outlined text-[20px]">my_location</span>
                 </div>
                 <div class="min-w-0">
-                  <p class="text-label-sm text-outline font-medium">Coordinates</p>
+                  <p class="text-label-sm text-gray-500 font-medium">Coordinates</p>
                   <p id="sumCoords" class="text-body-md font-semibold text-on-surface truncate">&mdash;</p>
                 </div>
               </div>
@@ -370,7 +370,7 @@
                   <span class="material-symbols-outlined text-[20px]">chat</span>
                 </div>
                 <div class="min-w-0">
-                  <p class="text-label-sm text-outline font-medium">Wallet Message</p>
+                  <p class="text-label-sm text-gray-500 font-medium">Wallet Message</p>
                   <p id="sumWallet" class="text-body-md font-semibold text-on-surface line-clamp-2">&mdash;</p>
                 </div>
               </div>

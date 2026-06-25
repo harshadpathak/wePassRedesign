@@ -89,7 +89,7 @@
           </span>
           <div class="flex-1 min-w-0">
             <h3 class="text-headline-md font-bold text-on-surface">Access Keys</h3>
-            <p class="text-label-md text-on-surface-variant">Manage your API authentication keys</p>
+            <p class="text-label-md text-gray-500">Manage your API authentication keys</p>
           </div>
           <!-- Status legend -->
           <!-- <div class="hidden md:flex items-center gap-1.5 pr-1 shrink-0">

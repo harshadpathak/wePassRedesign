@@ -246,14 +246,14 @@
                   <option value="tls">tls</option>
                   <option value="none">none</option>
                 </select>
-                <p class="text-label-md text-on-surface-variant">Supported: ssl, tls, none</p>
+                <p class="text-label-md text-gray-400">Supported: ssl, tls, none</p>
               </div>
 
               <div class="space-y-2">
                 <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Port: <span class="text-error">*</span></label>
                 <input type="text" placeholder="465"
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-                <p class="text-label-md text-on-surface-variant">Common ports: 465 (SSL), 587 (TLS)</p>
+                <p class="text-label-md text-gray-400">Common ports: 465 (SSL), 587 (TLS)</p>
               </div>
             </div>
 
@@ -273,7 +273,7 @@
                 </label>
                 <input type="text" placeholder="savanihd@gmail.com"
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-                <p class="text-label-md text-on-surface-variant">Your SMTP username (email address for Gmail/Outlook, or API username for services like SendGrid)</p>
+                <p class="text-label-md text-gray-400">Your SMTP username (email address for Gmail/Outlook, or API username for services like SendGrid)</p>
               </div>
 
               <div class="space-y-2">
@@ -285,7 +285,7 @@
                     <span class="material-symbols-outlined text-[20px]">visibility</span>
                   </button>
                 </div>
-                <p class="flex items-center gap-1.5 text-label-md text-on-surface-variant">
+                <p class="flex items-center gap-1.5 text-label-md text-gray-400">
                   <span class="material-symbols-outlined text-[15px] text-emerald-600">verified_user</span>
                   Credentials are encrypted at rest and never exposed in logs
                   <!-- Encrypted at rest &middot; never exposed in logs -->
@@ -302,7 +302,7 @@
                 <label class="flex items-center text-on-surface font-semibold text-label-md">Mail From Address: <span class="text-error">*</span></label>
                 <input type="email" placeholder="example@gmail.com"
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-                <p class="text-label-md text-on-surface-variant">This address appears as the sender in all outbound emails.</p>
+                <p class="text-label-md text-gray-400">This address appears as the sender in all outbound emails.</p>
               </div>
             </div>
           </div>

@@ -82,7 +82,7 @@
           </span>
           <div class="flex-1 min-w-0">
             <h3 class="text-headline-md font-bold text-on-surface">Webhook URLs</h3>
-            <p class="text-label-md text-on-surface-variant">Manage your webhook endpoint URLs</p>
+            <p class="text-label-md text-gray-500">Manage your webhook endpoint URLs</p>
           </div>
           <!-- <span class="hidden md:block w-px h-8 bg-outline-variant/70 shrink-0"></span> -->
           <button type="button"

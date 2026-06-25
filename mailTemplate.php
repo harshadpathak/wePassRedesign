@@ -167,7 +167,7 @@
                       <div class="space-y-4">
                         <div>
                           <label class="text-on-surface font-semibold text-label-md">Logo Image</label>
-                          <p class="text-label-md text-on-surface-variant mt-1">This appears at the top of every email you send.</p>
+                          <p class="text-label-md text-gray-400 mt-1">This appears at the top of every email you send.</p>
                         </div>
 
                         <input id="logo-input" type="file" accept="image/png,image/svg+xml,image/jpeg" class="hidden">
@@ -231,7 +231,7 @@
                       <div class="space-y-4">
                         <div>
                           <label class="text-on-surface font-semibold text-label-md">Footer Content</label>
-                          <p class="text-label-md text-on-surface-variant mt-1">Shown at the bottom of every outgoing email.</p>
+                          <p class="text-label-md text-gray-400 mt-1">Shown at the bottom of every outgoing email.</p>
                         </div>
                         <input type="text" data-footer-input="content" placeholder="Copyright © WePASS. All rights reserved."
                           value="© 2026 WePass. All rights reserved."

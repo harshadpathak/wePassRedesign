@@ -131,7 +131,7 @@
             </div>
             <div>
               <h3 class="text-headline-md font-bold text-on-surface">Pass Activity Calendar</h3>
-              <p class="text-body-md text-secondary">Track issued and installed passes over time</p>
+              <p class="text-body-md text-gray-400">Track issued and installed passes over time</p>
             </div>
           </div>
           <!-- Legend -->

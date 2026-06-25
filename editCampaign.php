@@ -235,7 +235,7 @@
                 <div id="selectedEmpty" class="h-full flex flex-col items-center justify-center text-center px-6">
                   <span class="material-symbols-outlined text-[40px] text-outline-variant">wrong_location</span>
                   <p class="text-body-md font-bold text-on-surface mt-2">No stores selected yet</p>
-                  <p class="text-label-md text-outline mt-0.5">Pick stores from the left to add them here.</p>
+                  <p class="text-label-md text-gray-400 mt-0.5">Pick stores from the left to add them here.</p>
                 </div>
               </div>
             </div>

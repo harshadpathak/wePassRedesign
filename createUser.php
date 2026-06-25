@@ -44,7 +44,7 @@
                 </div>
                 <div class="flex-1">
                     <h3 class="text-headline-md font-bold text-on-surface tracking-tight">How User Invitation Works</h3>
-                    <p class="text-body-md text-secondary mt-2 leading-relaxed">Add a new team member to your account. Fill in their name, email, and assign a role. Once submitted, the user will receive an invitation email with their login credentials to access the platform.</p>
+                    <p class="text-body-md text-secondary leading-relaxed">Add a new team member to your account. Fill in their name, email, and assign a role. Once submitted, the user will receive an invitation email with their login credentials to access the platform.</p>
                 </div>
             </div>
             <!-- Steps -->

@@ -167,7 +167,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Expiration</h3>
-                <p class="text-label-md text-outline">Control when this pass is no longer valid</p>
+                <p class="text-label-md text-gray-500">Control when this pass is no longer valid</p>
               </div>
             </header>
             <div class="p-6">
@@ -183,11 +183,11 @@
                   </span>
                 </label>                    
                 </div>
-                <p class="text-label-md text-outline">Please select the date/time value or enter in the format (MM/DD/YYYY HH:MM:SS)</p>
+                <p class="text-label-md text-gray-400">Please select the date/time value or enter in the format (MM/DD/YYYY HH:MM:SS)</p>
                 <input id="exp-stamp"
                   class="js-datetime w-full md:w-1/2 bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md font-semibold text-on-surface focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                   data-date-format="d/m/Y H:i" type="text" value="<?= htmlspecialchars($pass['expiration']) ?>">
-                <p class="flex items-center gap-1.5 text-label-md text-outline pt-1">
+                <p class="flex items-center gap-1.5 text-label-md text-gray-400 pt-1">
                   <span class="material-symbols-outlined text-[16px]">public</span>
                   <?= htmlspecialchars($pass['timezone']) ?>
                 </p>
@@ -203,7 +203,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Primary Fields</h3>
-                <p class="text-label-md text-outline">The headline values shown on the pass</p>
+                <p class="text-label-md text-gray-500">The headline values shown on the pass</p>
               </div>
             </header>
             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
@@ -211,7 +211,7 @@
               <div class="space-y-2">
                 <div class="flex items-center justify-between">
                   <label for="balance" class="text-on-surface font-semibold text-label-md">Balance: <span class="text-error">*</span></label>
-                  <span class="text-label-sm text-outline">999999999999 chars max.</span>
+                  <span class="text-label-sm text-gray-400">999999999999 chars max.</span>
                 </div>
                 <input id="balance" type="text" value="<?= htmlspecialchars($pass['balance']) ?>"
                   class="js-sync w-full bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
@@ -243,7 +243,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Additional Fields</h3>
-                <p class="text-label-md text-outline">Extra details stored on the pass</p>
+                <p class="text-label-md text-gray-500">Extra details stored on the pass</p>
               </div>
             </header>
             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -251,7 +251,7 @@
               <div class="space-y-2">
                 <div class="flex items-center justify-between">
                   <label for="pin" class="text-on-surface font-semibold text-label-md">Pin:</label>
-                  <span class="text-label-sm text-outline">50 chars max.</span>
+                  <span class="text-label-sm text-gray-500">50 chars max.</span>
                 </div>
                 <input id="pin" type="text" value="<?= htmlspecialchars($pass['pin']) ?>"
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
@@ -260,7 +260,7 @@
               <div class="space-y-2">
                 <div class="flex items-center justify-between">
                   <label for="event" class="text-on-surface font-semibold text-label-md">Event Number:</label>
-                  <span class="text-label-sm text-outline">50 chars max.</span>
+                  <span class="text-label-sm text-gray-500">50 chars max.</span>
                 </div>
                 <input id="event" type="text" value="<?= htmlspecialchars($pass['event']) ?>"
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
@@ -282,7 +282,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Pass Update Notification</h3>
-                <p class="text-label-md text-outline">Alert wallet holders about this change</p>
+                <p class="text-label-md text-gray-500">Alert wallet holders about this change</p>
               </div>
             </header>
             <div class="p-6 space-y-5">

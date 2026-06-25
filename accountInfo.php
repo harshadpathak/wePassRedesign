@@ -205,7 +205,7 @@
                     class="flex-1 w-full bg-transparent py-3 px-4 text-body-md focus:outline-none border-0 focus:ring-0 cursor-not-allowed">
                   <span class="flex items-center px-4 text-body-md font-semibold text-secondary bg-surface-container-high border-l border-outline-variant">days</span>
                 </div>
-                <p class="text-label-sm text-outline">Default value is 365 days</p>
+                <p class="text-label-sm text-gray-400">Default value is 365 days</p>
               </div>
               <!-- Slug -->
               <div class="space-y-2">

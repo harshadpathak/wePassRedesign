@@ -73,7 +73,7 @@
           </div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface tracking-tight">Billing Overview</h3>
-            <p class="text-body-md text-secondary">Manage your plan details and track resource usage</p>
+            <p class="text-body-md text-gray-500">Manage your plan details and track resource usage</p>
           </div>
         </div>
 
