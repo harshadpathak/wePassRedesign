@@ -44,11 +44,11 @@
       <div class="flex items-end justify-between gap-4">
         <div class="space-y-1">
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
-            <span class="material-symbols-outlined text-[14px] text-blue-600">home</span> <span class="text-blue-600 font-semibold">Dashboard</span>
+            <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-blue-600 font-semibold">Passes</span>
+            <span class="text-gray font-normal">Passes</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-on-surface font-semibold">Pass Installs</span>
+            <span class="text-gray-500 font-normal">Pass Installs</span>
           </nav>
           <h2 class="font-display tracking-tight text-headline-lg font-bold">Pass Installs</h2>
         </div>
@@ -285,7 +285,7 @@
                             <span class="font-medium">View</span>
                           </a>
                           <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                            href="#">
+                            href="passUpdate.php">
                             <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
                             <span class="font-medium">Edit</span>
                           </a>
