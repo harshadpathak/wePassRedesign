@@ -364,7 +364,7 @@
                     <span class="material-symbols-outlined text-[18px]">hourglass_top</span>
                   </span>
                   <div class="leading-tight">
-                    <p class="text-[10px] font-bold uppercase tracking-wider text-outline">Starting Sonn</p>
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-outline">Starting Soon</p>
                   </div>
                 </div>
               </td>
