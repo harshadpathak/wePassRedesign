@@ -1,6 +1,10 @@
 <header
     class="h-16 flex items-center justify-between px-margin-desktop sticky top-0 bg-surface/80 backdrop-blur-md border-b border-outline-variant z-40">
-    <div class="flex items-center flex-1 max-w-xl">
+    <div class="flex items-center gap-2 flex-1 max-w-xl">
+    <button id="mobile-menu-btn" type="button"
+        class="lg:hidden shrink-0 p-2 rounded-lg hover:bg-surface-container-high text-on-surface-variant transition-all">
+        <span class="material-symbols-outlined">menu</span>
+    </button>
     <div class="relative w-full group">
         <span
         class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">search</span>

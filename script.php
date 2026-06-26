@@ -50,8 +50,48 @@ document.querySelectorAll('tbody tr').forEach(row => {
 <script>
 document.getElementById('sidebar-toggle').addEventListener('click', function () {
     const sidebar = document.querySelector('aside');
+    // On mobile, this button closes the off-canvas drawer instead of collapsing the rail
+    if (window.matchMedia('(max-width: 1023px)').matches) {
+        sidebar.classList.remove('mobile-open');
+        var bd = document.getElementById('sidebar-backdrop');
+        if (bd) bd.classList.add('hidden');
+        return;
+    }
     sidebar.classList.toggle('sidebar-collapsed');
 });
+</script>
+<script>
+// Mobile off-canvas sidebar drawer
+(function () {
+    var sidebar = document.querySelector('aside');
+    var backdrop = document.getElementById('sidebar-backdrop');
+    var openBtn = document.getElementById('mobile-menu-btn');
+    if (!sidebar) return;
+
+    function openSidebar() {
+        sidebar.classList.add('mobile-open');
+        if (backdrop) backdrop.classList.remove('hidden');
+    }
+    function closeSidebar() {
+        sidebar.classList.remove('mobile-open');
+        if (backdrop) backdrop.classList.add('hidden');
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openSidebar);
+    if (backdrop) backdrop.addEventListener('click', closeSidebar);
+
+    // Close the drawer after tapping a nav link on mobile
+    sidebar.querySelectorAll('nav a[href]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (window.matchMedia('(max-width: 1023px)').matches) closeSidebar();
+        });
+    });
+
+    // Reset state when resizing up to desktop
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 1024) closeSidebar();
+    });
+})();
 </script>
 <script>
 // Script updated to remove accordion behavior. 

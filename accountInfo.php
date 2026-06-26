@@ -225,7 +225,7 @@
 
             <div class="flex justify-center mt-6 pt-5 border-t border-outline-variant/40">
               <button type="submit"
-                class="flex items-center gap-2 bg-emerald-500 text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                class="flex items-center gap-2 bg-teal-600 text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-teal-600/20 hover:opacity-95 active:scale-[0.98] transition-all">
                 <span class="material-symbols-outlined text-[20px]">save</span>
                 Save
               </button>

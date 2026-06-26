@@ -257,7 +257,7 @@
             </div>
             <div class="flex justify-end mt-8 pt-6 border-t border-outline-variant/30">
                 <button
-                    class="flex items-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                    class="flex items-center gap-2 bg-teal-600 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-teal-600/20 hover:opacity-95 active:scale-[0.98] transition-all">
                     <span class="material-symbols-outlined">send</span>
                     Send Passes
                 </button>

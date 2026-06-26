@@ -18,7 +18,7 @@
     <!-- Canvas -->
     <section class="p-margin-desktop space-y-stack-lg pb-16">
       <!-- Header Section -->
-      <div class="flex items-end justify-between">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div class="space-y-1">
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
             <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
@@ -136,9 +136,70 @@
           </div>
         </div>
       </div>
+      <style>
+        /* Mobile: turn the templates table into stacked cards (desktop unchanged) */
+        @media (max-width: 1023px) {
+          .responsive-table thead { display: none; }
+          .responsive-table, .responsive-table tbody { display: block; width: 100%; }
+          .responsive-table tbody { padding: 0.75rem; }
+          .responsive-table tr {
+            display: block;
+            position: relative;
+            border: 1px solid rgba(120, 130, 150, 0.22) !important;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: #fff;
+          }
+          .responsive-table tr:last-child { margin-bottom: 0; }
+          .responsive-table td {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.4rem 0 !important;
+            border: none !important;
+            text-align: left !important;
+          }
+          .responsive-table td[data-label]::before {
+            content: attr(data-label);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            color: #94a3b8;
+            flex-shrink: 0;
+          }
+          .responsive-table td.cell-main {
+            display: block;
+            padding-right: 2.75rem !important;
+            padding-bottom: 0.75rem !important;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(120, 130, 150, 0.15) !important;
+          }
+          .responsive-table td.cell-main .font-mono { white-space: normal; word-break: break-all; }
+          .responsive-table td.cell-action {
+            position: absolute;
+            top: 0.85rem;
+            right: 0.85rem;
+            width: auto;
+            padding: 0 !important;
+          }
+        }
+      </style>
+      <?php
+        $templates = [
+          ['name' => 'GENERIC-PASS-6',       'id' => 'cc7b3c0875a4a2cb9071274afa4122b7aa0e6fa4', 'icon' => 'person',              'iconbg' => 'bg-primary/10 text-primary',          'type' => 'Generic Pass',  'badge' => 'bg-blue-50 text-blue-600 border-blue-100',          'created' => '22/05/2026 17:03:55', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'ADVERTISING 34',       'id' => '171f8c83fc297fdeda6eed32fee0a1cf2f503e15', 'icon' => 'campaign',            'iconbg' => 'bg-amber-100 text-amber-700',         'type' => 'Advertising',   'badge' => 'bg-slate-50 text-slate-600 border-slate-200',       'created' => '19/05/2026 23:25:14', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'LOYALTY-TIER-TEST-01', 'id' => '6ef7b13772f104c2533dd189814704ca5bc161a7', 'icon' => 'loyalty',             'iconbg' => 'bg-primary/10 text-primary',          'type' => 'Loyalty + Tier','badge' => 'bg-blue-100 text-blue-700 border-blue-200',         'created' => '19/05/2026 22:56:31', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'EVENT-TICKET-20',      'id' => '373b3ea3360feb6220dc003d74eb5630d6866b7d', 'icon' => 'confirmation_number', 'iconbg' => 'bg-emerald-100 text-emerald-700',     'type' => 'Event Ticket',  'badge' => 'bg-emerald-50 text-emerald-700 border-emerald-100', 'created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'LOYALTY-CARD-49',      'id' => '9d41f80ac36317a9ea842c491a31ded9d44c20ca', 'icon' => 'badge',               'iconbg' => 'bg-amber-100 text-amber-700',         'type' => 'Loyalty Card',  'badge' => 'bg-amber-50 text-amber-700 border-amber-100',       'created' => '18/05/2026 22:39:36', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'GIFT-CARD-43',         'id' => '2563bc42f3ca8df571d6562b15dcc2f16b8564da', 'icon' => 'person',              'iconbg' => 'bg-primary/10 text-primary',          'type' => 'Gift Card',     'badge' => 'bg-error-container/40 text-error border-error/10',  'created' => '18/05/2026 22:15:18', 'updated' => '04/06/2026 16:19:15'],
+        ];
+      ?>
       <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden shadow-sm [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
         <div class="overflow-x-auto [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
-          <table class="w-full text-left border-collapse">
+          <table class="responsive-table w-full text-left border-collapse">
             <thead class="bg-surface-container-low/50">
               <tr>
                 <th
@@ -159,353 +220,40 @@
               </tr>
             </thead>
             <tbody class="divide-y divide-outline-variant/30">
-              <!-- Row 1 -->
+              <?php foreach ($templates as $t): ?>
               <tr class="hover:bg-surface-container-low transition-colors group">
-                <td class="px-6 py-4">
+                <td class="cell-main px-6 py-4">
                   <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
-                      <span class="material-symbols-outlined"
-                        style="font-variation-settings: &quot;FILL&quot; 1;">person</span>
+                    <div class="w-10 h-10 rounded-xl <?= $t['iconbg'] ?> flex items-center justify-center">
+                      <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;"><?= $t['icon'] ?></span>
                     </div>
                     <div>
-                      <p class="text-body-md text-on-surface font-medium">GENERIC-PASS-6</p>
-                      <p class="text-label-sm text-outline font-mono whitespace-nowrap font-medium">ID:
-                        cc7b3c0875a4a2cb9071274afa4122b7aa0e6fa4</p>
+                      <p class="text-body-md text-on-surface font-medium"><?= htmlspecialchars($t['name']) ?></p>
+                      <p class="text-label-sm text-outline font-mono whitespace-nowrap font-medium">ID: <?= htmlspecialchars($t['id']) ?></p>
                     </div>
                   </div>
                 </td>
-                <td class="px-6 py-4">
-                  <span
-                    class="inline-flex items-center py-1 rounded-full text-[10px] font-bold uppercase bg-blue-50 text-blue-600 border border-blue-100 whitespace-nowrap px-2">Generic
-                    Pass</span>
+                <td class="px-6 py-4" data-label="Pass Type">
+                  <span class="inline-flex items-center py-1 rounded-full text-[10px] font-bold uppercase <?= $t['badge'] ?> border whitespace-nowrap px-2"><?= htmlspecialchars($t['type']) ?></span>
                 </td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">22/05/2026 17:03:55</td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
-                <td class="px-6 py-4 text-right">
+                <td class="px-6 py-4 text-label-md text-on-surface-variant" data-label="Created"><?= htmlspecialchars($t['created']) ?></td>
+                <td class="px-6 py-4 text-label-md text-on-surface-variant" data-label="Updated"><?= htmlspecialchars($t['updated']) ?></td>
+                <td class="cell-action px-6 py-4 text-right">
                   <div class="relative inline-block js-menu">
-                    <button
-                      type="button"
-                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
-                      more_vert
-                    </button>
-                    <div
-                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
+                    <button type="button" class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">more_vert</button>
+                    <div class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
-                          <span class="font-medium">View</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
-                          <span class="font-medium">Edit</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="geoLocation.php">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
-                          <span class="font-medium">GEO location</span>
-                        </a>
+                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">visibility</span><span class="font-medium">View</span></a>
+                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">edit</span><span class="font-medium">Edit</span></a>
+                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="geoLocation.php"><span class="material-symbols-outlined text-secondary text-[20px]">location_on</span><span class="font-medium">GEO location</span></a>
                         <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-[20px]">delete</span>
-                          <span class="font-bold">Delete</span>
-                        </a>
+                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">delete</span><span class="font-bold">Delete</span></a>
                       </div>
                     </div>
                   </div>
                 </td>
               </tr>
-              <!-- Row 2 -->
-              <tr class="hover:bg-surface-container-low transition-colors group">
-                <td class="px-6 py-4">
-                  <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center">
-                      <span class="material-symbols-outlined"
-                        style="font-variation-settings: &quot;FILL&quot; 1;">campaign</span>
-                    </div>
-                    <div>
-                      <p class="text-body-md text-on-surface font-medium">ADVERTISING 34</p>
-                      <p class="text-label-sm text-outline font-mono whitespace-nowrap font-medium">ID:
-                        171f8c83fc297fdeda6eed32fee0a1cf2f503e15</p>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4">
-                  <span
-                    class="inline-flex items-center py-1 rounded-full text-[10px] font-bold uppercase bg-slate-50 text-slate-600 border border-slate-200 whitespace-nowrap px-2">Advertising</span>
-                </td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">19/05/2026 23:25:14</td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
-                <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block js-menu">
-                    <button
-                      type="button"
-                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
-                      more_vert
-                    </button>
-                    <div
-                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
-                      <div class="py-1.5">
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
-                          <span class="font-medium">View</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
-                          <span class="font-medium">Edit</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="geoLocation.php">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
-                          <span class="font-medium">GEO location</span>
-                        </a>
-                        <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-[20px]">delete</span>
-                          <span class="font-bold">Delete</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <!-- Row 3 -->
-              <tr class="hover:bg-surface-container-low transition-colors group">
-                <td class="px-6 py-4">
-                  <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
-                      <span class="material-symbols-outlined"
-                        style="font-variation-settings: &quot;FILL&quot; 1;">loyalty</span>
-                    </div>
-                    <div>
-                      <p class="text-body-md text-on-surface font-medium">LOYALTY-TIER-TEST-01</p>
-                      <p class="text-label-sm text-outline font-mono whitespace-nowrap font-medium">ID:
-                        6ef7b13772f104c2533dd189814704ca5bc161a7</p>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4">
-                  <span
-                    class="inline-flex items-center py-1 rounded-full text-[10px] font-bold uppercase bg-blue-100 text-blue-700 border border-blue-200 whitespace-nowrap px-2">Loyalty
-                    + Tier</span>
-                </td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">19/05/2026 22:56:31</td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
-                <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block js-menu">
-                    <button
-                      type="button"
-                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
-                      more_vert
-                    </button>
-                    <div
-                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
-                      <div class="py-1.5">
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
-                          <span class="font-medium">View</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
-                          <span class="font-medium">Edit</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="geoLocation.php">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
-                          <span class="font-medium">GEO location</span>
-                        </a>
-                        <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-[20px]">delete</span>
-                          <span class="font-bold">Delete</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <!-- Row 4 -->
-              <tr class="hover:bg-surface-container-low transition-colors group">
-                <td class="px-6 py-4">
-                  <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
-                      <span class="material-symbols-outlined"
-                        style="font-variation-settings: &quot;FILL&quot; 1;">confirmation_number</span>
-                    </div>
-                    <div>
-                      <p class="text-body-md text-on-surface font-medium">EVENT-TICKET-20</p>
-                      <p class="text-label-sm text-outline font-mono whitespace-nowrap font-medium">ID:
-                        373b3ea3360feb6220dc003d74eb5630d6866b7d</p>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4">
-                  <span
-                    class="inline-flex items-center py-1 rounded-full text-[10px] font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-100 whitespace-nowrap px-2">Event
-                    Ticket</span>
-                </td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">19/05/2026 21:59:10</td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
-                <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block js-menu">
-                    <button
-                      type="button"
-                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
-                      more_vert
-                    </button>
-                    <div
-                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
-                      <div class="py-1.5">
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
-                          <span class="font-medium">View</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
-                          <span class="font-medium">Edit</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="geoLocation.php">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
-                          <span class="font-medium">GEO location</span>
-                        </a>
-                        <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-[20px]">delete</span>
-                          <span class="font-bold">Delete</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <!-- Row 5 -->
-              <tr class="hover:bg-surface-container-low transition-colors group">
-                <td class="px-6 py-4">
-                  <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center">
-                      <span class="material-symbols-outlined"
-                        style="font-variation-settings: &quot;FILL&quot; 1;">badge</span>
-                    </div>
-                    <div>
-                      <p class="text-body-md text-on-surface font-medium">LOYALTY-CARD-49</p>
-                      <p class="text-label-sm text-outline font-mono whitespace-nowrap font-medium">ID:
-                        9d41f80ac36317a9ea842c491a31ded9d44c20ca</p>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4">
-                  <span
-                    class="inline-flex items-center py-1 rounded-full text-[10px] font-bold uppercase bg-amber-50 text-amber-700 border border-amber-100 whitespace-nowrap px-2">Loyalty
-                    Card</span>
-                </td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">18/05/2026 22:39:36</td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
-                <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block js-menu">
-                    <button
-                      type="button"
-                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
-                      more_vert
-                    </button>
-                    <div
-                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
-                      <div class="py-1.5">
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
-                          <span class="font-medium">View</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
-                          <span class="font-medium">Edit</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="geoLocation.php">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
-                          <span class="font-medium">GEO location</span>
-                        </a>
-                        <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-[20px]">delete</span>
-                          <span class="font-bold">Delete</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <!-- Row 6 -->
-              <tr class="hover:bg-surface-container-low transition-colors group">
-                <td class="px-6 py-4">
-                  <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
-                      <span class="material-symbols-outlined"
-                        style="font-variation-settings: &quot;FILL&quot; 1;">person</span>
-                    </div>
-                    <div>
-                      <p class="text-body-md text-on-surface font-medium">GIFT-CARD-43</p>
-                      <p class="text-label-sm text-outline font-mono whitespace-nowrap font-medium">ID:
-                        2563bc42f3ca8df571d6562b15dcc2f16b8564da</p>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4">
-                  <span
-                    class="inline-flex items-center py-1 rounded-full text-[10px] font-bold uppercase bg-error-container/40 text-error border border-error/10 whitespace-nowrap px-2">Gift
-                    Card</span>
-                </td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">18/05/2026 22:15:18</td>
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">04/06/2026 16:19:15</td>
-                <td class="px-6 py-4 text-right">
-                  <div class="relative inline-block js-menu">
-                    <button
-                      type="button"
-                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
-                      more_vert
-                    </button>
-                    <div
-                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
-                      <div class="py-1.5">
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
-                          <span class="font-medium">View</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
-                          <span class="font-medium">Edit</span>
-                        </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                          href="geoLocation.php">
-                          <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
-                          <span class="font-medium">GEO location</span>
-                        </a>
-                        <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors"
-                          href="#">
-                          <span class="material-symbols-outlined text-[20px]">delete</span>
-                          <span class="font-bold">Delete</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>
