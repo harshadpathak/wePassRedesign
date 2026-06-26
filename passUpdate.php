@@ -344,7 +344,7 @@
           <!-- Actions -->
           <div class="flex flex-col-reverse sm:flex-row items-center justify-center gap-3 pt-2">
             <button type="submit"
-              class="w-full sm:w-auto flex items-center justify-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+              class="w-full sm:w-auto flex items-center justify-center gap-2 bg-teal-600 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-teal-600/20 hover:opacity-95 active:scale-[0.98] transition-all">
               <span class="material-symbols-outlined text-[20px]">save</span>
               Update Pass
             </button>

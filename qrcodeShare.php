@@ -162,7 +162,7 @@
             </div>
             <div class="min-w-0">
               <p class="text-body-lg font-bold text-on-surface truncate"><?= htmlspecialchars($row['name']) ?></p>
-              <p class="text-label-sm text-outline font-mono truncate">ID: <?= htmlspecialchars($row['id']) ?></p>
+              <p class="text-label-sm text-outline font-mono truncate font-medium">ID: <?= htmlspecialchars($row['id']) ?></p>
             </div>
           </div>
 

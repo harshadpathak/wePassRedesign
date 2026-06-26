@@ -118,6 +118,31 @@ body {
 }
 </style>
 <style>
+/* ---------- Mobile sidebar (off-canvas drawer) ---------- */
+@media (max-width: 1023px) {
+    /* Content takes full width on mobile */
+    main {
+        margin-left: 0 !important;
+    }
+    /* Sidebar slides off-screen by default */
+    aside {
+        transform: translateX(-100%);
+    }
+    /* Open state (toggled via JS) */
+    aside.mobile-open {
+        transform: translateX(0);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    }
+    /* Ignore the desktop 80px-rail collapse on mobile */
+    aside.sidebar-collapsed {
+        width: 300px !important;
+    }
+    .sidebar-collapsed ~ main {
+        margin-left: 0 !important;
+    }
+}
+</style>
+<style>
 /* ---------- Collapsed sidebar (80px rail) ---------- */
 .sidebar-collapsed {
     width: 80px !important;
