@@ -304,7 +304,7 @@
           </div>
 
           <!-- Realtime note -->
-          <div class="flex items-center justify-end gap-1.5 text-label-md text-outline">
+          <div class="flex items-center justify-end gap-1.5 text-label-md text-gray-400">
             <span class="material-symbols-outlined text-[16px] text-amber-500">bolt</span>
             Data updates near real time
           </div>

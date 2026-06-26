@@ -195,7 +195,7 @@
                             <span class="font-bold text-on-surface">2 MB</span>
                           </div>
                         </div>
-                        <p class="flex items-start gap-1.5 text-label-md text-on-surface-variant">
+                        <p class="flex items-start gap-1.5 text-label-md text-gray-400">
                           <span class="material-symbols-outlined text-[15px] text-emerald-600 shrink-0">tips_and_updates</span>
                           Use a transparent background so the logo blends with the email header.
                         </p>

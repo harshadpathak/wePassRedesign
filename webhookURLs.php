@@ -179,7 +179,7 @@
 
         <!-- Card footer -->
         <div class="flex items-center justify-end px-6 py-3.5 border-t border-outline-variant/70 bg-surface-container-low/40">
-          <p class="flex items-center gap-2 text-label-md text-on-surface-variant flex-1">
+          <p class="flex items-center gap-2 text-label-md text-gray-400 flex-1">
             <span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
             Only send webhooks to endpoints you control and trust.
           </p>
