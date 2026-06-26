@@ -291,7 +291,11 @@ body {
     outline: none;
     border-color: #5573ff;
     box-shadow: 0 0 0 2px rgba(85, 115, 255, 0.2);
-}
+}                    
+[data-schedule-panel] .select2-container--disabled .select2-selection,
+[data-schedule-panel] .select2-container--disabled .select2-selection__rendered { 
+    cursor: not-allowed !important; 
+    }
 </style>
 <script>
 // Auto-initialise any <select class="js-select2"> on the page.
