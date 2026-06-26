@@ -98,7 +98,7 @@
               <div class="space-y-1.5">
                 <label class="block text-label-md font-semibold text-on-surface">Issuer ID:<span class="text-error">*</span></label>
                 <input type="text" placeholder="Enter Issuer ID" required
-                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <!-- What is Issuer ID? -->
                 <div class="mt-2 py-4 space-y-2">
                   <p class="flex items-center gap-2 text-label-md font-bold text-gray-400">
@@ -222,7 +222,7 @@
                 <div class="space-y-1.5">
                   <label class="block text-label-md font-semibold text-on-surface">Organization Name:<span class="text-error">*</span></label>
                   <input type="text" placeholder="Enter Organization Name" required
-                    class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <p class="flex items-center gap-1.5 text-label-sm font-normal text-gray-400">
                     <span class="material-symbols-outlined text-[15px]">info</span>Your company's legal name from Apple Developer account
                   </p>
@@ -231,7 +231,7 @@
                 <div class="space-y-1.5">
                   <label class="block text-label-md font-semibold text-on-surface">Team Identifier:<span class="text-error">*</span></label>
                   <input type="text" placeholder="Enter Team Identifier" required
-                    class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <p class="flex items-center gap-1.5 text-label-sm font-normal text-gray-400">
                     <span class="material-symbols-outlined text-[15px]">info</span>10-character ID from Apple Developer → Membership
                   </p>
@@ -242,7 +242,7 @@
               <div class="space-y-1.5">
                 <label class="block text-label-md font-semibold text-on-surface">Certificate Password:<span class="text-error">*</span></label>
                 <input type="password" placeholder="Enter certificate password" required
-                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <p class="flex items-center gap-1.5 text-label-sm font-normal text-gray-400">
                   <span class="material-symbols-outlined text-[15px]">info</span>Password set when exporting certificate from Keychain Access
                 </p>
@@ -252,7 +252,7 @@
               <div class="space-y-1.5">
                 <label class="block text-label-md font-semibold text-on-surface">Pass Type Identifier:<span class="text-error">*</span></label>
                 <input type="text" placeholder="pass.com.yourcompany.passname" required
-                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <div class="mt-2 py-4 space-y-1.5">
                   <p class="text-label-md text-gray-400"><span class="font-semibold text-gray-400">How to get:</span> Apple Developer → Certificates, IDs &amp; Profiles → Identifiers → Pass Type IDs</p>
                   <p class="text-label-md text-on-surface-variant"><span class="font-semibold text-gray-400">Format:</span> <code class="rounded bg-primary/10 px-1.5 py-0.5 text-label-sm font-mono text-primary">pass.com.yourcompany.passname</code></p>
@@ -299,7 +299,7 @@
                 <div class="space-y-1.5">
                   <label class="block text-label-md font-semibold text-on-surface">Auth Key ID: <span class="text-error">*</span></label>
                   <input type="text" placeholder="Enter Auth Key ID" required
-                    class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <p class="flex items-center gap-1.5 text-label-sm text-gray-400">
                     <span class="material-symbols-outlined text-[15px]">info</span>10-character Key ID from Apple Developer → Keys
                   </p>
