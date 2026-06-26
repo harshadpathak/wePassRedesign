@@ -190,7 +190,7 @@
         <!-- Card Footer -->
         <div class="flex items-center justify-end gap-1.5 px-6 py-3.5 border-t border-outline-variant/60 bg-surface-container-low/40">
           <span class="material-symbols-outlined text-[16px] text-emerald-500">cloud_sync</span>
-          <span class="text-label-md text-on-surface-variant font-medium">Data updates near real time</span>
+          <span class="text-label-md text-gray-400 font-medium">Data updates near real time</span>
         </div>
       </section>
     </section>

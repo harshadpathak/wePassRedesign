@@ -146,7 +146,7 @@
 
           <!-- Footer / Submit -->
           <div class="flex items-center gap-3 px-6 py-4 border-t border-outline-variant/70 bg-surface-container-low/40">
-            <p class="flex items-center gap-1.5 text-label-md text-on-surface-variant flex-1 min-w-0">
+            <p class="flex items-center gap-1.5 text-label-md text-gray-400 flex-1 min-w-0">
               <span class="material-symbols-outlined text-[18px] text-primary shrink-0">lock</span>
               Credentials are encrypted at rest
             </p>
@@ -326,7 +326,7 @@
 
           <!-- Footer / Submit -->
           <div class="flex items-center gap-3 px-6 py-4 border-t border-outline-variant/70 bg-surface-container-low/40">
-            <p class="flex items-center gap-1.5 text-label-md text-on-surface-variant flex-1 min-w-0">
+            <p class="flex items-center gap-1.5 text-label-md text-gray-400 flex-1 min-w-0">
               <span class="material-symbols-outlined text-[18px] text-primary shrink-0">lock</span>
               Credentials are encrypted at rest
             </p>

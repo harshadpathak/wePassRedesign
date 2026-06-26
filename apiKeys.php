@@ -140,7 +140,7 @@
                       <?php echo htmlspecialchars($key['prefix']); ?><?php echo htmlspecialchars($key['suffix']); ?>
                     </code>
                     <button type="button" onclick="copyText('<?php echo htmlspecialchars($key['prefix'] . $key['suffix']); ?>', this)"
-                      class="opacity-0 group-hover:opacity-100 inline-flex items-center justify-center w-7 h-7 rounded-lg text-outline hover:bg-surface-container-high hover:text-primary transition-all"
+                      class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-outline hover:bg-surface-container-high hover:text-primary transition-all"
                       title="Copy key">
                       <span class="material-symbols-outlined text-[16px]">content_copy</span>
                     </button>
@@ -190,11 +190,11 @@
         
         <!-- Card footer -->
         <div class="flex items-center justify-end px-6 py-3.5 border-t border-outline-variant/70 bg-surface-container-low/40">
-          <p class="flex items-center gap-2 text-label-md text-on-surface-variant flex-1">
+          <p class="flex items-center gap-2 text-label-md text-gray-400 flex-1">
             <span class="material-symbols-outlined text-[18px] text-primary">shield</span>
             Keep your keys secret and never expose them in client-side code.
           </p>
-          <span class="flex items-center gap-1.5 text-label-md text-on-surface-variant">
+          <span class="flex items-center gap-1.5 text-label-md text-gray-400">
             <span class="material-symbols-outlined text-[16px] text-amber-500">bolt</span>
             Data updates near real time
           </span>
