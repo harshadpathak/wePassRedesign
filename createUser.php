@@ -86,7 +86,7 @@
                         </label>
                         <div class="relative">
                             <input type="text" placeholder="Enter name" required
-                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface  placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                         </div>
                     </div>
                     <!-- Email -->
@@ -96,7 +96,7 @@
                         </label>
                         <div class="relative">
                             <input type="email" placeholder="Enter email" required
-                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface  placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                         </div>
                     </div>
                     <!-- Role -->

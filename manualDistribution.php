@@ -117,7 +117,7 @@
                     <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">Balance:</label>
                         <input
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             type="text" value="100">
                     </div>
                     <!-- Currency Code -->
@@ -138,7 +138,7 @@
                         <label class="text-on-surface font-semibold text-label-md">Gift Card Number:<span
                                 class="text-error">*</span></label>
                         <input
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             type="text" value="ABCD123456">
                     </div>
                     <!-- Pass Expiration Date -->
@@ -146,7 +146,7 @@
                         <label class="text-on-surface font-semibold text-label-md">Pass Expiration Date:<span
                                 class="text-error">*</span></label>
                         <input
-                            class="js-datetime w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="js-datetime w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             placeholder="-Date-" type="text">
                     </div>
                     <!-- Barcode Value -->
@@ -154,7 +154,7 @@
                         <label class="text-on-surface font-semibold text-label-md">Barcode Value:<span
                                 class="text-error">*</span></label>
                         <textarea rows="2"
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y">1246897531</textarea>
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y">1246897531</textarea>
                     </div>
                 </div>
             </div>
@@ -170,14 +170,14 @@
                     <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">Pin:</label>
                         <input
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             type="text" value="ddd">
                     </div>
                     <!-- Event Number -->
                     <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">Event Number:</label>
                         <input
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             placeholder="Enter Event Number" type="text">
                     </div>
                     <!-- Country -->
@@ -198,7 +198,7 @@
                     <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">City:</label>
                         <input
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             placeholder="Enter City" type="text">
                     </div>
                 </div>
@@ -230,20 +230,20 @@
                             <label class="text-on-surface font-semibold text-label-md">First Name:<span
                                     class="text-error">*</span></label>
                             <input
-                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 placeholder="Enter first name" type="text">
                         </div>
                         <div class="space-y-2">
                             <label class="text-on-surface font-semibold text-label-md">Last Name:</label>
                             <input
-                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 placeholder="Enter last name" type="text">
                         </div>
                         <div class="space-y-2">
                             <label class="text-on-surface font-semibold text-label-md">Email:<span
                                     class="text-error">*</span></label>
                             <input
-                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 placeholder="Enter email address" type="email">
                         </div>
                     </div>

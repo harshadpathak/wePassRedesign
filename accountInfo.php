@@ -84,7 +84,7 @@
                   <span
                     class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
                   <input
-                    class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer"
+                    class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer"
                     placeholder="Select date range" readonly="" type="text">
                 </div>
               </div>
@@ -129,7 +129,7 @@
                   </span>
                 </label>
                 <input type="text" value="Aatman Infotech" disabled
-                  class="w-full bg-surface-container-high border-outline-variant rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
+                  class="w-full bg-surface-container-high border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
               </div>
               <!-- Account Domain -->
               <div class="space-y-2">
@@ -143,7 +143,7 @@
                   </span>
                 </label>
                 <input type="text" value="https://aatmaninfotech.com" disabled
-                  class="w-full bg-surface-container-high border-outline-variant rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
+                  class="w-full bg-surface-container-high border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
               </div>
               <!-- Timezone -->
               <div class="space-y-2">
@@ -202,7 +202,7 @@
                 </label>
                 <div class="flex items-stretch rounded-lg border border-outline-variant bg-surface-container-low overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
                   <input type="text" disabled
-                    class="flex-1 w-full bg-transparent py-3 px-4 text-body-md focus:outline-none border-0 focus:ring-0 cursor-not-allowed">
+                    class="flex-1 w-full bg-transparent py-3 px-4 text-body-md placeholder:text-slate-400 focus:outline-none border-0 focus:ring-0 cursor-not-allowed">
                   <span class="flex items-center px-4 text-body-md font-semibold text-secondary bg-surface-container-high border-l border-outline-variant">days</span>
                 </div>
                 <p class="text-label-sm text-gray-400">Default value is 365 days</p>
@@ -219,7 +219,7 @@
                   </span>
                 </label>
                 <input type="text" disabled
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-not-allowed">
+                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-not-allowed">
               </div>
             </div>
 

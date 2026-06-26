@@ -130,12 +130,12 @@
                   <div class="space-y-2">
                     <label class="text-on-surface font-bold text-label-md">Name</label>
                     <input type="text" value="<?= htmlspecialchars($user['name']) ?>"
-                      class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                      class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   </div>
                   <div class="space-y-2">
                     <label class="text-on-surface font-bold text-label-md">Email</label>
                     <input type="email" value="<?= htmlspecialchars($user['email']) ?>" readonly
-                      class="w-full bg-surface-container-high/60 border-outline-variant rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
+                      class="w-full bg-surface-container-high/60 border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
                   </div>
                 </div>
               </div>
@@ -153,12 +153,12 @@
                   <div class="space-y-2">
                     <label class="text-on-surface font-bold text-label-md">Role</label>
                     <input type="text" value="<?= htmlspecialchars($user['role']) ?>" readonly
-                      class="w-full bg-surface-container-high/60 border-outline-variant rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
+                      class="w-full bg-surface-container-high/60 border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
                   </div>
                   <div class="space-y-2">
                     <label class="text-on-surface font-bold text-label-md">VAT Number</label>
                     <input type="text" placeholder="Enter VAT Number"
-                      class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                      class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   </div>
                   <div class="space-y-2">
                     <label class="text-on-surface font-bold text-label-md">Timezone</label>

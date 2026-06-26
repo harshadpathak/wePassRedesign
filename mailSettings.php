@@ -235,7 +235,7 @@
               <div class="space-y-2">
                 <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Host: <span class="text-error">*</span></label>
                 <input type="text" placeholder="smtp.gmail.com"
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
 
               <div class="space-y-2">
@@ -252,7 +252,7 @@
               <div class="space-y-2">
                 <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Port: <span class="text-error">*</span></label>
                 <input type="text" placeholder="465"
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <p class="text-label-md text-gray-400">Common ports: 465 (SSL), 587 (TLS)</p>
               </div>
             </div>
@@ -272,7 +272,7 @@
                   </span>
                 </label>
                 <input type="text" placeholder="savanihd@gmail.com"
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <p class="text-label-md text-gray-400">Your SMTP username (email address for Gmail/Outlook, or API username for services like SendGrid)</p>
               </div>
 
@@ -280,7 +280,7 @@
                 <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Password: <span class="text-error">*</span></label>
                 <div class="flex items-stretch rounded-lg border border-outline-variant bg-surface-container-low overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
                   <input type="password" placeholder="••••••••••••••••" id="smtp-password"
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:border-primary transition-all focus:ring-0 focus:outline-none">
+                    class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md focus:border-primary transition-all focus:ring-0 focus:outline-none">
                   <button type="button" data-toggle-pw="smtp-password" class="flex items-center px-4 bg-surface-container-low  border-outline-variant text-outline hover:text-on-surface transition-colors">
                     <span class="material-symbols-outlined text-[20px]">visibility</span>
                   </button>
@@ -301,7 +301,7 @@
               <div class="space-y-2">
                 <label class="flex items-center text-on-surface font-semibold text-label-md">Mail From Address: <span class="text-error">*</span></label>
                 <input type="email" placeholder="example@gmail.com"
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <p class="text-label-md text-gray-400">This address appears as the sender in all outbound emails.</p>
               </div>
             </div>
