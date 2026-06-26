@@ -192,7 +192,7 @@
                 <span class="text-label-sm font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-full">Recommended</span>
               </div>
               <ul class="space-y-2 text-body-md text-secondary">
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>Uses pre-configured Apple credentials (Team ID, Pass Type ID, certificates)</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>Uses default Apple Wallet credentials for secure pass generation.</li>
                 <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>Automatically issues digital passes for Apple Wallet</li>
                 <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>No manual setup required — works out of the box</li>
               </ul>
