@@ -90,7 +90,7 @@
             // label, value, sublabel, icon, chip bg, sparkline color, trend, heights
             ['Pass Templates',   '129', 'vs 114 last month', 'description', 'bg-brand-gradient shadow-primary/20',     'bg-primary/30',  '+13.2%', [40,55,45,62,52,70,66]],
             ['Passes',           '261', 'vs 241 last month', 'credit_card', 'bg-brand-gradient shadow-primary/20',     'bg-primary/30',  '+8.3%',  [48,44,58,54,68,63,80]],
-            ['Installed Passes', '220', 'vs 191 last month', 'download',    'bg-emerald-500 shadow-teal-600/20',     'bg-emerald-400/40', '+15.2%', [34,48,44,55,64,60,76]],
+            ['Installed Passes', '220', 'vs 191 last month', 'download',    'bg-emerald-500 shadow-[#198754]/20',     'bg-emerald-400/40', '+15.2%', [34,48,44,55,64,60,76]],
           ];
           foreach ($stats as [$label, $value, $sub, $icon, $chip, $spark, $trend, $heights]):
         ?>

@@ -318,6 +318,60 @@ body {
     box-shadow: 0 0 0 2px rgba(85, 115, 255, 0.2);
 }
 </style>
+
+<!-- Mobile view -->
+ <style>
+        /* Mobile: turn the templates table into stacked cards (desktop unchanged) */
+        @media (max-width: 1023px) {
+          .responsive-table thead { display: none; }
+          .responsive-table, .responsive-table tbody { display: block; width: 100%; }
+          .responsive-table tbody { padding: 0.75rem; }
+          .responsive-table tr {
+            display: block;
+            position: relative;
+            border: 1px solid rgba(120, 130, 150, 0.22) !important;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: #fff;
+          }
+          .responsive-table tr:last-child { margin-bottom: 0; }
+          .responsive-table td {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.4rem 0 !important;
+            border: none !important;
+            text-align: left !important;
+          }
+          .responsive-table td[data-label]::before {
+            content: attr(data-label);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            color: #94a3b8;
+            flex-shrink: 0;
+          }
+          .responsive-table td.cell-main {
+            display: block;
+            padding-right: 2.75rem !important;
+            padding-bottom: 0.75rem !important;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(120, 130, 150, 0.15) !important;
+          }
+          .responsive-table td.cell-main .font-mono { white-space: normal; word-break: break-all; }
+          .responsive-table td.cell-action {
+            position: absolute;
+            top: 0.85rem;
+            right: 0.85rem;
+            width: auto;
+            padding: 0 !important;
+          }
+        }
+      </style>
+<!-- Mobile view End-->
 <script>
 // Auto-initialise any <select class="js-select2"> on the page.
 // Options via data-attributes: data-placeholder, data-allow-clear="false".

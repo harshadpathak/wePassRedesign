@@ -116,7 +116,7 @@
             <!-- Card Footer -->
             <div class="flex items-center justify-center gap-3 mt-6 pt-6 border-t border-outline-variant/40 bg-white">
                 <button type="submit"
-                    class="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-teal-600/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                    class="inline-flex items-center gap-2 bg-[#198754] text-white px-6 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
                     <span class="material-symbols-outlined text-[20px]">send</span>
                     Send Invitation
                 </button>
