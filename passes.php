@@ -46,7 +46,7 @@
             </div>
             <div class="flex flex-col">
               <h3 class="text-on-surface font-bold text-body-lg font-display mb-1">Records</h3>
-              <p class="text-outline text-label-md font-body-md">Email delivery logs for personalized passes</p>
+              <p class="text-gray-400 text-label-md font-body-md">Email delivery logs for personalized passes</p>
             </div>
           </div>
           <!-- Divider -->
@@ -58,7 +58,7 @@
             </div>
             <div class="flex flex-col">
               <h3 class="text-on-surface font-bold text-body-lg font-display mb-1">Installs</h3>
-              <p class="text-outline text-label-md font-body-md">Installation events across wallet platforms</p>
+              <p class="text-gray-400 text-label-md font-body-md">Installation events across wallet platforms</p>
             </div>
           </div>
           <!-- Divider -->
@@ -70,7 +70,7 @@
             </div>
             <div class="flex flex-col">
               <h3 class="text-on-surface font-bold text-body-lg font-display mb-1">Analytics</h3>
-              <p class="text-outline text-label-md font-body-md">Distribution and activity reports</p>
+              <p class="text-gray-400 text-label-md font-body-md">Distribution and activity reports</p>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <h3 class="text-primary font-display font-bold text-headline-md">Filter Pass Templates</h3>
-            <p class="text-on-surface-variant text-body-md">Refine your search to find specific templates</p>
+            <p class="text-gray-400 text-body-md">Refine your search to find specific templates</p>
           </div>
           <div class="border-t border-outline-variant/30"></div>
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
@@ -93,7 +93,7 @@
                 <span
                   class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
                 <input
-                  class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                   placeholder="Select date range" readonly="" type="text">
               </div>
             </div>
@@ -117,7 +117,7 @@
               <label class="text-on-surface font-bold text-label-md">Search:</label>
               <div class="relative">
                 <input
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                   placeholder="Search by name, ID, or keyword..." type="text">
               </div>
             </div>
@@ -184,9 +184,9 @@
                 <span class="material-symbols-outlined text-[20px]">more_vert</span>
               </button>
               <div class="js-menu-panel hidden absolute right-0 mt-1 w-48 bg-white border border-outline-variant rounded-xl shadow-lg py-1.5 z-20">
-                <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
+                <a href="passStatistics.php" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors">
                   <span class="material-symbols-outlined text-[18px] text-primary">analytics</span> View Analytics
-                </button>
+                </a>
               </div>
             </div>
           </div>

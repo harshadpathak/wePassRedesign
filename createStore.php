@@ -68,7 +68,7 @@
                 <label class="flex items-center text-on-surface font-semibold text-label-md">
                   Store Name:<span class="text-red-500">*</span></label>
                 <input type="text" placeholder="e.g. Thermi Flagship Store" required
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface  placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
 
               <!-- Apple Wallet Location Message -->
@@ -80,7 +80,7 @@
                   <textarea id="walletMsg" maxlength="120" required
                     oninput="document.getElementById('walletMsgCount').textContent = this.value.length"
                     placeholder="e.g. You are near our Thermi store. Tap to view your pass."
-                    class="w-full h-full min-h-[120px] bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none"></textarea>
+                    class="w-full h-full min-h-[120px] bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface  placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none"></textarea>
                   <span class="absolute bottom-3 right-3 text-label-sm text-outline pointer-events-none">
                     <span id="walletMsgCount">0</span> / 120
                   </span>
@@ -145,7 +145,7 @@
             <div class="relative">
               <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
               <input type="text" placeholder="Search by address, store name, landmark, or place"
-                class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-11 pr-4 py-3 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-11 pr-4 py-3 text-body-md text-on-surface  placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
             </div>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <p class="text-label-md text-gray-400">Examples: &ldquo;Leof. Georgikis Scholis 27, Thermi&rdquo;, &ldquo;Thermi Greece&rdquo;, &ldquo;Phoenix Centre Thermi&rdquo;</p>
@@ -266,7 +266,7 @@
               <span class="material-symbols-outlined chevron text-[22px] transition-transform duration-200">chevron_right</span>
               Advanced location fields
             </button>
-            <p class="text-body-md text-secondary mt-1 ml-7">Auto-filled from your selection. You may adjust the address parts; coordinates are read-only.</p>
+            <p class="text-body-md text-gray-400 mt-1 ml-7">Auto-filled from your selection. You may adjust the address parts; coordinates are read-only.</p>
 
             <!-- Collapsible panel -->
             <div id="advancedPanel" class="hidden mt-4 space-y-4">
@@ -275,7 +275,7 @@
                 <div class="space-y-2">
                   <label class="flex items-center text-on-surface font-semibold text-label-md">Address: <span class="text-red-500">*</span></label>
                   <input type="text" id="advAddress" placeholder="Auto-filled from search"
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface  placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <div id="addrHint" class="hidden">
                     <span class="inline-flex items-center gap-1.5 bg-primary/5 text-label-sm px-2.5 py-1 rounded-full">
                       <span class="material-symbols-outlined text-[14px] text-primary">public</span>
@@ -288,7 +288,7 @@
                 <div class="space-y-2">
                   <label class="flex items-center text-on-surface font-semibold text-label-md">Postal Code:</label>
                   <input type="text" placeholder="Postal code" disabled
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface  placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 </div>
                 <!-- Country -->
                 <div class="space-y-2">
@@ -304,19 +304,19 @@
                 <div class="space-y-2">
                   <label class="flex items-center text-on-surface font-semibold text-label-md">City: <span class="text-red-500">*</span></label>
                   <input type="text" id="advCity" placeholder="City"
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface  placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 </div>
                 <!-- Latitude -->
                 <div class="space-y-2">
                   <label class="flex items-center text-on-surface font-semibold text-label-md">Latitude: <span class="text-red-500">*</span></label>
                   <input type="text" id="advLat" readonly value="&mdash;"
-                    class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-on-surface-variant cursor-not-allowed">
+                    class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-slate-400 cursor-not-allowed">
                 </div>
                 <!-- Longitude -->
                 <div class="space-y-2">
                   <label class="flex items-center text-on-surface font-semibold text-label-md">Longitude: <span class="text-red-500">*</span></label>
                   <input type="text" id="advLng" readonly value="&mdash;"
-                    class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-on-surface-variant cursor-not-allowed">
+                    class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-slate-400 cursor-not-allowed">
                 </div>
               </div>
               <!-- Coordinates helper -->
@@ -381,7 +381,7 @@
           <!-- Footer -->
           <div class="flex justify-center mt-8 pt-6 border-t border-outline-variant/30">
             <button type="submit"
-              class="flex items-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+              class="flex items-center gap-2 bg-[#198754] text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
               <span class="material-symbols-outlined">save</span>
               Submit
             </button>

@@ -52,8 +52,8 @@
         </div>
           <div class="flex-1 min-w-0">
             <h3 class="text-headline-md font-bold text-on-surface tracking-tight">About the WePass API</h3>
-            <p class="text-body-md text-secondary leading-relaxed">
-              Our REST API lets you automate your entire pass workflow using your API key. You can <span class="font-bold text-on-surface">generate templates</span> to define the design and structure of your passes, <span class="font-bold text-on-surface">create passes</span> from those templates to issue them to your customers, and <span class="font-bold text-on-surface">update passes</span> at any time to change their content or keep information current. You can also configure a <span class="font-bold text-on-surface">webhook</span> to receive real-time notifications about pass events, so your application always stays in sync. Just include your API key with each request to securely authenticate and start integrating these features into your own application.
+            <p class="text-body-md text-gray-400 leading-relaxed">
+              Our REST API lets you automate your entire pass workflow using your API key. You can <span class="font-bold text-gray-400">generate templates</span> to define the design and structure of your passes, <span class="font-bold text-gray-400">create passes</span> from those templates to issue them to your customers, and <span class="font-bold text-gray-400">update passes</span> at any time to change their content or keep information current. You can also configure a <span class="font-bold text-gray-400">webhook</span> to receive real-time notifications about pass events, so your application always stays in sync. Just include your API key with each request to securely authenticate and start integrating these features into your own application.
             </p>
             <!-- Base URL row + Documentation link, side by side -->
             <div class="flex flex-col lg:flex-row lg:items-stretch gap-3 mt-4">
@@ -89,7 +89,7 @@
           </span>
           <div class="flex-1 min-w-0">
             <h3 class="text-headline-md font-bold text-on-surface">Access Keys</h3>
-            <p class="text-label-md text-gray-500">Manage your API authentication keys</p>
+            <p class="text-label-md text-gray-400">Manage your API authentication keys</p>
           </div>
           <!-- Status legend -->
           <!-- <div class="hidden md:flex items-center gap-1.5 pr-1 shrink-0">
@@ -131,7 +131,7 @@
               <tr class="group hover:bg-surface-container-low transition-colors">
                 <!-- Name -->
                 <td class="px-6 py-4">
-                  <span class="text-body-md font-semibold text-on-surface"><?php echo htmlspecialchars($key['name']); ?></span>
+                  <span class="text-body-md text-on-surface-variant"><?php echo htmlspecialchars($key['name']); ?></span>
                 </td>
                 <!-- Key Secret -->
                 <td class="px-6 py-4">

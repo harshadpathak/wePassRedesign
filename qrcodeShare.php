@@ -45,7 +45,7 @@
           </div>
           <div class="flex-1">
             <h3 class="text-headline-md font-bold text-on-surface tracking-tight">QR Code &amp; Link Share</h3>
-            <p class="text-body-md text-secondary leading-relaxed">Distribute your Generic Advertising Pass
+            <p class="text-body-md text-gray-400 leading-relaxed">Distribute your Generic Advertising Pass
               effortlessly. Each pass template listed below has a unique QR code and shareable link. Copy the link or
               let recipients scan the QR code to add the pass directly to their wallet.
             </p>
@@ -53,15 +53,15 @@
             <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3 mt-4">
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
                 <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="text-body-md font-bold text-on-surface">Scan QR Code</span>
+                <span class="text-body-md font-bold text-gray-600">Scan QR Code</span>
               </div>
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
                 <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="text-body-md font-bold text-on-surface">Share Link</span>
+                <span class="text-body-md font-bold text-gray-600">Share Link</span>
               </div>
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
                 <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="text-body-md font-bold text-on-surface">Add to Wallet</span>
+                <span class="text-body-md font-bold text-gray-600 ">Add to Wallet</span>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <h3 class="text-primary font-display font-bold text-headline-md">Filter QR Code Share</h3>
-            <p class="text-on-surface-variant text-body-md">Refine your search to find specific passes</p>
+            <p class="text-gray-400 text-body-md">Refine your search to find specific passes</p>
           </div>
           <div class="border-t border-outline-variant/30"></div>
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
@@ -86,7 +86,7 @@
                 <span
                   class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
                 <input
-                  class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                   placeholder="Select date range" readonly="" type="text">
               </div>
             </div>
@@ -95,7 +95,7 @@
               <label class="text-on-surface font-semibold text-label-md">Search:</label>
               <div class="relative">
                 <input
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                   placeholder="Search by name, ID, or keyword..." type="text">
               </div>
             </div>
@@ -162,7 +162,7 @@
             </div>
             <div class="min-w-0">
               <p class="text-body-lg font-bold text-on-surface truncate"><?= htmlspecialchars($row['name']) ?></p>
-              <p class="text-label-sm text-outline font-mono truncate">ID: <?= htmlspecialchars($row['id']) ?></p>
+              <p class="text-label-sm text-outline font-mono truncate font-medium">ID: <?= htmlspecialchars($row['id']) ?></p>
             </div>
           </div>
 
@@ -232,12 +232,6 @@
           </button>
         </nav>
         </div>
-      </div>
-
-      <!-- Realtime note -->
-      <div class="flex items-center justify-end gap-1.5 text-label-md text-gray-400">
-        <span class="material-symbols-outlined text-[16px] text-amber-500">bolt</span>
-        Data updates near real time
       </div>
     </section>
     <?php include('footer.php'); ?>

@@ -37,7 +37,7 @@
                 </div>
                 <div class="flex-1">
                     <h3 class="text-headline-md font-bold text-on-surface tracking-tight">About Mail Templates</h3>
-                    <p class="text-body-md text-secondary leading-relaxed">Customize and manage email templates for each pass type. Set subject lines, sender titles, body content, and upload a branded logo for your email header.</p>
+                    <p class="text-body-md text-gray-400 leading-relaxed">Customize and manage email templates for each pass type. Set subject lines, sender titles, body content, and upload a branded logo for your email header.</p>
                     <!-- Steps -->
                     <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3 mt-4">
                         <!-- Step 1 -->
@@ -45,28 +45,28 @@
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                                 style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            <span class="text-body-md font-bold text-on-surface">Mail Logo</span>
+                            <span class="text-body-md font-bold text-gray-600">Mail Logo</span>
                         </div>
                         <!-- Step 2 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                                 style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            <span class="text-body-md font-bold text-on-surface">Subject & Sender</span>
+                            <span class="text-body-md font-bold text-gray-600">Subject & Sender</span>
                         </div>
                         <!-- Step 3 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                                 style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            <span class="text-body-md font-bold text-on-surface">Email Body</span>
+                            <span class="text-body-md font-bold text-gray-600">Email Body</span>
                         </div>
                         <!-- Step 4 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                                 style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            <span class="text-body-md font-bold text-on-surface">Download Button</span>
+                            <span class="text-body-md font-bold text-gray-600">Download Button</span>
                         </div>
                     </div>
                 </div>
@@ -236,7 +236,7 @@
                         <input type="text" data-footer-input="content" placeholder="Copyright © WePASS. All rights reserved."
                           value="© 2026 WePass. All rights reserved."
                           class="w-full bg-surface-container-low border-outline-variant rounded-lg py-2.5 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" />
-                        <p class="flex items-start gap-1.5 text-label-md text-on-surface-variant">
+                        <p class="flex items-start gap-1.5 text-label-md text-gray-400">
                           <span class="material-symbols-outlined text-[15px] text-emerald-600 shrink-0">tips_and_updates</span>
                           Keep it short — a copyright line and a support contact is all most recipients need.
                         </p>
@@ -276,19 +276,19 @@
                         <div class="space-y-2">
                           <label class="text-on-surface font-semibold text-label-md">Subject:<span class="text-error">*</span></label>
                           <input type="text" placeholder="Your <?php echo $tab['label']; ?> is ready"
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                         </div>
                         <div class="space-y-2">
                           <label class="text-on-surface font-semibold text-label-md">Sender Title: <span class="text-error">*</span></label>
                           <input type="text" placeholder="WePASS Team"
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                         </div>
                       </div>
 
                       <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">Body:<span class="text-error">*</span></label>
                         <textarea rows="6" placeholder="Write the message your recipients will see in the email body…"
-                          class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
+                          class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
                         <!-- <p class="flex items-center gap-1.5 text-label-md text-on-surface-variant">
                           <span class="material-symbols-outlined text-[15px]">code</span>
                           You can use placeholders like <code class="rounded bg-surface-container-high px-1 font-mono text-[12px]">{name}</code> and <code class="rounded bg-surface-container-high px-1 font-mono text-[12px]">{pass_link}</code>.
@@ -298,7 +298,7 @@
                       <div class="space-y-2 grid grid-cols-1">
                         <label class="text-on-surface font-semibold text-label-md">View Pass Button Name:<span class="text-error">*</span></label>
                         <input type="text" placeholder="Add to Wallet"
-                          class="w-full max-w-md bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                          class="w-full max-w-md bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                       </div>
                     </div>
                   <?php endif; ?>
@@ -313,7 +313,7 @@
                     </button>
                     <?php endif; ?>
                     <button type="submit"
-                      class="<?php echo $tab['type'] === 'template' ? 'ml-auto' : ''; ?> flex items-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                      class="<?php echo $tab['type'] === 'template' ? 'ml-auto' : ''; ?> flex items-center gap-2 bg-[#198754] text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
                       <span class="material-symbols-outlined text-[18px]">save</span>
                       Submit
                     </button>

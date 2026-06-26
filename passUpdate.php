@@ -167,7 +167,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Expiration</h3>
-                <p class="text-label-md text-gray-500">Control when this pass is no longer valid</p>
+                <p class="text-label-md text-gray-400">Control when this pass is no longer valid</p>
               </div>
             </header>
             <div class="p-6">
@@ -203,7 +203,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Primary Fields</h3>
-                <p class="text-label-md text-gray-500">The headline values shown on the pass</p>
+                <p class="text-label-md text-gray-400">The headline values shown on the pass</p>
               </div>
             </header>
             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
@@ -214,7 +214,7 @@
                   <span class="text-label-sm text-gray-400">999999999999 chars max.</span>
                 </div>
                 <input id="balance" type="text" value="<?= htmlspecialchars($pass['balance']) ?>"
-                  class="js-sync w-full bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="js-sync w-full bg-surface-container-low border border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md text-on-surface focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
               <!-- Currency Code -->
               <div class="space-y-2">
@@ -243,7 +243,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Additional Fields</h3>
-                <p class="text-label-md text-gray-500">Extra details stored on the pass</p>
+                <p class="text-label-md text-gray-400">Extra details stored on the pass</p>
               </div>
             </header>
             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -254,7 +254,7 @@
                   <span class="text-label-sm text-gray-500">50 chars max.</span>
                 </div>
                 <input id="pin" type="text" value="<?= htmlspecialchars($pass['pin']) ?>"
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
               <!-- Event Number -->
               <div class="space-y-2">
@@ -263,13 +263,13 @@
                   <span class="text-label-sm text-gray-500">50 chars max.</span>
                 </div>
                 <input id="event" type="text" value="<?= htmlspecialchars($pass['event']) ?>"
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
               <!-- Gift Card Number -->
               <div class="space-y-2 md:col-span-2">
                 <label for="giftcard" class="text-on-surface font-semibold text-label-md">Gift Card Number: <span class="text-error">*</span></label>
                 <input id="giftcard" type="text" value="<?= htmlspecialchars($pass['cardNumber']) ?>"
-                  class="js-sync w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="js-sync w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
             </div>
           </section>
@@ -282,7 +282,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Pass Update Notification</h3>
-                <p class="text-label-md text-gray-500">Alert wallet holders about this change</p>
+                <p class="text-label-md text-gray-400">Alert wallet holders about this change</p>
               </div>
             </header>
             <div class="p-6 space-y-5">
@@ -297,7 +297,7 @@
                   <span class="flex flex-col">
                     <span class="text-body-md font-semibold text-on-surface">Do you want to send a notification?</span>
                     <!-- swap hint based on state -->
-                    <span class="text-label-sm text-outline group-has-[:checked]:hidden">Off — holders won't be alerted</span>
+                    <span class="text-label-sm text-gray-400 group-has-[:checked]:hidden">Off — holders won't be alerted</span>
                     <span class="hidden items-center gap-1 text-label-sm font-semibold text-primary group-has-[:checked]:inline-flex">
                       <span class="material-symbols-outlined text-[14px]">check_circle</span>On — a push will be sent
                     </span>
@@ -319,7 +319,7 @@
                 <div class="space-y-2">
                   <label for="notify-title" class="text-on-surface font-semibold text-label-md">Pass Update Notification Title:</label>
                   <input id="notify-title" type="text" placeholder="Enter notification title"
-                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md font-semibold text-on-surface placeholder:font-normal placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md font-semibold text-on-surface placeholder:font-normal placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 </div>
                 <!-- Message -->
                 <div class="space-y-2">
@@ -335,7 +335,7 @@
                     </label>                     
                   </div>
                   <textarea id="notify-message" rows="4" placeholder="Enter notification message"
-                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md font-semibold text-on-surface placeholder:font-normal placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
+                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md font-semibold text-on-surface placeholder:font-normal placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
                 </div>
               </div>
             </div>
@@ -344,7 +344,7 @@
           <!-- Actions -->
           <div class="flex flex-col-reverse sm:flex-row items-center justify-center gap-3 pt-2">
             <button type="submit"
-              class="w-full sm:w-auto flex items-center justify-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+              class="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#198754] text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
               <span class="material-symbols-outlined text-[20px]">save</span>
               Update Pass
             </button>

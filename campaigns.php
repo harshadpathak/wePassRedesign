@@ -32,7 +32,7 @@
             class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm"
             onclick="document.getElementById('filter-panel').classList.toggle('hidden')">
             <span class="material-symbols-outlined text-[20px]">filter_alt</span>
-            <span>Filter</span>
+            <span class="">Filter</span>
           </button>
           <div class="flex items-center gap-3">
             <a href ="createCampaign.php"
@@ -52,7 +52,7 @@
             <span class="material-symbols-outlined">storefront</span>
           </div>
           <div class="min-w-0">
-            <p class="text-label-sm text-outline font-medium">Total Campaigns</p>
+            <p class="text-label-sm text-gray-400 font-medium">Total Campaigns</p>
             <p class="text-headline-md text-primary font-bold">5</p>
           </div>
         </div>
@@ -65,7 +65,7 @@
               <span class="material-symbols-outlined [font-variation-settings:'FILL'_1]">check_circle</span>
             </div>
             <div class="min-w-0">
-              <p class="text-label-sm text-outline font-medium">Completed</p>
+              <p class="text-label-sm text-gray-400 font-medium">Completed</p>
               <p class="text-headline-md font-bold">5</p>
             </div>
           </div>
@@ -79,7 +79,7 @@
               <span class="material-symbols-outlined [font-variation-settings:'FILL'_1]">play_circle</span>
             </div>
             <div class="min-w-0">
-              <p class="text-label-sm text-outline font-medium">Running</p>
+              <p class="text-label-sm text-gray-400 font-medium">Running</p>
               <p class="text-headline-md font-bold">5</p>
             </div>            
           </div>
@@ -93,7 +93,7 @@
               <span class="material-symbols-outlined [font-variation-settings:'FILL'_1]">hourglass_top</span>
             </div>
             <div class="min-w-0">
-              <p class="text-label-sm text-outline font-medium">Pending</p>
+              <p class="text-label-sm text-gray-400 font-medium">Pending</p>
               <p class="text-headline-md font-bold">5</p>
             </div>            
           </div>
@@ -107,7 +107,7 @@
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <h3 class="text-primary font-display font-bold text-headline-md">Filter Campaigns</h3>
-            <p class="text-on-surface-variant text-body-md">Refine your search to find specific campaigns</p>
+            <p class="text-gray-400 text-body-md">Refine your search to find specific campaigns</p>
           </div>
           <div class="border-t border-outline-variant/30"></div>
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
@@ -115,7 +115,7 @@
               <label class="text-on-surface font-bold text-label-md">Search:</label>
               <div class="relative">
                 <input
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                   placeholder="Search by campaign title" type="text">
               </div>
             </div>
@@ -402,7 +402,9 @@
 
         <!-- Footer / Pagination -->
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
-          <p class="text-label-sm text-outline">Showing 1 to 10 of 12 campaigns</p>
+          <p class="text-label-md text-secondary">Showing <span class="font-semibold text-on-surface">1</span> to
+            <span class="font-semibold text-on-surface">5</span> of
+            <span class="font-semibold text-on-surface">10</span> results</p>
           <div class="flex items-center gap-1.5">
             <button class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low disabled:opacity-40 disabled:cursor-not-allowed transition-all" disabled>
               <span class="material-symbols-outlined text-[18px]">chevron_left</span>

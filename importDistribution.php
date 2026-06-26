@@ -37,7 +37,7 @@
           </div>
           <div class="flex-1">
             <h3 class="text-headline-md font-bold text-on-surface tracking-tight">How Import Distribution Works</h3>
-            <p class="text-body-md text-secondary leading-relaxed">Bulk distribute digital wallet passes by
+            <p class="text-body-md text-gray-400 leading-relaxed">Bulk distribute digital wallet passes by
               importing recipient data from CSV or Excel files. Upload your file with recipient information, map the
               columns to pass fields, and distribute passes to multiple recipients at once.
             </p>
@@ -45,19 +45,19 @@
             <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3 mt-4">
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
                 <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="text-body-md font-bold text-on-surface">Upload File</span>
+                <span class="text-body-md font-bold text-gray-600">Upload File</span>
               </div>
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
                 <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="text-body-md font-bold text-on-surface">Map Columns</span>
+                <span class="text-body-md font-bold text-gray-600">Map Columns</span>
               </div>
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
                 <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="text-body-md font-bold text-on-surface">Preview Data</span>
+                <span class="text-body-md font-bold text-gray-600">Preview Data</span>
               </div>
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
                 <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="text-body-md font-bold text-on-surface">Distribute</span>
+                <span class="text-body-md font-bold text-gray-600">Distribute</span>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@
             </div>
             <div>
               <p class="step-title text-body-lg font-bold">Upload Your CSV File</p>
-              <p class="text-label-md text-secondary mt-0.5 leading-snug">Select a template and upload your recipient data</p>
+              <p class="text-label-md text-gray-400 mt-0.5 leading-snug">Select a template and upload your recipient data</p>
             </div>
             <span class="step-arrow hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-3 h-3 rotate-45 bg-white border-t border-r border-outline-variant/60"></span>
           </div>
@@ -86,7 +86,7 @@
             </div>
             <div>
               <p class="step-title text-body-lg font-bold">Map CSV Fields</p>
-              <p class="text-label-md text-secondary mt-0.5 leading-snug">Match your CSV columns to the required fields</p>
+              <p class="text-label-md text-gray-400 mt-0.5 leading-snug">Match your CSV columns to the required fields</p>
             </div>
             <span class="step-arrow hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-3 h-3 rotate-45 bg-white border-t border-r border-outline-variant/60"></span>
           </div>
@@ -97,7 +97,7 @@
             </div>
             <div>
               <p class="step-title text-body-lg font-bold">Import</p>
-              <p class="text-label-md text-secondary mt-0.5 leading-snug">Process and import your data</p>
+              <p class="text-label-md text-gray-400 mt-0.5 leading-snug">Process and import your data</p>
             </div>
           </div>
         </div>
@@ -105,23 +105,22 @@
         <!-- Step 1 Body -->
         <div id="step-1" class="p-6 md:p-8 space-y-8">
           <!-- Info note -->
-          <div class="relative overflow-hidden flex items-start gap-4 bg-gradient-to-r from-blue-50 to-indigo-50/40 border border-primary/15 rounded-2xl p-5">
-            <span class="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-primary to-indigo-500"></span>
-            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 ml-1">
-              <span class="material-symbols-outlined text-[22px]">info</span>
+          <div class="flex items-start gap-4 bg-gradient-to-r from-blue-50 to-indigo-50/40 border border-primary/15 rounded-2xl p-5">
+            <div class="w-9 h-9 rounded-lg bg-primary text-white flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">info</span>
             </div>
             <div class="flex-1">
               <p class="text-body-md font-bold text-on-surface">Before you upload</p>
-              <p class="text-body-md text-secondary leading-relaxed mt-1">Upload a CSV file containing recipient
+              <p class="text-body-md text-gray-500 leading-relaxed mt-1">Upload a CSV file containing recipient
                 information. Make sure your file includes columns for the following required fields:</p>
               <div class="flex flex-wrap gap-2 mt-3">
-                <span class="inline-flex items-center gap-1.5 bg-white border border-primary/20 text-on-surface text-label-md font-semibold px-3 py-1.5 rounded-full shadow-sm">
+                <span class="inline-flex items-center gap-1.5 bg-white border border-primary/20 text-gray-600 text-label-md font-semibold px-3 py-1.5 rounded-full shadow-sm">
                   <span class="material-symbols-outlined text-primary text-[16px]">person</span> First Name
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-white border border-primary/20 text-on-surface text-label-md font-semibold px-3 py-1.5 rounded-full shadow-sm">
+                <span class="inline-flex items-center gap-1.5 bg-white border border-primary/20 text-gray-600 text-label-md font-semibold px-3 py-1.5 rounded-full shadow-sm">
                   <span class="material-symbols-outlined text-primary text-[16px]">badge</span> Last Name
                 </span>
-                <span class="inline-flex items-center gap-1.5 bg-white border border-primary/20 text-on-surface text-label-md font-semibold px-3 py-1.5 rounded-full shadow-sm">
+                <span class="inline-flex items-center gap-1.5 bg-white border border-primary/20 text-gray-600 text-label-md font-semibold px-3 py-1.5 rounded-full shadow-sm">
                   <span class="material-symbols-outlined text-primary text-[16px]">mail</span> Email Address
                 </span>
               </div>
@@ -197,15 +196,12 @@
         <div id="step-2" class="hidden">
           <div class="p-6 md:p-8 pt-0 md:pt-0 space-y-6">
             <!-- Info note -->
-            <div class="relative overflow-hidden flex items-start gap-4 bg-gradient-to-r from-blue-50 to-indigo-50/40 border border-primary/15 rounded-2xl p-5 mt-4">
-              <span class="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-primary to-indigo-500"></span>
-              <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 ml-1">
-                <span class="material-symbols-outlined text-[22px]">info</span>
-              </div>
-              <p class="flex-1 text-body-md text-secondary leading-relaxed self-center">Map each field to the
-                corresponding column from your CSV file. Required fields are marked with an asterisk
-                (<span class="text-error font-bold">*</span>).</p>
+          <div class="flex items-start gap-3 mt-5 bg-gradient-to-r from-blue-50 to-indigo-50/40 border border-primary/15 rounded-xl p-4">
+            <div class="w-9 h-9 rounded-lg bg-primary text-white flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">info</span>
             </div>
+            <p class="text-body-md text-gray-500 leading-relaxed self-center">Map each field to the corresponding column from your CSV file. Required fields are marked with an asterisk (<span class="text-red-500">*</span>).</p>
+          </div>
 
             <!-- Mapping Table -->
             <div class="border border-outline-variant rounded-2xl overflow-hidden">

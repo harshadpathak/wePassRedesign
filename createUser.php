@@ -44,31 +44,31 @@
                 </div>
                 <div class="flex-1">
                     <h3 class="text-headline-md font-bold text-on-surface tracking-tight">How User Invitation Works</h3>
-                    <p class="text-body-md text-secondary leading-relaxed">Add a new team member to your account. Fill in their name, email, and assign a role. Once submitted, the user will receive an invitation email with their login credentials to access the platform.</p>
-                </div>
-            </div>
-            <!-- Steps -->
-            <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
-                <!-- Step 1 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Enter Name & Email</span>
-                </div>
-                <!-- Step 2 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Assign Role</span>
-                </div>
-                <!-- Step 3 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Send Invitation</span>
+                    <p class="text-body-md text-gray-400 leading-relaxed">Add a new team member to your account. Fill in their name, email, and assign a role. Once submitted, the user will receive an invitation email with their login credentials to access the platform.</p>
+                    <!-- Steps -->
+                    <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3 mt-4">
+                        <!-- Step 1 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Enter Name & Email</span>
+                        </div>
+                        <!-- Step 2 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Assign Role</span>
+                        </div>
+                        <!-- Step 3 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Send Invitation</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
                         </label>
                         <div class="relative">
                             <input type="text" placeholder="Enter name" required
-                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface  placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                         </div>
                     </div>
                     <!-- Email -->
@@ -96,7 +96,7 @@
                         </label>
                         <div class="relative">
                             <input type="email" placeholder="Enter email" required
-                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface  placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                         </div>
                     </div>
                     <!-- Role -->
@@ -116,7 +116,7 @@
             <!-- Card Footer -->
             <div class="flex items-center justify-center gap-3 mt-6 pt-6 border-t border-outline-variant/40 bg-white">
                 <button type="submit"
-                    class="inline-flex items-center gap-2 bg-emerald-500 text-white px-6 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                    class="inline-flex items-center gap-2 bg-[#198754] text-white px-6 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
                     <span class="material-symbols-outlined text-[20px]">send</span>
                     Send Invitation
                 </button>

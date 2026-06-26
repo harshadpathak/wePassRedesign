@@ -155,7 +155,7 @@
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <h3 class="text-primary font-display font-bold text-headline-md">Filter Pass Records</h3>
-            <p class="text-on-surface-variant text-body-md">Refine your search to find specific pass records</p>
+            <p class="text-gray-400 text-body-md">Refine your search to find specific pass records</p>
           </div>
           <div class="border-t border-outline-variant/30"></div>
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
@@ -166,7 +166,7 @@
                 <span
                   class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
                 <input
-                  class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer"
+                  class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer"
                   placeholder="Select date range" readonly="" type="text">
               </div>
             </div>
@@ -175,7 +175,7 @@
               <label class="text-on-surface font-semibold text-label-md">Search:</label>
               <div class="relative">
                 <input
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                   placeholder="Search by name, ID, or keyword..." type="text">
               </div>
             </div>
@@ -204,7 +204,7 @@
             <div class="w-9 h-9 rounded-lg bg-primary text-white flex items-center justify-center shrink-0">
               <span class="material-symbols-outlined text-[20px]">info</span>
             </div>
-            <p class="text-body-md text-secondary leading-relaxed self-center">Below are all pass install records for this template. Track how many devices have installed or uninstalled the pass across Google and Apple wallets. Use the actions menu to view or edit individual passes.</p>
+            <p class="text-body-md text-gray-500 leading-relaxed self-center">Below are all pass install records for this template. Track how many devices have installed or uninstalled the pass across Google and Apple wallets. Use the actions menu to view or edit individual passes.</p>
           </div>
 
           <!-- Records Table -->

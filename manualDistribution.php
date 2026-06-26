@@ -37,7 +37,7 @@
                 <div class="flex-1">
                     <h3 class="text-headline-md font-bold text-on-surface tracking-tight">How Manual Distribution
                         Works</h3>
-                    <p class="text-body-md text-secondary leading-relaxed">Create and distribute
+                    <p class="text-body-md text-gray-400 leading-relaxed">Create and distribute
                         digital wallet passes to your recipients instantly. Select a template, fill in the required
                         fields, and add recipient details. Each recipient will receive their personalized pass via
                         email.
@@ -49,28 +49,28 @@
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                                 style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            <span class="text-body-md font-bold text-on-surface">Select Template</span>
+                            <span class="text-body-md font-bold text-gray-600">Select Template</span>
                         </div>
                         <!-- Step 2 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                                 style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            <span class="text-body-md font-bold text-on-surface">Fill Pass Details</span>
+                            <span class="text-body-md font-bold text-gray-600">Fill Pass Details</span>
                         </div>
                         <!-- Step 3 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                                 style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            <span class="text-body-md font-bold text-on-surface">Add Recipients</span>
+                            <span class="text-body-md font-bold text-gray-600">Add Recipients</span>
                         </div>
                         <!-- Step 4 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px]"
                                 style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            <span class="text-body-md font-bold text-on-surface">Distribute</span>
+                            <span class="text-body-md font-bold text-gray-600">Distribute</span>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                     <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">Balance:</label>
                         <input
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             type="text" value="100">
                     </div>
                     <!-- Currency Code -->
@@ -138,7 +138,7 @@
                         <label class="text-on-surface font-semibold text-label-md">Gift Card Number:<span
                                 class="text-error">*</span></label>
                         <input
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             type="text" value="ABCD123456">
                     </div>
                     <!-- Pass Expiration Date -->
@@ -146,7 +146,7 @@
                         <label class="text-on-surface font-semibold text-label-md">Pass Expiration Date:<span
                                 class="text-error">*</span></label>
                         <input
-                            class="js-datetime w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="js-datetime w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             placeholder="-Date-" type="text">
                     </div>
                     <!-- Barcode Value -->
@@ -154,7 +154,7 @@
                         <label class="text-on-surface font-semibold text-label-md">Barcode Value:<span
                                 class="text-error">*</span></label>
                         <textarea rows="2"
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y">1246897531</textarea>
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y">1246897531</textarea>
                     </div>
                 </div>
             </div>
@@ -170,14 +170,14 @@
                     <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">Pin:</label>
                         <input
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             type="text" value="ddd">
                     </div>
                     <!-- Event Number -->
                     <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">Event Number:</label>
                         <input
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             placeholder="Enter Event Number" type="text">
                     </div>
                     <!-- Country -->
@@ -198,7 +198,7 @@
                     <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">City:</label>
                         <input
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             placeholder="Enter City" type="text">
                     </div>
                 </div>
@@ -230,20 +230,20 @@
                             <label class="text-on-surface font-semibold text-label-md">First Name:<span
                                     class="text-error">*</span></label>
                             <input
-                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 placeholder="Enter first name" type="text">
                         </div>
                         <div class="space-y-2">
                             <label class="text-on-surface font-semibold text-label-md">Last Name:</label>
                             <input
-                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 placeholder="Enter last name" type="text">
                         </div>
                         <div class="space-y-2">
                             <label class="text-on-surface font-semibold text-label-md">Email:<span
                                     class="text-error">*</span></label>
                             <input
-                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 placeholder="Enter email address" type="email">
                         </div>
                     </div>
@@ -257,7 +257,7 @@
             </div>
             <div class="flex justify-end mt-8 pt-6 border-t border-outline-variant/30">
                 <button
-                    class="flex items-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                    class="flex items-center gap-2 bg-[#198754] text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
                     <span class="material-symbols-outlined">send</span>
                     Send Passes
                 </button>

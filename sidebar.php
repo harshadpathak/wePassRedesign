@@ -229,6 +229,8 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
     </div>
 </div>
 </aside>
+<!-- Mobile backdrop (only shows when sidebar is open on mobile) -->
+<div id="sidebar-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-40 lg:hidden"></div>
 <script>
 // Accordion: only one sidebar submenu open at a time
 function toggleSubmenu(btn) {

@@ -112,7 +112,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface">Edit Profile</h3>
-                <p class="text-label-md text-secondary">Update your personal information and preferences</p>
+                <p class="text-label-md text-gray-400">Update your personal information and preferences</p>
               </div>
             </div>
 
@@ -123,19 +123,19 @@
                   <span class="w-9 h-9 rounded-lg bg-blue-50 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">person</span></span>
                   <div>
                     <h4 class="text-body-lg font-bold text-on-surface">Personal Information</h4>
-                    <p class="text-label-md text-secondary">Your basic account details.</p>
+                    <p class="text-label-md text-gray-400">Your basic account details.</p>
                   </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div class="space-y-2">
                     <label class="text-on-surface font-bold text-label-md">Name</label>
                     <input type="text" value="<?= htmlspecialchars($user['name']) ?>"
-                      class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                      class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   </div>
                   <div class="space-y-2">
                     <label class="text-on-surface font-bold text-label-md">Email</label>
                     <input type="email" value="<?= htmlspecialchars($user['email']) ?>" readonly
-                      class="w-full bg-surface-container-high/60 border-outline-variant rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
+                      class="w-full bg-surface-container-high/60 border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
                   </div>
                 </div>
               </div>
@@ -146,19 +146,19 @@
                   <span class="w-9 h-9 rounded-lg bg-blue-50 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">settings</span></span>
                   <div>
                     <h4 class="text-body-lg font-bold text-on-surface">Account Settings</h4>
-                    <p class="text-label-md text-secondary">Configure your role, regional, and language preferences.</p>
+                    <p class="text-label-md text-gray-400">Configure your role, regional, and language preferences.</p>
                   </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div class="space-y-2">
                     <label class="text-on-surface font-bold text-label-md">Role</label>
                     <input type="text" value="<?= htmlspecialchars($user['role']) ?>" readonly
-                      class="w-full bg-surface-container-high/60 border-outline-variant rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
+                      class="w-full bg-surface-container-high/60 border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md text-secondary cursor-not-allowed">
                   </div>
                   <div class="space-y-2">
                     <label class="text-on-surface font-bold text-label-md">VAT Number</label>
                     <input type="text" placeholder="Enter VAT Number"
-                      class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                      class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   </div>
                   <div class="space-y-2">
                     <label class="text-on-surface font-bold text-label-md">Timezone</label>
@@ -186,7 +186,7 @@
 
             <div class="flex justify-end px-6 lg:px-8 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
               <button type="submit"
-                class="inline-flex items-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                class="inline-flex items-center gap-2 bg-[#198754] text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
                 <span class="material-symbols-outlined text-[18px]">save</span>
                 Submit
               </button>
@@ -201,7 +201,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface">Change Password</h3>
-                <p class="text-label-md text-secondary">Update your account password</p>
+                <p class="text-label-md text-gray-400">Update your account password</p>
               </div>
             </div>
 
@@ -242,7 +242,7 @@
 
             <div class="flex justify-end px-6 lg:px-8 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
               <button type="submit"
-                class="inline-flex items-center gap-2 bg-emerald-500 text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                class="inline-flex items-center gap-2 bg-[#198754] text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
                 <span class="material-symbols-outlined text-[19px]">save</span>
                 Update Password
               </button>
@@ -257,7 +257,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface">Connected Accounts</h3>
-                <p class="text-label-md text-secondary">Link your accounts to sign in faster and access connected services.</p>
+                <p class="text-label-md text-gray-400">Link your accounts to sign in faster and access connected services.</p>
               </div>
             </div>
 
@@ -279,7 +279,7 @@
                   </div>
                 </div>
                 <div class="mt-4 pt-4 border-t border-outline-variant/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <p class="flex items-center gap-1.5 text-label-md text-outline">
+                  <p class="flex items-center gap-1.5 text-label-md text-gray-400">
                     <span class="w-2 h-2 rounded-full bg-outline-variant"></span> Not connected yet. Connect to enable Google sign-in.
                   </p>
                   <button type="button" class="inline-flex items-center justify-center gap-2 bg-white border border-outline-variant text-on-surface font-bold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-surface-container-low transition-all shrink-0">
@@ -311,7 +311,7 @@
                   </div>
                 </div>
                 <div class="mt-4 pt-4 border-t border-outline-variant/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <p class="flex items-center gap-1.5 text-label-md text-outline">
+                  <p class="flex items-center gap-1.5 text-label-md text-gray-400">
                     <span class="w-2 h-2 rounded-full bg-outline-variant"></span> Not connected yet. Connect to enable Microsoft sign-in.
                   </p>
                   <button type="button" class="inline-flex items-center justify-center gap-2 bg-white border border-outline-variant text-on-surface font-bold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-surface-container-low transition-all shrink-0">

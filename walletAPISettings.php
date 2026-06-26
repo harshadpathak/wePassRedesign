@@ -46,7 +46,7 @@
             </span>
             <div class="flex-1 min-w-0">
               <h3 class="text-headline-md font-bold text-on-surface leading-tight">Google Wallet</h3>
-              <p class="text-label-md text-on-surface-variant mt-0.5">API configuration</p>
+              <p class="text-label-md text-gray-400 mt-0.5">API configuration</p>
             </div>
             <span class="js-status inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 px-2.5 py-1 text-label-sm font-bold text-emerald-700 shrink-0">
               <span class="js-status-dot w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
@@ -69,9 +69,9 @@
                 <span class="text-label-sm font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-full">Recommended</span>
               </div>
               <ul class="space-y-2 text-body-md text-secondary">
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>Uses the system's default Issuer ID and configuration file</li>
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>Securely connects with the Google Wallet pass distribution service</li>
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>No manual setup required — works out of the box</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>Uses the system's default Issuer ID and configuration file</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>Securely connects with the Google Wallet pass distribution service</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>No manual setup required — works out of the box</li>
               </ul>
             </label>
 
@@ -86,9 +86,9 @@
                 <span class="text-body-lg font-bold text-on-surface">Custom Own API Configuration</span>
               </div>
               <ul class="space-y-2 text-body-md text-secondary">
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Provide your own Issuer ID and configuration file</li>
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Securely connect your system with the WePass platform</li>
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Full control over your Google Wallet pass integration</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Provide your own Issuer ID and configuration file</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Securely connect your system with the WePass platform</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Full control over your Google Wallet pass integration</li>
               </ul>
             </label>
 
@@ -98,14 +98,14 @@
               <div class="space-y-1.5">
                 <label class="block text-label-md font-semibold text-on-surface">Issuer ID:<span class="text-error">*</span></label>
                 <input type="text" placeholder="Enter Issuer ID" required
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <!-- What is Issuer ID? -->
                 <div class="mt-2 py-4 space-y-2">
-                  <p class="flex items-center gap-2 text-label-md font-bold text-on-surface">
-                    <span class="material-symbols-outlined text-[18px] text-on-surface-variant">info</span>What is Issuer ID?
+                  <p class="flex items-center gap-2 text-label-md font-bold text-gray-400">
+                    <span class="material-symbols-outlined text-[18px] text-gray-400">info</span>What is Issuer ID?
                   </p>
                   <p class="text-label-md text-gray-400">Your unique Issuer ID provided by Google Pay for Passes. This identifies your organization in the Google Wallet ecosystem.</p>
-                  <p class="text-label-md text-gray-400"><span class="font-bold text-on-surface">How to get:</span> Visit <a href="https://pay.google.com/business/console" target="_blank" rel="noopener" class="font-semibold underline underline-offset-2 text-primary/70 hover:text-primary hover:underline">Google Pay Business Console</a> → Navigate to "Issuer Settings" → Copy your Issuer ID</p>
+                  <p class="text-label-md text-gray-400"><span class="font-bold text-gray-400">How to get:</span> Visit <a href="https://pay.google.com/business/console" target="_blank" rel="noopener" class="font-semibold underline underline-offset-2 text-primary/70 hover:text-primary hover:underline">Google Pay Business Console</a> → Navigate to "Issuer Settings" → Copy your Issuer ID</p>
                 </div>
               </div>
 
@@ -123,11 +123,11 @@
                 </label>
                 <!-- What is Configuration File? -->
                 <div class="mt-2 py-4 space-y-2">
-                  <p class="flex items-center gap-2 text-label-md font-bold text-on-surface">
-                    <span class="material-symbols-outlined text-[18px] text-on-surface-variant">info</span>What is Configuration File?
+                  <p class="flex items-center gap-2 text-label-md font-bold text-gray-400">
+                    <span class="material-symbols-outlined text-[18px] text-gray-400">info</span>What is Configuration File?
                   </p>
                   <p class="text-label-md text-gray-400">A JSON service account key file that contains credentials for authenticating API requests to Google Wallet.</p>
-                  <p class="text-body-md font-semibold text-on-surface">How to get:</p>
+                  <p class="text-body-md font-semibold text-gray-400">How to get:</p>
                   <ol class="list-decimal list-inside space-y-1 text-label-md text-gray-400">
                     <li>Go to <a href="https://console.cloud.google.com" target="_blank" rel="noopener" class="text-primary font-semibold underline underline-offset-2 hover:opacity-80">Google Cloud Console</a></li>
                     <li>Select your project → IAM &amp; Admin → Service Accounts</li>
@@ -135,7 +135,7 @@
                     <li>Choose JSON format and download the file</li>
                     <li>Upload the downloaded JSON file here</li>
                   </ol>
-                  <p class="flex items-start gap-2 rounded-lg bg-error/5 border border-error/20 px-3 py-2 text-label-md text-error">
+                  <p class="flex items-start gap-2 rounded-lg bg-amber-50 border border-amber-200 px-3 py-2 text-label-md text-amber-700">
                     <span class="material-symbols-outlined text-[14px] shrink-0">warning</span>
                     <span><span class="font-bold">Security Note:</span> Keep this file secure and never share it publicly.</span>
                   </p>
@@ -151,7 +151,7 @@
               Credentials are encrypted at rest
             </p>
             <button type="submit"
-              class="inline-flex items-center gap-2 bg-emerald-500 text-white px-5 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all shrink-0">
+              class="inline-flex items-center gap-2 bg-[#198754] text-white px-5 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all shrink-0">
               <span class="material-symbols-outlined text-[20px]">save</span>
               Save Configuration
             </button>
@@ -169,7 +169,7 @@
             </span>
             <div class="flex-1 min-w-0">
               <h3 class="text-headline-md font-bold text-on-surface leading-tight">Apple Wallet</h3>
-              <p class="text-label-md text-on-surface-variant mt-0.5">API configuration</p>
+              <p class="text-label-md text-gray-400 mt-0.5">API configuration</p>
             </div>
             <span class="js-status inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 px-2.5 py-1 text-label-sm font-bold text-emerald-700 shrink-0">
               <span class="js-status-dot w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
@@ -192,9 +192,9 @@
                 <span class="text-label-sm font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-full">Recommended</span>
               </div>
               <ul class="space-y-2 text-body-md text-secondary">
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>Uses pre-configured Apple credentials (Team ID, Pass Type ID, certificates)</li>
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>Automatically issues digital passes for Apple Wallet</li>
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>No manual setup required — works out of the box</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>Uses default Apple Wallet credentials for secure pass generation.</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>Automatically issues digital passes for Apple Wallet</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>No manual setup required — works out of the box</li>
               </ul>
             </label>
 
@@ -209,9 +209,9 @@
                 <span class="text-body-lg font-bold text-on-surface">Custom Own API Configuration</span>
               </div>
               <ul class="space-y-2 text-body-md text-secondary">
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Enter your Team ID, Pass Type ID, and Certificate Password</li>
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Upload your Apple Certificate and WWDR Certificate</li>
-                <li class="flex gap-2.5 text-gray-500"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Enables secure, custom pass generation for Apple Wallet</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Enter your Team ID, Pass Type ID, and Certificate Password</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Upload your Apple Certificate and WWDR Certificate</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Enables secure, custom pass generation for Apple Wallet</li>
               </ul>
             </label>
 
@@ -222,7 +222,7 @@
                 <div class="space-y-1.5">
                   <label class="block text-label-md font-semibold text-on-surface">Organization Name:<span class="text-error">*</span></label>
                   <input type="text" placeholder="Enter Organization Name" required
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <p class="flex items-center gap-1.5 text-label-sm font-normal text-gray-400">
                     <span class="material-symbols-outlined text-[15px]">info</span>Your company's legal name from Apple Developer account
                   </p>
@@ -231,7 +231,7 @@
                 <div class="space-y-1.5">
                   <label class="block text-label-md font-semibold text-on-surface">Team Identifier:<span class="text-error">*</span></label>
                   <input type="text" placeholder="Enter Team Identifier" required
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <p class="flex items-center gap-1.5 text-label-sm font-normal text-gray-400">
                     <span class="material-symbols-outlined text-[15px]">info</span>10-character ID from Apple Developer → Membership
                   </p>
@@ -242,7 +242,7 @@
               <div class="space-y-1.5">
                 <label class="block text-label-md font-semibold text-on-surface">Certificate Password:<span class="text-error">*</span></label>
                 <input type="password" placeholder="Enter certificate password" required
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <p class="flex items-center gap-1.5 text-label-sm font-normal text-gray-400">
                   <span class="material-symbols-outlined text-[15px]">info</span>Password set when exporting certificate from Keychain Access
                 </p>
@@ -252,10 +252,10 @@
               <div class="space-y-1.5">
                 <label class="block text-label-md font-semibold text-on-surface">Pass Type Identifier:<span class="text-error">*</span></label>
                 <input type="text" placeholder="pass.com.yourcompany.passname" required
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <div class="mt-2 py-4 space-y-1.5">
-                  <p class="text-label-md text-gray-400"><span class="font-semibold text-on-surface">How to get:</span> Apple Developer → Certificates, IDs &amp; Profiles → Identifiers → Pass Type IDs</p>
-                  <p class="text-label-md text-on-surface-variant"><span class="font-semibold text-on-surface">Format:</span> <code class="rounded bg-primary/10 px-1.5 py-0.5 text-label-sm font-mono text-primary">pass.com.yourcompany.passname</code></p>
+                  <p class="text-label-md text-gray-400"><span class="font-semibold text-gray-400">How to get:</span> Apple Developer → Certificates, IDs &amp; Profiles → Identifiers → Pass Type IDs</p>
+                  <p class="text-label-md text-on-surface-variant"><span class="font-semibold text-gray-400">Format:</span> <code class="rounded bg-primary/10 px-1.5 py-0.5 text-label-sm font-mono text-primary">pass.com.yourcompany.passname</code></p>
                 </div>
               </div>
 
@@ -299,7 +299,7 @@
                 <div class="space-y-1.5">
                   <label class="block text-label-md font-semibold text-on-surface">Auth Key ID: <span class="text-error">*</span></label>
                   <input type="text" placeholder="Enter Auth Key ID" required
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <p class="flex items-center gap-1.5 text-label-sm text-gray-400">
                     <span class="material-symbols-outlined text-[15px]">info</span>10-character Key ID from Apple Developer → Keys
                   </p>
@@ -331,7 +331,7 @@
               Credentials are encrypted at rest
             </p>
             <button type="submit"
-              class="inline-flex items-center gap-2 bg-emerald-500 text-white px-5 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all shrink-0">
+              class="inline-flex items-center gap-2 bg-[#198754] text-white px-5 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all shrink-0">
               <span class="material-symbols-outlined text-[20px]">save</span>
               Save Configuration
             </button>

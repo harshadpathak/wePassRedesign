@@ -42,31 +42,31 @@
                 </div>
                 <div class="flex-1">
                     <h3 class="text-headline-md font-bold text-on-surface tracking-tight">Edit User Details</h3>
-                    <p class="text-body-md text-secondary mt-2 leading-relaxed">Modify user details such as name, email, role, or status. You can also reset the user's password. All changes will take effect immediately after saving.</p>
-                </div>
-            </div>
-            <!-- Steps -->
-            <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
-                <!-- Step 1 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Update Details</span>
-                </div>
-                <!-- Step 2 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Change Role</span>
-                </div>
-                <!-- Step 3 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Reset Password</span>
+                    <p class="text-body-md text-gray-400 leading-relaxed">Modify user details such as name, email, role, or status. You can also reset the user's password. All changes will take effect immediately after saving.</p>
+                    <!-- Steps -->
+                    <div class="bg-primary/5 rounded-2xl mt-4 p-2 flex flex-wrap items-center gap-3">
+                        <!-- Step 1 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Update Details</span>
+                        </div>
+                        <!-- Step 2 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Change Role</span>
+                        </div>
+                        <!-- Step 3 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Reset Password</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
                     </label>
                     <div class="relative">
                         <input type="text" value="Jenil Vora" placeholder="Enter name" required
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                     </div>
                 </div>
                 <!-- Email -->
@@ -92,7 +92,7 @@
                     </label>
                     <div class="relative">
                         <input type="email" value="womaludy@mailinator.com" placeholder="Enter email" required
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                     </div>
                 </div>
                 <!-- Role -->
@@ -142,7 +142,7 @@
                     </label>
                     <div class="relative">
                         <input type="password" id="password" placeholder="Enter a New Password"
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                         <button type="button" data-toggle-password="password"
                             class="material-symbols-outlined text-[20px] text-outline absolute right-3.5 top-1/2 -translate-y-1/2 hover:text-on-surface transition-colors cursor-pointer">visibility</button>
                     </div>
@@ -154,7 +154,7 @@
                     </label>
                     <div class="relative">
                         <input type="password" id="confirm_password" placeholder="Enter a New Confirm Password"
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                         <button type="button" data-toggle-password="confirm_password"
                             class="material-symbols-outlined text-[20px] text-outline absolute right-3.5 top-1/2 -translate-y-1/2 hover:text-on-surface transition-colors cursor-pointer">visibility</button>
                     </div>
@@ -164,7 +164,7 @@
             <!-- Card Footer -->
             <div class="flex items-center justify-center gap-3 mt-6 pt-6 border-t border-outline-variant/40 bg-white">
                 <button type="submit"
-                    class="inline-flex items-center gap-2 bg-emerald-500 text-white px-6 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-emerald-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                    class="inline-flex items-center gap-2 bg-[#198754] text-white px-6 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
                     <span class="material-symbols-outlined text-[20px]">save</span>
                     Update
                 </button>
