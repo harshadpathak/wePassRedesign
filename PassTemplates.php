@@ -81,7 +81,7 @@
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <h3 class="text-primary font-display font-bold text-headline-md">Filter Pass Templates</h3>
-            <p class="text-on-surface-variant text-body-md">Refine your search to find specific templates</p>
+            <p class="text-gray-400 text-body-md">Refine your search to find specific templates</p>
           </div>
           <div class="border-t border-outline-variant/30"></div>
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
