@@ -69,9 +69,9 @@
                 <span class="text-label-sm font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-full">Recommended</span>
               </div>
               <ul class="space-y-2 text-body-md text-secondary">
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>Uses the system's default Issuer ID and configuration file</li>
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>Securely connects with the Google Wallet pass distribution service</li>
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>No manual setup required — works out of the box</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>Uses the system's default Issuer ID and configuration file</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>Securely connects with the Google Wallet pass distribution service</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>No manual setup required — works out of the box</li>
               </ul>
             </label>
 
@@ -86,9 +86,9 @@
                 <span class="text-body-lg font-bold text-on-surface">Custom Own API Configuration</span>
               </div>
               <ul class="space-y-2 text-body-md text-secondary">
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Provide your own Issuer ID and configuration file</li>
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Securely connect your system with the WePass platform</li>
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Full control over your Google Wallet pass integration</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Provide your own Issuer ID and configuration file</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Securely connect your system with the WePass platform</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Full control over your Google Wallet pass integration</li>
               </ul>
             </label>
 
@@ -192,9 +192,9 @@
                 <span class="text-label-sm font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-full">Recommended</span>
               </div>
               <ul class="space-y-2 text-body-md text-secondary">
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>Uses pre-configured Apple credentials (Team ID, Pass Type ID, certificates)</li>
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>Automatically issues digital passes for Apple Wallet</li>
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-emerald-500 shrink-0 mt-0.5">check_circle</span>No manual setup required — works out of the box</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>Uses default Apple Wallet credentials for secure pass generation.</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>Automatically issues digital passes for Apple Wallet</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">check_circle</span>No manual setup required — works out of the box</li>
               </ul>
             </label>
 
@@ -209,9 +209,9 @@
                 <span class="text-body-lg font-bold text-on-surface">Custom Own API Configuration</span>
               </div>
               <ul class="space-y-2 text-body-md text-secondary">
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Enter your Team ID, Pass Type ID, and Certificate Password</li>
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Upload your Apple Certificate and WWDR Certificate</li>
-                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">arrow_circle_right</span>Enables secure, custom pass generation for Apple Wallet</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Enter your Team ID, Pass Type ID, and Certificate Password</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Upload your Apple Certificate and WWDR Certificate</li>
+                <li class="flex gap-2.5 text-gray-400"><span class="material-symbols-outlined text-[18px] text-gray-400 shrink-0 mt-0.5">arrow_circle_right</span>Enables secure, custom pass generation for Apple Wallet</li>
               </ul>
             </label>
 
