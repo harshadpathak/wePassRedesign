@@ -46,7 +46,7 @@
             </div>
             <div class="flex flex-col">
               <h3 class="text-on-surface font-bold text-body-lg font-display mb-1">Records</h3>
-              <p class="text-outline text-label-md font-body-md">Email delivery logs for personalized passes</p>
+              <p class="text-gray-400 text-label-md font-body-md">Email delivery logs for personalized passes</p>
             </div>
           </div>
           <!-- Divider -->
@@ -58,7 +58,7 @@
             </div>
             <div class="flex flex-col">
               <h3 class="text-on-surface font-bold text-body-lg font-display mb-1">Installs</h3>
-              <p class="text-outline text-label-md font-body-md">Installation events across wallet platforms</p>
+              <p class="text-gray-400 text-label-md font-body-md">Installation events across wallet platforms</p>
             </div>
           </div>
           <!-- Divider -->
@@ -70,7 +70,7 @@
             </div>
             <div class="flex flex-col">
               <h3 class="text-on-surface font-bold text-body-lg font-display mb-1">Analytics</h3>
-              <p class="text-outline text-label-md font-body-md">Distribution and activity reports</p>
+              <p class="text-gray-400 text-label-md font-body-md">Distribution and activity reports</p>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <h3 class="text-primary font-display font-bold text-headline-md">Filter Pass Templates</h3>
-            <p class="text-on-surface-variant text-body-md">Refine your search to find specific templates</p>
+            <p class="text-gray-400 text-body-md">Refine your search to find specific templates</p>
           </div>
           <div class="border-t border-outline-variant/30"></div>
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">

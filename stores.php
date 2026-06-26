@@ -52,7 +52,7 @@
             <span class="material-symbols-outlined">storefront</span>
           </div>
           <div class="min-w-0">
-            <p class="text-label-sm text-outline font-medium">Total Stores</p>
+            <p class="text-label-sm text-gray-400 font-medium">Total Stores</p>
             <p class="text-headline-md text-primary font-bold">3</p>
           </div>
         </div>
@@ -65,7 +65,7 @@
               <span class="material-symbols-outlined [font-variation-settings:'FILL'_1]">toggle_on</span>
             </div>
             <div class="min-w-0">
-              <p class="text-label-sm text-outline font-medium">Active</p>
+              <p class="text-label-sm text-gray-400 font-medium">Active</p>
               <p class="text-headline-md font-bold">2</p>
             </div>
           </div>
@@ -79,7 +79,7 @@
               <span class="material-symbols-outlined [font-variation-settings:'FILL'_1]">toggle_off</span>
             </div>
             <div class="min-w-0">
-              <p class="text-label-sm text-outline font-medium">Inactive</p>
+              <p class="text-label-sm text-gray-400 font-medium">Inactive</p>
               <p class="text-headline-md font-bold">1</p>
             </div>
           </div>
@@ -93,7 +93,7 @@
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <h3 class="text-primary font-display font-bold text-headline-md">Filter Stores</h3>
-            <p class="text-on-surface-variant text-body-md">Refine your search to find specific stores</p>
+            <p class="text-gray-400 text-body-md">Refine your search to find specific stores</p>
           </div>
           <div class="border-t border-outline-variant/30"></div>
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">

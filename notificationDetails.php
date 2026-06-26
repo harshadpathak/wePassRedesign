@@ -171,7 +171,7 @@
                     <span class="material-symbols-outlined text-[15px]">group</span><?= htmlspecialchars($notification['audience']) ?>
                   </span>
                 </div>
-                <p class="text-body-md text-secondary mt-1"><?= htmlspecialchars($notification['body']) ?></p>
+                <p class="text-body-md text-gray-400 mt-1"><?= htmlspecialchars($notification['body']) ?></p>
               </div>
             </div>
             <!-- Reach counters -->

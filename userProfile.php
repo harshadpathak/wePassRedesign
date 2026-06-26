@@ -112,7 +112,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface">Edit Profile</h3>
-                <p class="text-label-md text-secondary">Update your personal information and preferences</p>
+                <p class="text-label-md text-gray-400">Update your personal information and preferences</p>
               </div>
             </div>
 
@@ -123,7 +123,7 @@
                   <span class="w-9 h-9 rounded-lg bg-blue-50 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">person</span></span>
                   <div>
                     <h4 class="text-body-lg font-bold text-on-surface">Personal Information</h4>
-                    <p class="text-label-md text-secondary">Your basic account details.</p>
+                    <p class="text-label-md text-gray-400">Your basic account details.</p>
                   </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -146,7 +146,7 @@
                   <span class="w-9 h-9 rounded-lg bg-blue-50 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">settings</span></span>
                   <div>
                     <h4 class="text-body-lg font-bold text-on-surface">Account Settings</h4>
-                    <p class="text-label-md text-secondary">Configure your role, regional, and language preferences.</p>
+                    <p class="text-label-md text-gray-400">Configure your role, regional, and language preferences.</p>
                   </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -201,7 +201,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface">Change Password</h3>
-                <p class="text-label-md text-secondary">Update your account password</p>
+                <p class="text-label-md text-gray-400">Update your account password</p>
               </div>
             </div>
 
@@ -257,7 +257,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface">Connected Accounts</h3>
-                <p class="text-label-md text-secondary">Link your accounts to sign in faster and access connected services.</p>
+                <p class="text-label-md text-gray-400">Link your accounts to sign in faster and access connected services.</p>
               </div>
             </div>
 
@@ -279,7 +279,7 @@
                   </div>
                 </div>
                 <div class="mt-4 pt-4 border-t border-outline-variant/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <p class="flex items-center gap-1.5 text-label-md text-outline">
+                  <p class="flex items-center gap-1.5 text-label-md text-gray-400">
                     <span class="w-2 h-2 rounded-full bg-outline-variant"></span> Not connected yet. Connect to enable Google sign-in.
                   </p>
                   <button type="button" class="inline-flex items-center justify-center gap-2 bg-white border border-outline-variant text-on-surface font-bold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-surface-container-low transition-all shrink-0">
@@ -311,7 +311,7 @@
                   </div>
                 </div>
                 <div class="mt-4 pt-4 border-t border-outline-variant/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <p class="flex items-center gap-1.5 text-label-md text-outline">
+                  <p class="flex items-center gap-1.5 text-label-md text-gray-400">
                     <span class="w-2 h-2 rounded-full bg-outline-variant"></span> Not connected yet. Connect to enable Microsoft sign-in.
                   </p>
                   <button type="button" class="inline-flex items-center justify-center gap-2 bg-white border border-outline-variant text-on-surface font-bold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-surface-container-low transition-all shrink-0">

@@ -155,7 +155,7 @@
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <h3 class="text-primary font-display font-bold text-headline-md">Filter Pass Records</h3>
-            <p class="text-on-surface-variant text-body-md">Refine your search to find specific pass records</p>
+            <p class="text-gray-400 text-body-md">Refine your search to find specific pass records</p>
           </div>
           <div class="border-t border-outline-variant/30"></div>
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
@@ -204,7 +204,7 @@
             <div class="w-9 h-9 rounded-lg bg-primary text-white flex items-center justify-center shrink-0">
               <span class="material-symbols-outlined text-[20px]">info</span>
             </div>
-            <p class="text-body-md text-secondary leading-relaxed self-center">Below are all pass install records for this template. Track how many devices have installed or uninstalled the pass across Google and Apple wallets. Use the actions menu to view or edit individual passes.</p>
+            <p class="text-body-md text-gray-500 leading-relaxed self-center">Below are all pass install records for this template. Track how many devices have installed or uninstalled the pass across Google and Apple wallets. Use the actions menu to view or edit individual passes.</p>
           </div>
 
           <!-- Records Table -->

@@ -266,7 +266,7 @@
               <span class="material-symbols-outlined chevron text-[22px] transition-transform duration-200">chevron_right</span>
               Advanced location fields
             </button>
-            <p class="text-body-md text-secondary mt-1 ml-7">Auto-filled from your selection. You may adjust the address parts; coordinates are read-only.</p>
+            <p class="text-body-md text-gray-400 mt-1 ml-7">Auto-filled from your selection. You may adjust the address parts; coordinates are read-only.</p>
 
             <!-- Collapsible panel -->
             <div id="advancedPanel" class="hidden mt-4 space-y-4">

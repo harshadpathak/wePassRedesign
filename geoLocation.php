@@ -47,6 +47,8 @@
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
             <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <span class="text-gray font-normal">Pass Templates</span>
+            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
             <span class="text-gray-500 font-normal">GEO Location Settings</span>
           </nav>
           <h2 class="font-display tracking-tight text-headline-lg font-bold">GEO Location Settings</h2>
@@ -143,7 +145,7 @@
             </div>
             <div class="space-y-1.5">
               <h3 class="text-title-md font-bold text-on-surface tracking-tight">City Configuration</h3>
-              <p class="text-label-md text-on-surface-variant max-w-md">Restrict pass distribution to specific cities. When enabled, only the cities listed below can issue this template.</p>
+              <p class="text-label-md text-gray-400">Restrict pass distribution to specific cities. When enabled, only the cities listed below can issue this template.</p>
             </div>
           </div>
           <!-- Toggle control -->
@@ -153,13 +155,13 @@
               role="switch"
               aria-checked="<?= $cityConfigEnabled ? 'true' : 'false' ?>"
               data-enabled="<?= $cityConfigEnabled ? '1' : '0' ?>"
-              class="group flex items-center gap-3.5 rounded-2xl border px-4 py-3 transition-all active:scale-[0.99] <?= $cityConfigEnabled
+              class="group w-[170px] flex items-center gap-3.5 rounded-2xl border px-4 py-3 transition-all active:scale-[0.99] <?= $cityConfigEnabled
                 ? 'bg-emerald-50/60 border-emerald-200 hover:border-emerald-300'
                 : 'bg-rose-50/60 border-rose-200 hover:border-rose-300' ?>">
               <!-- Switch track -->
-              <span class="js-toggle-track relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 shrink-0 <?= $cityConfigEnabled ? 'bg-brand-gradient shadow-inner shadow-primary/30' : 'bg-rose-400' ?>">
+              <span class="js-toggle-track relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 shrink-0 <?= $cityConfigEnabled ? 'bg-emerald-500 shadow-inner shadow-emerald/30' : 'bg-rose-400' ?>">
                 <span class="js-toggle-knob absolute left-0.5 h-5 w-5 rounded-full bg-white shadow-md flex items-center justify-center transition-transform duration-300 <?= $cityConfigEnabled ? 'translate-x-5' : 'translate-x-0' ?>">
-                  <span class="material-symbols-outlined text-[12px] leading-none <?= $cityConfigEnabled ? 'text-primary' : 'text-rose-500' ?>"><?= $cityConfigEnabled ? 'check' : 'close' ?></span>
+                  <span class="material-symbols-outlined text-[12px] leading-none <?= $cityConfigEnabled ? 'text-emerald' : 'text-rose-500' ?>"><?= $cityConfigEnabled ? 'check' : 'close' ?></span>
                 </span>
               </span>
               <!-- Label -->
@@ -182,7 +184,7 @@
             </span>
             <div>
               <h3 class="text-title-md font-bold text-on-surface tracking-tight">Cities</h3>
-              <p class="text-label-sm text-outline font-medium mt-0.5"><?= count($cities) ?> <?= count($cities) === 1 ? 'city' : 'cities' ?> configured</p>
+              <p class="text-label-md text-gray-400"><?= count($cities) ?> <?= count($cities) === 1 ? 'city' : 'cities' ?> configured</p>
             </div>
           </div>
           <button type="button"
@@ -301,7 +303,7 @@
         btn.classList.toggle('border-rose-200', !enabled);
         btn.classList.toggle('hover:border-rose-300', !enabled);
 
-        track.classList.toggle('bg-brand-gradient', enabled);
+        track.classList.toggle('bg-emerald-500', enabled);
         track.classList.toggle('shadow-inner', enabled);
         track.classList.toggle('shadow-primary/30', enabled);
         track.classList.toggle('bg-rose-400', !enabled);

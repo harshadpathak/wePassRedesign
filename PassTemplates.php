@@ -49,7 +49,7 @@
             <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">apps</span>
           </div>
           <div class="relative z-10">
-            <p class="text-label-sm text-outline font-medium">All Templates</p>
+            <p class="text-label-sm text-gray-400 font-medium">All Templates</p>
             <p class="text-headline-md text-primary font-bold">793</p>
           </div>
         </div>
@@ -59,7 +59,7 @@
             <span class="material-symbols-outlined">person</span>
           </div>
           <div>
-            <p class="text-label-sm text-outline font-medium">Personalized Unique</p>
+            <p class="text-label-sm text-gray-400 font-medium">Personalized Unique</p>
             <p class="text-headline-md font-bold">542</p>
           </div>
         </div>
@@ -69,7 +69,7 @@
             <span class="material-symbols-outlined">campaign</span>
           </div>
           <div>
-            <p class="text-label-sm text-outline font-medium">Generic Advertising</p>
+            <p class="text-label-sm text-gray-400 font-medium">Generic Advertising</p>
             <p class="text-headline-md font-bold">251</p>
           </div>
         </div>

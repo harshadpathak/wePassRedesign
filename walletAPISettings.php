@@ -105,7 +105,7 @@
                     <span class="material-symbols-outlined text-[18px] text-gray-400">info</span>What is Issuer ID?
                   </p>
                   <p class="text-label-md text-gray-400">Your unique Issuer ID provided by Google Pay for Passes. This identifies your organization in the Google Wallet ecosystem.</p>
-                  <p class="text-label-md text-gray-400"><span class="font-bold text-on-surface">How to get:</span> Visit <a href="https://pay.google.com/business/console" target="_blank" rel="noopener" class="font-semibold underline underline-offset-2 text-primary/70 hover:text-primary hover:underline">Google Pay Business Console</a> → Navigate to "Issuer Settings" → Copy your Issuer ID</p>
+                  <p class="text-label-md text-gray-400"><span class="font-bold text-gray-400">How to get:</span> Visit <a href="https://pay.google.com/business/console" target="_blank" rel="noopener" class="font-semibold underline underline-offset-2 text-primary/70 hover:text-primary hover:underline">Google Pay Business Console</a> → Navigate to "Issuer Settings" → Copy your Issuer ID</p>
                 </div>
               </div>
 
@@ -127,7 +127,7 @@
                     <span class="material-symbols-outlined text-[18px] text-gray-400">info</span>What is Configuration File?
                   </p>
                   <p class="text-label-md text-gray-400">A JSON service account key file that contains credentials for authenticating API requests to Google Wallet.</p>
-                  <p class="text-body-md font-semibold text-on-surface">How to get:</p>
+                  <p class="text-body-md font-semibold text-gray-400">How to get:</p>
                   <ol class="list-decimal list-inside space-y-1 text-label-md text-gray-400">
                     <li>Go to <a href="https://console.cloud.google.com" target="_blank" rel="noopener" class="text-primary font-semibold underline underline-offset-2 hover:opacity-80">Google Cloud Console</a></li>
                     <li>Select your project → IAM &amp; Admin → Service Accounts</li>
@@ -254,8 +254,8 @@
                 <input type="text" placeholder="pass.com.yourcompany.passname" required
                   class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 <div class="mt-2 py-4 space-y-1.5">
-                  <p class="text-label-md text-gray-400"><span class="font-semibold text-on-surface">How to get:</span> Apple Developer → Certificates, IDs &amp; Profiles → Identifiers → Pass Type IDs</p>
-                  <p class="text-label-md text-on-surface-variant"><span class="font-semibold text-on-surface">Format:</span> <code class="rounded bg-primary/10 px-1.5 py-0.5 text-label-sm font-mono text-primary">pass.com.yourcompany.passname</code></p>
+                  <p class="text-label-md text-gray-400"><span class="font-semibold text-gray-400">How to get:</span> Apple Developer → Certificates, IDs &amp; Profiles → Identifiers → Pass Type IDs</p>
+                  <p class="text-label-md text-on-surface-variant"><span class="font-semibold text-gray-400">Format:</span> <code class="rounded bg-primary/10 px-1.5 py-0.5 text-label-sm font-mono text-primary">pass.com.yourcompany.passname</code></p>
                 </div>
               </div>
 

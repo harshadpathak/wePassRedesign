@@ -45,12 +45,12 @@
       ];
 
       // Current Counts line chart
-      $ccDates  = ['10 Jun','12 Jun','14 Jun','16 Jun','18 Jun','20 Jun','22 Jun','24 Jun','26 Jun','28 Jun','30 Jun'];
+      $ccDates  = ['2 Jun','4 Jun','6 Jun','8 Jun','10 Jun','12 Jun','14 Jun','16 Jun','18 Jun','20 Jun','22 Jun','24 Jun','26 Jun','28 Jun','30 Jun'];
       $ccSeries = [
-        ['name' => 'Current Records',      'color' => '#3b82f6', 'data' => [0,0,0,0,0,0,0,0,0.5,0,0]],
-        ['name' => 'Current Installed',    'color' => '#10b981', 'data' => [0,0,0,0,0,0,0,0,2,0,0]],
-        ['name' => 'Google Notifications', 'color' => '#f59e0b', 'data' => [0,0,0,0,0,0,0,0,0,0,0]],
-        ['name' => 'Apple Notifications',  'color' => '#8b5cf6', 'data' => [0,0,0,0,0,0,0,0,0,0,0]],
+        ['name' => 'Current Records',      'color' => '#3b82f6', 'data' => [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0]],
+        ['name' => 'Current Installed',    'color' => '#10b981', 'data' => [0,0,0,0,0,0,0,0,0,0,0,0,2,0,0]],
+        ['name' => 'Google Notifications', 'color' => '#f59e0b', 'data' => [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],
+        ['name' => 'Apple Notifications',  'color' => '#8b5cf6', 'data' => [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],
       ];
       $ccMax = 2;
 
@@ -223,7 +223,7 @@
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <h3 class="text-primary font-display font-bold text-headline-md">Filter Pass Records</h3>
-            <p class="text-on-surface-variant text-body-md">Refine your search to find specific pass records</p>
+            <p class="text-gray-400 text-body-md">Select a date range to filter pass statistics</p>
           </div>
           <div class="border-t border-outline-variant/30"></div>
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
@@ -236,15 +236,6 @@
                 <input
                   class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer"
                   placeholder="Select date range" readonly="" type="text">
-              </div>
-            </div>
-            <!-- Search -->
-            <div class="md:col-span-3 space-y-2">
-              <label class="text-on-surface font-semibold text-label-md">Search:</label>
-              <div class="relative">
-                <input
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                  placeholder="Search by name, ID, or keyword..." type="text">
               </div>
             </div>
             <!-- Actions -->
@@ -265,23 +256,22 @@
       </div>
 
       <!-- ===== Analytics (single card) ===== -->
-      <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
-        <div class="p-6 space-y-6">
+      <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden p-6 space-y-6">
         <!-- Info banner -->
         <div class="flex items-start gap-3 bg-gradient-to-r from-blue-50 to-indigo-50/40 border border-primary/15 rounded-xl p-4">
             <div class="w-9 h-9 rounded-lg bg-primary text-white flex items-center justify-center shrink-0">
                 <span class="material-symbols-outlined text-[20px]">info</span>
             </div>
-            <p class="text-body-md text-secondary leading-relaxed self-center">Track your pass performance with <span class="text-primary font-semibold">daily activity</span> and <span class="text-primary font-semibold">real-time totals</span> across Google Wallet & Apple Wallet. Use filters to analyze specific date ranges.</p>
+            <p class="text-body-md text-gray-500 leading-relaxed self-center">Track your pass performance with <span class="text-gray-500 font-semibold">daily activity</span> and <span class="text-gray-500 font-semibold">real-time totals</span> across Google Wallet & Apple Wallet. Use filters to analyze specific date ranges.</p>
         </div>
 
         <!-- KPI cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-4">
           <?php foreach ($kpis as $k): ?>
-          <div class="group rounded-2xl border border-outline-variant bg-white overflow-hidden flex flex-col">
-            <div class="p-5">
+          <div class="group rounded-2xl border border-outline-variant bg-white overflow-hidden">
+            <div class="p-5 pb-0">
               <!-- top: icon + trend -->
-              <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center justify-between gap-2">
                 <span class="w-10 h-10 rounded-xl <?= $k['tint'] ?> <?= $k['ic'] ?> flex items-center justify-center shrink-0">
                   <span class="material-symbols-outlined text-[22px]"><?= $k['icon'] ?></span>
                 </span>
@@ -289,235 +279,227 @@
                 <span class="inline-flex items-center gap-0.5 text-emerald-600 bg-emerald-50 text-label-sm font-bold px-2 py-0.5 rounded-full">
                   <span class="material-symbols-outlined text-[15px]">trending_up</span><?= $k['trend'] ?>
                 </span>
+                <?php else: ?>
+                <span class="text-label-sm font-semibold text-outline">—</span>
                 <?php endif; ?>
               </div>
-              <!-- label -->
-              <p class="text-label-sm font-bold uppercase tracking-wider text-outline mt-4"><?= htmlspecialchars($k['label']) ?></p>
-              <!-- value -->
-              <p class="font-display font-bold text-[32px] leading-none text-on-surface mt-1"><?= (int) $k['value'] ?></p>
-              <p class="text-label-sm text-outline mt-2.5">vs last 30 days</p>
+              <!-- value + label -->
+              <p class="font-display font-bold text-[34px] leading-none text-on-surface mt-4 pl-1"><?= (int) $k['value'] ?></p>
+              <div class="flex items-center justify-between gap-2 mt-1.5">
+                <p class="text-label-sm font-bold uppercase tracking-wider text-outline truncate"><?= htmlspecialchars($k['label']) ?></p>
+                <p class="text-label-sm text-outline/80 whitespace-nowrap shrink-0">30d</p>
+              </div>
             </div>
             <!-- sparkline strip -->
-            <div class="mt-auto"><?= wp_sparkline($k['spark'], $k['color']) ?></div>
+            <div class="mt-3"><?= wp_sparkline($k['spark'], $k['color']) ?></div>
           </div>
           <?php endforeach; ?>
         </div>
 
         <!-- Current Counts + Wallet Donut -->
         <div class="grid grid-cols-1 xl:grid-cols-3 gap-stack-lg items-stretch">
-        <!-- Current Counts (line chart) -->
-        <div class="xl:col-span-2 rounded-2xl border border-outline-variant p-6 flex flex-col">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[22px]">show_chart</span>
-            </span>
-            <div>
-              <h3 class="text-headline-md font-bold text-on-surface">Current Counts</h3>
-              <p class="text-label-md text-gray-400">Daily activity over the selected range</p>
-            </div>
-          </div>
-          <!-- Legend -->
-          <div class="flex flex-wrap items-center gap-x-5 gap-y-2 mb-2">
-            <?php foreach ($ccSeries as $s): ?>
-            <span class="inline-flex items-center gap-1.5 text-label-md font-semibold text-secondary">
-              <span class="w-2.5 h-2.5 rounded-full" style="background: <?= $s['color'] ?>;"></span><?= htmlspecialchars($s['name']) ?>
-            </span>
-            <?php endforeach; ?>
-          </div>
-          <div class="flex-1 flex items-stretch min-h-[360px]">
-            <div id="cc-chart" class="w-full"></div>
-          </div>
-        </div>
-
-        <!-- Wallet Installation Statistics (donut) -->
-        <div class="rounded-2xl border border-outline-variant p-6 flex flex-col">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[22px]">donut_large</span>
-            </span>
-            <div>
-              <h3 class="text-headline-md font-bold text-on-surface">Wallet Installation Statistics</h3>
-              <p class="text-label-md text-gray-400">All installs by wallet type</p>
-            </div>
-          </div>
-          <div class="flex-1 flex flex-col items-center justify-center gap-6">
-            <!-- legend: color key -->
-            <div class="flex items-center justify-center gap-7">
-              <span class="inline-flex items-center gap-2 text-label-md font-bold text-on-surface"><span class="w-3 h-3 rounded-full bg-[#4f46e5]"></span>Apple Wallet</span>
-              <span class="inline-flex items-center gap-2 text-label-md font-bold text-on-surface"><span class="w-3 h-3 rounded-full bg-[#10b981]"></span>Google Wallet</span>
-            </div>
-            <!-- donut + static center -->
-            <div class="relative w-[320px] h-[320px] max-w-full">
-              <div id="wallet-chart"></div>
-              <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                <span class="text-label-md text-outline">Total Installs</span>
-                <span class="font-display font-bold text-[44px] leading-none text-on-surface"><?= (int) ($wallet['apple'] + $wallet['google']) ?></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===== Recent Records + Push Overview ===== -->
-      <div class="grid grid-cols-1 xl:grid-cols-3 gap-stack-lg items-stretch">
-        <!-- Recent Pass Records -->
-        <div class="xl:col-span-2 rounded-2xl border border-outline-variant overflow-hidden flex flex-col">
-          <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
-            <span class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[22px]">contacts</span>
-            </span>
-            <div>
-              <h3 class="text-headline-md font-bold text-on-surface">Recent Pass Records</h3>
-              <p class="text-label-md text-gray-400">Last 10 days</p>
-            </div>
-          </div>
-          <div class="flex-1 overflow-x-auto [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
-            <table class="w-full text-left border-collapse min-w-[640px]">
-              <thead>
-                <tr class="px-5 py-4 text-outline uppercase tracking-widest border-b border-outline-variant">
-                  <th class="px-5 py-4 text-label-sm">Receiver</th>
-                  <th class="px-5 py-4 text-label-sm">Pass ID</th>
-                  <th class="px-5 py-4 text-label-sm text-center">Active Installed</th>
-                  <th class="px-5 py-4 text-label-sm text-center">Uninstalled</th>
-                  <th class="px-5 py-4 text-label-sm text-right">Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php foreach ($recent as $r): ?>
-                <tr class="group border-b border-outline-variant/40 hover:bg-primary/5 transition-colors">
-                  <td class="px-5 py-4 align-middle">
-                    <p class="text-body-md font-bold text-on-surface"><?= htmlspecialchars($r['user']) ?></p>
-                    <p class="text-label-sm text-outline"><?= htmlspecialchars($r['email']) ?></p>
-                  </td>
-                  <td class="px-5 py-4 align-middle">
-                    <div class="flex items-center gap-2">
-                      <code class="text-label-md font-mono text-on-surface"><?= htmlspecialchars($r['pid']) ?></code>
-                      <button type="button" data-copy="<?= htmlspecialchars($r['pid']) ?>"
-                        class="js-copy w-7 h-7 rounded-md text-outline hover:bg-blue-50 hover:text-primary flex items-center justify-center transition-all" title="Copy ID">
-                        <span class="material-symbols-outlined text-[16px]">content_copy</span>
-                      </button>
+            <!-- Current Counts (line chart) -->
+            <div class="xl:col-span-2 rounded-2xl border border-outline-variant p-6 flex flex-col hover:border-primary/40 transition-all">
+                <div class="flex items-center gap-3 mb-5">
+                    <span class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">show_chart</span>
+                    </span>
+                    <div>
+                    <h3 class="text-headline-md font-bold text-on-surface">Current Counts</h3>
+                    <p class="text-label-md text-gray-400">Daily activity over the selected range</p>
                     </div>
-                  </td>
-                  <td class="px-5 py-4 align-middle text-center">
-                    <span class="inline-flex items-center justify-center min-w-7 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 text-label-md font-bold"><?= (int) $r['installed'] ?></span>
-                  </td>
-                  <td class="px-5 py-4 align-middle text-center">
-                    <span class="inline-flex items-center justify-center min-w-7 px-2 py-0.5 rounded-full bg-red-50 text-red-600 text-label-md font-bold"><?= (int) $r['uninstalled'] ?></span>
-                  </td>
-                  <td class="px-5 py-4 align-middle text-right whitespace-nowrap text-label-md text-on-surface-variant"><?= htmlspecialchars($r['date']) ?></td>
-                </tr>
-                <?php endforeach; ?>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Push Notification Overview -->
-        <div class="rounded-2xl border border-outline-variant p-6 flex flex-col">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[22px]">notifications_active</span>
-            </span>
-            <div>
-              <h3 class="text-headline-md font-bold text-on-surface">Push Notifications</h3>
-              <p class="text-label-md text-gray-400">Immediate &amp; scheduled delivery</p>
-            </div>
-          </div>
-          <!-- Total block -->
-          <div class="flex items-center gap-4 rounded-xl bg-primary/5 border border-primary/10 p-4 mb-5">
-            <span class="w-12 h-12 rounded-xl bg-white border border-primary/15 text-primary flex items-center justify-center shrink-0 shadow-sm">
-              <span class="material-symbols-outlined text-[24px]">campaign</span>
-            </span>
-            <div>
-              <p class="font-display font-bold text-[28px] leading-none text-on-surface"><?= array_sum(array_column($push, 'value')) ?></p>
-              <p class="text-label-sm text-outline mt-1">Total Notifications</p>
-            </div>
-          </div>
-          <!-- Delivery breakdown -->
-          <div class="flex-1 flex flex-col justify-center space-y-5">
-            <?php foreach ($push as $p): ?>
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="inline-flex items-center gap-2 text-body-md font-semibold text-on-surface"><span class="w-2.5 h-2.5 rounded-full <?= $p['dot'] ?>"></span><?= htmlspecialchars($p['label']) ?></span>
-                <span class="text-body-md font-bold text-on-surface"><?= (int) $p['value'] ?></span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
-                  <div class="h-full rounded-full <?= $p['dot'] ?> transition-all" style="width: <?= (int) $p['pct'] ?>%;"></div>
                 </div>
-                <span class="text-label-sm font-semibold text-outline w-9 text-right"><?= (int) $p['pct'] ?>%</span>
+                <!-- Legend -->
+                <div class="flex flex-wrap items-center gap-x-5 gap-y-2 mb-2">
+                    <?php foreach ($ccSeries as $s): ?>
+                    <span class="inline-flex items-center gap-1.5 text-label-md font-semibold text-secondary">
+                    <span class="w-2.5 h-2.5 rounded-full" style="background: <?= $s['color'] ?>;"></span><?= htmlspecialchars($s['name']) ?>
+                    </span>
+                    <?php endforeach; ?>
+                </div>
+                <div class="flex-1 flex items-stretch min-h-[360px]">
+                    <div id="cc-chart" class="w-full"></div>
+                </div>
+            </div>
+
+            <!-- Wallet Installation Statistics (donut) -->
+            <div class="rounded-2xl border border-outline-variant p-6 flex flex-col hover:border-primary/40 transition-all">
+                <div class="flex items-center gap-3 mb-5">
+                    <span class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">donut_large</span>
+                    </span>
+                    <div>
+                    <h3 class="text-headline-md font-bold text-on-surface">Wallet Installation Statistics</h3>
+                    <p class="text-label-md text-gray-400">All installs by wallet type</p>
+                    </div>
+                </div>
+                <div class="flex-1 flex flex-col items-center justify-center gap-6">
+                    <!-- legend: color key -->
+                    <div class="flex items-center justify-center gap-7">
+                    <span class="inline-flex items-center gap-2 text-label-md font-bold text-on-surface"><span class="w-3 h-3 rounded-full bg-[#4f46e5]"></span>Apple Wallet</span>
+                    <span class="inline-flex items-center gap-2 text-label-md font-bold text-on-surface"><span class="w-3 h-3 rounded-full bg-[#10b981]"></span>Google Wallet</span>
+                    </div>
+                    <!-- donut + static center -->
+                    <div class="relative w-[320px] h-[320px] max-w-full">
+                    <div id="wallet-chart"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                        <span class="text-label-md text-outline">Total Installs</span>
+                        <span class="font-display font-bold text-[44px] leading-none text-on-surface"><?= (int) ($wallet['apple'] + $wallet['google']) ?></span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Recent Records + Push Overview ===== -->
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-stack-lg items-stretch">
+            <!-- Recent Pass Records -->
+            <div class="xl:col-span-2 rounded-2xl border border-outline-variant overflow-hidden flex flex-col hover:border-primary/40 transition-all">
+                <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
+                    <span class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">contacts</span>
+                    </span>
+                    <div>
+                    <h3 class="text-headline-md font-bold text-on-surface">Recent Pass Records</h3>
+                    <p class="text-label-md text-gray-400">Last 10 days</p>
+                    </div>
+                </div>
+                <div class="flex-1 overflow-x-auto [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
+                    <table class="w-full text-left border-collapse min-w-[640px]">
+                    <thead>
+                        <tr class="px-5 py-4 text-outline uppercase tracking-widest border-b border-outline-variant">
+                        <th class="px-5 py-4 text-label-sm">Receiver</th>
+                        <th class="px-5 py-4 text-label-sm">Pass ID</th>
+                        <th class="px-5 py-4 text-label-sm text-center">Active Installed</th>
+                        <th class="px-5 py-4 text-label-sm text-center">Uninstalled</th>
+                        <th class="px-5 py-4 text-label-sm text-right">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($recent as $r): ?>
+                        <tr class="group border-b border-outline-variant/40 hover:bg-primary/5 transition-colors">
+                        <td class="px-5 py-4 align-middle">
+                            <p class="text-body-md font-bold text-on-surface"><?= htmlspecialchars($r['user']) ?></p>
+                            <p class="text-label-sm text-outline"><?= htmlspecialchars($r['email']) ?></p>
+                        </td>
+                        <td class="px-5 py-4 align-middle">
+                            <code class="text-label-md font-mono text-on-surface"><?= htmlspecialchars($r['pid']) ?></code>
+                        </td>
+                        <td class="px-5 py-4 align-middle text-center">
+                            <span class="inline-flex items-center justify-center min-w-7 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 text-label-md font-bold"><?= (int) $r['installed'] ?></span>
+                        </td>
+                        <td class="px-5 py-4 align-middle text-center">
+                            <span class="inline-flex items-center justify-center min-w-7 px-2 py-0.5 rounded-full bg-red-50 text-red-600 text-label-md font-bold"><?= (int) $r['uninstalled'] ?></span>
+                        </td>
+                        <td class="px-5 py-4 align-middle text-right whitespace-nowrap text-label-md text-on-surface-variant"><?= htmlspecialchars($r['date']) ?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Push Notification Overview -->
+            <div class="rounded-2xl border border-outline-variant p-6 flex flex-col hover:border-primary/40 transition-all">
+                <div class="flex items-center gap-3 mb-5">
+                    <span class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[22px]">notifications_active</span>
+                    </span>
+                    <div>
+                    <h3 class="text-headline-md font-bold text-on-surface">Push Notifications</h3>
+                    <p class="text-label-md text-gray-400">Immediate &amp; scheduled delivery</p>
+                    </div>
+                </div>
+                <!-- Total block -->
+                <div class="flex items-center gap-4 rounded-xl bg-primary/5 border border-primary/10 p-4 mb-5">
+                    <span class="w-12 h-12 rounded-xl bg-white border border-primary/15 text-primary flex items-center justify-center shrink-0 shadow-sm">
+                    <span class="material-symbols-outlined text-[24px]">campaign</span>
+                    </span>
+                    <div>
+                    <p class="font-display font-bold text-[28px] leading-none text-on-surface"><?= array_sum(array_column($push, 'value')) ?></p>
+                    <p class="text-label-sm text-outline mt-1">Total Notifications</p>
+                    </div>
+                </div>
+                <!-- Delivery breakdown -->
+                <div class="flex-1 flex flex-col justify-center space-y-5">
+                    <?php foreach ($push as $p): ?>
+                    <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="inline-flex items-center gap-2 text-body-md font-semibold text-on-surface"><span class="w-2.5 h-2.5 rounded-full <?= $p['dot'] ?>"></span><?= htmlspecialchars($p['label']) ?></span>
+                        <span class="text-body-md font-bold text-on-surface"><?= (int) $p['value'] ?></span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+                        <div class="h-full rounded-full <?= $p['dot'] ?> transition-all" style="width: <?= (int) $p['pct'] ?>%;"></div>
+                        </div>
+                        <span class="text-label-sm font-semibold text-outline w-9 text-right"><?= (int) $p['pct'] ?>%</span>
+                    </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Country-wise + Insights ===== -->
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-stack-lg items-stretch">
+            <!-- Country-wise Passes -->
+            <div class="xl:col-span-2 rounded-2xl border border-outline-variant p-6 hover:border-primary/40 transition-all">
+              <div class="flex items-center justify-between gap-3 mb-5">
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">public</span>
+                  </span>
+                  <div>
+                    <h3 class="text-headline-md font-bold text-on-surface">Country-wise Passes</h3>
+                    <p class="text-label-md text-gray-400">Top countries by wallet installs</p>
+                  </div>
+                </div>
+                <span class="w-9 h-9 rounded-lg bg-surface-container-low text-outline flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">travel_explore</span>
+                </span>
+              </div>
+              <!-- World map -->
+              <div class="relative rounded-xl bg-surface-container-low/30 overflow-hidden">
+                <div id="world-map" class="w-full aspect-[5/2] min-h-[320px]"></div>
+                <!-- country chips overlay -->
+                <div class="absolute bottom-4 left-4 flex flex-col gap-2">
+                  <?php foreach ($countries as $co): ?>
+                  <span class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-outline-variant rounded-lg pl-2.5 pr-3 py-1.5 shadow-sm">
+                    <span class="text-[18px] leading-none"><?= $co['flag'] ?></span>
+                    <span class="text-label-md font-semibold text-on-surface"><?= htmlspecialchars($co['name']) ?></span>
+                    <span class="inline-flex items-center justify-center min-w-5 px-1.5 h-5 rounded-full bg-primary text-white text-label-sm font-bold"><?= (int) $co['value'] ?></span>
+                  </span>
+                  <?php endforeach; ?>
+                </div>
               </div>
             </div>
-            <?php endforeach; ?>
-          </div>
-        </div>
-      </div>
 
-      <!-- ===== Country-wise + Insights ===== -->
-      <div class="grid grid-cols-1 xl:grid-cols-3 gap-stack-lg items-start">
-        <!-- Country-wise Passes -->
-        <div class="xl:col-span-2 rounded-2xl border border-outline-variant p-6">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[22px]">public</span>
-            </span>
-            <div>
-              <h3 class="text-headline-md font-bold text-on-surface">Country-wise Passes</h3>
-              <p class="text-label-md text-gray-400">Top countries by wallet installs</p>
-            </div>
-          </div>
-          <div class="space-y-3">
-            <?php foreach ($countries as $co): ?>
-            <div class="flex items-center gap-4 rounded-xl border border-outline-variant p-4 hover:border-primary/40 transition-colors">
-              <span class="w-11 h-11 rounded-xl bg-surface-container-low border border-outline-variant/60 flex items-center justify-center text-[24px] shrink-0"><?= $co['flag'] ?></span>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center justify-between gap-3">
-                  <p class="text-body-lg font-bold text-on-surface"><?= htmlspecialchars($co['name']) ?></p>
-                  <p class="text-label-md font-bold text-on-surface"><?= (int) $co['value'] ?> <span class="text-outline font-normal">installs</span></p>
+            <!-- Insights -->
+            <div class="rounded-2xl border border-outline-variant p-6 hover:border-primary/40 transition-all">
+                <div class="flex items-center gap-3 mb-5">
+                    <span class="w-10 h-10 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+                    </span>
+                    <div>
+                    <h3 class="text-headline-md font-bold text-on-surface">Insights</h3>
+                    <p class="text-label-md text-gray-400">Key takeaways from your data</p>
+                    </div>
                 </div>
-                <div class="mt-2 h-2 rounded-full bg-surface-container-high overflow-hidden">
-                  <div class="h-full rounded-full bg-brand-gradient transition-all" style="width: <?= (int) $co['pct'] ?>%;"></div>
+                <div class="space-y-3">
+                  <div class="flex items-start gap-3 rounded-xl bg-surface-container-low/40 border border-outline-variant p-4 hover:border-primary/30 transition-colors">
+                    <span class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[20px]">trending_up</span>
+                    </span>
+                    <p class="text-body-md text-on-surface self-center">Active passes increased by <span class="font-bold text-emerald-600">100%</span> vs last 30 days.</p>
+                  </div>
+                  <div class="flex items-start gap-3 rounded-xl bg-surface-container-low/40 border border-outline-variant p-4 hover:border-primary/30 transition-colors">
+                    <span class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[20px]">location_on</span>
+                    </span>
+                    <p class="text-body-md text-on-surface self-center">Most installs are from <span class="font-bold text-primary">India</span> (100%).</p>
+                  </div>
                 </div>
-              </div>
-              <span class="text-label-md font-bold text-primary shrink-0"><?= (int) $co['pct'] ?>%</span>
             </div>
-            <?php endforeach; ?>
-          </div>
-        </div>
-
-        <!-- Insights -->
-        <div class="rounded-2xl border border-outline-variant p-6">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="w-10 h-10 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
-            </span>
-            <div>
-              <h3 class="text-headline-md font-bold text-on-surface">Insights</h3>
-              <p class="text-label-md text-gray-400">Key takeaways from your data</p>
-            </div>
-          </div>
-          <div class="space-y-3">
-            <div class="flex items-start gap-3 rounded-xl bg-emerald-50/50 border border-emerald-100 p-3.5">
-              <span class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-600 flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-[18px]">trending_up</span>
-              </span>
-              <p class="text-body-md text-on-surface self-center">Active passes increased by <span class="font-bold text-emerald-600">100%</span> vs last 30 days.</p>
-            </div>
-            <div class="flex items-start gap-3 rounded-xl bg-blue-50/50 border border-blue-100 p-3.5">
-              <span class="w-8 h-8 rounded-lg bg-blue-500/15 text-blue-600 flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-[18px]">location_on</span>
-              </span>
-              <p class="text-body-md text-on-surface self-center">Most installs are from <span class="font-bold text-primary">India</span> (100%).</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-        <!-- Realtime note -->
-        <div class="flex items-center justify-end gap-1.5 text-label-md text-gray-400">
-          <span class="material-symbols-outlined text-[16px] text-amber-500">bolt</span>
-          Data updates near real time
-        </div>
         </div>
       </div>
     </section>
@@ -576,7 +558,15 @@
           labels: { style: { colors: '#94a3b8', fontSize: '11px' } }
         },
         yaxis: { min: 0, max: <?= (int) $ccMax ?>, tickAmount: <?= (int) $ccMax ?>, labels: { style: { colors: '#94a3b8', fontSize: '11px' } } },
-        tooltip: { theme: 'light', shared: true, intersect: false },
+        tooltip: {
+          theme: 'light', shared: true, intersect: false,
+          x: {
+            formatter: function (val, opts) {
+              var label = (opts && categories && categories[opts.dataPointIndex] != null) ? categories[opts.dataPointIndex] : val;
+              return label + ' ' + new Date().getFullYear();
+            }
+          }
+        },
         markers: { size: 0, hover: { size: 5 } }
       });
       chart.render();
@@ -598,6 +588,37 @@
         });
         donut.render();
       }
+    });
+  </script>
+
+  <!-- Country map (jsVectorMap) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var mapEl = document.getElementById('world-map');
+      if (!mapEl || typeof jsVectorMap === 'undefined') return;
+      var worldMap = new jsVectorMap({
+        selector: '#world-map',
+        map: 'world',
+        backgroundColor: 'transparent',
+        zoomButtons: false,
+        zoomOnScroll: false,
+        regionsSelectable: false,
+        selectedRegions: ['IN'],
+        regionStyle: {
+          initial: { fill: '#e2e8f0', stroke: '#ffffff', strokeWidth: 0.4 },
+          hover: { fill: '#cbd5e1', fillOpacity: 1 },
+          selected: { fill: '#1e293b' }
+        },
+        showTooltip: true
+      });
+      // Re-fit to the container once the layout has settled.
+      function fitMap() { try { worldMap.updateSize(); } catch (e) {} }
+      setTimeout(fitMap, 80);
+      setTimeout(fitMap, 400);
+      window.addEventListener('resize', fitMap);
     });
   </script>
 </body>

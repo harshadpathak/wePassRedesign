@@ -152,7 +152,7 @@
             <div class="w-9 h-9 rounded-lg bg-primary text-white flex items-center justify-center shrink-0">
               <span class="material-symbols-outlined text-[20px]">info</span>
             </div>
-            <p class="text-body-md text-secondary leading-relaxed self-center">Below are all push notification messages sent for this pass template. Track the reach of each notification across Google and Apple wallet devices. Messages are delivered to users who have the pass installed on their devices.</p>
+            <p class="text-body-md text-gray-500 leading-relaxed self-center">Below are all push notification messages sent for this pass template. Track the reach of each notification across Google and Apple wallet devices. Messages are delivered to users who have the pass installed on their devices.</p>
           </div>
 
           <!-- Message History -->

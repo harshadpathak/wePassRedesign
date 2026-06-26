@@ -60,12 +60,12 @@
                     <h4 class="text-headline-md font-bold text-on-surface">Default SMTP</h4>
                     <span class="rounded-full bg-emerald-50 border border-emerald-100 px-2 py-0.5 text-label-sm font-bold text-emerald-600">DEFAULT</span>
                   </div>
-                  <p class="text-body-md text-on-surface-variant leading-relaxed mt-0.5">Uses WePass-managed mail servers for standard delivery.</p>
+                  <p class="text-body-md text-gray-400 leading-relaxed mt-0.5">Uses WePass-managed mail servers for standard delivery.</p>
                 </div>
               </div>
 
               <div class="border-t border-outline-variant/70 pt-5 mb-5">
-                <ul class="space-y-3.5 text-body-md text-on-surface">
+                <ul class="space-y-3.5 text-body-md text-gray-400">
                   <li class="flex items-center gap-3">
                     <span class="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-primary">bolt</span></span>
                     No setup required
@@ -102,12 +102,12 @@
                 </div>
                 <div class="min-w-0">
                   <h4 class="text-headline-md font-bold text-on-surface-variant">Email Provider</h4>
-                  <p class="text-body-md text-on-surface-variant leading-relaxed mt-0.5">Connect your email securely — no SMTP credentials needed.</p>
+                  <p class="text-body-md text-gray-400 leading-relaxed mt-0.5">Connect your email securely — no SMTP credentials needed.</p>
                 </div>
               </div>
 
               <div class="border-t border-outline-variant/70 pt-5 mb-5">
-                <ul class="space-y-3.5 text-body-md text-on-surface-variant">
+                <ul class="space-y-3.5 text-body-md text-gray-400">
                   <li class="flex items-center gap-3">
                     <span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">trending_up</span></span>
                     Uses your provider's sending reputation
@@ -149,12 +149,12 @@
                 </div>
                 <div class="min-w-0">
                   <h4 class="text-headline-md font-bold text-on-surface">Custom SMTP</h4>
-                  <p class="text-body-md text-on-surface-variant leading-relaxed mt-0.5">Configure Custom SMTP by adding your mail server details.</p>
+                  <p class="text-body-md text-gray-400 leading-relaxed mt-0.5">Configure Custom SMTP by adding your mail server details.</p>
                 </div>
               </div>
 
               <div class="border-t border-outline-variant/70 pt-5 mb-5">
-                <ul class="space-y-3.5 text-body-md text-on-surface">
+                <ul class="space-y-3.5 text-body-md text-gray-400">
                   <li class="flex items-center gap-3">
                     <span class="w-7 h-7 rounded-lg bg-orange-50 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[16px] text-tertiary">settings_ethernet</span></span>
                     Full control over delivery
@@ -205,7 +205,7 @@
                 <div class="w-6 h-6 rounded-lg bg-primary text-white flex items-center justify-center shrink-0">
                   <span class="material-symbols-outlined text-[16px]">info</span>
                 </div>
-                <p class="text-body-md text-secondary">Changes affect all outgoing emails immediately.</p>
+                <p class="text-body-md text-gray-500">Changes affect all outgoing emails immediately.</p>
             </div>
           </div>
 

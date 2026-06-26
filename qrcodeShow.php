@@ -75,7 +75,7 @@
           </div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface tracking-tight">Share Your Pass</h3>
-            <p class="text-label-md text-secondary">Choose how you'd like to distribute this pass</p>
+            <p class="text-label-md text-gray-400">Choose how you'd like to distribute this pass</p>
           </div>
         </div>
 
@@ -90,7 +90,7 @@
                 <img alt="QR code for <?= htmlspecialchars($pass['name']) ?>" class="w-44 h-44 rounded-lg"
                   src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&margin=0&data=<?= urlencode($link) ?>">
               </div>
-              <p class="text-body-md text-secondary mt-5 leading-relaxed">Point your smartphone camera at this code for instant wallet access</p>
+              <p class="text-body-md text-gray-500 mt-5 leading-relaxed">Point your smartphone camera at this code for instant wallet access</p>
               <div class="w-full mt-5 pt-5 border-t border-emerald-200/60 space-y-2.5 text-left">
                 <div class="flex items-center gap-2.5">
                   <span class="w-6 h-6 rounded-full bg-emerald-500/15 text-emerald-700 text-label-sm font-bold flex items-center justify-center shrink-0">1</span>
@@ -118,7 +118,7 @@
                 </div>
                 <div>
                   <h4 class="text-body-lg font-bold text-on-surface">Share via Link</h4>
-                  <p class="text-label-md text-secondary">Copy and share this unique URL via email, SMS, or social media</p>
+                  <p class="text-label-md text-gray-400">Copy and share this unique URL via email, SMS, or social media</p>
                 </div>
               </div>
               <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-4 bg-surface-container-low/50 border border-outline-variant/60 rounded-xl p-2.5">
@@ -139,7 +139,7 @@
                 </div>
                 <div>
                   <h4 class="text-body-lg font-bold text-on-surface">Embed Code</h4>
-                  <p class="text-label-md text-secondary">Add this code snippet to your website HTML to embed the pass</p>
+                  <p class="text-label-md text-gray-400">Add this code snippet to your website HTML to embed the pass</p>
                 </div>
               </div>
               <div class="mt-4 bg-[#1e1b2e] rounded-xl p-4 overflow-x-auto">

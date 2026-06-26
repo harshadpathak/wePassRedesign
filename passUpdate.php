@@ -167,7 +167,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Expiration</h3>
-                <p class="text-label-md text-gray-500">Control when this pass is no longer valid</p>
+                <p class="text-label-md text-gray-400">Control when this pass is no longer valid</p>
               </div>
             </header>
             <div class="p-6">
@@ -203,7 +203,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Primary Fields</h3>
-                <p class="text-label-md text-gray-500">The headline values shown on the pass</p>
+                <p class="text-label-md text-gray-400">The headline values shown on the pass</p>
               </div>
             </header>
             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
@@ -243,7 +243,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Additional Fields</h3>
-                <p class="text-label-md text-gray-500">Extra details stored on the pass</p>
+                <p class="text-label-md text-gray-400">Extra details stored on the pass</p>
               </div>
             </header>
             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -282,7 +282,7 @@
               </div>
               <div>
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Pass Update Notification</h3>
-                <p class="text-label-md text-gray-500">Alert wallet holders about this change</p>
+                <p class="text-label-md text-gray-400">Alert wallet holders about this change</p>
               </div>
             </header>
             <div class="p-6 space-y-5">
@@ -297,7 +297,7 @@
                   <span class="flex flex-col">
                     <span class="text-body-md font-semibold text-on-surface">Do you want to send a notification?</span>
                     <!-- swap hint based on state -->
-                    <span class="text-label-sm text-outline group-has-[:checked]:hidden">Off — holders won't be alerted</span>
+                    <span class="text-label-sm text-gray-400 group-has-[:checked]:hidden">Off — holders won't be alerted</span>
                     <span class="hidden items-center gap-1 text-label-sm font-semibold text-primary group-has-[:checked]:inline-flex">
                       <span class="material-symbols-outlined text-[14px]">check_circle</span>On — a push will be sent
                     </span>

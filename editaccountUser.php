@@ -42,31 +42,31 @@
                 </div>
                 <div class="flex-1">
                     <h3 class="text-headline-md font-bold text-on-surface tracking-tight">Edit User Details</h3>
-                    <p class="text-body-md text-secondary mt-2 leading-relaxed">Modify user details such as name, email, role, or status. You can also reset the user's password. All changes will take effect immediately after saving.</p>
-                </div>
-            </div>
-            <!-- Steps -->
-            <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
-                <!-- Step 1 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Update Details</span>
-                </div>
-                <!-- Step 2 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Change Role</span>
-                </div>
-                <!-- Step 3 -->
-                <div
-                    class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                    <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                    <span class="text-body-md font-bold text-on-surface">Reset Password</span>
+                    <p class="text-body-md text-gray-400 leading-relaxed">Modify user details such as name, email, role, or status. You can also reset the user's password. All changes will take effect immediately after saving.</p>
+                    <!-- Steps -->
+                    <div class="bg-primary/5 rounded-2xl mt-4 p-2 flex flex-wrap items-center gap-3">
+                        <!-- Step 1 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Update Details</span>
+                        </div>
+                        <!-- Step 2 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Change Role</span>
+                        </div>
+                        <!-- Step 3 -->
+                        <div
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Reset Password</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

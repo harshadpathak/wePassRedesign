@@ -49,8 +49,8 @@
           </div>
           <div class="flex-1 min-w-0">
             <h3 class="text-headline-md font-bold text-on-surface tracking-tight">About Webhooks</h3>
-            <p class="text-body-md text-secondary leading-relaxed">
-              Webhooks let WePass notify your application in real time whenever a pass event occurs. WePass sends a <span class="font-bold text-on-surface">POST</span> request to your configured endpoint URL so your systems always stay in sync. Make sure your endpoint returns <span class="font-bold text-on-surface">HTTP 200</span> within 15 seconds to acknowledge each delivery.
+            <p class="text-body-md text-gray-400 leading-relaxed">
+              Webhooks let WePass notify your application in real time whenever a pass event occurs. WePass sends a <span class="font-bold text-gray-500">POST</span> request to your configured endpoint URL so your systems always stay in sync. Make sure your endpoint returns <span class="font-bold text-gray-500">HTTP 200</span> within 15 seconds to acknowledge each delivery.
             </p>
             <!-- Event types -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
@@ -59,14 +59,14 @@
                   <span class="material-symbols-outlined text-[16px]">add_circle</span>
                   Install
                 </span>
-                <p class="text-body-md text-secondary leading-snug">Fired when a user adds your pass to their Apple or Google Wallet.</p>
+                <p class="text-body-md text-gray-600 leading-snug">Fired when a user adds your pass to their Apple or Google Wallet.</p>
               </div>
               <div class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/70 px-3 py-2">
                 <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-rose-50 border border-rose-200/70 px-2.5 py-1 text-label-sm font-bold text-rose-700 shrink-0">
                   <span class="material-symbols-outlined text-[16px]">do_not_disturb_on</span>
                   Uninstall
                 </span>
-                <p class="text-body-md text-secondary leading-snug">Fired when a user removes the pass from their wallet.</p>
+                <p class="text-body-md text-gray-600 leading-snug">Fired when a user removes the pass from their wallet.</p>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@
           </span>
           <div class="flex-1 min-w-0">
             <h3 class="text-headline-md font-bold text-on-surface">Webhook URLs</h3>
-            <p class="text-label-md text-gray-500">Manage your webhook endpoint URLs</p>
+            <p class="text-label-md text-gray-400">Manage your webhook endpoint URLs</p>
           </div>
           <!-- <span class="hidden md:block w-px h-8 bg-outline-variant/70 shrink-0"></span> -->
           <button type="button"
@@ -126,14 +126,14 @@
               <tr class="group hover:bg-surface-container-low transition-colors">
                 <!-- Name / URL -->
                 <td class="px-6 py-3 align-middle">
-                  <p class="text-body-md font-bold text-on-surface"><?php echo htmlspecialchars($hook['name']); ?></p>
+                  <p class="text-body-md font-semiboldbold text-on-surface-variant"><?php echo htmlspecialchars($hook['name']); ?></p>
                   <div class="flex items-center gap-2">
                     <a href="<?php echo htmlspecialchars($hook['url']); ?>" target="_blank" rel="noopener noreferrer"
-                      class="text-label-sm text-primary/70 hover:text-primary hover:underline truncate max-w-[360px]">
+                      class="text-label-sm text-primary/70 truncate max-w-[360px]">
                       <?php echo htmlspecialchars($hook['url']); ?>
                     </a>
                     <button type="button" onclick="copyText('<?php echo htmlspecialchars($hook['url']); ?>', this)"
-                      class="opacity-0 group-hover:opacity-100 inline-flex items-center justify-center w-7 h-7 rounded-lg text-outline hover:bg-surface-container-high hover:text-primary transition-all"
+                      class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-outline hover:bg-surface-container-high hover:text-primary transition-all"
                       title="Copy URL">
                       <span class="material-symbols-outlined text-[16px]">content_copy</span>
                     </button>
@@ -183,7 +183,7 @@
             <span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
             Only send webhooks to endpoints you control and trust.
           </p>
-          <span class="flex items-center gap-1.5 text-label-md text-on-surface-variant">
+          <span class="flex items-center gap-1.5 text-label-md text-gray-400">
             <span class="material-symbols-outlined text-[16px] text-amber-500">bolt</span>
             Data updates near real time
           </span>
