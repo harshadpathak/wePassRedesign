@@ -276,19 +276,19 @@
                         <div class="space-y-2">
                           <label class="text-on-surface font-semibold text-label-md">Subject:<span class="text-error">*</span></label>
                           <input type="text" placeholder="Your <?php echo $tab['label']; ?> is ready"
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                         </div>
                         <div class="space-y-2">
                           <label class="text-on-surface font-semibold text-label-md">Sender Title: <span class="text-error">*</span></label>
                           <input type="text" placeholder="WePASS Team"
-                            class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                         </div>
                       </div>
 
                       <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">Body:<span class="text-error">*</span></label>
                         <textarea rows="6" placeholder="Write the message your recipients will see in the email body…"
-                          class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
+                          class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
                         <!-- <p class="flex items-center gap-1.5 text-label-md text-on-surface-variant">
                           <span class="material-symbols-outlined text-[15px]">code</span>
                           You can use placeholders like <code class="rounded bg-surface-container-high px-1 font-mono text-[12px]">{name}</code> and <code class="rounded bg-surface-container-high px-1 font-mono text-[12px]">{pass_link}</code>.
@@ -298,7 +298,7 @@
                       <div class="space-y-2 grid grid-cols-1">
                         <label class="text-on-surface font-semibold text-label-md">View Pass Button Name:<span class="text-error">*</span></label>
                         <input type="text" placeholder="Add to Wallet"
-                          class="w-full max-w-md bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                          class="w-full max-w-md bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                       </div>
                     </div>
                   <?php endif; ?>

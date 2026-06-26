@@ -214,7 +214,7 @@
                   <span class="text-label-sm text-gray-400">999999999999 chars max.</span>
                 </div>
                 <input id="balance" type="text" value="<?= htmlspecialchars($pass['balance']) ?>"
-                  class="js-sync w-full bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="js-sync w-full bg-surface-container-low border border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md text-on-surface focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
               <!-- Currency Code -->
               <div class="space-y-2">
@@ -254,7 +254,7 @@
                   <span class="text-label-sm text-gray-500">50 chars max.</span>
                 </div>
                 <input id="pin" type="text" value="<?= htmlspecialchars($pass['pin']) ?>"
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
               <!-- Event Number -->
               <div class="space-y-2">
@@ -263,13 +263,13 @@
                   <span class="text-label-sm text-gray-500">50 chars max.</span>
                 </div>
                 <input id="event" type="text" value="<?= htmlspecialchars($pass['event']) ?>"
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
               <!-- Gift Card Number -->
               <div class="space-y-2 md:col-span-2">
                 <label for="giftcard" class="text-on-surface font-semibold text-label-md">Gift Card Number: <span class="text-error">*</span></label>
                 <input id="giftcard" type="text" value="<?= htmlspecialchars($pass['cardNumber']) ?>"
-                  class="js-sync w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="js-sync w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
             </div>
           </section>
@@ -319,7 +319,7 @@
                 <div class="space-y-2">
                   <label for="notify-title" class="text-on-surface font-semibold text-label-md">Pass Update Notification Title:</label>
                   <input id="notify-title" type="text" placeholder="Enter notification title"
-                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md font-semibold text-on-surface placeholder:font-normal placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md font-semibold text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 </div>
                 <!-- Message -->
                 <div class="space-y-2">
@@ -335,7 +335,7 @@
                     </label>                     
                   </div>
                   <textarea id="notify-message" rows="4" placeholder="Enter notification message"
-                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md font-semibold text-on-surface placeholder:font-normal placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
+                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg py-3 px-4 text-body-md font-semibold text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
                 </div>
               </div>
             </div>

@@ -77,7 +77,7 @@
                   Store Name: <span class="text-red-500">*</span>
                 </label>
                 <input type="text" placeholder="e.g. Thermi Flagship Store" required value="Aatman Infotech"
-                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                  class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
               </div>
 
               <!-- Apple Wallet Location Message -->
@@ -89,7 +89,7 @@
                   <textarea id="walletMsg" maxlength="120" required
                     oninput="document.getElementById('walletMsgCount').textContent = this.value.length"
                     placeholder="e.g. You are near our Thermi store. Tap to view your pass."
-                    class="w-full h-full min-h-[120px] bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none">You are near our Aatman Infotech store. Tap to view your pass.</textarea>
+                    class="w-full h-full min-h-[120px] bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none">You are near our Aatman Infotech store. Tap to view your pass.</textarea>
                   <span class="absolute bottom-3 right-3 text-label-sm text-outline pointer-events-none">
                     <span id="walletMsgCount">61</span> / 120
                   </span>
@@ -155,7 +155,7 @@
               <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
               <input type="text" placeholder="Search by address, store name, landmark, or place"
                 value="701, Aatman Infotech, Wings Business Bay, Umiya Chowk, Rajkot, 360004"
-                class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-11 pr-4 py-3 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-11 pr-4 py-3 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
             </div>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <p class="text-label-md text-gray-400">Examples: &ldquo;Leof. Georgikis Scholis 27, Thermi&rdquo;, &ldquo;Thermi Greece&rdquo;, &ldquo;Phoenix Centre Thermi&rdquo;</p>
@@ -285,7 +285,7 @@
                 <div class="space-y-2">
                   <label class="flex items-center text-on-surface font-semibold text-label-md">Address: <span class="text-red-500">*</span></label>
                   <input type="text" id="advAddress" placeholder="Auto-filled from search" value="701, Aatman Infotech, Wings Business Bay, Umiya Chowk, Rajkot, 360004"
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <div id="addrHint" class="hidden">
                     <span class="inline-flex items-center gap-1.5 bg-primary/5 text-label-sm px-2.5 py-1 rounded-full">
                       <span class="material-symbols-outlined text-[14px] text-primary">public</span>
@@ -298,7 +298,7 @@
                 <div class="space-y-2">
                   <label class="flex items-center text-on-surface font-semibold text-label-md">Postal Code:</label>
                   <input type="text" placeholder="Postal code" value="360004"
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 </div>
                 <!-- Country -->
                 <div class="space-y-2">
@@ -314,19 +314,19 @@
                 <div class="space-y-2">
                   <label class="flex items-center text-on-surface font-semibold text-label-md">City: <span class="text-red-500">*</span></label>
                   <input type="text" id="advCity" placeholder="City" value="Rajkot"
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 </div>
                 <!-- Latitude -->
                 <div class="space-y-2">
                   <label class="flex items-center text-on-surface font-semibold text-label-md">Latitude: <span class="text-red-500">*</span></label>
                   <input type="text" id="advLat" readonly value="22.25797520"
-                    class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-on-surface-variant cursor-not-allowed">
+                    class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-gray-500 cursor-not-allowed">
                 </div>
                 <!-- Longitude -->
                 <div class="space-y-2">
                   <label class="flex items-center text-on-surface font-semibold text-label-md">Longitude: <span class="text-red-500">*</span></label>
                   <input type="text" id="advLng" readonly value="70.78807400"
-                    class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-on-surface-variant cursor-not-allowed">
+                    class="w-full bg-surface-container-high/60 border-outline-variant/60 rounded-lg py-3 px-4 text-body-md text-gray-500 cursor-not-allowed">
                 </div>
               </div>
               <!-- Coordinates helper -->

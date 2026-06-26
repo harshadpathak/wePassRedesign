@@ -62,7 +62,7 @@
             <div class="space-y-2">
               <label class="flex items-center text-on-surface font-semibold text-label-md">Title: <span class="text-red-500">*</span></label>
               <input type="text" placeholder="e.g. Winter Promo 2026" required value="Monsoon Offer"
-                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
             </div>
           </div>
 
@@ -125,7 +125,7 @@
                 <div class="relative">
                   <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px] pointer-events-none z-10">calendar_month</span>
                   <input type="text" id="startDate" placeholder="dd-mm-yyyy" readonly
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 text-body-md font-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 text-body-md font-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer">
                 </div>
               </div>
               <!-- Start Time (Schedule only) -->
@@ -149,7 +149,7 @@
                 <div class="relative">
                   <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px] pointer-events-none z-10">calendar_month</span>
                   <input type="text" id="endDate" placeholder="dd-mm-yyyy" readonly value="30-06-2026"
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 text-body-md font-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 text-body-md font-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer">
                 </div>
               </div>
               <!-- End Time -->
@@ -203,7 +203,7 @@
                 <div class="relative">
                   <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
                   <input type="text" id="storeSearch" onkeyup="filterStores(this.value)" placeholder="Search by store or city…"
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-11 pr-4 py-2.5 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-11 pr-4 py-2.5 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                 </div>
               </div>
               <div id="availableList" class="flex-1 overflow-y-auto px-4 pb-4 space-y-2">
@@ -336,7 +336,7 @@
               '<span class="inline-flex items-center gap-1.5 text-label-sm font-bold text-secondary"><span class="material-symbols-outlined text-[15px] text-primary">wallet</span>Relevant Text (Apple)</span>' +
             '</div>' +
             '<p data-view class="text-body-md text-on-surface leading-relaxed">' + defaultMsg + '</p>' +
-            '<textarea data-edit name="relevant_text[' + row.dataset.store + ']" rows="1" maxlength="120" placeholder="Message shown on the pass when the user is near this store" class="hidden w-full bg-white border border-outline-variant rounded-lg py-2 px-3 text-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none">' + defaultMsg + '</textarea>' +
+            '<textarea data-edit name="relevant_text[' + row.dataset.store + ']" rows="1" maxlength="120" placeholder="Message shown on the pass when the user is near this store" class="hidden w-full bg-white border border-outline-variant rounded-lg py-2 px-3 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none">' + defaultMsg + '</textarea>' +
           '</div>';
         selectedList.appendChild(item);
 
