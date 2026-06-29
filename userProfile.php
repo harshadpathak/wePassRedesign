@@ -210,7 +210,7 @@
                 <label class="text-on-surface font-bold text-label-md">Current Password <span class="text-error">*</span></label>
                 <div class="relative">
                   <input type="password" id="cur-pw" placeholder="Enter Current Password"
-                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pl-4 pr-12 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pl-4 pr-12 text-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                   <button type="button" data-toggle-pw="cur-pw" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors">
                     <span class="material-symbols-outlined text-[20px]">visibility</span>
                   </button>
@@ -221,7 +221,7 @@
                   <label class="text-on-surface font-bold text-label-md">New Password <span class="text-error">*</span></label>
                   <div class="relative">
                     <input type="password" id="new-pw" placeholder="Enter New Password"
-                      class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pl-4 pr-12 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                      class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pl-4 pr-12 text-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                     <button type="button" data-toggle-pw="new-pw" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors">
                       <span class="material-symbols-outlined text-[20px]">visibility</span>
                     </button>
@@ -231,7 +231,7 @@
                   <label class="text-on-surface font-bold text-label-md">Confirm New Password <span class="text-error">*</span></label>
                   <div class="relative">
                     <input type="password" id="conf-pw" placeholder="Confirm New Password"
-                      class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pl-4 pr-12 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                      class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pl-4 pr-12 text-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
                     <button type="button" data-toggle-pw="conf-pw" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors">
                       <span class="material-symbols-outlined text-[20px]">visibility</span>
                     </button>

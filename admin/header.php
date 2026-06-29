@@ -5,13 +5,6 @@
         class="lg:hidden shrink-0 p-2 rounded-lg hover:bg-surface-container-high text-on-surface-variant transition-all">
         <span class="material-symbols-outlined">menu</span>
     </button>
-    <div class="relative w-full group">
-        <span
-        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">search</span>
-        <input
-        class="w-full bg-surface-container-low border-outline-variant rounded-full py-2 pl-10 pr-4 text-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-        placeholder="Search pass templates..." type="text">
-    </div>
     </div>
     <div class="flex items-center gap-4 translate-x-[10px] translate-x-2" style="transform: translateX(5px);">
     <button
@@ -31,14 +24,14 @@
             HS
             </div>
         </div>
-        <div class="hidden md:flex flex-col overflow-hidden">
+        <div class="flex flex-col overflow-hidden">
             <p
             class="text-[14px] leading-none truncate font-bold text-on-surface group-hover/profile:text-primary transition-colors">
             Hardik Savani</p>
             <p class="text-[12px] text-outline truncate mt-0.5 font-medium">savani@wepass.io</p>
         </div>
         <span
-            class="material-symbols-outlined text-outline text-[18px] ml-1 hidden md:inline group-hover/profile:text-primary transition-transform duration-300 group-hover/profile:translate-y-0.5">expand_more</span>
+            class="material-symbols-outlined text-outline text-[18px] ml-1 group-hover/profile:text-primary transition-transform duration-300 group-hover/profile:translate-y-0.5">expand_more</span>
         </div>
         <!-- Dropdown Menu -->
         <div

@@ -235,7 +235,7 @@
                         </div>
                         <input type="text" data-footer-input="content" placeholder="Copyright © WePASS. All rights reserved."
                           value="© 2026 WePass. All rights reserved."
-                          class="w-full bg-surface-container-low border-outline-variant rounded-lg py-2.5 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" />
+                          class="w-full bg-surface-container-low border-outline-variant rounded-lg py-2.5 px-4 text-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" />
                         <p class="flex items-start gap-1.5 text-label-md text-gray-400">
                           <span class="material-symbols-outlined text-[15px] text-emerald-600 shrink-0">tips_and_updates</span>
                           Keep it short — a copyright line and a support contact is all most recipients need.
