@@ -42,7 +42,7 @@
     <!-- Canvas -->
     <section class="p-margin-desktop space-y-stack-lg pb-16">
       <!-- Breadcrumbs and Header -->
-      <div class="flex items-end justify-between">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div class="space-y-1">
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
             <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
@@ -54,7 +54,7 @@
           <h2 class="font-display tracking-tight text-headline-lg font-bold">GEO Location Settings</h2>
         </div>
           <a href="PassTemplates.php"
-            class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
+            class="inline-flex self-start sm:self-auto items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
             <span class="material-symbols-outlined text-[18px]">arrow_back</span>
             Back
           </a>        
@@ -149,7 +149,7 @@
             </div>
           </div>
           <!-- Toggle control -->
-          <div class="flex items-center gap-4 shrink-0 sm:pl-6 sm:border-l border-outline-variant/60">
+          <div class="flex items-center justify-center gap-4 shrink-0 lg:justify-start lg:pl-6 lg:border-l border-outline-variant/60">
             <button type="button"
               id="cityConfigToggle"
               role="switch"
@@ -195,7 +195,7 @@
         </div>
         <!-- Table -->
         <div class="overflow-x-auto [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
-          <table class="w-full text-left border-collapse">
+          <table class="responsive-table geo-table w-full text-left border-collapse">
             <thead class="bg-surface-container-low/50">
               <tr>
                 <th class="px-6 py-4 text-label-sm text-outline uppercase tracking-widest border-b border-outline-variant w-16">#</th>
@@ -207,7 +207,7 @@
             <tbody class="divide-y divide-outline-variant/30">
               <?php if (empty($cities)): ?>
               <tr>
-                <td colspan="4" class="px-6 py-16 text-center">
+                <td colspan="4" class="cell-empty px-6 py-16 text-center">
                   <div class="flex flex-col items-center gap-3 text-outline">
                     <span class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center">
                       <span class="material-symbols-outlined text-[28px]">location_off</span>
@@ -226,7 +226,7 @@
                   <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-high text-on-surface-variant text-label-md font-bold group-hover:bg-primary/10 group-hover:text-primary transition-colors"><?= $i + 1 ?></span>
                 </td>
                 <!-- City -->
-                <td class="px-6 py-4">
+                <td class="cell-main px-6 py-4">
                   <div class="flex items-center gap-3.5">
                     <div class="min-w-0">
                       <p class="text-body-md font-bold text-on-surface"><?= htmlspecialchars($city['name']) ?></p>
@@ -238,7 +238,7 @@
                   </div>
                 </td>
                 <!-- Stores -->
-                <td class="px-6 py-4">
+                <td class="cell-stack px-6 py-4" data-label="Stores">
                   <div class="flex flex-wrap items-center gap-2">
                     <?php foreach ($city['stores'] as $store): ?>
                     <span class="inline-flex items-center gap-1.5 bg-surface-container-low border border-outline-variant/60 text-on-surface text-label-md font-semibold px-3 py-1.5 rounded-full">
@@ -249,7 +249,7 @@
                   </div>
                 </td>
                 <!-- Action -->
-                <td class="px-6 py-4 text-right">
+                <td class="cell-action px-6 py-4 text-right">
                   <div class="relative inline-block js-menu">
                     <button type="button"
                       class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">

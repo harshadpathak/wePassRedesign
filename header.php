@@ -31,14 +31,14 @@
             HS
             </div>
         </div>
-        <div class="flex flex-col overflow-hidden">
+        <div class="hidden md:flex flex-col overflow-hidden">
             <p
             class="text-[14px] leading-none truncate font-bold text-on-surface group-hover/profile:text-primary transition-colors">
             Hardik Savani</p>
             <p class="text-[12px] text-outline truncate mt-0.5 font-medium">savani@wepass.io</p>
         </div>
         <span
-            class="material-symbols-outlined text-outline text-[18px] ml-1 group-hover/profile:text-primary transition-transform duration-300 group-hover/profile:translate-y-0.5">expand_more</span>
+            class="material-symbols-outlined text-outline text-[18px] ml-1 hidden md:inline group-hover/profile:text-primary transition-transform duration-300 group-hover/profile:translate-y-0.5">expand_more</span>
         </div>
         <!-- Dropdown Menu -->
         <div

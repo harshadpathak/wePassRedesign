@@ -373,6 +373,59 @@ body {
             width: auto;
             padding: 0 !important;
           }
+
+            /* Mobile: turn the templates table into stacked cards (desktop unchanged) */
+          .responsive-table td.cell-stack {
+            display: block;
+            padding-bottom: 0.4rem !important;
+          }
+          .responsive-table td.cell-stack[data-label]::before {
+            display: block;
+            margin-bottom: 0.5rem;
+          }
+          /* Empty-state row keeps its centered card look instead of the stacked layout */
+          .responsive-table td.cell-empty {
+            display: block;
+            padding: 2.5rem 1rem !important;
+            text-align: center !important;
+          }
+          .responsive-table td.cell-empty::before { content: none; }
+
+          .responsive-table.geo-table tr {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem 0.75rem;
+          }
+          .responsive-table.geo-table td[data-label="#"] {
+            order: 1;
+            width: auto;
+            padding: 0 !important;
+          }
+          .responsive-table.geo-table td[data-label="#"]::before { content: none; }
+          .responsive-table.geo-table td.cell-main {
+            order: 2;
+            flex: 1 1 auto;
+            min-width: 0;
+            padding: 0 !important;
+            margin-bottom: 0;
+            border-bottom: none !important;
+          }
+          .responsive-table.geo-table td.cell-action {
+            position: static;
+            order: 3;
+            width: auto;
+            margin-left: auto;
+            padding: 0 !important;
+          }
+          .responsive-table.geo-table td.cell-stack {
+            order: 4;
+            flex-basis: 100%;
+            border-top: 1px solid rgba(120, 130, 150, 0.15) !important;
+            padding-top: 0.75rem !important;
+            margin-top: 0.25rem;
+          }
+          .responsive-table.geo-table td.cell-empty { flex-basis: 100%; }
         }
       </style>
 <!-- Mobile view End-->
