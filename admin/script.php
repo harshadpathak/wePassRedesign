@@ -1,12 +1,14 @@
 <script>
 // Simple search input highlight effect
-const searchInput = document.querySelector('input[type="text"]');
-searchInput.addEventListener('focus', () => {
-    searchInput.parentElement.classList.add('scale-[1.01]');
-});
-searchInput.addEventListener('blur', () => {
-    searchInput.parentElement.classList.remove('scale-[1.01]');
-});
+const searchInput = document.querySelector('input[type="search"]');
+if (searchInput) {
+    searchInput.addEventListener('focus', () => {
+        searchInput.parentElement.classList.add('scale-[1.01]');
+    });
+    searchInput.addEventListener('blur', () => {
+        searchInput.parentElement.classList.remove('scale-[1.01]');
+    });
+}
 
 // Interactive row hover enhancement
 document.querySelectorAll('tbody tr').forEach(row => {

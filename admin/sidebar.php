@@ -51,8 +51,8 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
         <span>Users</span>
     </a>
     <!-- Settings -->
-    <a class="<?= $linkBase ?> <?= $current === 'settings.php' ? $linkActive : $linkIdle ?>"
-        href="settings.php">
+    <a class="<?= $linkBase ?> <?= $current === 'setting.php' ? $linkActive : $linkIdle ?>"
+        href="setting.php">
         <span class="material-symbols-outlined" <?= $current === 'settings.php' ? $fill : '' ?>>settings</span>
         <span>Settings</span>
     </a>
