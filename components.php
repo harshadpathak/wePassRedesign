@@ -212,12 +212,37 @@
             <p class="text-label-md text-secondary">Explanatory section header</p>
           </div>
         </div>
-        <div class="p-6">
-          <div class="bg-white border border-outline-variant/50 rounded-2xl p-6 shadow-sm flex gap-6 items-start">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-[28px]">info</span></div>
-            <div class="flex-1">
-              <h3 class="text-headline-md font-bold text-on-surface tracking-tight">How This Works</h3>
-              <p class="text-body-md text-secondary mt-2 leading-relaxed">Use this banner to introduce a page or explain a feature to your users with a short, friendly description.</p>
+        <div class="p-6 space-y-5">
+          <!-- Variant 1: banner with steps chips -->
+          <div class="bg-white border border-outline-variant/50 rounded-2xl p-6 shadow-sm flex flex-col gap-4">
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
+                <span class="material-symbols-outlined text-[28px]">qr_code_2</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-headline-md font-bold text-on-surface tracking-tight">QR Code &amp; Link Share</h3>
+                <p class="text-body-md text-secondary mt-2 leading-relaxed">Distribute your Generic Advertising Pass
+                  effortlessly. Each pass template has a unique QR code and shareable link.</p>
+              </div>
+            </div>
+            <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
+              <?php foreach (['Scan QR Code', 'Share Link', 'Add to Wallet'] as $step): ?>
+              <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="text-body-md font-bold text-on-surface"><?= $step ?></span>
+              </div>
+              <?php endforeach; ?>
+            </div>
+          </div>
+
+          <!-- Variant 2: header banner with gradient icon tile -->
+          <div class="bg-white border border-outline-variant/50 rounded-2xl p-6 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
+              <span class="material-symbols-outlined text-[26px]">credit_card</span>
+            </div>
+            <div>
+              <h3 class="text-headline-md font-bold text-on-surface tracking-tight">Billing Overview</h3>
+              <p class="text-body-md text-secondary">Manage your plan details and track resource usage</p>
             </div>
           </div>
         </div>
