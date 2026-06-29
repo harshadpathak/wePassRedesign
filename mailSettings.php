@@ -276,21 +276,24 @@
                 <p class="text-label-md text-gray-400">Your SMTP username (email address for Gmail/Outlook, or API username for services like SendGrid)</p>
               </div>
 
-              <div class="space-y-2">
-                <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Password: <span class="text-error">*</span></label>
-                <div class="flex items-stretch rounded-lg border border-outline-variant bg-surface-container-low overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
-                  <input type="password" placeholder="••••••••••••••••" id="smtp-password"
-                    class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md focus:border-primary transition-all focus:ring-0 focus:outline-none">
-                  <button type="button" data-toggle-pw="smtp-password" class="flex items-center px-4 bg-surface-container-low  border-outline-variant text-outline hover:text-on-surface transition-colors">
-                    <span class="material-symbols-outlined text-[20px]">visibility</span>
-                  </button>
+                <div class="space-y-2">
+                    <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Password: <span class="text-error">*</span></label>
+                    <div class="relative">
+                        <input type="password" id="confirm_password" placeholder="Enter Mail Password" class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                        <button type="button" data-toggle-password="confirm_password" class="material-symbols-outlined text-[20px] text-outline absolute right-3.5 top-1/2 -translate-y-1/2 hover:text-on-surface transition-colors cursor-pointer">visibility</button>
+                    </div>
                 </div>
+              <!-- <div class="space-y-2">
+                <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Password: <span class="text-error">*</span></label>
+<div class="relative">
+                        <input type="password" id="confirm_password" placeholder="Enter a New Confirm Password" class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                        <button type="button" data-toggle-password="confirm_password" class="material-symbols-outlined text-[20px] text-outline absolute right-3.5 top-1/2 -translate-y-1/2 hover:text-on-surface transition-colors cursor-pointer">visibility</button>
+                    </div>
                 <p class="flex items-center gap-1.5 text-label-md text-gray-400">
                   <span class="material-symbols-outlined text-[15px] text-emerald-600">verified_user</span>
                   Credentials are encrypted at rest and never exposed in logs
-                  <!-- Encrypted at rest &middot; never exposed in logs -->
                 </p>
-              </div>
+              </div> -->
 
               <div class="flex items-center gap-3 pt-7">
                 <span class="material-symbols-outlined text-[18px] text-secondary">badge</span>
@@ -308,7 +311,7 @@
           </div>
 
           <!-- Panel actions -->
-          <div class="flex items-center justify-center gap-3 px-6 lg:px-8 pb-7">
+          <div class="flex items-center justify-center gap-3 px-6 lg:px-8 pb-7 pt-6 border-t border-outline-variant/70 mx-6 lg:mx-8">
             <button type="button"
               class="flex items-center gap-2 bg-white border border-outline-variant text-on-surface px-6 py-3 rounded-lg text-[14px] font-bold hover:bg-surface-container-low transition-all shadow-sm">
               <span class="material-symbols-outlined text-[18px]">cable</span>
@@ -378,6 +381,17 @@
   </main>
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
+   <script>
+     document.querySelectorAll('[data-toggle-password]').forEach(function (btn) {
+       btn.addEventListener('click', function () {
+         var input = document.getElementById(btn.getAttribute('data-toggle-password'));
+         if (!input) return;
+         var show = input.type === 'password';
+         input.type = show ? 'text' : 'password';
+         btn.textContent = show ? 'visibility_off' : 'visibility';
+       });
+     });
+   </script>
 </body>
  
 </html>
