@@ -39,14 +39,6 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
         <span class="material-symbols-outlined">menu_open</span>
     </button>
     </div>
-    <!-- CTA -->
-    <div class="px-4 mb-4 mt-2">
-    <button
-        class="w-full flex items-center justify-center gap-2 bg-brand-gradient text-on-primary px-2 py-3 rounded-lg text-sm hover:opacity-90 transition-all active:scale-[0.98] shadow-md shadow-primary/20 font-bold">
-        <span class="material-symbols-outlined">add</span>
-        <span class="">Create Pass Template</span>
-    </button>
-    </div>
     <!-- Nav Items -->
     <nav class="flex-1 space-y-1 overflow-y-auto pb-24 text-body-md"><!-- Dashboard -->
     <a class="<?= $linkBase ?> <?= $current === 'index.php' ? $linkActive : $linkIdle ?>"
@@ -199,12 +191,6 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
     </nav>
     <!-- Footer Nav -->
     <div class="absolute bottom-0 left-0 w-full p-4 space-y-1 bg-surface">
-    <!-- API Documentation -->
-    <a class="flex items-center gap-3 px-4 py-2 hover:text-primary transition-colors group" href="#"
-        style="color: #94a3b8;">
-        <span class="material-symbols-outlined text-[18px]">menu_book</span>
-        <span class="font-display text-[14px]">API Documentation</span>
-    </a>
 
     <!-- Company Info Card -->
     <div
@@ -217,13 +203,7 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
 
         <!-- Company Name -->
         <div class="flex-1">
-        <p class="font-display font-bold text-on-surface text-[12px] truncate">Aatman Infotech</p>
-        </div>
-
-        <!-- Admin Badge -->
-        <div class="absolute -right-2 -top-3">
-        <span
-            class="bg-blue-50 text-blue-600 text-[10px] font-bold px-3 py-1 rounded-full border border-blue-100 tracking-wider uppercase shadow-sm">Manager</span>
+        <p class="font-display font-bold text-on-surface text-[12px] truncate">Super Admin</p>
         </div>
     </div>
     </div>

@@ -5,13 +5,6 @@
         class="lg:hidden shrink-0 p-2 rounded-lg hover:bg-surface-container-high text-on-surface-variant transition-all">
         <span class="material-symbols-outlined">menu</span>
     </button>
-    <div class="relative w-full group">
-        <span
-        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">search</span>
-        <input
-        class="w-full bg-surface-container-low border-outline-variant rounded-full py-2 pl-10 pr-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-        placeholder="Search pass templates..." type="text">
-    </div>
     </div>
     <div class="flex items-center gap-4 translate-x-[10px] translate-x-2" style="transform: translateX(5px);">
     <button
