@@ -206,7 +206,7 @@
                         <label class="text-on-surface font-semibold text-label-md">Additional Image:</label>
                         <!-- Single box: upload control + inline preview -->
                         <label id="additional-image-zone" for="additional-image-input"
-                            class="group relative flex h-40 flex-col items-center justify-center text-center gap-2.5 rounded-2xl px-4 cursor-pointer overflow-hidden border border-outline-variant bg-gradient-to-br from-surface-container-low/60 to-primary/[0.04] hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+                            class="group relative flex h-40 flex-col items-center justify-center text-center gap-2.5 rounded-2xl px-4 cursor-pointer overflow-hidden border border-outline-variant bg-gradient-to-br from-surface-container-low/60 to-primary/[0.04] transition-all duration-300">
                             <!-- Empty state -->
                             <span class="relative w-12 h-12 rounded-2xl bg-white shadow-sm ring-1 ring-outline-variant/60 flex items-center justify-center text-primary">
                                 <span class="material-symbols-outlined text-[26px]">add_photo_alternate</span>
