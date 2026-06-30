@@ -440,7 +440,27 @@
           </nav>
         </div>
       </div>
-      <br>
+      <!-- Modals -->
+      <div id="modals" class="scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+        <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
+          <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">web_asset</span></div>
+          <div>
+            <h3 class="text-headline-md font-bold text-on-surface">Modals</h3>
+            <p class="text-label-md text-secondary">Confirmation, information &amp; form dialogs</p>
+          </div>
+        </div>
+        <div class="p-6 flex flex-wrap items-center gap-3">
+          <button type="button" data-modal-target="#modal-delete" class="flex items-center gap-2 bg-error text-white px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-error/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">delete</span> Delete Confirmation
+          </button>
+          <button type="button" data-modal-target="#modal-info" class="flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">info</span> Information
+          </button>
+          <button type="button" data-modal-target="#modal-form" class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
+            <span class="material-symbols-outlined text-[20px]">edit_note</span> Form Modal
+          </button>
+        </div>
+      </div>
     </div>
     <!-- Filter -->
     <div id="filter" class="w-full  scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
@@ -517,27 +537,7 @@
           </div>
         </div>
       </div>
-      <!-- Modals -->
-      <div id="modals" class="scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
-        <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
-          <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">web_asset</span></div>
-          <div>
-            <h3 class="text-headline-md font-bold text-on-surface">Modals</h3>
-            <p class="text-label-md text-secondary">Confirmation, information &amp; form dialogs</p>
-          </div>
-        </div>
-        <div class="p-6 flex flex-wrap items-center gap-3">
-          <button type="button" data-modal-target="#modal-delete" class="flex items-center gap-2 bg-error text-white px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-error/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
-            <span class="material-symbols-outlined text-sm">delete</span> Delete Confirmation
-          </button>
-          <button type="button" data-modal-target="#modal-info" class="flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
-            <span class="material-symbols-outlined text-sm">info</span> Information
-          </button>
-          <button type="button" data-modal-target="#modal-form" class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
-            <span class="material-symbols-outlined text-[20px]">edit_note</span> Form Modal
-          </button>
-        </div>
-      </div>
+      
     </section>
     <?php include('footer.php'); ?>
   </main>
