@@ -338,7 +338,7 @@
           </div>
           <!-- Image Upload -->
           <div class="space-y-2">
-            <label class="text-on-surface font-bold text-label-md">Image Upload</label>
+            <label class="text-on-surface font-bold text-label-md">Additional Image:</label>
             <label data-image-zone for="component-image-input"
               class="group relative flex h-40 flex-col items-center justify-center text-center gap-2.5 rounded-2xl px-4 cursor-pointer overflow-hidden border border-outline-variant bg-gradient-to-br from-surface-container-low/60 to-primary/[0.04] transition-all duration-300">
               <!-- Empty state -->
