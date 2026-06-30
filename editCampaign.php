@@ -40,11 +40,26 @@
         <!-- ===== Campaign Details Card ===== -->
         <div class="bg-white rounded-2xl border border-outline-variant p-6 shadow-sm">
           <!-- Section header -->
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-8 h-8 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
-              <span class="material-symbols-outlined text-[20px]">campaign</span>
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">campaign</span>
+              </div>
+              <h3 class="text-headline-md font-bold text-on-surface">Campaign Details</h3>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-label-sm font-bold text-primary">
+                <span class="material-symbols-outlined text-[15px]">calendar_month</span><span class="leading-none">Schedule</span> 
+              </span>
             </div>
-            <h3 class="text-headline-md font-bold text-on-surface">Campaign Details</h3>
+            <div class="flex items-center gap-3">
+              <label class="inline-flex items-center gap-2.5 cursor-pointer select-none">
+                <span class="js-enable-label text-label-md font-bold text-emerald-600">Enabled</span>
+                <span class="relative inline-flex">
+                  <input type="checkbox" class="sr-only peer js-enable-toggle" checked>
+                  <span class="w-9 h-5 bg-red-500 rounded-full transition-colors peer-checked:bg-emerald-500"></span>
+                  <span class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200 peer-checked:translate-x-4"></span>
+                </span>
+              </label>
+            </div>
           </div>
 
           <!-- Template + Title -->
@@ -400,6 +415,18 @@
       });
 
       update();
+    })();
+
+    // ---- Enable / Disable toggle label ----
+    (function () {
+      var toggle = document.querySelector('.js-enable-toggle');
+      var label = document.querySelector('.js-enable-label');
+      if (!toggle || !label) return;
+      toggle.addEventListener('change', function () {
+        label.textContent = toggle.checked ? 'Enabled' : 'Disabled';
+        label.classList.toggle('text-emerald-600', toggle.checked);
+        label.classList.toggle('text-red-600', !toggle.checked);
+      });
     })();
   </script>
 </body>
