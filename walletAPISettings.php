@@ -115,7 +115,7 @@
                 <label class="flex items-center gap-3 rounded-lg border border-dashed border-outline-variant bg-white px-4 py-3 cursor-pointer hover:border-primary hover:bg-primary/[0.03] transition-all">
                   <span class="material-symbols-outlined text-primary">upload_file</span>
                   <div class="flex-1 min-w-0">
-                    <p class="text-label-md font-bold text-on-surface">Upload service account JSON</p>
+                    <p class="text-label-md font-bold text-on-surface">Click to upload</p>
                     <p class="text-label-sm text-outline">JSON file · max 2 MB</p>
                   </div>
                   <span class="text-label-sm font-bold text-primary bg-primary/10 px-3 py-1.5 rounded-lg shrink-0">Browse</span>

@@ -151,7 +151,7 @@
               Credentials are encrypted at rest
             </p>
             <button type="submit"
-              class="inline-flex items-center gap-2 bg-[#198754] text-white px-5 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all shrink-0">
+              class="flex items-center gap-2 bg-[#198754] text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
               <span class="material-symbols-outlined text-[19px]">save</span>
               Save Configuration
             </button>
@@ -331,7 +331,7 @@
               Credentials are encrypted at rest
             </p>
             <button type="submit"
-              class="inline-flex items-center gap-2 bg-[#198754] text-white px-5 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all shrink-0">
+              class="flex items-center gap-2 bg-[#198754] text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
               <span class="material-symbols-outlined text-[19px]">save</span>
               Save Configuration
             </button>
