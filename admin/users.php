@@ -223,7 +223,8 @@
                           <span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
                           <span class="font-medium">View</span>
                         </a>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+                        <a href="userActivity.php"
+                          class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#">
                           <span class="material-symbols-outlined text-secondary text-[20px]">monitoring</span>
                           <span class="font-medium">Activity</span>
                         </a>
