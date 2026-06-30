@@ -21,9 +21,10 @@
       <div class="flex items-end justify-between">
         <div class="space-y-1">
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
-            <span class="material-symbols-outlined text-[14px] text-blue-600">home</span> <span class="text-blue-600 font-semibold">Dashboard</span>
+            <span class="material-symbols-outlined text-[14px] text-gray">home</span> 
+            <span class="text-gray font-normal">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-on-surface font-semibold">Components</span>
+            <span class="text-gray-500 font-normal">Components</span>
           </nav>
           <h2 class="font-display tracking-tight text-headline-lg font-bold">Components</h2>
         </div>
@@ -46,12 +47,10 @@
           ['name' => 'Breadcrumbs',       'icon' => 'chevron_right',       'desc' => 'Page hierarchy',                  'href' => '#breadcrumbs'],
           ['name' => 'Info Banner',       'icon' => 'info',                'desc' => 'Explanatory headers',             'href' => '#info-banner'],
           ['name' => 'Stat Tiles',        'icon' => 'leaderboard',         'desc' => 'KPI summary cards',               'href' => '#stats'],
-          ['name' => 'Progress Bars',     'icon' => 'percent',             'desc' => 'Usage meters',                    'href' => '#progress'],
           ['name' => 'File Upload',       'icon' => 'cloud_upload',        'desc' => 'Drag & drop dropzone',            'href' => 'importDistribution.php'],
           ['name' => 'QR Cards',          'icon' => 'qr_code_2',           'desc' => 'Shareable pass QR codes',         'href' => 'qrcodeShare.php'],
-          ['name' => 'Avatar',            'icon' => 'account_circle',      'desc' => 'User initials & profile',         'href' => '#avatar'],
           ['name' => 'Tooltips',          'icon' => 'help',                'desc' => 'Hover hints',                     'href' => '#tooltips'],
-          ['name' => 'Sidebar Nav',       'icon' => 'menu_open',           'desc' => 'Collapsible navigation',          'href' => '#'],
+          ['name' => 'Filter',            'icon' => 'filter_alt',          'desc' => 'Filters',                         'href' => '#filter'],
         ];
       ?>
       <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
@@ -194,11 +193,11 @@
           </div>
         </div>
         <div class="p-6 flex flex-wrap items-center gap-3">
-          <button class="inline-flex items-center gap-2 bg-brand-gradient text-on-primary px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:opacity-90 active:scale-[0.98] transition-all font-bold"><span class="material-symbols-outlined text-[18px]">add</span> Primary</button>
-          <button class="inline-flex items-center gap-2 bg-[#198754] text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold"><span class="material-symbols-outlined text-[18px]">save</span> Success</button>
-          <button class="inline-flex items-center gap-2 bg-white border border-outline-variant text-on-surface px-5 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm"><span class="material-symbols-outlined text-[18px]">filter_alt</span> Outline</button>
-          <button class="inline-flex items-center gap-2 bg-red-500 text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-red-500/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold"><span class="material-symbols-outlined text-[18px]">delete</span> Danger</button>
-          <button class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:opacity-90 transition-all shadow-md shadow-primary/20"><span class="material-symbols-outlined">add</span></button>
+          <button class="flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold"><span class="material-symbols-outlined text-sm">add</span>Primary</button>
+          <button type="submit" class="flex items-center gap-2 bg-[#198754] text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all"><span class="material-symbols-outlined text-[19px]">save</span>Success</button>
+          <button class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm"><span class="material-symbols-outlined text-[20px]">filter_alt</span><span class="">Outline</span></button>
+          <button type="button" class="inline-flex items-center gap-2 bg-red-500 text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-red-500/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold"><span class="material-symbols-outlined text-[20px]">delete</span>Danger</button>
+          <button type="button" id="add-recipient" class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:opacity-90 transition-all shadow-md shadow-primary/20"><span class="material-symbols-outlined">add</span></button>
           <button disabled class="inline-flex items-center gap-2 bg-surface-container-high text-outline px-5 py-2.5 rounded-lg text-[14px] font-bold opacity-60 cursor-not-allowed">Disabled</button>
         </div>
       </div>
@@ -214,37 +213,56 @@
         </div>
         <div class="p-6 space-y-5">
           <!-- Variant 1: banner with steps chips -->
-          <div class="bg-white border border-outline-variant/50 rounded-2xl p-6 shadow-sm flex flex-col gap-4">
+          <div class="bg-white border border-outline-variant rounded-2xl p-6 flex flex-col gap-4">
             <div class="flex gap-6 items-start">
-              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
-                <span class="material-symbols-outlined text-[28px]">qr_code_2</span>
-              </div>
-              <div class="flex-1">
-                <h3 class="text-headline-md font-bold text-on-surface tracking-tight">QR Code &amp; Link Share</h3>
-                <p class="text-body-md text-secondary mt-2 leading-relaxed">Distribute your Generic Advertising Pass
-                  effortlessly. Each pass template has a unique QR code and shareable link.</p>
-              </div>
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[28px]">info</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-headline-md font-bold text-on-surface tracking-tight">How Manual Distribution
+                        Works</h3>
+                    <p class="text-body-md text-gray-400 leading-relaxed">Create and distribute
+                        digital wallet passes to your recipients instantly. Select a template, fill in the required
+                        fields, and add recipient details. Each recipient will receive their personalized pass via
+                        email.
+                    </p>
+                    <!-- Steps -->
+                    <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3  mt-4">
+                        <!-- Step 1 -->
+                        <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Select Template</span>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Fill Pass Details</span>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Add Recipients</span>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-body-md font-bold text-gray-600">Distribute</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="bg-primary/5 rounded-2xl p-3 flex flex-wrap items-center gap-3">
-              <?php foreach (['Scan QR Code', 'Share Link', 'Add to Wallet'] as $step): ?>
-              <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="text-body-md font-bold text-on-surface"><?= $step ?></span>
-              </div>
-              <?php endforeach; ?>
-            </div>
-          </div>
+        </div>
 
           <!-- Variant 2: header banner with gradient icon tile -->
-          <div class="bg-white border border-outline-variant/50 rounded-2xl p-6 shadow-sm flex items-center gap-4">
-            <div class="w-12 h-12 rounded-2xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
-              <span class="material-symbols-outlined text-[26px]">credit_card</span>
-            </div>
-            <div>
-              <h3 class="text-headline-md font-bold text-on-surface tracking-tight">Billing Overview</h3>
-              <p class="text-body-md text-secondary">Manage your plan details and track resource usage</p>
-            </div>
+          <div class="flex items-center gap-4 px-6 py-5 border-b border-outline-variant/60">
+          <div class="w-12 h-12 rounded-2xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
+            <span class="material-symbols-outlined text-[26px]">credit_card</span>
           </div>
+          <div>
+            <h3 class="text-headline-md font-bold text-on-surface tracking-tight">Billing Overview</h3>
+            <p class="text-body-md text-gray-400">Manage your plan details and track resource usage</p>
+          </div>
+        </div>
         </div>
       </div>
 
@@ -258,12 +276,13 @@
           </div>
         </div>
         <div class="p-6">
-          <nav class="flex items-center gap-2 text-label-sm text-outline">
-            <span class="material-symbols-outlined text-[14px] text-blue-600">home</span> <span class="text-blue-600 font-semibold">Dashboard</span>
+          <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
+            <span class="material-symbols-outlined text-[14px] text-gray">home</span> 
+            <span class="text-gray font-normal">Dashboard</span>
+            <span class="material-symbols-outlined text-[14px] text-gray">chevron_right</span>
+            <span class="text-gray font-normal">Section</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-blue-600 font-semibold">Section</span>
-            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-            <span class="text-on-surface font-semibold">Current Page</span>
+            <span class="text-gray-500 font-normal">Current Page</span>
           </nav>
         </div>
       </div>
@@ -332,54 +351,30 @@
           </div>
           <div class="p-6 grid grid-cols-2 gap-4">
             <div class="border border-outline-variant rounded-2xl p-4 flex items-center gap-3">
-              <span class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">database</span></span>
-              <div><p class="text-headline-md font-bold text-on-surface leading-none">64</p><p class="text-label-md text-secondary font-semibold mt-1">Records</p></div>
+              <!-- <div class="bg-surface-container-lowest p-4 rounded-xl border border-primary/40 shadow-sm flex items-center gap-4 cursor-pointer relative overflow-hidden group"> -->
+                <div class="bg-brand-gradient text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
+                  <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">apps</span>
+                </div>
+                <div class="relative z-10">
+                  <p class="text-label-sm text-gray-400 font-medium">All Templates</p>
+                  <p class="text-headline-md text-primary font-bold">793</p>
+                </div>
+            <!-- </div> -->
             </div>
             <div class="border border-outline-variant rounded-2xl p-4 flex items-center gap-3">
-              <span class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">install_mobile</span></span>
-              <div><p class="text-headline-md font-bold text-on-surface leading-none">113</p><p class="text-label-md text-secondary font-semibold mt-1">Installs</p></div>
+              <div class="bg-emerald-500 text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
+                  <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">Install_mobile</span>
+                </div>
+                <div class="relative z-10">
+                  <p class="text-label-sm text-gray-400 font-medium">Install</p>
+                  <p class="text-headline-md font-bold">15</p>
+                </div>
             </div>
           </div>
         </div>
-        <div id="progress" class="scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
-          <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
-            <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">percent</span></div>
-            <h3 class="text-headline-md font-bold text-on-surface">Progress Bars</h3>
-          </div>
-          <div class="p-6 space-y-4">
-            <div>
-              <div class="flex justify-between text-label-md mb-1.5"><span class="font-semibold text-on-surface">Templates</span><span class="text-outline">21%</span></div>
-              <div class="h-2 rounded-full bg-surface-container-high overflow-hidden"><div class="h-full rounded-full bg-blue-500" style="width:21%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between text-label-md mb-1.5"><span class="font-semibold text-on-surface">Passes</span><span class="text-outline">38%</span></div>
-              <div class="h-2 rounded-full bg-surface-container-high overflow-hidden"><div class="h-full rounded-full bg-emerald-500" style="width:38%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between text-label-md mb-1.5"><span class="font-semibold text-on-surface">Notifications</span><span class="text-outline">73%</span></div>
-              <div class="h-2 rounded-full bg-surface-container-high overflow-hidden"><div class="h-full rounded-full bg-amber-500" style="width:73%"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <!-- Avatar & Dropdown -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div id="avatar" class="scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
-          <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
-            <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">account_circle</span></div>
-            <h3 class="text-headline-md font-bold text-on-surface">Avatar</h3>
-          </div>
-          <div class="p-6 flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-brand-gradient text-white flex items-center justify-center font-bold shadow-sm">HS</div>
-            <div class="w-12 h-12 rounded-full bg-amber-400 text-white flex items-center justify-center font-bold shadow-sm">W</div>
-            <img class="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-sm" alt="avatar" src="https://i.pravatar.cc/96?img=12">
-            <span class="relative inline-block">
-              <div class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold shadow-sm">JD</div>
-              <span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white"></span>
-            </span>
-          </div>
-        </div>
         <div id="dropdown" class="scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm [&:has(.js-menu-panel:not(.hidden))]:overflow-visible overflow-hidden">
           <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
             <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">more_vert</span></div>
@@ -390,11 +385,13 @@
               <button type="button" class="js-menu-toggle inline-flex items-center gap-2 bg-white border border-outline-variant text-on-surface font-bold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-surface-container-low transition-all">
                 Actions <span class="material-symbols-outlined text-[18px]">expand_more</span>
               </button>
-              <div class="js-menu-panel hidden absolute left-0 mt-1 w-48 bg-white border border-outline-variant rounded-xl shadow-lg py-1.5 z-20">
-                <button class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">visibility</span> View</button>
-                <button class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-on-surface hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">edit</span> Edit</button>
-                <div class="my-1 border-t border-outline-variant/50"></div>
-                <button class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-error hover:bg-error/5 transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span> Delete</button>
+              <div class="js-menu-panel absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white hidden">
+                <div class="py-1.5">
+                  <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">visibility</span><span class="font-medium">View</span></a>
+                  <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">edit</span><span class="font-medium">Edit</span></a>
+                  <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
+                  <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">delete</span><span class="font-bold">Delete</span></a>
+                </div>
               </div>
             </div>
           </div>
@@ -408,14 +405,94 @@
           <h3 class="text-headline-md font-bold text-on-surface">Pagination</h3>
         </div>
         <div class="p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p class="text-label-md text-secondary">Showing <span class="font-semibold text-on-surface">1</span> to <span class="font-semibold text-on-surface">10</span> of <span class="font-semibold text-on-surface">42</span> results</p>
+          <p class="text-label-md text-secondary">Showing <span class="font-semibold text-on-surface">1</span> to<span class="font-semibold text-on-surface">10</span> of <span class="font-semibold text-on-surface">11</span> results</p>
           <nav class="flex items-center gap-1.5">
-            <button class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low disabled:opacity-40 transition-all" disabled><span class="material-symbols-outlined text-[18px]">chevron_left</span></button>
-            <button class="w-9 h-9 rounded-lg bg-primary text-white font-bold text-label-md flex items-center justify-center shadow-sm">1</button>
-            <button class="w-9 h-9 rounded-lg border border-outline-variant text-on-surface font-semibold text-label-md flex items-center justify-center hover:bg-surface-container-low transition-all">2</button>
-            <button class="w-9 h-9 rounded-lg border border-outline-variant text-on-surface font-semibold text-label-md flex items-center justify-center hover:bg-surface-container-low transition-all">3</button>
-            <button class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low transition-all"><span class="material-symbols-outlined text-[18px]">chevron_right</span></button>
+            <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low disabled:opacity-40 disabled:cursor-not-allowed transition-all" disabled="">
+              <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+            </button>
+            <button type="button" class="w-9 h-9 rounded-lg bg-primary text-white font-bold text-label-md flex items-center justify-center shadow-sm">1</button>
+            <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-on-surface font-semibold text-label-md flex items-center justify-center hover:bg-surface-container-low transition-all">2</button>
+            <button type="button" class="w-9 h-9 rounded-lg border border-outline-variant text-outline flex items-center justify-center hover:bg-surface-container-low transition-all">
+              <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+            </button>
           </nav>
+        </div>
+      </div>
+      <br>
+    </div>
+    <!-- Filter -->
+    <div id="filter" class="w-full  scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+      <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
+        <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">filter_alt</span></div>
+        <h3 class="text-headline-md font-bold text-on-surface">Filter</h3>
+      </div>
+      <div class="p-6 space-y-4">
+        <button
+          class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm"
+          onclick="document.getElementById('filter-panel').classList.toggle('hidden')">
+          <span class="material-symbols-outlined text-[20px]">filter_alt</span>
+          <span class="">Filter</span>
+        </button>
+        <div
+          class="bg-white rounded-2xl border border-outline-variant p-6 shadow-sm transition-all duration-300 overflow-hidden hidden"
+          id="filter-panel">
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2">
+              <h3 class="text-primary font-display font-bold text-headline-md">Filter Pass Templates</h3>
+              <p class="text-gray-400 text-body-md">Refine your search to find specific templates</p>
+            </div>
+            <div class="border-t border-outline-variant/30"></div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+              <!-- Date Range -->
+              <div class="md:col-span-3 space-y-2">
+                <label class="text-on-surface font-semibold text-label-md">Date Range:</label>
+                <div class="relative">
+                  <span
+                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-[20px]">calendar_month</span>
+                  <input
+                    class="js-daterange w-full bg-surface-container-low border-outline-variant rounded-lg pl-10 pr-4 py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                    placeholder="Select date range" readonly="" type="text">
+                </div>
+              </div>
+              <!-- Template Type -->
+              <div class="md:col-span-3 space-y-2">
+                <label class="text-on-surface font-semibold text-label-md">Template Type:</label>
+                <div class="relative">
+                  <select class="w-full js-select2">
+                    <option>All Types</option>
+                    <option>Generic Pass</option>
+                    <option>Advertising</option>
+                    <option>Loyalty + Tier</option>
+                    <option>Event Ticket</option>
+                    <option>Loyalty Card</option>
+                    <option>Gift Card</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Search -->
+              <div class="md:col-span-3 space-y-2">
+                <label class="text-on-surface font-semibold text-label-md">Search:</label>
+                <div class="relative">
+                  <input
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md font-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                    placeholder="Search by name, ID, or keyword..." type="text">
+                </div>
+              </div>
+              <!-- Actions -->
+              <div class="md:col-span-3 flex items-center gap-3">
+                <button
+                  class="flex-1 flex items-center justify-center gap-2 bg-brand-gradient text-on-primary px-4 py-3 rounded-lg text-[14px] shadow-md shadow-primary/20 hover:opacity-95 transition-all font-bold">
+                  <span class="material-symbols-outlined text-[20px]">search</span>
+                  Search
+                </button>
+                <button
+                  class="flex-1 flex items-center justify-center gap-2 bg-surface border border-outline-variant text-on-surface-variant px-4 py-3 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold">
+                  <span class="material-symbols-outlined text-[20px]">cancel</span>
+                  Clear
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

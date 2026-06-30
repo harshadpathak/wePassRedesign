@@ -19,11 +19,7 @@ $subActive = 'text-primary before:bg-primary';
 
 // Which submenu (if any) contains the active page
 $settingsActive = in_array($current, ['walletAPISettings.php','webhookURLs.php','apiKeys.php','mailSettings.php','mailTemplate.php'], true);
-$distActive = in_array($current, ['manualDistribution.php','importDistribution.php','qrcodeShare.php','qrcodeShow.php'], true);
-$geoActive = in_array($current, ['stores.php','createStore.php','editStore.php','campaigns.php','createCampaign.php','editCampaign.php'], true);
-$storesActive = in_array($current, ['stores.php','createStore.php','editStore.php'], true);
-$campaignsActive = in_array($current, ['campaigns.php','createCampaign.php','editCampaign.php'], true);
-$companyActive = in_array($current, ['accountInfo.php','accountUsers.php'], true);
+
 ?>
 <aside
 class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline-variant dark:bg-inverse-surface z-50 transition-all duration-300 ease-in-out bg-surface">
@@ -41,11 +37,11 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
     </div>
     <!-- CTA -->
     <div class="px-4 mb-4 mt-2">
-    <button
+    <a href="invitecompany.php"
         class="w-full flex items-center justify-center gap-2 bg-brand-gradient text-on-primary px-2 py-3 rounded-lg text-sm hover:opacity-90 transition-all active:scale-[0.98] shadow-md shadow-primary/20 font-bold">
         <span class="material-symbols-outlined">add</span>
-        <span class="">Create Pass Template</span>
-    </button>
+        <span class="">Invite Company</span>
+    </a>
     </div>
     <!-- Nav Items -->
     <nav class="flex-1 space-y-1 overflow-y-auto pb-24 text-body-md"><!-- Dashboard -->
@@ -54,94 +50,18 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
         <span class="material-symbols-outlined" <?= $current === 'index.php' ? $fill : '' ?>>home</span>
         <span>Dashboard</span>
     </a>
-    <!-- Pass Templates -->
-    <a class="<?= $linkBase ?> <?= $current === 'PassTemplates.php' ? $linkActive : $linkIdle ?>"
-        href="PassTemplates.php">
-        <span class="material-symbols-outlined" <?= $current === 'PassTemplates.php' ? $fill : '' ?>>style</span>
-        <span>Pass Templates</span>
-        <span
-        class="ml-auto text-white text-[10px] px-2 py-0.5 rounded-full bg-primary font-semibold">793</span>
-    </a>
-    <!-- Pass Distribution -->
-    <div class="group/nav mb-[30px] mb-4">
-        <button
-        class="<?= $navBtn ?> <?= $distActive ? $linkActive : $linkIdle ?>"
-        onclick="toggleSubmenu(this)">
-        <span class="material-symbols-outlined">send</span>
-        <span>Pass Distribution</span>
-        <span
-            class="ml-auto material-symbols-outlined text-sm transition-transform duration-200 chevron <?= $distActive ? 'rotate-90' : '' ?>">chevron_right</span>
-        </button>
-        <div class="<?= $subWrap ?> <?= $distActive ? '' : 'hidden' ?>">
-        <a class="<?= $subBase ?> <?= $current === 'manualDistribution.php' ? $subActive : $subIdle ?>"
-            href="manualDistribution.php">
-            <span class="material-symbols-outlined text-[18px]">edit_square</span>
-            <span>Manual Distribution</span>
-        </a>
-        <a class="<?= $subBase ?> <?= $current === 'importDistribution.php' ? $subActive : $subIdle ?>"
-            href="importDistribution.php">
-            <span class="material-symbols-outlined text-[18px]">upload</span>
-            <span>Import Distribution</span>
-        </a>
-        <a class="<?= $subBase ?> <?= $current === 'qrcodeShare.php' ? $subActive : $subIdle ?>"
-            href="qrcodeShare.php">
-            <span class="material-symbols-outlined text-[18px]">grid_view</span>
-            <span>QR Code Share</span>
-        </a>
-        </div>
-    </div>
-    <!-- Passes -->
-    <a class="<?= $linkBase ?> <?= $current === 'passes.php' ? $linkActive : $linkIdle ?>"
-        href="passes.php">
-        <span class="material-symbols-outlined" <?= $current === 'passes.php' ? $fill : '' ?>>credit_card</span>
-        <span>Passes</span>
-    </a>
-    <!-- GEO Locations -->
-    <div class="group/nav mb-[30px] mb-4">
-        <button
-        class="<?= $navBtn ?> <?= $geoActive ? $linkActive : $linkIdle ?>"
-        onclick="toggleSubmenu(this)">
-        <span class="material-symbols-outlined">location_on</span>
-        <span>GEO Locations</span>
-        <span
-            class="ml-auto material-symbols-outlined text-sm transition-transform duration-200 chevron <?= $geoActive ? 'rotate-90' : '' ?>">chevron_right</span>
-        </button>
-        <div class="<?= $subWrap ?> <?= $geoActive ? '' : 'hidden' ?>">
-        <a class="<?= $subBase ?> <?= $storesActive ? $subActive : $subIdle ?>"
-            href="stores.php">
-            <span class="material-symbols-outlined text-[18px]">store</span>
-            <span>Stores</span>
-        </a>
-        <a class="<?= $subBase ?> <?= $campaignsActive ? $subActive : $subIdle ?>"
-            href="campaigns.php">
-            <span class="material-symbols-outlined text-[18px]">campaign</span>
-            <span>Campaigns</span>
-        </a>
-        </div>
-    </div>
     <!-- Company -->
-    <div class="group/nav mb-[30px] mb-4">
-        <button
-        class="<?= $navBtn ?> <?= $companyActive ? $linkActive : $linkIdle ?>"
-        onclick="toggleSubmenu(this)">
-        <span class="material-symbols-outlined">business_center</span>
-        <span>Company</span>
-        <span
-            class="ml-auto material-symbols-outlined text-sm transition-transform duration-200 chevron <?= $companyActive ? 'rotate-90' : '' ?>">chevron_right</span>
-        </button>
-        <div class="<?= $subWrap ?> <?= $companyActive ? '' : 'hidden' ?>">
-        <a class="<?= $subBase ?> <?= $current === 'accountInfo.php' ? $subActive : $subIdle ?>"
-            href="accountInfo.php">
-            <span class="material-symbols-outlined text-[18px]">person</span>
-            <span>Account Info</span>
-        </a>
-        <a class="<?= $subBase ?> <?= $current === 'accountUsers.php' ? $subActive : $subIdle ?>"
-            href="accountUsers.php">
-            <span class="material-symbols-outlined text-[18px]">group</span>
-            <span>Account Users</span>
-        </a>
-        </div>
-    </div>
+     <a class="<?= $linkBase ?> <?= $current === 'company.php' ? $linkActive : $linkIdle ?>"
+        href="company.php">
+        <span class="material-symbols-outlined " <?= $current === 'company.php' ? $fill : '' ?>>grid_view</span>
+        <span>Companies</span>
+    </a>
+    <!-- Business -->
+    <a class="<?= $linkBase ?> <?= $current === 'business.php' ? $linkActive : $linkIdle ?>"
+        href="business.php">
+        <span class="material-symbols-outlined " <?= $current === 'business.php' ? $fill : '' ?>>business_center</span>
+        <span>Business</span>
+    </a>
     <!-- Billing -->
     <a class="<?= $linkBase ?> <?= $current === 'billing.php' ? $linkActive : $linkIdle ?>"
         href="billing.php">
@@ -165,29 +85,14 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
             <span class="material-symbols-outlined text-[18px]">credit_card</span>
             <span>Wallet API Settings</span>
         </a>
-        <a class="<?= $subBase ?> <?= $current === 'apiKeys.php' ? $subActive : $subIdle ?>"
-            href="apiKeys.php">
-            <span class="material-symbols-outlined text-[18px]">key</span>
-            <span>API Keys</span>
-            <span
-            class="ml-auto text-[9px] font-bold uppercase tracking-wider bg-amber-50 text-amber-700 px-1.5 py-0.5 rounded border border-amber-100">Sensitive</span>
-        </a>
-        <a class="<?= $subBase ?> <?= $current === 'webhookURLs.php' ? $subActive : $subIdle ?>"
-            href="webhookURLs.php">
-            <span class="material-symbols-outlined text-[18px]">link</span>
-            <span>Webhook URLs</span>
-        </a>
+
         <p class="-ml-4 pl-3 pr-2 py-1.5 mt-2 text-[10px] font-bold uppercase tracking-widest text-outline bg-surface">Communication</p>
         <a class="<?= $subBase ?> <?= $current === 'mailSettings.php' ? $subActive : $subIdle ?>"
             href="mailSettings.php">
             <span class="material-symbols-outlined text-[18px]">mail</span>
             <span>Mail Settings</span>
         </a>
-        <a class="<?= $subBase ?> <?= $current === 'mailTemplate.php' ? $subActive : $subIdle ?>"
-            href="mailTemplate.php">
-            <span class="material-symbols-outlined text-[18px]">description</span>
-            <span>Mail Templates</span>
-        </a>
+
         </div>
     </div>
     <!-- PLATFORM Section -->
@@ -217,14 +122,14 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
 
         <!-- Company Name -->
         <div class="flex-1">
-        <p class="font-display font-bold text-on-surface text-[12px] truncate">Aatman Infotech</p>
+        <p class="font-display font-bold text-on-surface text-[12px] truncate">Agent</p>
         </div>
 
         <!-- Admin Badge -->
-        <div class="absolute -right-2 -top-3">
+        <!-- <div class="absolute -right-2 -top-3">
         <span
             class="bg-blue-50 text-blue-600 text-[10px] font-bold px-3 py-1 rounded-full border border-blue-100 tracking-wider uppercase shadow-sm">Manager</span>
-        </div>
+        </div> -->
     </div>
     </div>
 </div>
