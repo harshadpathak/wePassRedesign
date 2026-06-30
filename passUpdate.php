@@ -423,7 +423,35 @@
                 <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
                 <span class="text-body-md font-semibold text-on-surface">GEO Locations</span>
               </div>
-              <span class="bg-primary/10 text-primary text-label-sm font-bold px-3 py-1 rounded-full">None</span>
+              <span class="inline-flex items-center rounded-full border border-primary/10 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1">None</span>
+            </div>
+            <div class="bg-white rounded-2xl border border-outline-variant shadow-sm px-5 py-4 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+                <span class="text-body-md font-semibold text-on-surface">GEO Locations</span>
+                <span class="inline-flex items-center rounded-full border border-emerald-100 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3.5 py-1">Active</span>
+              </div>
+              <span class="inline-flex items-center rounded-full border border-primary/10 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1 gap-1">Manual 
+                <span class="bg-primary text-white text-label-sm font-bold px-2 py-0.5 rounded-full">1</span></span>
+            </div>
+            <div class="bg-white rounded-2xl border border-outline-variant shadow-sm px-5 py-4 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+                <span class="text-body-md font-semibold text-on-surface">GEO Locations</span>
+                <span class="inline-flex items-center rounded-full border border-emerald-100 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3.5 py-1">Active</span>
+              </div>
+              <span class="inline-flex items-center rounded-full border border-primary/10 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1 gap-1">Store 
+                <span class="bg-primary text-white text-label-sm font-bold px-2 py-0.5 rounded-full">1</span></span>
+            </div>
+            <div class="bg-white rounded-2xl border border-outline-variant shadow-sm px-5 py-4 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+                <span class="text-body-md font-semibold text-on-surface">GEO City Locations</span>
+              </div>
+              <span class="inline-flex items-center rounded-full border border-primary/10 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1 gap-1">
+                Rajkot 
+                <span class="bg-primary text-white text-label-sm font-bold px-2 py-0.5 rounded-full">1</span>
+              </span>
             </div>
           </div>
         </aside>
