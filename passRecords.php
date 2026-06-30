@@ -35,9 +35,30 @@
         ['label' => 'Active Passes', 'value' => 2, 'icon' => 'check_circle', 'icbg' => 'bg-emerald-100', 'ic' => 'text-emerald-600', 'bar' => 'bg-emerald-500'],
       ];
       $records = [
-        ['pid' => 'ca5473d6e81a675c031841ed3ebd7656', 'user' => 'Kartik Doe', 'email' => 'hardik@wepass.io', 'updated' => '17/06/2026 13:35:50', 'updatedAgo' => 'updated 4 days ago', 'created' => '17/06/2026 13:35:50', 'pass' => 'Active', 'send' => 'Send', 'exp' => '25/03/2027 05:29:59', 'archive' => '-'],
+        ['pid' => 'ca5473d6e81a675c031841ed3ebd7656', 'user' => 'Kartik Doe', 'email' => 'hardik@wepass.io', 'updated' => '17/06/2026 13:35:50', 'updatedAgo' => 'updated 4 days ago', 'created' => '17/06/2026 13:35:50', 'pass' => 'Active', 'send' => 'Pending', 'exp' => '25/03/2027 05:29:59', 'archive' => '-'],
+        ['pid' => 'aedc8a5a01c8695d28087ed0b387630e', 'user' => 'Kartik Doe', 'email' => 'hardik@wepass.io', 'updated' => '17/06/2026 13:40:36', 'updatedAgo' => 'updated 4 days ago', 'created' => '17/06/2026 13:35:24', 'pass' => 'Active', 'send' => 'Processing', 'exp' => '25/03/2027 05:29:59', 'archive' => '-'],
         ['pid' => 'aedc8a5a01c8695d28087ed0b387630e', 'user' => 'Kartik Doe', 'email' => 'hardik@wepass.io', 'updated' => '17/06/2026 13:40:36', 'updatedAgo' => 'updated 4 days ago', 'created' => '17/06/2026 13:35:24', 'pass' => 'Active', 'send' => 'Send', 'exp' => '25/03/2027 05:29:59', 'archive' => '-'],
+        ['pid' => 'aedc8a5a01c8695d28087ed0b387630e', 'user' => 'Kartik Doe', 'email' => 'hardik@wepass.io', 'updated' => '17/06/2026 13:40:36', 'updatedAgo' => 'updated 4 days ago', 'created' => '17/06/2026 13:35:24', 'pass' => 'Active', 'send' => 'Failed', 'exp' => '25/03/2027 05:29:59', 'archive' => '-'],
+        ['pid' => 'aedc8a5a01c8695d28087ed0b387630e', 'user' => 'Kartik Doe', 'email' => 'hardik@wepass.io', 'updated' => '17/06/2026 13:40:36', 'updatedAgo' => 'updated 4 days ago', 'created' => '17/06/2026 13:35:24', 'pass' => 'Expired', 'send' => 'Send', 'exp' => '25/03/2027 05:29:59', 'archive' => '-'],
+        ['pid' => 'aedc8a5a01c8695d28087ed0b387630e', 'user' => 'Kartik Doe', 'email' => 'hardik@wepass.io', 'updated' => '17/06/2026 13:40:36', 'updatedAgo' => 'updated 4 days ago', 'created' => '17/06/2026 13:35:24', 'pass' => 'Reedemed', 'send' => 'Send', 'exp' => '25/03/2027 05:29:59', 'archive' => '-'],
+        ['pid' => 'aedc8a5a01c8695d28087ed0b387630e', 'user' => 'Kartik Doe', 'email' => 'hardik@wepass.io', 'updated' => '17/06/2026 13:40:36', 'updatedAgo' => 'updated 4 days ago', 'created' => '17/06/2026 13:35:24', 'pass' => 'Voided', 'send' => 'Send', 'exp' => '25/03/2027 05:29:59', 'archive' => '-'],
       ];
+
+      // Pass status — same dot icon, different color per status
+      $passStatusCfg = [
+        'Active'   => ['cls' => 'bg-emerald-50 text-emerald-600 border-emerald-200', 'dot' => 'bg-emerald-500'],
+        'Expired'  => ['cls' => 'bg-amber-50 text-amber-600 border-amber-200',       'dot' => 'bg-amber-500'],
+        'Reedemed' => ['cls' => 'bg-blue-50 text-blue-600 border-blue-200',          'dot' => 'bg-blue-500'],
+        'Voided'   => ['cls' => 'bg-rose-50 text-rose-600 border-rose-200',          'dot' => 'bg-rose-500'],
+      ];
+      // Send status — different icon AND color per status
+      $sendStatusCfg = [
+        'Pending'    => ['cls' => 'bg-amber-50 text-amber-600 border-amber-200',       'icon' => 'schedule'],
+        'Processing' => ['cls' => 'bg-sky-50 text-sky-600 border-sky-200',             'icon' => 'sync'],
+        'Send'       => ['cls' => 'bg-emerald-50 text-emerald-600 border-emerald-200', 'icon' => 'mark_email_read'],
+        'Failed'     => ['cls' => 'bg-rose-50 text-rose-600 border-rose-200',          'icon' => 'error'],
+      ];
+      $statusFallback = ['cls' => 'bg-surface-container-high text-on-surface-variant border-outline-variant/60', 'dot' => 'bg-outline', 'icon' => 'help'];
     ?>
     <section class="p-margin-desktop space-y-stack-lg pb-16">
       <!-- Breadcrumbs and Header -->
@@ -245,7 +266,10 @@
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-outline-variant/40">
-                  <?php foreach ($records as $r): ?>
+                  <?php foreach ($records as $r):
+                    $ps = $passStatusCfg[$r['pass']] ?? $statusFallback;
+                    $ss = $sendStatusCfg[$r['send']] ?? $statusFallback;
+                  ?>
                   <tr class="group hover:bg-primary/5 transition-colors">
                     <td class="px-5 py-4 align-middle">
                       <div class="flex items-center gap-2">
@@ -268,13 +292,13 @@
                       <p class="text-label-md text-on-surface-variant whitespace-nowrap"><?= htmlspecialchars($r['created']) ?></p>
                     </td>
                     <td class="px-5 py-4 align-middle">
-                      <span class="inline-flex items-center gap-1 text-[10px] bg-blue-50 text-primary font-bold px-2 py-1 rounded-full">
-                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span> <?= htmlspecialchars($r['pass']) ?>
+                      <span class="inline-flex items-center gap-1 text-[10px] font-bold uppercase px-2 py-1 rounded-full border <?= $ps['cls'] ?> whitespace-nowrap">
+                        <span class="w-1.5 h-1.5 rounded-full <?= $ps['dot'] ?>"></span> <?= htmlspecialchars($r['pass']) ?>
                       </span>
                     </td>
                     <td class="px-5 py-4 align-middle">
-                      <span class="inline-flex items-center py-1 gap-1 rounded-full text-[10px] font-bold uppercase bg-blue-50 bg-emerald-50 text-emerald-600 whitespace-nowrap px-2">
-                        <span class="material-symbols-outlined text-[14px]">check</span> <?= htmlspecialchars($r['send']) ?>
+                      <span class="inline-flex items-center gap-1 text-[10px] font-bold uppercase px-2 py-1 rounded-full border <?= $ss['cls'] ?> whitespace-nowrap">
+                        <span class="material-symbols-outlined text-[14px]"><?= $ss['icon'] ?></span> <?= htmlspecialchars($r['send']) ?>
                       </span>
                     </td>
                     <td class="px-5 py-4 align-middle">

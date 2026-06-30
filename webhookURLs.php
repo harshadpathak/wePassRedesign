@@ -38,6 +38,12 @@
             'created' => '15/06/2026 06:36:30',
             'active'  => true,
           ],
+          [
+            'name'    => 'Webhook 2',
+            'url'     => 'https://webhook.com/harsh',
+            'created' => '30/06/2026 03:03:30',
+            'active'  => false,
+          ],
         ];
       ?>
 

@@ -56,6 +56,13 @@
           </nav>
           <h2 class="font-display tracking-tight text-headline-lg font-bold">Send Push Notification</h2>
         </div>
+        <div class="flex items-center gap-3">
+          <a href="pushMessage.php"
+            class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            Back
+          </a>
+        </div>
       </div>
       <!-- Template Summary Banner -->
       <div class="bg-white border border-outline-variant rounded-2xl shadow-sm overflow-hidden">
