@@ -34,23 +34,18 @@
       <?php
         $components = [
           ['name' => 'Alerts',            'icon' => 'notifications_active', 'desc' => 'Contextual dismissible messages', 'href' => '#alerts'],
+          ['name' => 'Modals',            'icon' => 'web_asset',           'desc' => 'Confirm, info & form dialogs',     'href' => '#modals'],
           ['name' => 'Badges & Pills',    'icon' => 'label',               'desc' => 'Status pills & tags',             'href' => '#badges'],
           ['name' => 'Buttons',           'icon' => 'smart_button',        'desc' => 'Primary, success, outline, icon', 'href' => '#buttons'],
-          ['name' => 'Cards',             'icon' => 'dashboard',           'desc' => 'Surfaces & containers',           'href' => 'billing.php'],
-          ['name' => 'Tables',            'icon' => 'table_rows',          'desc' => 'Responsive data tables',          'href' => 'PassTemplates.php'],
           ['name' => 'Forms & Inputs',    'icon' => 'edit_note',           'desc' => 'Text, textarea, password',        'href' => '#forms'],
-          ['name' => 'Select (Select2)',  'icon' => 'arrow_drop_down_circle','desc' => 'Searchable dropdowns',          'href' => '#select'],
-          ['name' => 'Date Picker',       'icon' => 'calendar_month',      'desc' => 'Flatpickr date / range',          'href' => '#datepicker'],
-          ['name' => 'Stepper / Wizard',  'icon' => 'linear_scale',        'desc' => 'Multi-step flows',                'href' => 'importDistribution.php'],
           ['name' => 'Dropdown Menu',     'icon' => 'more_vert',           'desc' => 'Row & action menus',              'href' => '#dropdown'],
           ['name' => 'Pagination',        'icon' => 'last_page',           'desc' => 'Paged navigation',                'href' => '#pagination'],
           ['name' => 'Breadcrumbs',       'icon' => 'chevron_right',       'desc' => 'Page hierarchy',                  'href' => '#breadcrumbs'],
           ['name' => 'Info Banner',       'icon' => 'info',                'desc' => 'Explanatory headers',             'href' => '#info-banner'],
           ['name' => 'Stat Tiles',        'icon' => 'leaderboard',         'desc' => 'KPI summary cards',               'href' => '#stats'],
-          ['name' => 'File Upload',       'icon' => 'cloud_upload',        'desc' => 'Drag & drop dropzone',            'href' => 'importDistribution.php'],
-          ['name' => 'QR Cards',          'icon' => 'qr_code_2',           'desc' => 'Shareable pass QR codes',         'href' => 'qrcodeShare.php'],
           ['name' => 'Tooltips',          'icon' => 'help',                'desc' => 'Hover hints',                     'href' => '#tooltips'],
           ['name' => 'Filter',            'icon' => 'filter_alt',          'desc' => 'Filters',                         'href' => '#filter'],
+          ['name' => 'Wallet Icon',       'icon' => 'wallet',                'desc' => 'Wallet Icon',                     'href' => '#wallet_icon'],
         ];
       ?>
       <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
@@ -62,7 +57,7 @@
             </div>
             <div>
               <h3 class="text-headline-md font-bold text-on-surface">Theme Components</h3>
-              <p class="text-label-md text-secondary">All UI components used across the project</p>
+              <p class="text-label-md text-gray-400">All UI components used across the project</p>
             </div>
           </div>
           <span class="bg-primary/10 text-primary text-label-sm font-bold px-3 py-1 rounded-full"><?= count($components) ?> Components</span>
@@ -101,7 +96,7 @@
           </div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Alerts</h3>
-            <p class="text-label-md text-secondary">Contextual feedback messages in theme colors</p>
+            <p class="text-label-md text-gray-400">Contextual feedback messages in theme colors</p>
           </div>
         </div>
         <div class="p-6 space-y-4">
@@ -128,7 +123,7 @@
           </div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Pill Bordered Badges</h3>
-            <p class="text-label-md text-secondary">Outlined status pills in theme colors</p>
+            <p class="text-label-md text-gray-400">Outlined status pills in theme colors</p>
           </div>
         </div>
 
@@ -137,11 +132,11 @@
           <div>
             <p class="text-label-sm font-bold uppercase tracking-wider text-outline mb-3">Default</p>
             <div class="flex flex-wrap gap-2.5">
-              <span class="inline-flex items-center rounded-full border border-primary/30 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1">Primary</span>
-              <span class="inline-flex items-center rounded-full border border-emerald-300 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3.5 py-1">Success</span>
-              <span class="inline-flex items-center rounded-full border border-amber-300 bg-amber-50 text-amber-700 text-label-md font-bold px-3.5 py-1">Warning</span>
-              <span class="inline-flex items-center rounded-full border border-red-300 bg-red-50 text-red-700 text-label-md font-bold px-3.5 py-1">Error</span>
-              <span class="inline-flex items-center rounded-full border border-teal-300 bg-teal-50 text-teal-700 text-label-md font-bold px-3.5 py-1">Teal</span>
+              <span class="inline-flex items-center rounded-full border border-primary/10 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1">Primary</span>
+              <span class="inline-flex items-center rounded-full border border-emerald-100 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3.5 py-1">Success</span>
+              <span class="inline-flex items-center rounded-full border border-amber-100 bg-amber-50 text-amber-700 text-label-md font-bold px-3.5 py-1">Warning</span>
+              <span class="inline-flex items-center rounded-full border border-red-100 bg-red-50 text-red-700 text-label-md font-bold px-3.5 py-1">Error</span>
+              <span class="inline-flex items-center rounded-full border border-teal-100 bg-teal-50 text-teal-700 text-label-md font-bold px-3.5 py-1">Teal</span>
               <span class="inline-flex items-center rounded-full border border-outline-variant bg-surface-container-low text-secondary text-label-md font-bold px-3.5 py-1">Neutral</span>
             </div>
           </div>
@@ -150,10 +145,10 @@
           <div>
             <p class="text-label-sm font-bold uppercase tracking-wider text-outline mb-3">With status dot</p>
             <div class="flex flex-wrap gap-2.5">
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Active</span>
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-300 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Completed</span>
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-300 bg-amber-50 text-amber-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Pending</span>
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-red-300 bg-red-50 text-red-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Failed</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-primary/10 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Active</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-100 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Completed</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-100 bg-amber-50 text-amber-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Pending</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 text-red-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Failed</span>
               <span class="inline-flex items-center gap-1.5 rounded-full border border-outline-variant bg-surface-container-low text-secondary text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Draft</span>
             </div>
           </div>
@@ -162,10 +157,10 @@
           <div>
             <p class="text-label-sm font-bold uppercase tracking-wider text-outline mb-3">With icon</p>
             <div class="flex flex-wrap gap-2.5">
-              <span class="inline-flex items-center gap-1 rounded-full border border-emerald-300 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Verified</span>
-              <span class="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">star</span> Featured</span>
-              <span class="inline-flex items-center gap-1 rounded-full border border-amber-300 bg-amber-50 text-amber-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">schedule</span> Scheduled</span>
-              <span class="inline-flex items-center gap-1 rounded-full border border-red-300 bg-red-50 text-red-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">block</span> Blocked</span>
+              <span class="inline-flex items-center gap-1 rounded-full border border-emerald-100 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Verified</span>
+              <span class="inline-flex items-center gap-1 rounded-full border border-primary/10 bg-primary/5 text-primary text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">star</span> Featured</span>
+              <span class="inline-flex items-center gap-1 rounded-full border border-amber-100 bg-amber-50 text-amber-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">schedule</span> Scheduled</span>
+              <span class="inline-flex items-center gap-1 rounded-full border border-red-100 bg-red-50 text-red-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">block</span> Blocked</span>
             </div>
           </div>
 
@@ -189,14 +184,14 @@
           <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">smart_button</span></div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Buttons</h3>
-            <p class="text-label-md text-secondary">Primary, success, outline, danger & icon</p>
+            <p class="text-label-md text-gray-400">Primary, success, outline, danger & icon</p>
           </div>
         </div>
         <div class="p-6 flex flex-wrap items-center gap-3">
           <button class="flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold"><span class="material-symbols-outlined text-sm">add</span>Primary</button>
           <button type="submit" class="flex items-center gap-2 bg-[#198754] text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all"><span class="material-symbols-outlined text-[19px]">save</span>Success</button>
-          <button class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm"><span class="material-symbols-outlined text-[20px]">filter_alt</span><span class="">Outline</span></button>
-          <button type="button" class="inline-flex items-center gap-2 bg-red-500 text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-red-500/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold"><span class="material-symbols-outlined text-[20px]">delete</span>Danger</button>
+          <button class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm"><span class="material-symbols-outlined text-[19px]">filter_alt</span><span class="">Outline</span></button>
+          <button type="button" class="inline-flex items-center gap-2 bg-red-500 text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-red-500/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold"><span class="material-symbols-outlined text-[19px]">delete</span>Danger</button>
           <button type="button" id="add-recipient" class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:opacity-90 transition-all shadow-md shadow-primary/20"><span class="material-symbols-outlined">add</span></button>
           <button disabled class="inline-flex items-center gap-2 bg-surface-container-high text-outline px-5 py-2.5 rounded-lg text-[14px] font-bold opacity-60 cursor-not-allowed">Disabled</button>
         </div>
@@ -208,7 +203,7 @@
           <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">info</span></div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Info Banner</h3>
-            <p class="text-label-md text-secondary">Explanatory section header</p>
+            <p class="text-label-md text-gray-400">Explanatory section header</p>
           </div>
         </div>
         <div class="p-6 space-y-5">
@@ -272,7 +267,7 @@
           <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">chevron_right</span></div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Breadcrumbs</h3>
-            <p class="text-label-md text-secondary">Page hierarchy navigation</p>
+            <p class="text-label-md text-gray-400">Page hierarchy navigation</p>
           </div>
         </div>
         <div class="p-6">
@@ -293,7 +288,7 @@
           <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">edit_note</span></div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Forms &amp; Inputs</h3>
-            <p class="text-label-md text-secondary">Text, textarea, select, date &amp; password</p>
+            <p class="text-label-md text-gray-400">Text, textarea, select, date &amp; password</p>
           </div>
         </div>
         <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -320,9 +315,11 @@
           <div class="space-y-2">
             <label class="text-on-surface font-bold text-label-md">Password</label>
             <div class="relative">
-              <input type="password" id="demo-pw" placeholder="Enter password" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pl-4 pr-12 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-              <button type="button" data-toggle-pw="demo-pw" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
-            </div>
+                            <input type="password" id="password" placeholder="Enter Password"
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            <button type="button" data-toggle-password="password"
+                                class="material-symbols-outlined text-[20px] text-outline absolute right-3.5 top-1/2 -translate-y-1/2 hover:text-on-surface transition-colors cursor-pointer">visibility</button>
+                        </div>
           </div>
           <div class="space-y-2 md:col-span-2">
             <label class="text-on-surface font-bold text-label-md">Textarea</label>
@@ -396,6 +393,30 @@
             </div>
           </div>
         </div>
+        <div id="wallet_icon" class="scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm [&:has(.js-menu-panel:not(.hidden))]:overflow-visible overflow-hidden">
+          <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
+            <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-[20px]">wallet</span></div>
+            <h3 class="text-headline-md font-bold text-on-surface">Wallet icon</h3>
+          </div>
+          <div class="p-6">
+            <div class="relative flex gap-3 js-menu">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-blue-50">
+                <svg viewBox="0 0 24 24" class="w-6 h-6">
+                    <rect x="2.5" y="2" width="19" height="20" rx="2.5" fill="#34A853"></rect>
+                    <rect x="2.5" y="4" width="19" height="18" rx="2.5" fill="#FBBC05"></rect>
+                    <rect x="2.5" y="6.5" width="19" height="15.5" rx="2.5" fill="#EA4335"></rect>
+                    <path d="M2 12.2 C 5.5 10.2 8.5 13.8 12 14 C 15.5 14.2 18.5 10.5 22 10.8 L 22 19.5 Q 22 22 19.5 22 L 4.5 22 Q 2 22 2 19.5 Z" fill="#4285F4"></path>
+                </svg>
+            </div>
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface shrink-0 bg-surface-container-high">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor" aria-hidden="true">
+                <path d="M17.05 12.04c-.03-2.43 1.99-3.6 2.08-3.66-1.13-1.66-2.9-1.89-3.53-1.91-1.5-.15-2.93.88-3.69.88-.76 0-1.94-.86-3.19-.84-1.64.02-3.15.95-3.99 2.42-1.7 2.95-.43 7.32 1.22 9.71.81 1.17 1.77 2.48 3.03 2.43 1.22-.05 1.68-.79 3.15-.79 1.47 0 1.88.79 3.17.76 1.31-.02 2.14-1.19 2.94-2.37.93-1.36 1.31-2.68 1.33-2.75-.03-.01-2.55-.98-2.58-3.86zM14.6 4.86c.67-.81 1.12-1.94.99-3.06-.96.04-2.13.64-2.82 1.45-.62.72-1.16 1.87-1.02 2.97 1.07.08 2.17-.55 2.85-1.36z"></path>
+              </svg>
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Pagination -->
@@ -418,7 +439,27 @@
           </nav>
         </div>
       </div>
-      <br>
+      <!-- Modals -->
+      <div id="modals" class="scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+        <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
+          <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">web_asset</span></div>
+          <div>
+            <h3 class="text-headline-md font-bold text-on-surface">Modals</h3>
+            <p class="text-label-md text-secondary">Confirmation, information &amp; form dialogs</p>
+          </div>
+        </div>
+        <div class="p-6 flex flex-wrap items-center gap-3">
+          <button type="button" data-modal-target="#modal-delete" class="flex items-center gap-2 bg-error text-white px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-error/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">delete</span> Delete Confirmation
+          </button>
+          <button type="button" data-modal-target="#modal-info" class="flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">info</span> Information
+          </button>
+          <button type="button" data-modal-target="#modal-form" class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
+            <span class="material-symbols-outlined text-[20px]">edit_note</span> Form Modal
+          </button>
+        </div>
+      </div>
     </div>
     <!-- Filter -->
     <div id="filter" class="w-full  scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
@@ -495,9 +536,100 @@
           </div>
         </div>
       </div>
+      
     </section>
     <?php include('footer.php'); ?>
   </main>
+
+  <!-- ============ MODALS ============ -->
+  <!-- 1) Delete Confirmation (same as store page) -->
+  <div id="modal-delete" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="relative w-full max-w-md bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+      <div class="p-6 text-center">
+        <div class="w-14 h-14 rounded-full bg-error/10 text-error flex items-center justify-center mx-auto">
+          <span class="material-symbols-outlined text-[30px]">delete</span>
+        </div>
+        <h3 class="text-headline-md font-bold text-on-surface mt-4">Delete Item</h3>
+        <p class="text-body-md text-secondary mt-2 leading-relaxed">Are you sure you want to delete
+          <span class="font-bold text-on-surface">this item</span>? This action cannot be undone.</p>
+      </div>
+      <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+        <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">Cancel</button>
+        <button type="button" class="js-modal-close flex items-center gap-2 bg-error text-white px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-error/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+          <span class="material-symbols-outlined text-sm">delete</span> Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2) Information Popup -->
+  <div id="modal-info" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="relative w-full max-w-lg bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+      <div class="p-6 text-center">
+        <div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto">
+          <span class="material-symbols-outlined text-[30px]">info</span>
+        </div>
+        <h3 class="text-headline-md font-bold text-on-surface mt-4">Heads up!</h3>
+        <p class="text-body-md text-secondary mt-2 leading-relaxed">This is an informational message. Use it to
+          explain a result, share a tip, or guide the user to the next step.</p>
+      </div>
+      <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+        <button type="button" class="js-modal-close flex items-center gap-2 bg-brand-gradient text-on-primary px-6 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+          <span class="material-symbols-outlined text-sm">check</span> Got it
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3) Form Modal -->
+  <div id="modal-form" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="relative w-full max-w-2xl bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+      <div class="flex items-center justify-between gap-3 px-6 py-5 border-b border-outline-variant/60">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
+            <span class="material-symbols-outlined text-[22px]">add</span>
+          </div>
+          <div>
+            <h3 class="text-headline-md font-bold text-on-surface">Add New Item</h3>
+            <p class="text-label-md text-secondary">Fill in the details below</p>
+          </div>
+        </div>
+        <button type="button" class="js-modal-close w-9 h-9 rounded-lg text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+      <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="space-y-2 md:col-span-2">
+          <label class="text-on-surface font-bold text-label-md">Name <span class="text-error">*</span></label>
+          <input type="text" placeholder="Enter name" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+        </div>
+        <div class="space-y-2">
+          <label class="text-on-surface font-bold text-label-md">Status</label>
+          <select class="w-full js-select2" data-allow-clear="false">
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+        </div>
+        <div class="space-y-2">
+          <label class="text-on-surface font-bold text-label-md">Email</label>
+          <input type="email" placeholder="name@example.com" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+        </div>
+        <div class="space-y-2 md:col-span-2">
+          <label class="text-on-surface font-bold text-label-md">Notes</label>
+          <textarea rows="3" placeholder="Optional notes" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
+        </div>
+      </div>
+      <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+        <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">Cancel</button>
+        <button type="button" class="js-modal-close flex items-center gap-2 bg-[#198754] text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold">
+          <span class="material-symbols-outlined text-[18px]">save</span> Save
+        </button>
+      </div>
+    </div>
+  </div>
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
   <script>
@@ -520,14 +652,37 @@
         });
       });
       // Password show/hide toggles
-      document.querySelectorAll('[data-toggle-pw]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var input = document.getElementById(btn.getAttribute('data-toggle-pw'));
-          if (!input) return;
-          var icon = btn.querySelector('.material-symbols-outlined');
-          if (input.type === 'password') { input.type = 'text'; if (icon) icon.textContent = 'visibility_off'; }
-          else { input.type = 'password'; if (icon) icon.textContent = 'visibility'; }
-        });
+      document.querySelectorAll('[data-toggle-password]').forEach(function (btn) {
+       btn.addEventListener('click', function () {
+         var input = document.getElementById(btn.getAttribute('data-toggle-password'));
+         if (!input) return;
+         var show = input.type === 'password';
+         input.type = show ? 'text' : 'password';
+         btn.textContent = show ? 'visibility_off' : 'visibility';
+       });
+     });
+
+      // Modals: open / close
+      function openModal(sel) {
+        var m = document.querySelector(sel);
+        if (!m) return;
+        m.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal(m) {
+        m.classList.add('hidden');
+        if (!document.querySelector('.js-modal:not(.hidden)')) document.body.style.overflow = '';
+      }
+      document.querySelectorAll('[data-modal-target]').forEach(function (btn) {
+        btn.addEventListener('click', function () { openModal(btn.getAttribute('data-modal-target')); });
+      });
+      document.querySelectorAll('.js-modal .js-modal-close').forEach(function (el) {
+        el.addEventListener('click', function () { closeModal(el.closest('.js-modal')); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.js-modal:not(.hidden)').forEach(closeModal);
+        }
       });
     })();
   </script>

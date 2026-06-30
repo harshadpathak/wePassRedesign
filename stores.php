@@ -195,11 +195,10 @@
                           <span class="font-medium">Edit</span>
                         </a>
                         <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors"
-                          href="#">
+                        <button type="button" class="js-delete-btn w-full flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors">
                           <span class="material-symbols-outlined text-[20px]">delete</span>
                           <span class="font-bold">Delete</span>
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -251,11 +250,10 @@
                           <span class="font-medium">Edit</span>
                         </a>
                         <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors"
-                          href="#">
+                        <button type="button" class="js-delete-btn w-full flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors">
                           <span class="material-symbols-outlined text-[20px]">delete</span>
                           <span class="font-bold">Delete</span>
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -307,11 +305,10 @@
                           <span class="font-medium">Edit</span>
                         </a>
                         <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors"
-                          href="#">
+                        <button type="button" class="js-delete-btn w-full flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors">
                           <span class="material-symbols-outlined text-[20px]">delete</span>
                           <span class="font-bold">Delete</span>
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -396,8 +393,85 @@
     </section>
     <?php include('footer.php'); ?>
   </main>
+
+  <!-- Delete Confirmation Modal -->
+  <div id="delete-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <!-- Backdrop -->
+    <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <!-- Dialog -->
+    <div class="relative w-full max-w-md bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+      <div class="p-6 text-center">
+        <div class="w-14 h-14 rounded-full bg-error/10 text-error flex items-center justify-center mx-auto">
+          <span class="material-symbols-outlined text-[30px]">delete</span>
+        </div>
+        <h3 class="text-headline-md font-bold text-on-surface mt-4">Delete Store</h3>
+        <p class="text-body-md text-secondary mt-2 leading-relaxed">
+          Are you sure you want to delete <span id="delete-store-name" class="font-bold text-on-surface">this store</span>?
+          This action cannot be undone.
+        </p>
+      </div>
+      <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+        <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
+          Cancel
+        </button>
+        <button type="button" id="confirm-delete" class="flex items-center gap-2 bg-error text-white px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-error/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+          <span class="material-symbols-outlined text-sm">delete</span>
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
+  <script>
+    (function () {
+      var modal = document.getElementById('delete-modal');
+      var nameEl = document.getElementById('delete-store-name');
+      var confirmBtn = document.getElementById('confirm-delete');
+      var targetRow = null;
+
+      function openModal(row) {
+        targetRow = row || null;
+        if (nameEl) {
+          var nameNode = row ? row.querySelector('td .text-body-md.font-medium') : null;
+          nameEl.textContent = nameNode ? nameNode.textContent.trim() : 'this store';
+        }
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+        targetRow = null;
+      }
+
+      // Open on any delete button
+      document.querySelectorAll('.js-delete-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          // close the row action menu if open
+          var panel = btn.closest('.js-menu-panel');
+          if (panel) panel.classList.add('hidden');
+          openModal(btn.closest('tr'));
+        });
+      });
+
+      // Close handlers
+      modal.querySelectorAll('.js-modal-close').forEach(function (el) {
+        el.addEventListener('click', closeModal);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+      });
+
+      // Confirm — remove the row (replace with your real delete request)
+      if (confirmBtn) confirmBtn.addEventListener('click', function () {
+        if (targetRow) targetRow.remove();
+        closeModal();
+      });
+    })();
+  </script>
 </body>
  
 </html>
