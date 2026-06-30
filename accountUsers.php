@@ -40,7 +40,7 @@
       <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center justify-end gap-3">
           <!-- Manager -->
           <div
-              class="flex items-center gap-2.5 bg-white rounded-2xl pl-1 pr-4 py-1 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+              class="flex items-center gap-2.5 bg-white rounded-2xl pl-1 pr-4 py-1 shadow-sm border border-outline-variant/40">
               <div class="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
                   <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">manage_accounts</span>
               </div>
@@ -48,7 +48,7 @@
           </div>
           <!-- Read Only -->
           <div
-              class="flex items-center gap-2.5 bg-white rounded-2xl pl-1 pr-4 py-1 shadow-sm border border-outline-variant/40 transition-transform hover:-translate-y-0.5">
+              class="flex items-center gap-2.5 bg-white rounded-2xl pl-1 pr-4 py-1 shadow-sm border border-outline-variant/40">
               <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
                   <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
               </div>
