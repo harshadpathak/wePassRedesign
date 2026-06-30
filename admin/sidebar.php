@@ -13,9 +13,9 @@ $fill = "style=\"font-variation-settings: 'FILL' 1;\"";
 
 // Submenu (accordion children) styling — clean dropdown with a left guide line
 $subWrap   = 'relative ml-9 mt-1 mb-2 mr-2 pl-4 border-l border-outline-variant/60 space-y-0.5';
-$subBase   = 'flex items-center gap-2.5 py-2 px-3 rounded-lg text-body-md font-semibold transition-colors hover:bg-surface-container-high hover:text-primary';
-$subIdle   = 'text-on-surface-variant';
-$subActive = 'bg-primary/10 text-primary';
+$subBase   = 'relative flex items-center gap-2.5 py-2 px-3 rounded-lg text-body-md font-semibold transition-colors hover:bg-surface-container-high hover:text-primary before:absolute before:-left-4 before:top-1/2 before:-translate-y-1/2 before:h-px before:w-3 before:rounded-full';
+$subIdle   = 'text-on-surface-variant before:bg-outline-variant/60';
+$subActive = 'text-primary before:bg-primary';
 
 // Which submenu (if any) contains the active page
 $queueActive       = in_array($current, ['queueApple.php','queueGoogle.php','queueMail.php','queuePassClass.php','queuePassObject.php','webhookLogs.php'], true);
