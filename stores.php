@@ -314,6 +314,62 @@
                   </div>
                 </td>
               </tr>
+              <!-- Row -->
+              <tr class="hover:bg-surface-container-low transition-colors group">
+                <!-- Name + location -->
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3.5">
+                    <img src="aw_logo.png"
+                      alt="Celsius"
+                      class="w-11 h-11 rounded-xl object-contain bg-white border border-outline-variant/60 p-1.5 shrink-0">
+                    <div class="min-w-0">
+                      <p class="text-body-md font-medium text-on-surface truncate uppercase">Bole to Vadapav</p>
+                      <p class="flex items-center gap-1 text-label-sm text-outline font-medium mt-0.5">
+                        <span class="material-symbols-outlined text-[14px]">location_on</span>
+                        Rajkot, India
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <!-- Status -->
+                <td class="px-6 py-4">
+                  <span class="inline-flex items-center gap-1.5 py-1 px-2 rounded-full text-[10px] font-bold uppercase bg-rose-50 text-rose-700 border border-rose-100 whitespace-nowrap">
+                    <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Inactive
+                  </span>
+                </td>
+                <!-- Default -->
+                <td class="px-6 py-4">
+                  <span class="inline-flex items-center gap-1 py-1 px-2 rounded-full text-[10px] font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-100 whitespace-nowrap"><span class="material-symbols-outlined text-[14px] leading-none">check_circle</span><span class="leading-none">Yes</span>
+                </td>
+                <!-- Created -->
+                <td class="px-6 py-4 text-label-md text-on-surface-variant">15/05/2026 12:30:00</td>
+                <!-- Action -->
+                <td class="px-6 py-4 text-right">
+                  <div class="relative inline-block js-menu">
+                    <button
+                      type="button"
+                      class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
+                      more_vert
+                    </button>
+                    <div
+                      class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
+                      <div class="py-1.5">
+                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
+                          href="editStore.php">
+                          <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
+                          <span class="font-medium">Edit</span>
+                        </a>
+                        <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
+                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors"
+                          href="#">
+                          <span class="material-symbols-outlined text-[20px]">delete</span>
+                          <span class="font-bold">Delete</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
             </tbody>
           </table>
 

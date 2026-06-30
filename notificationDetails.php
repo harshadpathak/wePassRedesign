@@ -50,6 +50,17 @@
         ['label' => 'Success Deliveries', 'value' => '0',  'icon' => 'mark_email_read','icbg' => 'bg-amber-100',   'ic' => 'text-amber-600'],
         ['label' => 'Success Rate (%)',   'value' => '0%', 'icon' => 'percent',       'icbg' => 'bg-emerald-100', 'ic' => 'text-emerald-600'],
       ];
+      // Country-wise device breakdown
+      $countries = [
+        ['name' => 'India', 'flag' => 'in', 'google' => 1, 'apple' => 1],
+      ];
+      // Tiny inline flag SVGs
+      function wp_flag($code) {
+        if ($code === 'in') {
+          return '<svg viewBox="0 0 18 12" class="h-full w-full"><rect width="18" height="12" fill="#fff"/><rect width="18" height="4" fill="#FF9933"/><rect width="18" height="4" y="8" fill="#138808"/><circle cx="9" cy="6" r="1.25" fill="none" stroke="#000080" stroke-width="0.35"/></svg>';
+        }
+        return '<svg viewBox="0 0 18 12" class="h-full w-full"><rect width="18" height="12" fill="#e2e8f0"/></svg>';
+      }
     ?>
     <section class="p-margin-desktop space-y-stack-lg pb-16">
       <!-- Breadcrumbs and Header -->
@@ -196,6 +207,30 @@
             </div>
           </div>
 
+          <!-- Scheduled For -->
+          <div class="relative overflow-hidden bg-gradient-to-r from-blue-50 to-indigo-50/40 border border-primary/15 rounded-xl p-4">
+            <div class="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div class="flex items-center gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-gradient text-white shadow-md shadow-primary/20">
+                  <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">event</span>
+                </span>
+                <div class="min-w-0">
+                  <p class="text-label-sm font-bold uppercase tracking-wider text-primary/70">Scheduled For</p>
+                  <p class="text-headline-md font-bold text-on-surface">30 Jun, 2026 17:00</p>
+                  <p class="mt-1 flex items-center gap-1.5 text-label-md text-gray-400">
+                    <span class="material-symbols-outlined text-[15px] text-gray-400">public</span>Asia/Kolkata
+                  </p>
+                </div>
+              </div>
+              <div class="shrink-0 rounded-xl border border-primary/20 bg-white/70 px-4 py-2.5 text-center shadow-sm">
+                <p class="text-headline-md font-bold text-primary leading-tight">3h 57m</p>
+                <p class="mt-0.5 flex items-center justify-center gap-1 text-label-sm font-semibold text-primary/70">
+                  <span class="material-symbols-outlined text-[14px]">schedule</span>from now
+                </p>
+              </div>
+            </div>
+          </div>
+
           <!-- Meta info -->
           <div>
             <div class="flex items-center gap-3 mb-4">
@@ -254,6 +289,48 @@
               </div>
             </div>
             <?php endforeach; ?>
+            </div>
+          </div>
+
+          <!-- Country-Wise Devices -->
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <p class="text-headline-md font-bold text-on-surface whitespace-nowrap">Country-Wise Devices</p>
+              <span class="flex-1 h-px bg-outline-variant/60"></span>
+            </div>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <?php foreach ($countries as $c): $total = (int) $c['google'] + (int) $c['apple']; ?>
+              <div class="rounded-2xl border border-outline-variant bg-white p-4 shadow-sm">
+                <!-- header -->
+                <div class="flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-3 min-w-0">
+                    <span class="h-9 w-12 shrink-0 overflow-hidden rounded-md border border-outline-variant/60 shadow-sm"><?= wp_flag($c['flag']) ?></span>
+                    <div class="min-w-0">
+                      <p class="text-body-md font-bold text-on-surface truncate"><?= htmlspecialchars($c['name']) ?></p>
+                      <p class="text-label-sm text-outline"><?= $total ?> device<?= $total === 1 ? '' : 's' ?></p>
+                    </div>
+                  </div>
+                  <span class="flex h-9 min-w-9 items-center justify-center rounded-lg bg-primary/10 px-2.5 text-body-md font-bold text-primary"><?= $total ?></span>
+                </div>
+                <!-- platform breakdown -->
+                <div class="mt-3 grid grid-cols-2 gap-2">
+                  <div class="flex items-center gap-2.5 rounded-xl border border-outline-variant/50 bg-surface-container-low/40 px-3 py-2 hover:border-primary/40 transition-colors">
+                    <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0"><rect x="2.5" y="2" width="19" height="20" rx="2.5" fill="#34A853"/><rect x="2.5" y="4" width="19" height="18" rx="2.5" fill="#FBBC05"/><rect x="2.5" y="6.5" width="19" height="15.5" rx="2.5" fill="#EA4335"/><path d="M2 12.2 C 5.5 10.2 8.5 13.8 12 14 C 15.5 14.2 18.5 10.5 22 10.8 L 22 19.5 Q 22 22 19.5 22 L 4.5 22 Q 2 22 2 19.5 Z" fill="#4285F4"/></svg>
+                    <div class="min-w-0">
+                      <p class="text-label-sm font-semibold text-outline leading-none">Google</p>
+                      <p class="text-body-md font-bold text-on-surface leading-tight"><?= (int) $c['google'] ?></p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2.5 rounded-xl border border-outline-variant/50 bg-surface-container-low/40 px-3 py-2 hover:border-primary/40 transition-colors">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 shrink-0 text-on-surface"><path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></svg>
+                    <div class="min-w-0">
+                      <p class="text-label-sm font-semibold text-outline leading-none">Apple</p>
+                      <p class="text-body-md font-bold text-on-surface leading-tight"><?= (int) $c['apple'] ?></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>

@@ -40,6 +40,14 @@
             'lastUsed'  => '15/06/2026 04:59:06',
             'active'    => true,
           ],
+          [
+            'name'      => 'WePass Testing 2',
+            'prefix'    => 'wp_live_5dtogYUXgWKp........',
+            'suffix'    => 'Lmno',
+            'created'   => '30/06/2026 03:00:00',
+            'lastUsed'  => '30/06/2026 03:02:15',
+            'active'    => false,
+          ],
         ];
       ?>
 
