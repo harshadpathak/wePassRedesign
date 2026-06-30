@@ -318,9 +318,11 @@
           <div class="space-y-2">
             <label class="text-on-surface font-bold text-label-md">Password</label>
             <div class="relative">
-              <input type="password" id="demo-pw" placeholder="Enter password" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pl-4 pr-12 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-              <button type="button" data-toggle-pw="demo-pw" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
-            </div>
+                            <input type="password" id="password" placeholder="Enter Password"
+                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            <button type="button" data-toggle-password="password"
+                                class="material-symbols-outlined text-[20px] text-outline absolute right-3.5 top-1/2 -translate-y-1/2 hover:text-on-surface transition-colors cursor-pointer">visibility</button>
+                        </div>
           </div>
           <div class="space-y-2 md:col-span-2">
             <label class="text-on-surface font-bold text-label-md">Textarea</label>
@@ -653,15 +655,15 @@
         });
       });
       // Password show/hide toggles
-      document.querySelectorAll('[data-toggle-pw]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var input = document.getElementById(btn.getAttribute('data-toggle-pw'));
-          if (!input) return;
-          var icon = btn.querySelector('.material-symbols-outlined');
-          if (input.type === 'password') { input.type = 'text'; if (icon) icon.textContent = 'visibility_off'; }
-          else { input.type = 'password'; if (icon) icon.textContent = 'visibility'; }
-        });
-      });
+      document.querySelectorAll('[data-toggle-password]').forEach(function (btn) {
+       btn.addEventListener('click', function () {
+         var input = document.getElementById(btn.getAttribute('data-toggle-password'));
+         if (!input) return;
+         var show = input.type === 'password';
+         input.type = show ? 'text' : 'password';
+         btn.textContent = show ? 'visibility_off' : 'visibility';
+       });
+     });
 
       // Modals: open / close
       function openModal(sel) {
