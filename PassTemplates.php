@@ -21,7 +21,8 @@
       <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div class="space-y-1">
           <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
-            <span class="material-symbols-outlined text-[14px] text-gray">home</span> <span class="text-gray font-normal">Dashboard</span>
+            <span class="material-symbols-outlined text-[14px] text-gray">home</span> 
+            <span class="text-gray font-normal">Dashboard</span>
             <span class="material-symbols-outlined text-[14px]">chevron_right</span>
             <span class="text-gray-500 font-normal">Pass Templates</span>
           </nav>

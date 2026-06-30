@@ -1,6 +1,6 @@
 <header
-    class="h-16 flex items-center justify-between px-margin-desktop sticky top-0 bg-surface/80 backdrop-blur-md border-b border-outline-variant z-40">
-    <div class="flex items-center flex-1 max-w-xl">
+    class="h-16 flex justify-end items-center px-margin-desktop sticky top-0 bg-surface/80 backdrop-blur-md border-b border-outline-variant z-40">
+    <!-- <div class="flex items-center flex-1 max-w-xl">
     <div class="relative w-full group">
         <span
         class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">search</span>
@@ -8,7 +8,7 @@
         class="w-full bg-surface-container-low border-outline-variant rounded-full py-2 pl-10 pr-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
         placeholder="Search pass templates..." type="text">
     </div>
-    </div>
+    </div> -->
     <div class="flex items-center gap-4 translate-x-[10px] translate-x-2" style="transform: translateX(5px);">
     <button
         class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container rounded-lg p-2 transition-all">help</button>

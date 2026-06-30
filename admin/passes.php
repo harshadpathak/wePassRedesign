@@ -186,7 +186,7 @@
                     <button type="button" class="js-menu-toggle material-symbols-outlined text-outline group-hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">more_vert</button>
                     <div class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">visibility</span><span class="font-medium">View</span></a>
+                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="passesDetails.php"><span class="material-symbols-outlined text-secondary text-[20px]">visibility</span><span class="font-medium">View</span></a>
                       </div>
                     </div>
                   </div>
