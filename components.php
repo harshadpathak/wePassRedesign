@@ -34,6 +34,7 @@
       <?php
         $components = [
           ['name' => 'Alerts',            'icon' => 'notifications_active', 'desc' => 'Contextual dismissible messages', 'href' => '#alerts'],
+          ['name' => 'Modals',            'icon' => 'web_asset',           'desc' => 'Confirm, info & form dialogs',     'href' => '#modals'],
           ['name' => 'Badges & Pills',    'icon' => 'label',               'desc' => 'Status pills & tags',             'href' => '#badges'],
           ['name' => 'Buttons',           'icon' => 'smart_button',        'desc' => 'Primary, success, outline, icon', 'href' => '#buttons'],
           ['name' => 'Cards',             'icon' => 'dashboard',           'desc' => 'Surfaces & containers',           'href' => 'billing.php'],
@@ -520,9 +521,120 @@
           </div>
         </div>
       </div>
+      <!-- Modals -->
+      <div id="modals" class="scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+        <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
+          <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">web_asset</span></div>
+          <div>
+            <h3 class="text-headline-md font-bold text-on-surface">Modals</h3>
+            <p class="text-label-md text-secondary">Confirmation, information &amp; form dialogs</p>
+          </div>
+        </div>
+        <div class="p-6 flex flex-wrap items-center gap-3">
+          <button type="button" data-modal-target="#modal-delete" class="flex items-center gap-2 bg-error text-white px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-error/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">delete</span> Delete Confirmation
+          </button>
+          <button type="button" data-modal-target="#modal-info" class="flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">info</span> Information
+          </button>
+          <button type="button" data-modal-target="#modal-form" class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
+            <span class="material-symbols-outlined text-[20px]">edit_note</span> Form Modal
+          </button>
+        </div>
+      </div>
     </section>
     <?php include('footer.php'); ?>
   </main>
+
+  <!-- ============ MODALS ============ -->
+  <!-- 1) Delete Confirmation (same as store page) -->
+  <div id="modal-delete" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="relative w-full max-w-md bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+      <div class="p-6 text-center">
+        <div class="w-14 h-14 rounded-full bg-error/10 text-error flex items-center justify-center mx-auto">
+          <span class="material-symbols-outlined text-[30px]">delete</span>
+        </div>
+        <h3 class="text-headline-md font-bold text-on-surface mt-4">Delete Item</h3>
+        <p class="text-body-md text-secondary mt-2 leading-relaxed">Are you sure you want to delete
+          <span class="font-bold text-on-surface">this item</span>? This action cannot be undone.</p>
+      </div>
+      <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+        <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">Cancel</button>
+        <button type="button" class="js-modal-close flex items-center gap-2 bg-error text-white px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-error/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+          <span class="material-symbols-outlined text-sm">delete</span> Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2) Information Popup -->
+  <div id="modal-info" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="relative w-full max-w-lg bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+      <div class="p-6 text-center">
+        <div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto">
+          <span class="material-symbols-outlined text-[30px]">info</span>
+        </div>
+        <h3 class="text-headline-md font-bold text-on-surface mt-4">Heads up!</h3>
+        <p class="text-body-md text-secondary mt-2 leading-relaxed">This is an informational message. Use it to
+          explain a result, share a tip, or guide the user to the next step.</p>
+      </div>
+      <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+        <button type="button" class="js-modal-close flex items-center gap-2 bg-brand-gradient text-on-primary px-6 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+          <span class="material-symbols-outlined text-sm">check</span> Got it
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3) Form Modal -->
+  <div id="modal-form" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="relative w-full max-w-2xl bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+      <div class="flex items-center justify-between gap-3 px-6 py-5 border-b border-outline-variant/60">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
+            <span class="material-symbols-outlined text-[22px]">add</span>
+          </div>
+          <div>
+            <h3 class="text-headline-md font-bold text-on-surface">Add New Item</h3>
+            <p class="text-label-md text-secondary">Fill in the details below</p>
+          </div>
+        </div>
+        <button type="button" class="js-modal-close w-9 h-9 rounded-lg text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+      <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="space-y-2 md:col-span-2">
+          <label class="text-on-surface font-bold text-label-md">Name <span class="text-error">*</span></label>
+          <input type="text" placeholder="Enter name" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+        </div>
+        <div class="space-y-2">
+          <label class="text-on-surface font-bold text-label-md">Status</label>
+          <select class="w-full js-select2" data-allow-clear="false">
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+        </div>
+        <div class="space-y-2">
+          <label class="text-on-surface font-bold text-label-md">Email</label>
+          <input type="email" placeholder="name@example.com" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+        </div>
+        <div class="space-y-2 md:col-span-2">
+          <label class="text-on-surface font-bold text-label-md">Notes</label>
+          <textarea rows="3" placeholder="Optional notes" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
+        </div>
+      </div>
+      <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+        <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">Cancel</button>
+        <button type="button" class="js-modal-close flex items-center gap-2 bg-[#198754] text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold">
+          <span class="material-symbols-outlined text-[18px]">save</span> Save
+        </button>
+      </div>
+    </div>
+  </div>
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
   <script>
@@ -553,6 +665,29 @@
           if (input.type === 'password') { input.type = 'text'; if (icon) icon.textContent = 'visibility_off'; }
           else { input.type = 'password'; if (icon) icon.textContent = 'visibility'; }
         });
+      });
+
+      // Modals: open / close
+      function openModal(sel) {
+        var m = document.querySelector(sel);
+        if (!m) return;
+        m.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal(m) {
+        m.classList.add('hidden');
+        if (!document.querySelector('.js-modal:not(.hidden)')) document.body.style.overflow = '';
+      }
+      document.querySelectorAll('[data-modal-target]').forEach(function (btn) {
+        btn.addEventListener('click', function () { openModal(btn.getAttribute('data-modal-target')); });
+      });
+      document.querySelectorAll('.js-modal .js-modal-close').forEach(function (el) {
+        el.addEventListener('click', function () { closeModal(el.closest('.js-modal')); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.js-modal:not(.hidden)').forEach(closeModal);
+        }
       });
     })();
   </script>
