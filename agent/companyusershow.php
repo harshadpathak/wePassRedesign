@@ -281,13 +281,13 @@
               <!-- Card Footer / Actions -->
               <div class="flex flex-col-reverse items-stretch gap-3 border-t border-outline-variant/60 pt-5 sm:flex-row sm:items-center sm:justify-between">
                 <button type="button"
-                  class="inline-flex items-center gap-2 bg-red-500 text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-red-500/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold">
-                  <span class="material-symbols-outlined">delete</span>
+                  class="flex items-center gap-2 bg-red-500 text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-red-500/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                  <span class="material-symbols-outlined text-[19px]">delete</span>
                   Delete Company
                 </button>
                 <button type="submit"
-                  class="flex items-center gap-2 bg-[#198754] text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
-                  <span class="material-symbols-outlined">save</span>
+                  class="flex items-center gap-2 bg-[#198754] text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                  <span class="material-symbols-outlined text-[19px]">save</span>
                   Update
                 </button>
               </div>
