@@ -36,19 +36,15 @@
           ['name' => 'Alerts',            'icon' => 'notifications_active', 'desc' => 'Contextual dismissible messages', 'href' => '#alerts'],
           ['name' => 'Badges & Pills',    'icon' => 'label',               'desc' => 'Status pills & tags',             'href' => '#badges'],
           ['name' => 'Buttons',           'icon' => 'smart_button',        'desc' => 'Primary, success, outline, icon', 'href' => '#buttons'],
-          ['name' => 'Cards',             'icon' => 'dashboard',           'desc' => 'Surfaces & containers',           'href' => 'billing.php'],
-          ['name' => 'Tables',            'icon' => 'table_rows',          'desc' => 'Responsive data tables',          'href' => 'PassTemplates.php'],
           ['name' => 'Forms & Inputs',    'icon' => 'edit_note',           'desc' => 'Text, textarea, password',        'href' => '#forms'],
           ['name' => 'Select (Select2)',  'icon' => 'arrow_drop_down_circle','desc' => 'Searchable dropdowns',          'href' => '#select'],
           ['name' => 'Date Picker',       'icon' => 'calendar_month',      'desc' => 'Flatpickr date / range',          'href' => '#datepicker'],
-          ['name' => 'Stepper / Wizard',  'icon' => 'linear_scale',        'desc' => 'Multi-step flows',                'href' => 'importDistribution.php'],
           ['name' => 'Dropdown Menu',     'icon' => 'more_vert',           'desc' => 'Row & action menus',              'href' => '#dropdown'],
           ['name' => 'Pagination',        'icon' => 'last_page',           'desc' => 'Paged navigation',                'href' => '#pagination'],
           ['name' => 'Breadcrumbs',       'icon' => 'chevron_right',       'desc' => 'Page hierarchy',                  'href' => '#breadcrumbs'],
           ['name' => 'Info Banner',       'icon' => 'info',                'desc' => 'Explanatory headers',             'href' => '#info-banner'],
           ['name' => 'Stat Tiles',        'icon' => 'leaderboard',         'desc' => 'KPI summary cards',               'href' => '#stats'],
-          ['name' => 'File Upload',       'icon' => 'cloud_upload',        'desc' => 'Drag & drop dropzone',            'href' => 'importDistribution.php'],
-          ['name' => 'QR Cards',          'icon' => 'qr_code_2',           'desc' => 'Shareable pass QR codes',         'href' => 'qrcodeShare.php'],
+          // ['name' => 'File Upload',       'icon' => 'cloud_upload',        'desc' => 'Drag & drop dropzone',            'href' => 'importDistribution.php'],
           ['name' => 'Tooltips',          'icon' => 'help',                'desc' => 'Hover hints',                     'href' => '#tooltips'],
           ['name' => 'Filter',            'icon' => 'filter_alt',          'desc' => 'Filters',                         'href' => '#filter'],
           ['name' => 'Wallet Icon',       'icon' => 'wallet',                'desc' => 'Wallet Icon',                     'href' => '#wallet_icon'],
@@ -138,11 +134,11 @@
           <div>
             <p class="text-label-sm font-bold uppercase tracking-wider text-outline mb-3">Default</p>
             <div class="flex flex-wrap gap-2.5">
-              <span class="inline-flex items-center rounded-full border border-primary/30 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1">Primary</span>
-              <span class="inline-flex items-center rounded-full border border-emerald-300 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3.5 py-1">Success</span>
-              <span class="inline-flex items-center rounded-full border border-amber-300 bg-amber-50 text-amber-700 text-label-md font-bold px-3.5 py-1">Warning</span>
-              <span class="inline-flex items-center rounded-full border border-red-300 bg-red-50 text-red-700 text-label-md font-bold px-3.5 py-1">Error</span>
-              <span class="inline-flex items-center rounded-full border border-teal-300 bg-teal-50 text-teal-700 text-label-md font-bold px-3.5 py-1">Teal</span>
+              <span class="inline-flex items-center rounded-full border border-primary/10 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1">Primary</span>
+              <span class="inline-flex items-center rounded-full border border-emerald-100 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3.5 py-1">Success</span>
+              <span class="inline-flex items-center rounded-full border border-amber-100 bg-amber-50 text-amber-700 text-label-md font-bold px-3.5 py-1">Warning</span>
+              <span class="inline-flex items-center rounded-full border border-red-100 bg-red-50 text-red-700 text-label-md font-bold px-3.5 py-1">Error</span>
+              <span class="inline-flex items-center rounded-full border border-teal-100 bg-teal-50 text-teal-700 text-label-md font-bold px-3.5 py-1">Teal</span>
               <span class="inline-flex items-center rounded-full border border-outline-variant bg-surface-container-low text-secondary text-label-md font-bold px-3.5 py-1">Neutral</span>
             </div>
           </div>
@@ -151,10 +147,10 @@
           <div>
             <p class="text-label-sm font-bold uppercase tracking-wider text-outline mb-3">With status dot</p>
             <div class="flex flex-wrap gap-2.5">
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Active</span>
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-300 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Completed</span>
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-300 bg-amber-50 text-amber-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Pending</span>
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-red-300 bg-red-50 text-red-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Failed</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-primary/10 bg-primary/5 text-primary text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Active</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-100 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Completed</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-100 bg-amber-50 text-amber-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Pending</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 text-red-700 text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Failed</span>
               <span class="inline-flex items-center gap-1.5 rounded-full border border-outline-variant bg-surface-container-low text-secondary text-label-md font-bold px-3.5 py-1"><span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Draft</span>
             </div>
           </div>
@@ -163,10 +159,10 @@
           <div>
             <p class="text-label-sm font-bold uppercase tracking-wider text-outline mb-3">With icon</p>
             <div class="flex flex-wrap gap-2.5">
-              <span class="inline-flex items-center gap-1 rounded-full border border-emerald-300 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Verified</span>
-              <span class="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">star</span> Featured</span>
-              <span class="inline-flex items-center gap-1 rounded-full border border-amber-300 bg-amber-50 text-amber-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">schedule</span> Scheduled</span>
-              <span class="inline-flex items-center gap-1 rounded-full border border-red-300 bg-red-50 text-red-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">block</span> Blocked</span>
+              <span class="inline-flex items-center gap-1 rounded-full border border-emerald-100 bg-emerald-50 text-emerald-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Verified</span>
+              <span class="inline-flex items-center gap-1 rounded-full border border-primary/10 bg-primary/5 text-primary text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">star</span> Featured</span>
+              <span class="inline-flex items-center gap-1 rounded-full border border-amber-100 bg-amber-50 text-amber-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">schedule</span> Scheduled</span>
+              <span class="inline-flex items-center gap-1 rounded-full border border-red-100 bg-red-50 text-red-700 text-label-md font-bold px-3 py-1"><span class="material-symbols-outlined text-[16px]">block</span> Blocked</span>
             </div>
           </div>
 
@@ -196,8 +192,8 @@
         <div class="p-6 flex flex-wrap items-center gap-3">
           <button class="flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold"><span class="material-symbols-outlined text-sm">add</span>Primary</button>
           <button type="submit" class="flex items-center gap-2 bg-[#198754] text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all"><span class="material-symbols-outlined text-[19px]">save</span>Success</button>
-          <button class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm"><span class="material-symbols-outlined text-[20px]">filter_alt</span><span class="">Outline</span></button>
-          <button type="button" class="inline-flex items-center gap-2 bg-red-500 text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-red-500/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold"><span class="material-symbols-outlined text-[20px]">delete</span>Danger</button>
+          <button class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm"><span class="material-symbols-outlined text-[19px]">filter_alt</span><span class="">Outline</span></button>
+          <button type="button" class="inline-flex items-center gap-2 bg-red-500 text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-red-500/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold"><span class="material-symbols-outlined text-[19px]">delete</span>Danger</button>
           <button type="button" id="add-recipient" class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:opacity-90 transition-all shadow-md shadow-primary/20"><span class="material-symbols-outlined">add</span></button>
           <button disabled class="inline-flex items-center gap-2 bg-surface-container-high text-outline px-5 py-2.5 rounded-lg text-[14px] font-bold opacity-60 cursor-not-allowed">Disabled</button>
         </div>
