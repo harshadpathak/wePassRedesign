@@ -220,7 +220,7 @@
                     ['label' => 'Last Name',           'required' => false, 'map' => 'last_name'],
                     ['label' => 'Email',               'required' => true,  'map' => 'email'],
                     ['label' => 'Card Balance Value',  'required' => false, 'map' => 'card_balance_value'],
-                    ['label' => 'Currency Code',       'required' => false, 'map' => 'currency_code'],
+                    ['label' => 'Currency Code',       'required' => false, 'map' => ''],
                     ['label' => 'Gift Card Number',    'required' => false, 'map' => 'gift_card_number'],
                     ['label' => 'Pass Expiration Date','required' => false, 'map' => 'pass_expiration_date'],
                     ['label' => 'Card PIN Value',      'required' => false, 'map' => 'card_pin_value'],
@@ -237,8 +237,11 @@
                     <span class="sm:hidden w-7 h-7 rounded-full bg-surface-container-low text-secondary text-label-sm font-bold flex items-center justify-center shrink-0"><?= $i + 1 ?></span>
                     <span class="text-body-md font-semibold text-on-surface"><?= htmlspecialchars($field['label']) ?></span>
                     <?php if ($field['required']): ?><span class="text-error font-bold">*</span><?php endif; ?>
-                    <span class="js-matched-badge ml-1 inline-flex items-center gap-1 bg-emerald-50 text-emerald-600 text-label-sm font-semibold px-2 py-0.5 rounded-full <?= $field['map'] ? '' : 'hidden' ?>">
+                    <span class="js-matched-badge ml-1 inline-flex items-center gap-1 bg-emerald-50 text-emerald-600 border border-emerald-200 text-label-sm font-semibold px-2 py-0.5 rounded-full <?= $field['map'] ? '' : 'hidden' ?>">
                       <span class="material-symbols-outlined text-[14px]">check_circle</span> Matched
+                    </span>
+                    <span class="js-unmatched-badge ml-1 inline-flex items-center gap-1 bg-amber-50 text-amber-600 border border-amber-200 text-label-sm font-semibold px-2 py-0.5 rounded-full <?= $field['map'] ? 'hidden' : '' ?>">
+                      <span class="material-symbols-outlined text-[14px]">error</span> Unmatched
                     </span>
                   </div>
                   <div class="sm:col-span-5 relative">
@@ -383,13 +386,15 @@
         }
       });
 
-      // Mapping: toggle "Matched" badge per row based on selection
+      // Mapping: toggle "Matched" / "Unmatched" badge per row based on selection
       document.querySelectorAll('.map-select').forEach(function (sel) {
         sel.addEventListener('change', function () {
           var row = sel.closest('.grid');
           if (!row) return;
-          var badge = row.querySelector('.js-matched-badge');
-          if (badge) badge.classList.toggle('hidden', !sel.value);
+          var matched = row.querySelector('.js-matched-badge');
+          var unmatched = row.querySelector('.js-unmatched-badge');
+          if (matched) matched.classList.toggle('hidden', !sel.value);
+          if (unmatched) unmatched.classList.toggle('hidden', !!sel.value);
         });
       });
     })();

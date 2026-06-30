@@ -381,8 +381,8 @@
           <!-- Footer -->
           <div class="flex justify-center mt-8 pt-6 border-t border-outline-variant/30">
             <button type="submit"
-              class="flex items-center gap-2 bg-[#198754] text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
-              <span class="material-symbols-outlined">save</span>
+              class="flex items-center gap-2 bg-[#198754] text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
+              <span class="material-symbols-outlined text-[19px]">save</span>
               Submit
             </button>
           </div>

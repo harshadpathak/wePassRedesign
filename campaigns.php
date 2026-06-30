@@ -278,11 +278,11 @@
               <td class="px-6 py-4"><span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-[10px] font-bold uppercase bg-amber-50 text-amber-700 border border-amber-100 whitespace-nowrap"><span class="material-symbols-outlined text-[13px] leading-none [font-variation-settings:'FILL'_1]">hourglass_top</span><span class="leading-none">Pending</span></span></td>
               <td class="px-6 py-4">
                 <div class="flex items-center gap-2.5">
-                  <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-500 flex items-center justify-center shrink-0">
+                  <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0">
                     <span class="material-symbols-outlined text-[18px]">hourglass_top</span>
                   </span>
                   <div class="leading-tight">
-                    <p class="text-[10px] font-bold uppercase tracking-wider text-outline">Starts in</p>
+                    <p class="text-[10px] font-normal uppercase tracking-wider text-outline">Starts in</p>
                     <p class="text-label-md font-bold text-indigo-600">2d 9h 47m</p>
                   </div>
                 </div>
@@ -330,7 +330,7 @@
               <td class="px-6 py-4"><span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-[10px] font-bold uppercase bg-amber-50 text-amber-700 border border-amber-100 whitespace-nowrap"><span class="material-symbols-outlined text-[13px] leading-none [font-variation-settings:'FILL'_1]">hourglass_top</span><span class="leading-none">Pending</span></span></td>
               <td class="px-6 py-4">
                 <div class="flex items-center gap-2.5">
-                  <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-500 flex items-center justify-center shrink-0">
+                  <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0">
                     <span class="material-symbols-outlined text-[18px]">hourglass_top</span>
                   </span>
                   <div class="leading-tight">
@@ -379,7 +379,68 @@
               </td>
               <td class="px-6 py-4 text-label-md text-on-surface-variant">18/06/2026 12:57:08</td>
               <td class="px-6 py-4"><span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-[10px] font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-100 whitespace-nowrap"><span class="material-symbols-outlined text-[13px] leading-none [font-variation-settings:'FILL'_1]">play_circle</span><span class="leading-none">Running</span></span></td>
-              <td class="px-6 py-4 text-label-md text-on-surface-variant">&ndash;</td>
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+                  </span>
+                  <div class="leading-tight">
+                    <p class="text-[10px] font-normal uppercase tracking-wider text-outline">Ends in</p>
+                    <p class="text-label-md font-bold text-amber-700">0d 0h 13m</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <span class="inline-flex items-center gap-1 py-1 px-2 rounded-full text-[10px] font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-100 whitespace-nowrap"><span class="material-symbols-outlined text-[14px] leading-none">check_circle</span><span class="leading-none">Enabled</span>
+              </td>
+              <td class="px-6 py-4 text-right">
+                <div class="relative inline-block js-menu">
+                  <button type="button" class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">more_vert</button>
+                  <div class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
+                    <div class="py-1.5">
+                      <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="editCampaign.php"><span class="material-symbols-outlined text-secondary text-[20px]">edit</span><span class="font-medium">Edit</span></a>
+                      <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
+                      <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">delete</span><span class="font-bold">Delete</span></a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Row: Test Campaign -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">bolt</span>
+                  </div>
+                  <div class="min-w-0">
+                    <p class="text-body-md font-medium text-on-surface truncate uppercase">Test Campaign</p>
+                    <p class="flex items-center gap-1 text-label-sm text-outline font-medium mt-0.5">
+                      <span class="material-symbols-outlined text-[14px]">calendar_month</span>
+                      19/06/2026 &rarr; 19/06/2026
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-2">
+                  <span class="text-body-md text-on-surface">Gift-Card-66</span>
+                  <span class="inline-flex items-center gap-1 bg-surface-container-high text-secondary text-[11px] font-bold px-2 py-0.5 rounded-full"><span class="material-symbols-outlined text-[14px]">store</span> 2</span>
+                </div>
+              </td>
+              <td class="px-6 py-4 text-label-md text-on-surface-variant">19/06/2026 02:57:08</td>
+              <td class="px-6 py-4"><span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-[10px] font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-100 whitespace-nowrap"><span class="material-symbols-outlined text-[13px] leading-none [font-variation-settings:'FILL'_1]">play_circle</span><span class="leading-none">Running</span></span></td>
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+                  </span>
+                  <div class="leading-tight">
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-outline">Ending Soon</p>
+                  </div>
+                </div>
+              </td>
               <td class="px-6 py-4">
                 <span class="inline-flex items-center gap-1 py-1 px-2 rounded-full text-[10px] font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-100 whitespace-nowrap"><span class="material-symbols-outlined text-[14px] leading-none">check_circle</span><span class="leading-none">Enabled</span>
               </td>
