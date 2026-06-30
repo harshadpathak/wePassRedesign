@@ -51,6 +51,7 @@
           ['name' => 'QR Cards',          'icon' => 'qr_code_2',           'desc' => 'Shareable pass QR codes',         'href' => 'qrcodeShare.php'],
           ['name' => 'Tooltips',          'icon' => 'help',                'desc' => 'Hover hints',                     'href' => '#tooltips'],
           ['name' => 'Filter',            'icon' => 'filter_alt',          'desc' => 'Filters',                         'href' => '#filter'],
+          ['name' => 'Wallet Icon',       'icon' => 'wallet',                'desc' => 'Wallet Icon',                     'href' => '#wallet_icon'],
         ];
       ?>
       <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
@@ -62,7 +63,7 @@
             </div>
             <div>
               <h3 class="text-headline-md font-bold text-on-surface">Theme Components</h3>
-              <p class="text-label-md text-secondary">All UI components used across the project</p>
+              <p class="text-label-md text-gray-400">All UI components used across the project</p>
             </div>
           </div>
           <span class="bg-primary/10 text-primary text-label-sm font-bold px-3 py-1 rounded-full"><?= count($components) ?> Components</span>
@@ -101,7 +102,7 @@
           </div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Alerts</h3>
-            <p class="text-label-md text-secondary">Contextual feedback messages in theme colors</p>
+            <p class="text-label-md text-gray-400">Contextual feedback messages in theme colors</p>
           </div>
         </div>
         <div class="p-6 space-y-4">
@@ -128,7 +129,7 @@
           </div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Pill Bordered Badges</h3>
-            <p class="text-label-md text-secondary">Outlined status pills in theme colors</p>
+            <p class="text-label-md text-gray-400">Outlined status pills in theme colors</p>
           </div>
         </div>
 
@@ -189,7 +190,7 @@
           <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">smart_button</span></div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Buttons</h3>
-            <p class="text-label-md text-secondary">Primary, success, outline, danger & icon</p>
+            <p class="text-label-md text-gray-400">Primary, success, outline, danger & icon</p>
           </div>
         </div>
         <div class="p-6 flex flex-wrap items-center gap-3">
@@ -208,7 +209,7 @@
           <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">info</span></div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Info Banner</h3>
-            <p class="text-label-md text-secondary">Explanatory section header</p>
+            <p class="text-label-md text-gray-400">Explanatory section header</p>
           </div>
         </div>
         <div class="p-6 space-y-5">
@@ -272,7 +273,7 @@
           <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">chevron_right</span></div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Breadcrumbs</h3>
-            <p class="text-label-md text-secondary">Page hierarchy navigation</p>
+            <p class="text-label-md text-gray-400">Page hierarchy navigation</p>
           </div>
         </div>
         <div class="p-6">
@@ -293,7 +294,7 @@
           <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">edit_note</span></div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Forms &amp; Inputs</h3>
-            <p class="text-label-md text-secondary">Text, textarea, select, date &amp; password</p>
+            <p class="text-label-md text-gray-400">Text, textarea, select, date &amp; password</p>
           </div>
         </div>
         <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -393,6 +394,30 @@
                   <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">delete</span><span class="font-bold">Delete</span></a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div id="wallet_icon" class="scroll-mt-24 bg-white rounded-2xl border border-outline-variant shadow-sm [&:has(.js-menu-panel:not(.hidden))]:overflow-visible overflow-hidden">
+          <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/60">
+            <div class="w-9 h-9 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-[20px]">wallet</span></div>
+            <h3 class="text-headline-md font-bold text-on-surface">Wallet icon</h3>
+          </div>
+          <div class="p-6">
+            <div class="relative flex gap-3 js-menu">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-blue-50">
+                <svg viewBox="0 0 24 24" class="w-6 h-6">
+                    <rect x="2.5" y="2" width="19" height="20" rx="2.5" fill="#34A853"></rect>
+                    <rect x="2.5" y="4" width="19" height="18" rx="2.5" fill="#FBBC05"></rect>
+                    <rect x="2.5" y="6.5" width="19" height="15.5" rx="2.5" fill="#EA4335"></rect>
+                    <path d="M2 12.2 C 5.5 10.2 8.5 13.8 12 14 C 15.5 14.2 18.5 10.5 22 10.8 L 22 19.5 Q 22 22 19.5 22 L 4.5 22 Q 2 22 2 19.5 Z" fill="#4285F4"></path>
+                </svg>
+            </div>
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-on-surface shrink-0 bg-surface-container-high">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor" aria-hidden="true">
+                <path d="M17.05 12.04c-.03-2.43 1.99-3.6 2.08-3.66-1.13-1.66-2.9-1.89-3.53-1.91-1.5-.15-2.93.88-3.69.88-.76 0-1.94-.86-3.19-.84-1.64.02-3.15.95-3.99 2.42-1.7 2.95-.43 7.32 1.22 9.71.81 1.17 1.77 2.48 3.03 2.43 1.22-.05 1.68-.79 3.15-.79 1.47 0 1.88.79 3.17.76 1.31-.02 2.14-1.19 2.94-2.37.93-1.36 1.31-2.68 1.33-2.75-.03-.01-2.55-.98-2.58-3.86zM14.6 4.86c.67-.81 1.12-1.94.99-3.06-.96.04-2.13.64-2.82 1.45-.62.72-1.16 1.87-1.02 2.97 1.07.08 2.17-.55 2.85-1.36z"></path>
+              </svg>
+            </div>
             </div>
           </div>
         </div>
