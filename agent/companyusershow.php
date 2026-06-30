@@ -32,7 +32,7 @@
         </div>
         <a href="company.php"
           class="inline-flex items-center gap-2 rounded-lg border border-outline-variant/50 bg-surface px-5 py-2.5 text-body-md font-bold text-on-surface shadow-sm transition-all hover:bg-surface-container-high active:scale-[0.98]">
-          <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+          <span class="material-symbols-outlined text-[19px]">arrow_back</span>
           Back
         </a>
       </div>

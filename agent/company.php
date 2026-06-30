@@ -31,7 +31,7 @@
         <div class="flex items-center gap-3">
           <a href="invitecompany.php"
             class="inline-flex items-center justify-center gap-2 rounded-lg bg-teal-600 px-4 py-2.5 text-body-md font-semibold text-white shadow-sm shadow-teal-600/20 transition-all hover:bg-teal-700 active:scale-[0.98]">
-            <span class="material-symbols-outlined text-[20px]">mail</span>
+            <span class="material-symbols-outlined text-[19px]">mail</span>
             <span>Invite Company</span>
           </a>
           <a href="companyusercreate.php"
@@ -154,9 +154,9 @@
               ];
 
               $statusStyles = [
-                'active'   => ['label' => 'ACTIVE',   'class' => 'bg-emerald-50 text-emerald-700 border-emerald-300', 'dot' => 'bg-emerald-500'],
-                'pending'  => ['label' => 'PENDING',  'class' => 'bg-amber-50 text-amber-700 border-amber-300',     'dot' => 'bg-amber-500'],
-                'inactive' => ['label' => 'INACTIVE', 'class' => 'bg-rose-50 text-rose-700 border-rose-300',       'dot' => 'bg-rose-500'],
+                'active'   => ['label' => 'ACTIVE',   'class' => 'bg-emerald-50 text-emerald-700 border-emerald-100', 'dot' => 'bg-emerald-500'],
+                'pending'  => ['label' => 'PENDING',  'class' => 'bg-amber-50 text-amber-700 border-amber-100',     'dot' => 'bg-amber-500'],
+                'inactive' => ['label' => 'INACTIVE', 'class' => 'bg-rose-50 text-rose-700 border-rose-100',       'dot' => 'bg-rose-500'],
               ];
 
               foreach ($companies as $c):

@@ -139,12 +139,12 @@
       </div>
       <?php
         $passes = [
-          ['name' => 'boarding kg-1', 'type' => 'Gift Card',       'icon' => 'card_giftcard',       'records' => 1, 'installs' => 1],
-          ['name' => 'loyalty-card-api-2',    'type' => 'Gift Card',       'icon' => 'card_giftcard',       'records' => 1, 'installs' => 1],
-          ['name' => 'loyalty-card-api-1',     'type' => 'Membership Card', 'icon' => 'badge',               'records' => 2, 'installs' => 2],
-          ['name' => 'Loyalty-Tier-19',  'type' => 'Loyalty Card',    'icon' => 'loyalty',             'records' => 5, 'installs' => 4],
-          ['name' => 'Gift-Card-26',    'type' => 'Event Ticket',    'icon' => 'confirmation_number', 'records' => 8, 'installs' => 6],
-          ['name' => 'Loyalty-Tier-jp-new','type' => 'Advertising',     'icon' => 'campaign',            'records' => 3, 'installs' => 2],
+          ['name' => 'Advertising-Pass-1', 'type' => 'Advertising',     'icon' => 'campaign',             'records' => null, 'installs' => 2],
+          ['name' => 'boarding kg-1', 'type' => 'Gift Card',       'icon' => 'how_to_reg',       'records' => 1, 'installs' => 1],
+          ['name' => 'loyalty-card-api-2',    'type' => 'Gift Card',       'icon' => 'how_to_reg',       'records' => 1, 'installs' => 1],
+          ['name' => 'Loyalty-Tier-19',  'type' => 'Loyalty Card',    'icon' => 'how_to_reg',             'records' => 5, 'installs' => 4],
+          ['name' => 'Gift-Card-26',    'type' => 'Event Ticket',    'icon' => 'how_to_reg', 'records' => 8, 'installs' => 6],
+          ['name' => 'Loyalty-Tier-jp-new','type' => 'Advertising',     'icon' => 'how_to_reg',            'records' => 3, 'installs' => 2],
         ];
       ?>
 
@@ -167,8 +167,8 @@
         <div class="group relative bg-surface-container-low/30 rounded-2xl border border-outline-variant hover:border-primary/50 hover:bg-white transition-colors duration-200 flex flex-col overflow-hidden [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
           <!-- Header -->
           <div class="flex items-center gap-4 p-5">
-            <div class="w-12 h-12 rounded-xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
-              <span class="material-symbols-outlined text-[24px]"><?= htmlspecialchars($pass['icon']) ?></span>
+            <div class="w-12 h-12 rounded-xl <?= $pass['icon'] === 'campaign' ? 'bg-amber-100 text-amber-700' : 'bg-primary/10 text-primary' ?> flex items-center justify-center shrink-0 ">
+              <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: &quot;FILL&quot; 1;"><?= htmlspecialchars($pass['icon']) ?></span>
             </div>
             <div class="min-w-0 flex-1">
               <p class="text-body-lg font-bold text-on-surface truncate uppercase"><?= htmlspecialchars($pass['name']) ?></p>
@@ -193,6 +193,7 @@
 
           <!-- Stats (main highlighted info, clickable) -->
           <div class="px-5 pb-5 mt-auto space-y-3">
+            <?php if ($pass['records'] !== null): ?>
             <!-- Records -->
             <a href="passRecords.php"
               class="group/stat w-full flex items-center gap-4 bg-amber-50 border border-amber-200 rounded-xl p-3 hover:bg-amber-100 hover:border-amber-300 transition-all">
@@ -205,8 +206,21 @@
               </div>
               <span class="material-symbols-outlined ml-auto text-amber-500/70 text-[20px] group-hover/stat:translate-x-0.5 transition-transform">arrow_forward</span>
             </a>
+            <?php else: ?>
+            <!-- Records (disabled) -->
+            <div class="w-full flex items-center gap-4 bg-amber-50/50 border border-amber-100 rounded-xl p-3 opacity-70 cursor-not-allowed select-none" aria-disabled="true" title="No records available">
+              <span class="w-11 h-11 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[22px]">receipt_long</span>
+              </span>
+              <div class="text-left leading-tight">
+                <p class="text-label-sm font-bold uppercase tracking-wider text-amber-500/70">Records</p>
+                <p class="text-headline-md font-bold text-amber-500/80">0</p>
+              </div>
+              <span class="material-symbols-outlined ml-auto text-amber-400/60 text-[20px]">block</span>
+            </div>
+            <?php endif; ?>
             <!-- Installs -->
-            <a href="passInstalls.php"
+            <a href="<?= $pass['type'] === 'Advertising' ? 'advertisingPassDetail.php' : 'passInstalls.php' ?>"
               class="group/stat w-full flex items-center gap-4 bg-emerald-50 border border-emerald-200 rounded-xl p-3 hover:bg-emerald-100 hover:border-emerald-300 transition-all">
               <span class="w-11 h-11 rounded-lg bg-emerald-500/15 text-emerald-600 flex items-center justify-center shrink-0">
                 <span class="material-symbols-outlined text-[22px]">install_mobile</span>
