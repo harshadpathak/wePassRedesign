@@ -180,11 +180,7 @@
         </div>
 
         <!-- Step 1 Footer -->
-        <div id="step-1-footer" class="flex items-center justify-between gap-4 px-6 md:px-8 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
-          <button type="button" disabled class="flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm cursor-not-allowed">
-            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
-            Previous
-          </button>
+        <div id="step-1-footer" class="flex items-end justify-end gap-4 px-6 md:px-8 py-5 border-t border-outline-variant/60 bg-surface-container-low/30">
           <button type="button" onclick="goToStep(2)"
             class="inline-flex items-center gap-2 bg-brand-gradient text-on-primary px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
             Next
@@ -237,12 +233,6 @@
                     <span class="sm:hidden w-7 h-7 rounded-full bg-surface-container-low text-secondary text-label-sm font-bold flex items-center justify-center shrink-0"><?= $i + 1 ?></span>
                     <span class="text-body-md font-semibold text-on-surface"><?= htmlspecialchars($field['label']) ?></span>
                     <?php if ($field['required']): ?><span class="text-error font-bold">*</span><?php endif; ?>
-                    <span class="js-matched-badge ml-1 inline-flex items-center gap-1 bg-emerald-50 text-emerald-600 border border-emerald-200 text-label-sm font-semibold px-2 py-0.5 rounded-full <?= $field['map'] ? '' : 'hidden' ?>">
-                      <span class="material-symbols-outlined text-[14px]">check_circle</span> Matched
-                    </span>
-                    <span class="js-unmatched-badge ml-1 inline-flex items-center gap-1 bg-amber-50 text-amber-600 border border-amber-200 text-label-sm font-semibold px-2 py-0.5 rounded-full <?= $field['map'] ? 'hidden' : '' ?>">
-                      <span class="material-symbols-outlined text-[14px]">error</span> Unmatched
-                    </span>
                   </div>
                   <div class="sm:col-span-5 relative">
                     <select class="map-select w-full appearance-none bg-surface-container-low border-outline-variant rounded-lg py-3 pl-4 pr-10 text-body-md text-on-surface focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer">
@@ -271,6 +261,107 @@
               Next
               <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
             </button>
+          </div>
+        </div>
+
+        <style>
+          @keyframes pop { 0% { transform: scale(0); opacity: 0; } 60% { transform: scale(1.12); } 100% { transform: scale(1); opacity: 1; } }
+          @keyframes rise { 0% { transform: translateY(12px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+          @keyframes ringGlow { 0%,100% { opacity: .35; } 50% { opacity: .7; } }
+          .stage-row { transition: background-color .3s ease, border-color .3s ease; }
+        </style>
+        <!-- Step 3 Body (Import) -->
+        <div id="step-3" class="hidden">
+          <div class="p-6 md:p-10">
+
+            <!-- ============ Processing State ============ -->
+            <div id="import-processing" class="flex flex-col items-center justify-center text-center py-12 md:py-16">
+
+              <!-- gradient progress ring -->
+              <div class="flex flex-col items-center text-center">
+                <div class="relative w-56 h-56">
+                  <!-- soft glow -->
+                  <div class="absolute inset-3 rounded-full bg-primary/10 blur-2xl" style="animation: ringGlow 2.4s ease-in-out infinite;"></div>
+                  <svg class="relative w-full h-full -rotate-90" viewBox="0 0 120 120">
+                    <defs>
+                      <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#5573FF"></stop>
+                        <stop offset="100%" stop-color="#3d5afe"></stop>
+                      </linearGradient>
+                    </defs>
+                    <circle cx="60" cy="60" r="52" fill="none" stroke="#e2e8f0" stroke-width="9"></circle>
+                    <circle id="progress-ring" cx="60" cy="60" r="52" fill="none" stroke="url(#ringGrad)" stroke-width="9" stroke-linecap="round"
+                      class="transition-[stroke-dashoffset] duration-200 ease-linear"
+                      stroke-dasharray="326.726" stroke-dashoffset="326.726"></circle>
+                  </svg>
+                  <div class="absolute inset-0 flex flex-col items-center justify-center">
+                    <span id="progress-percent" class="text-4xl md:text-5xl font-display font-bold text-on-surface tracking-tight leading-none">0%</span>
+                    <span class="mt-1 text-label-md font-semibold text-outline uppercase tracking-wider">Complete</span>
+                  </div>
+                </div>
+                <div class="mt-7 flex items-center gap-2.5 text-primary">
+                  <span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span>
+                  <span class="text-body-lg font-bold">Importing your file…</span>
+                </div>
+                <p class="mt-1.5 text-body-md text-gray-400">Please wait, this may take a moment.</p>
+              </div>
+            </div>
+
+            <!-- ============ Success State ============ -->
+            <div id="import-success" class="hidden flex-col items-center justify-center text-center max-w-2xl mx-auto py-8 md:py-12">
+              <div class="relative flex items-center justify-center w-36 h-36">
+                <!-- soft glow -->
+                <div class="absolute w-28 h-28 rounded-full bg-emerald-500/20 blur-2xl"></div>
+                <!-- scalloped (curly) seal surface -->
+                <svg viewBox="0 0 100 100" class="w-28 h-28 drop-shadow-xl">
+                  <defs>
+                    <linearGradient id="sealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#34d399"></stop>
+                      <stop offset="100%" stop-color="#059669"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path fill="url(#sealGrad)" stroke-linejoin="round" stroke-linecap="round"
+                    d="M 50.0 2.0 L 56.41 9.5 L 64.83 4.35 L 68.61 13.47 L 78.21 11.17 L 78.99 21.01 L 88.83 21.79 L 86.53 31.39 L 95.65 35.17 L 90.5 43.59 L 98.0 50.0 L 90.5 56.41 L 95.65 64.83 L 86.53 68.61 L 88.83 78.21 L 78.99 78.99 L 78.21 88.83 L 68.61 86.53 L 64.83 95.65 L 56.41 90.5 L 50.0 98.0 L 43.59 90.5 L 35.17 95.65 L 31.39 86.53 L 21.79 88.83 L 21.01 78.99 L 11.17 78.21 L 13.47 68.61 L 4.35 64.83 L 9.5 56.41 L 2.0 50.0 L 9.5 43.59 L 4.35 35.17 L 13.47 31.39 L 11.17 21.79 L 21.01 21.01 L 21.79 11.17 L 31.39 13.47 L 35.17 4.35 L 43.59 9.5 Z"></path>
+                </svg>
+                <!-- check icon -->
+                <span class="material-symbols-outlined absolute text-white text-[48px]" style="font-variation-settings: 'FILL' 1;">check</span>
+              </div>
+              <h3 class="mt-6 text-headline-lg font-bold text-on-surface tracking-tight animate-[rise_0.5s_ease-out_0.1s_both]">Import Successful!</h3>
+              <p class="mt-2 text-body-lg text-gray-500 leading-relaxed animate-[rise_0.5s_ease-out_0.15s_both]">Your passes have been imported and are ready to distribute. You can now view and manage them in your records.</p>
+
+              <!-- Summary stat cards -->
+              <div class="mt-7 grid grid-cols-3 gap-3 sm:gap-4 w-full animate-[rise_0.5s_ease-out_0.2s_both]">
+                <div class="bg-white border border-outline-variant rounded-2xl p-4 flex flex-col items-center">
+                  <span class="material-symbols-outlined text-primary text-[26px]">groups</span>
+                  <span id="stat-records" class="mt-1.5 text-headline-md font-bold text-on-surface">0</span>
+                  <span class="text-label-md text-gray-400 mt-0.5">Records Imported</span>
+                </div>
+                <div class="bg-white border border-outline-variant rounded-2xl p-4 flex flex-col items-center">
+                  <span class="material-symbols-outlined text-emerald-500 text-[26px]">confirmation_number</span>
+                  <span id="stat-passes" class="mt-1.5 text-headline-md font-bold text-on-surface">0</span>
+                  <span class="text-label-md text-gray-400 mt-0.5">Passes Created</span>
+                </div>
+                <div class="bg-white border border-outline-variant rounded-2xl p-4 flex flex-col items-center">
+                  <span class="material-symbols-outlined text-tertiary text-[26px]">mark_email_read</span>
+                  <span id="stat-notified" class="mt-1.5 text-headline-md font-bold text-on-surface">0</span>
+                  <span class="text-label-md text-gray-400 mt-0.5">Recipients Notified</span>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 w-full animate-[rise_0.5s_ease-out_0.25s_both]">
+                <a href="passes.php"
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-gradient text-on-primary px-7 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-primary/25 hover:shadow-xl hover:opacity-95 active:scale-[0.98] transition-all">
+                  <span class="material-symbols-outlined text-[20px]">list_alt</span>
+                  Go to Records
+                </a>
+                <a href="importDistribution.php"
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white border border-outline-variant text-on-surface px-7 py-3 rounded-lg text-[14px] font-bold shadow-sm hover:bg-surface-container-low active:scale-[0.98] transition-all">
+                  <span class="material-symbols-outlined text-[20px]">restart_alt</span>
+                  Import Another File
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -326,6 +417,67 @@
       // Scroll wizard into view
       var card = document.getElementById('step-' + step);
       if (card && card.scrollIntoView) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Kick off import animation when entering step 3
+      if (step === 3) startImport();
+    }
+
+    // ---- Step 3: import progress animation ----
+    // Wire TOTAL_RECORDS to your real CSV row count when integrating the backend.
+    var TOTAL_RECORDS = 300;
+    function startImport() {
+      var processing = document.getElementById('import-processing');
+      var success = document.getElementById('import-success');
+      var ring = document.getElementById('progress-ring');
+      var percentEl = document.getElementById('progress-percent');
+      var CIRCUMFERENCE = 326.726; // 2 * PI * r (r = 52)
+
+      // Reset to processing state
+      processing.classList.remove('hidden');
+      processing.classList.add('flex');
+      success.classList.add('hidden');
+      success.classList.remove('flex');
+      ring.style.strokeDashoffset = CIRCUMFERENCE;
+      percentEl.textContent = '0%';
+
+      var progress = 0;
+      var timer = setInterval(function () {
+        progress += Math.floor(Math.random() * 8) + 4;
+        if (progress >= 100) progress = 100;
+
+        percentEl.textContent = progress + '%';
+        ring.style.strokeDashoffset = CIRCUMFERENCE * (1 - progress / 100);
+
+        if (progress >= 100) {
+          clearInterval(timer);
+          setTimeout(showSuccess, 600);
+        }
+      }, 220);
+    }
+
+    // Count-up animation for the success stat cards
+    function countUp(el, target, duration) {
+      if (!el) return;
+      var start = 0, t0 = null;
+      function tick(ts) {
+        if (t0 === null) t0 = ts;
+        var p = Math.min(1, (ts - t0) / duration);
+        el.textContent = Math.round(start + (target - start) * p).toLocaleString();
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    function showSuccess() {
+      var processing = document.getElementById('import-processing');
+      var success = document.getElementById('import-success');
+      processing.classList.add('hidden');
+      processing.classList.remove('flex');
+      success.classList.remove('hidden');
+      success.classList.add('flex');
+      // Animate summary numbers (wire these to real backend results later)
+      countUp(document.getElementById('stat-records'), TOTAL_RECORDS, 900);
+      countUp(document.getElementById('stat-passes'), TOTAL_RECORDS, 1000);
+      countUp(document.getElementById('stat-notified'), TOTAL_RECORDS, 1100);
     }
     // Initialize on first step
     document.addEventListener('DOMContentLoaded', function () { goToStep(1); });

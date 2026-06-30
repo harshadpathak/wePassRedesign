@@ -201,6 +201,47 @@
                             class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                             placeholder="Enter City" type="text">
                     </div>
+                    <!-- Additional Image -->
+                    <div class="space-y-2">
+                        <label class="text-on-surface font-semibold text-label-md">Additional Image:</label>
+                        <!-- Single box: upload control + inline preview -->
+                        <label id="additional-image-zone" for="additional-image-input"
+                            class="group relative flex h-40 flex-col items-center justify-center text-center gap-2.5 rounded-2xl px-4 cursor-pointer overflow-hidden border border-outline-variant bg-gradient-to-br from-surface-container-low/60 to-primary/[0.04] transition-all duration-300">
+                            <!-- Empty state -->
+                            <span class="relative w-12 h-12 rounded-2xl bg-white shadow-sm ring-1 ring-outline-variant/60 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[26px]">add_photo_alternate</span>
+                            </span>
+                            <span class="relative">
+                                <span class="block text-body-md font-bold text-on-surface">Click to upload
+                                    <span class="text-gray-400 font-normal">or drag &amp; drop</span></span>
+                                <span class="block text-label-sm text-outline mt-0.5">PNG, JPG &bull; up to 5MB</span>
+                            </span>
+                            <input id="additional-image-input" type="file" accept="image/*" class="hidden">
+
+                            <!-- Inline preview (revealed after upload) -->
+                            <div id="additional-image-preview-wrap" class="hidden absolute inset-0">
+                                <img id="additional-image-preview" alt="Additional image preview"
+                                    class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20"></div>
+                                <!-- glass control bar -->
+                                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20">
+                                    <span class="flex items-center gap-1.5 min-w-0">
+                                        <span class="material-symbols-outlined text-white/90 text-[18px] shrink-0">image</span>
+                                        <span id="additional-image-name" class="text-white text-label-md font-semibold truncate"></span>
+                                    </span>
+                                    <span class="flex items-center gap-1.5 shrink-0">
+                                        <span class="inline-flex items-center gap-1 bg-white/90 hover:bg-white text-on-surface text-label-sm font-bold px-2.5 py-1.5 rounded-lg shadow-sm transition-all">
+                                            <span class="material-symbols-outlined text-[15px]">sync</span> Change
+                                        </span>
+                                        <button type="button" id="additional-image-remove"
+                                            class="w-7 h-7 rounded-lg bg-white/90 hover:bg-white text-error flex items-center justify-center shadow-sm transition-all">
+                                            <span class="material-symbols-outlined text-[16px]">delete</span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
                 </div>
             </div>
             </div>
@@ -270,6 +311,58 @@
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
   <script>
+    (function () {
+      // Additional Image: single box that doubles as uploader + inline preview
+      var imgZone = document.getElementById('additional-image-zone');
+      var imgInput = document.getElementById('additional-image-input');
+      var imgWrap = document.getElementById('additional-image-preview-wrap');
+      var imgPreview = document.getElementById('additional-image-preview');
+      var imgName = document.getElementById('additional-image-name');
+      var imgRemove = document.getElementById('additional-image-remove');
+
+      if (imgZone && imgInput && imgWrap) {
+        function showImg(file) {
+          imgPreview.src = URL.createObjectURL(file);
+          if (imgName) imgName.textContent = file.name;
+          imgWrap.classList.remove('hidden');
+        }
+        function clearImg() {
+          imgInput.value = '';
+          imgWrap.classList.add('hidden');
+        }
+
+        imgInput.addEventListener('change', function () {
+          var file = imgInput.files && imgInput.files[0];
+          if (file) showImg(file);
+        });
+
+        if (imgRemove) {
+          imgRemove.addEventListener('click', function (e) {
+            e.preventDefault();
+            clearImg();
+          });
+        }
+
+        // Drag & drop onto the same box
+        ['dragenter', 'dragover'].forEach(function (evt) {
+          imgZone.addEventListener(evt, function (e) {
+            e.preventDefault();
+            imgZone.classList.add('border-primary', 'bg-primary/5');
+          });
+        });
+        ['dragleave', 'drop'].forEach(function (evt) {
+          imgZone.addEventListener(evt, function (e) {
+            e.preventDefault();
+            imgZone.classList.remove('border-primary', 'bg-primary/5');
+          });
+        });
+        imgZone.addEventListener('drop', function (e) {
+          var files = e.dataTransfer && e.dataTransfer.files;
+          if (files && files[0]) { imgInput.files = files; showImg(files[0]); }
+        });
+      }
+    })();
+
     (function () {
       // Show/hide Template Fields based on template selection
       var templateSelect = document.getElementById('template-select');

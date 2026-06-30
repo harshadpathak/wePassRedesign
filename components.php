@@ -38,14 +38,11 @@
           ['name' => 'Badges & Pills',    'icon' => 'label',               'desc' => 'Status pills & tags',             'href' => '#badges'],
           ['name' => 'Buttons',           'icon' => 'smart_button',        'desc' => 'Primary, success, outline, icon', 'href' => '#buttons'],
           ['name' => 'Forms & Inputs',    'icon' => 'edit_note',           'desc' => 'Text, textarea, password',        'href' => '#forms'],
-          ['name' => 'Select (Select2)',  'icon' => 'arrow_drop_down_circle','desc' => 'Searchable dropdowns',          'href' => '#select'],
-          ['name' => 'Date Picker',       'icon' => 'calendar_month',      'desc' => 'Flatpickr date / range',          'href' => '#datepicker'],
           ['name' => 'Dropdown Menu',     'icon' => 'more_vert',           'desc' => 'Row & action menus',              'href' => '#dropdown'],
           ['name' => 'Pagination',        'icon' => 'last_page',           'desc' => 'Paged navigation',                'href' => '#pagination'],
           ['name' => 'Breadcrumbs',       'icon' => 'chevron_right',       'desc' => 'Page hierarchy',                  'href' => '#breadcrumbs'],
           ['name' => 'Info Banner',       'icon' => 'info',                'desc' => 'Explanatory headers',             'href' => '#info-banner'],
           ['name' => 'Stat Tiles',        'icon' => 'leaderboard',         'desc' => 'KPI summary cards',               'href' => '#stats'],
-          // ['name' => 'File Upload',       'icon' => 'cloud_upload',        'desc' => 'Drag & drop dropzone',            'href' => 'importDistribution.php'],
           ['name' => 'Tooltips',          'icon' => 'help',                'desc' => 'Hover hints',                     'href' => '#tooltips'],
           ['name' => 'Filter',            'icon' => 'filter_alt',          'desc' => 'Filters',                         'href' => '#filter'],
           ['name' => 'Wallet Icon',       'icon' => 'wallet',                'desc' => 'Wallet Icon',                     'href' => '#wallet_icon'],
@@ -295,7 +292,7 @@
             <p class="text-label-md text-gray-400">Text, textarea, select, date &amp; password</p>
           </div>
         </div>
-        <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-5">
           <div class="space-y-2">
             <label class="text-on-surface font-bold text-label-md">Text Input</label>
             <input type="text" placeholder="Enter value" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
@@ -325,7 +322,7 @@
                                 class="material-symbols-outlined text-[20px] text-outline absolute right-3.5 top-1/2 -translate-y-1/2 hover:text-on-surface transition-colors cursor-pointer">visibility</button>
                         </div>
           </div>
-          <div class="space-y-2 md:col-span-2">
+          <div class="space-y-2 md:col-span-3">
             <label class="text-on-surface font-bold text-label-md">Textarea</label>
             <textarea rows="3" placeholder="Enter a longer message" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-y"></textarea>
           </div>
@@ -339,6 +336,45 @@
               </span>
             </label>
             <input type="text" placeholder="Hover the help icon" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+          </div>
+          <!-- Image Upload -->
+          <div class="space-y-2">
+            <label class="text-on-surface font-bold text-label-md">Image Upload</label>
+            <label data-image-zone for="component-image-input"
+              class="group relative flex h-40 flex-col items-center justify-center text-center gap-2.5 rounded-2xl px-4 cursor-pointer overflow-hidden border border-outline-variant bg-gradient-to-br from-surface-container-low/60 to-primary/[0.04] transition-all duration-300">
+              <!-- Empty state -->
+              <span class="relative w-12 h-12 rounded-2xl bg-white shadow-sm ring-1 ring-outline-variant/60 flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[26px]">add_photo_alternate</span>
+              </span>
+              <span class="relative">
+                <span class="block text-body-md font-bold text-on-surface">Click to upload
+                  <span class="text-gray-400 font-normal">or drag &amp; drop</span></span>
+                <span class="block text-label-sm text-outline mt-0.5">PNG, JPG &bull; up to 5MB</span>
+              </span>
+              <input id="component-image-input" type="file" accept="image/*" class="hidden">
+
+              <!-- Inline preview (revealed after upload) -->
+              <div data-image-preview class="hidden absolute inset-0">
+                <img data-image-preview-img alt="Image preview" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20"></div>
+                <!-- glass control bar -->
+                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20">
+                  <span class="flex items-center gap-1.5 min-w-0">
+                    <span class="material-symbols-outlined text-white/90 text-[18px] shrink-0">image</span>
+                    <span data-image-name class="text-white text-label-md font-semibold truncate"></span>
+                  </span>
+                  <span class="flex items-center gap-1.5 shrink-0">
+                    <span class="inline-flex items-center gap-1 bg-white/90 hover:bg-white text-on-surface text-label-sm font-bold px-2.5 py-1.5 rounded-lg shadow-sm transition-all">
+                      <span class="material-symbols-outlined text-[15px]">sync</span> Change
+                    </span>
+                    <button type="button" data-image-remove
+                      class="w-7 h-7 rounded-lg bg-white/90 hover:bg-white text-error flex items-center justify-center shadow-sm transition-all">
+                      <span class="material-symbols-outlined text-[16px]">delete</span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </label>
           </div>
         </div>
       </div>
@@ -655,6 +691,42 @@
           alert.addEventListener('transitionend', function () { alert.remove(); }, { once: true });
         });
       });
+      // Image upload: single box that doubles as uploader + inline preview
+      document.querySelectorAll('[data-image-zone]').forEach(function (zone) {
+        var input = zone.querySelector('input[type="file"]');
+        var wrap = zone.querySelector('[data-image-preview]');
+        var img = zone.querySelector('[data-image-preview-img]');
+        var nameEl = zone.querySelector('[data-image-name]');
+        var removeBtn = zone.querySelector('[data-image-remove]');
+        if (!input || !wrap) return;
+
+        function showImg(file) {
+          img.src = URL.createObjectURL(file);
+          if (nameEl) nameEl.textContent = file.name;
+          wrap.classList.remove('hidden');
+        }
+        function clearImg() {
+          input.value = '';
+          wrap.classList.add('hidden');
+        }
+
+        input.addEventListener('change', function () {
+          if (input.files && input.files[0]) showImg(input.files[0]);
+        });
+        if (removeBtn) removeBtn.addEventListener('click', function (e) { e.preventDefault(); clearImg(); });
+
+        ['dragenter', 'dragover'].forEach(function (evt) {
+          zone.addEventListener(evt, function (e) { e.preventDefault(); zone.classList.add('border-primary', 'bg-primary/5'); });
+        });
+        ['dragleave', 'drop'].forEach(function (evt) {
+          zone.addEventListener(evt, function (e) { e.preventDefault(); zone.classList.remove('border-primary', 'bg-primary/5'); });
+        });
+        zone.addEventListener('drop', function (e) {
+          var files = e.dataTransfer && e.dataTransfer.files;
+          if (files && files[0]) { input.files = files; showImg(files[0]); }
+        });
+      });
+
       // Password show/hide toggles
       document.querySelectorAll('[data-toggle-password]').forEach(function (btn) {
        btn.addEventListener('click', function () {
