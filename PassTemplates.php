@@ -56,8 +56,8 @@
         </div>
         <div
           class="bg-white p-4 rounded-xl border border-outline-variant  transition-colors flex items-center gap-4 cursor-pointer">
-          <div class="bg-secondary-container text-secondary p-2.5 rounded-lg flex items-center justify-center">
-            <span class="material-symbols-outlined">person</span>
+          <div class="bg-primary/10 text-primary p-2.5 rounded-lg flex items-center justify-center">
+            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">how_to_reg</span>
           </div>
           <div>
             <p class="text-label-sm text-gray-400 font-medium">Personalized Unique</p>
@@ -66,8 +66,8 @@
         </div>
         <div
           class="bg-white p-4 rounded-xl border border-outline-variant transition-colors flex items-center gap-4 cursor-pointer">
-          <div class="bg-tertiary-container/40 text-tertiary p-2.5 rounded-lg flex items-center justify-center">
-            <span class="material-symbols-outlined">campaign</span>
+          <div class="bg-amber-100 text-amber-700 p-2.5 rounded-lg flex items-center justify-center">
+            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">campaign</span>
           </div>
           <div>
             <p class="text-label-sm text-gray-400 font-medium">Generic Advertising</p>
@@ -139,18 +139,18 @@
       </div>
       <?php
         $templates = [
-          ['name' => 'ADVERTISING 34',       'id' => '171f8c83fc297fdeda6eed32fee0a1cf2f503e15', 'icon' => 'campaign',            'iconbg' => 'bg-orange-50 text-orange-600',   'type' => 'Advertising',    'badge' => 'bg-orange-50 text-orange-600 border-orange-100',   'created' => '19/05/2026 23:25:14', 'updated' => '04/06/2026 16:19:15'],
-          ['name' => 'GIFT-CARD-43',         'id' => '2563bc42f3ca8df571d6562b15dcc2f16b8564da', 'icon' => 'redeem',              'iconbg' => 'bg-rose-50 text-rose-600',       'type' => 'Gift Card',      'badge' => 'bg-rose-50 text-rose-600 border-rose-100',         'created' => '18/05/2026 22:15:18', 'updated' => '04/06/2026 16:19:15'],
-          ['name' => 'LOYALTY-CARD-49',      'id' => '9d41f80ac36317a9ea842c491a31ded9d44c20ca', 'icon' => 'favorite',            'iconbg' => 'bg-amber-50 text-amber-600',     'type' => 'Loyalty Card',   'badge' => 'bg-amber-50 text-amber-600 border-amber-100',      'created' => '18/05/2026 22:39:36', 'updated' => '04/06/2026 16:19:15'],
-          ['name' => 'LOYALTY-TIER-TEST-01', 'id' => '6ef7b13772f104c2533dd189814704ca5bc161a7', 'icon' => 'emoji_events',        'iconbg' => 'bg-violet-50 text-violet-600',   'type' => 'Loyalty + Tier', 'badge' => 'bg-violet-50 text-violet-600 border-violet-100',   'created' => '19/05/2026 22:56:31', 'updated' => '04/06/2026 16:19:15'],
-          ['name' => 'GENERIC-PASS-6',       'id' => 'cc7b3c0875a4a2cb9071274afa4122b7aa0e6fa4', 'icon' => 'badge',               'iconbg' => 'bg-blue-50 text-blue-600',       'type' => 'Generic Pass',   'badge' => 'bg-blue-50 text-blue-600 border-blue-100',         'created' => '22/05/2026 17:03:55', 'updated' => '04/06/2026 16:19:15'],
-          ['name' => 'COUPON-1',             'id' => 'a4a2cb0875a4a2cb9071274afa4122b7aa0704ca', 'icon' => 'sell',                'iconbg' => 'bg-teal-50 text-teal-600',       'type' => 'Coupon',         'badge' => 'bg-teal-50 text-teal-600 border-teal-100',         'created' => '22/05/2026 17:03:55', 'updated' => '04/06/2026 16:19:15'],
-          ['name' => 'EVENT-TICKET-20',      'id' => '373b3ea3360feb6220dc003d74eb5630d6866b7d', 'icon' => 'confirmation_number', 'iconbg' => 'bg-emerald-50 text-emerald-600', 'type' => 'Event Ticket',   'badge' => 'bg-emerald-50 text-emerald-600 border-emerald-100','created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
-          ['name' => 'BOARDING-PASS-3',      'id' => '8a1c2d3e4f5061728394a5b6c7d8e9f0a1b2c3d4', 'icon' => 'flight',              'iconbg' => 'bg-sky-50 text-sky-600',         'type' => 'Boarding Pass',  'badge' => 'bg-sky-50 text-sky-600 border-sky-100',           'created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
-          ['name' => 'MEMBERSHIP-CARD-7',    'id' => '2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e', 'icon' => 'groups',              'iconbg' => 'bg-indigo-50 text-indigo-600',   'type' => 'Membership Card','badge' => 'bg-indigo-50 text-indigo-600 border-indigo-100',   'created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
-          ['name' => 'INSURANCE-PASS-5',     'id' => '3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f', 'icon' => 'shield',              'iconbg' => 'bg-lime-50 text-lime-600',       'type' => 'Insurance Pass', 'badge' => 'bg-lime-50 text-lime-600 border-lime-100',         'created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
-          ['name' => 'BUSINESS-CARD-10',     'id' => '4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f70', 'icon' => 'business_center',     'iconbg' => 'bg-slate-100 text-slate-600',    'type' => 'Business Card',  'badge' => 'bg-slate-50 text-slate-600 border-slate-200',      'created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
-          ['name' => 'WARRANTY-PASS-70',     'id' => '5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f7081', 'icon' => 'workspace_premium',   'iconbg' => 'bg-red-50 text-red-600',         'type' => 'Warranty Pass',  'badge' => 'bg-red-50 text-red-600 border-red-100',           'created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'ADVERTISING 34',       'id' => '171f8c83fc297fdeda6eed32fee0a1cf2f503e15', 'icon' => 'campaign',       'iconbg' => 'bg-orange-50 text-orange-600',   'type' => 'Advertising',    'badge' => 'bg-orange-50 text-orange-600 border-orange-100',   'created' => '19/05/2026 23:25:14', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'GIFT-CARD-43',         'id' => '2563bc42f3ca8df571d6562b15dcc2f16b8564da', 'icon' => 'how_to_reg',     'iconbg' => 'bg-primary/10 text-primary',       'type' => 'Gift Card',      'badge' => 'bg-rose-50 text-rose-600 border-rose-100',         'created' => '18/05/2026 22:15:18', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'LOYALTY-CARD-49',      'id' => '9d41f80ac36317a9ea842c491a31ded9d44c20ca', 'icon' => 'how_to_reg',     'iconbg' => 'bg-primary/10 text-primary',     'type' => 'Loyalty Card',   'badge' => 'bg-amber-50 text-amber-600 border-amber-100',      'created' => '18/05/2026 22:39:36', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'LOYALTY-TIER-TEST-01', 'id' => '6ef7b13772f104c2533dd189814704ca5bc161a7', 'icon' => 'how_to_reg',     'iconbg' => 'bg-primary/10 text-primary',   'type' => 'Loyalty + Tier', 'badge' => 'bg-violet-50 text-violet-600 border-violet-100',   'created' => '19/05/2026 22:56:31', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'GENERIC-PASS-6',       'id' => 'cc7b3c0875a4a2cb9071274afa4122b7aa0e6fa4', 'icon' => 'how_to_reg',     'iconbg' => 'bg-primary/10 text-primary',       'type' => 'Generic Pass',   'badge' => 'bg-blue-50 text-blue-600 border-blue-100',         'created' => '22/05/2026 17:03:55', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'COUPON-1',             'id' => 'a4a2cb0875a4a2cb9071274afa4122b7aa0704ca', 'icon' => 'how_to_reg',     'iconbg' => 'bg-primary/10 text-primary',       'type' => 'Coupon',         'badge' => 'bg-teal-50 text-teal-600 border-teal-100',         'created' => '22/05/2026 17:03:55', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'EVENT-TICKET-20',      'id' => '373b3ea3360feb6220dc003d74eb5630d6866b7d', 'icon' => 'how_to_reg',     'iconbg' => 'bg-primary/10 text-primary', 'type' => 'Event Ticket',   'badge' => 'bg-emerald-50 text-emerald-600 border-emerald-100','created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'BOARDING-PASS-3',      'id' => '8a1c2d3e4f5061728394a5b6c7d8e9f0a1b2c3d4', 'icon' => 'how_to_reg',     'iconbg' => 'bg-primary/10 text-primary',         'type' => 'Boarding Pass',  'badge' => 'bg-sky-50 text-sky-600 border-sky-100',           'created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'MEMBERSHIP-CARD-7',    'id' => '2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e', 'icon' => 'how_to_reg',     'iconbg' => 'bg-primary/10 text-primary',   'type' => 'Membership Card','badge' => 'bg-indigo-50 text-indigo-600 border-indigo-100',   'created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'INSURANCE-PASS-5',     'id' => '3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f', 'icon' => 'how_to_reg',     'iconbg' => 'bg-primary/10 text-primary',       'type' => 'Insurance Pass', 'badge' => 'bg-lime-50 text-lime-600 border-lime-100',         'created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'BUSINESS-CARD-10',     'id' => '4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f70', 'icon' => 'how_to_reg',     'iconbg' => 'bg-primary/10 text-primary',    'type' => 'Business Card',  'badge' => 'bg-slate-50 text-slate-600 border-slate-200',      'created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
+          ['name' => 'WARRANTY-PASS-70',     'id' => '5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f7081', 'icon' => 'how_to_reg',     'iconbg' => 'bg-primary/10 text-primary',         'type' => 'Warranty Pass',  'badge' => 'bg-red-50 text-red-600 border-red-100',           'created' => '19/05/2026 21:59:10', 'updated' => '04/06/2026 16:19:15'],
         ];
       ?>
       <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden shadow-sm [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
