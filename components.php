@@ -316,11 +316,30 @@
           <div class="space-y-2">
             <label class="text-on-surface font-bold text-label-md">Password</label>
             <div class="relative">
-                            <input type="password" id="password" placeholder="Enter Password"
-                                class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-                            <button type="button" data-toggle-password="password"
-                                class="material-symbols-outlined text-[20px] text-outline absolute right-3.5 top-1/2 -translate-y-1/2 hover:text-on-surface transition-colors cursor-pointer">visibility</button>
-                        </div>
+                <input type="password" id="password" placeholder="Enter Password"
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 pr-4 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                <button type="button" data-toggle-password="password"
+                    class="material-symbols-outlined text-[20px] text-outline absolute right-3.5 top-1/2 -translate-y-1/2 hover:text-on-surface transition-colors cursor-pointer">visibility</button>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label class="text-on-surface font-bold text-label-md">
+              Store Image: 
+            </label>
+            <label class="group flex items-center gap-3 w-full h-[46px] bg-surface-container-low border border-outline-variant rounded-lg px-3 cursor-pointer hover:border-primary hover:bg-primary/5 transition-all">
+              <input type="file" id="storeImage" accept="image/png, image/jpeg" class="sr-only ">
+              <span class="w-7 h-7 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 overflow-hidden">
+                <span id="storeImageIcon" class="material-symbols-outlined text-[18px]">cloud_upload</span>
+                <img id="storeImagePreview" class="hidden w-full h-full object-cover" alt="Store image preview">
+              </span>
+              <span class="min-w-0 leading-tight flex-1">
+                <span id="storeImageTitle" class="block text-label-md font-bold text-on-surface truncate">Click to upload</span>
+                <span id="storeImageHint" class="block text-label-sm text-outline">JPG/PNG up to 2MB</span>
+              </span>
+              <span role="button" id="storeImageClear" class="hidden shrink-0 w-7 h-7 rounded-full text-outline hover:bg-rose-50 hover:text-rose-600 flex items-center justify-center transition-all">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+              </span>
+            </label>
           </div>
           <div class="space-y-2 md:col-span-3">
             <label class="text-on-surface font-bold text-label-md">Textarea</label>
