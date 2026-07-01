@@ -112,14 +112,18 @@
               <!-- Configuration File (JSON) -->
               <div class="space-y-1.5">
                 <label class="block text-label-md font-semibold text-on-surface">Configuration File (JSON):<span class="text-error">*</span></label>
-                <label class="flex items-center gap-3 rounded-lg border border-dashed border-outline-variant bg-white px-4 py-3 cursor-pointer hover:border-primary hover:bg-primary/[0.03] transition-all">
-                  <span class="material-symbols-outlined text-primary">upload_file</span>
-                  <div class="flex-1 min-w-0">
-                    <p class="text-label-md font-bold text-on-surface">Click to upload</p>
-                    <p class="text-label-sm text-outline">JSON file · max 2 MB</p>
-                  </div>
-                  <span class="text-label-sm font-bold text-primary bg-primary/10 px-3 py-1.5 rounded-lg shrink-0">Browse</span>
-                  <input type="file" accept=".json" required class="sr-only">
+                <label class="group flex items-center gap-3 w-full h-[46px] bg-surface-container-low border border-outline-variant rounded-lg px-3 cursor-pointer hover:border-primary hover:bg-primary/5 transition-all">
+                  <input type="file" id="configFile" accept=".json,application/json" required class="sr-only">
+                  <span class="w-7 h-7 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[18px]">upload_file</span>
+                  </span>
+                  <span class="min-w-0 leading-tight flex-1">
+                    <span id="configFileTitle" class="block text-label-md font-bold text-on-surface truncate">Click to upload</span>
+                    <span id="configFileHint" class="block text-label-sm text-outline">JSON file · max 2 MB</span>
+                  </span>
+                  <span role="button" id="configFileClear" class="hidden shrink-0 w-7 h-7 rounded-full text-outline hover:bg-rose-50 hover:text-rose-600 flex items-center justify-center transition-all">
+                    <span class="material-symbols-outlined text-[18px]">close</span>
+                  </span>
                 </label>
                 <!-- What is Configuration File? -->
                 <div class="mt-2 py-4 space-y-2">
@@ -263,14 +267,18 @@
                 <!-- Apple Certificate -->
                 <div class="space-y-1.5">
                   <label class="block text-label-md font-semibold text-on-surface">Apple Certificate:<span class="text-error">*</span></label>
-                  <label class="flex items-center gap-3 rounded-lg border border-dashed border-outline-variant bg-white px-4 py-3 cursor-pointer hover:border-primary hover:bg-primary/[0.03] transition-all">
-                    <span class="material-symbols-outlined text-primary">upload_file</span>
-                    <div class="flex-1 min-w-0">
-                      <p class="text-label-md font-bold text-on-surface truncate">.p12 file</p>
-                      <p class="text-label-sm text-outline">max 2 MB</p>
-                    </div>
-                    <span class="text-label-sm font-bold text-primary bg-primary/10 px-3 py-1.5 rounded-lg shrink-0">Browse</span>
-                    <input type="file" accept=".p12" required class="sr-only">
+                  <label class="group flex items-center gap-3 w-full h-[46px] bg-surface-container-low border border-outline-variant rounded-lg px-3 cursor-pointer hover:border-primary hover:bg-primary/5 transition-all">
+                    <input type="file" id="appleCert" accept=".p12" required class="js-file-upload sr-only" data-hint=".p12 file · max 2 MB">
+                    <span class="w-7 h-7 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[18px]">upload_file</span>
+                    </span>
+                    <span class="min-w-0 leading-tight flex-1">
+                      <span class="js-file-title block text-label-md font-bold text-on-surface truncate">Click to upload</span>
+                      <span class="js-file-hint block text-label-sm text-outline">.p12 file · max 2 MB</span>
+                    </span>
+                    <span role="button" class="js-file-clear hidden shrink-0 w-7 h-7 rounded-full text-outline hover:bg-rose-50 hover:text-rose-600 flex items-center justify-center transition-all">
+                      <span class="material-symbols-outlined text-[18px]">close</span>
+                    </span>
                   </label>
                   <p class="flex items-center gap-1.5 text-label-sm text-gray-400">
                     <span class="material-symbols-outlined text-[15px]">description</span>Pass Type ID certificate (.p12 file)
@@ -279,14 +287,18 @@
                 <!-- WWDR Certificate -->
                 <div class="space-y-1.5">
                   <label class="block text-label-md font-semibold text-on-surface">WWDR Certificate: <span class="text-error">*</span></label>
-                  <label class="flex items-center gap-3 rounded-lg border border-dashed border-outline-variant bg-white px-4 py-3 cursor-pointer hover:border-primary hover:bg-primary/[0.03] transition-all">
-                    <span class="material-symbols-outlined text-primary">upload_file</span>
-                    <div class="flex-1 min-w-0">
-                      <p class="text-label-md font-bold text-on-surface truncate">.pem file</p>
-                      <p class="text-label-sm text-outline">max 2 MB</p>
-                    </div>
-                    <span class="text-label-sm font-bold text-primary bg-primary/10 px-3 py-1.5 rounded-lg shrink-0">Browse</span>
-                    <input type="file" accept=".pem" required class="sr-only">
+                  <label class="group flex items-center gap-3 w-full h-[46px] bg-surface-container-low border border-outline-variant rounded-lg px-3 cursor-pointer hover:border-primary hover:bg-primary/5 transition-all">
+                    <input type="file" id="wwdrCert" accept=".pem" required class="js-file-upload sr-only" data-hint=".pem file · max 2 MB">
+                    <span class="w-7 h-7 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[18px]">upload_file</span>
+                    </span>
+                    <span class="min-w-0 leading-tight flex-1">
+                      <span class="js-file-title block text-label-md font-bold text-on-surface truncate">Click to upload</span>
+                      <span class="js-file-hint block text-label-sm text-outline">.pem file · max 2 MB</span>
+                    </span>
+                    <span role="button" class="js-file-clear hidden shrink-0 w-7 h-7 rounded-full text-outline hover:bg-rose-50 hover:text-rose-600 flex items-center justify-center transition-all">
+                      <span class="material-symbols-outlined text-[18px]">close</span>
+                    </span>
                   </label>
                   <p class="flex items-center gap-1.5 text-label-sm text-gray-400">
                     <span class="material-symbols-outlined text-[15px]">description</span>Apple WWDR certificate (.pem file)
@@ -307,14 +319,18 @@
                 <!-- Auth Key File -->
                 <div class="space-y-1.5">
                   <label class="block text-label-md font-semibold text-on-surface">Auth Key File: <span class="text-error">*</span></label>
-                  <label class="flex items-center gap-3 rounded-lg border border-dashed border-outline-variant bg-white px-4 py-3 cursor-pointer hover:border-primary hover:bg-primary/[0.03] transition-all">
-                    <span class="material-symbols-outlined text-primary">upload_file</span>
-                    <div class="flex-1 min-w-0">
-                      <p class="text-label-md font-bold text-on-surface truncate">.p8 file</p>
-                      <p class="text-label-sm text-outline">max 2 MB</p>
-                    </div>
-                    <span class="text-label-sm font-bold text-primary bg-primary/10 px-3 py-1.5 rounded-lg shrink-0">Browse</span>
-                    <input type="file" accept=".p8" required class="sr-only">
+                  <label class="group flex items-center gap-3 w-full h-[46px] bg-surface-container-low border border-outline-variant rounded-lg px-3 cursor-pointer hover:border-primary hover:bg-primary/5 transition-all">
+                    <input type="file" id="authKeyFile" accept=".p8" required class="js-file-upload sr-only" data-hint=".p8 file · max 2 MB">
+                    <span class="w-7 h-7 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[18px]">upload_file</span>
+                    </span>
+                    <span class="min-w-0 leading-tight flex-1">
+                      <span class="js-file-title block text-label-md font-bold text-on-surface truncate">Click to upload</span>
+                      <span class="js-file-hint block text-label-sm text-outline">.p8 file · max 2 MB</span>
+                    </span>
+                    <span role="button" class="js-file-clear hidden shrink-0 w-7 h-7 rounded-full text-outline hover:bg-rose-50 hover:text-rose-600 flex items-center justify-center transition-all">
+                      <span class="material-symbols-outlined text-[18px]">close</span>
+                    </span>
                   </label>
                   <p class="flex items-center gap-1.5 text-label-sm text-gray-400">
                     <span class="material-symbols-outlined text-[15px]">description</span>APNs auth key (.p8 file) — download once from Apple Developer
@@ -371,6 +387,71 @@
         });
         sync();
       });
+
+      // Configuration File (JSON) upload: show filename + clear
+      (function () {
+        var input = document.getElementById('configFile');
+        var title = document.getElementById('configFileTitle');
+        var hint = document.getElementById('configFileHint');
+        var clearBtn = document.getElementById('configFileClear');
+        if (!input) return;
+
+        function formatSize(bytes) {
+          if (bytes < 1024) return bytes + ' B';
+          if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+          return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+        }
+        input.addEventListener('change', function () {
+          var file = input.files && input.files[0];
+          if (!file) return;
+          title.textContent = file.name;
+          hint.textContent = formatSize(file.size);
+          clearBtn.classList.remove('hidden');
+          clearBtn.classList.add('flex');
+        });
+        clearBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          input.value = '';
+          title.textContent = 'Click to upload';
+          hint.textContent = 'JSON file · max 2 MB';
+          clearBtn.classList.add('hidden');
+          clearBtn.classList.remove('flex');
+        });
+      })();
+
+      // Generic file uploads (Apple/WWDR/Auth Key): show filename + clear, restore hint from data-hint
+      (function () {
+        function formatSize(bytes) {
+          if (bytes < 1024) return bytes + ' B';
+          if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+          return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+        }
+        document.querySelectorAll('.js-file-upload').forEach(function (input) {
+          var zone = input.closest('label');
+          if (!zone) return;
+          var title = zone.querySelector('.js-file-title');
+          var hint = zone.querySelector('.js-file-hint');
+          var clearBtn = zone.querySelector('.js-file-clear');
+          var defaultHint = input.getAttribute('data-hint') || '';
+
+          input.addEventListener('change', function () {
+            var file = input.files && input.files[0];
+            if (!file) return;
+            title.textContent = file.name;
+            hint.textContent = formatSize(file.size);
+            clearBtn.classList.remove('hidden');
+            clearBtn.classList.add('flex');
+          });
+          if (clearBtn) clearBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            input.value = '';
+            title.textContent = 'Click to upload';
+            hint.textContent = defaultHint;
+            clearBtn.classList.add('hidden');
+            clearBtn.classList.remove('flex');
+          });
+        });
+      })();
     </script>
     <?php include('footer.php'); ?>
   </main>
