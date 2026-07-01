@@ -432,6 +432,36 @@ body {
         }
       </style>
 <!-- Mobile view End-->
+   <!-- Card Preview: flip styles -->
+  <style>
+    .flip-perspective { perspective: 2000px; }
+    .flip-inner {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+    .flip-inner.is-flipped { transform: rotateY(180deg); }
+    .flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .flip-front { position: relative; }
+    .flip-back { position: absolute; inset: 0; transform: rotateY(180deg); }
+
+    .pass-scroll { scrollbar-width: thin; scrollbar-color: #cbd5e1 transparent; }
+    .pass-scroll::-webkit-scrollbar { width: 6px; }
+    .pass-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+
+    /* Platform tab switch: fade + directional slide */
+    .platform-card.slide-in-right { animation: platformInRight .35s ease both; }
+    .platform-card.slide-in-left  { animation: platformInLeft  .35s ease both; }
+
+    @keyframes platformInRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes platformInLeft {
+      from { opacity: 0; transform: translateX(-40px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+  </style>
 <script>
 // Auto-initialise any <select class="js-select2"> on the page.
 // Options via data-attributes: data-placeholder, data-allow-clear="false".

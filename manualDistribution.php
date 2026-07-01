@@ -16,7 +16,7 @@
     <!-- Top App Bar -->
      <?php include('header.php'); ?>
     <!-- Canvas -->
-    <section class="p-margin-desktop space-y-stack-lg pb-16"><!-- Breadcrumbs and Header -->
+    <section class="p-4 sm:p-6 lg:p-margin-desktop space-y-stack-lg pb-16"><!-- Breadcrumbs and Header -->
         <div class="flex items-end justify-between">
             <div class="space-y-1">
                 <nav class="flex items-center gap-2 text-label-sm text-outline mb-1">
@@ -28,13 +28,13 @@
             </div>
         </div>
         <!-- Information Banner -->
-        <div class="bg-white border border-outline-variant rounded-2xl p-6 flex flex-col gap-4">
-            <div class="flex gap-6 items-start">
+        <div class="bg-white border border-outline-variant rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-6">
                 <div
                     class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
                     <span class="material-symbols-outlined text-[28px]">info</span>
                 </div>
-                <div class="flex-1">
+                <div class="flex-1 w-full text-left">
                     <h3 class="text-headline-md font-bold text-on-surface tracking-tight">How Manual Distribution
                         Works</h3>
                     <p class="text-body-md text-gray-400 leading-relaxed">Create and distribute
@@ -43,28 +43,28 @@
                         email.
                     </p>
                     <!-- Steps -->
-                    <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3  mt-4">
+                    <div class="bg-primary/5 rounded-2xl p-2 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 sm:gap-3 mt-4">
                         <!-- Step 1 -->
                         <div
-                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 w-full sm:w-auto">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Select Template</span>
                         </div>
                         <!-- Step 2 -->
                         <div
-                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 w-full sm:w-auto">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Fill Pass Details</span>
                         </div>
                         <!-- Step 3 -->
                         <div
-                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 w-full sm:w-auto">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Add Recipients</span>
                         </div>
                         <!-- Step 4 -->
                         <div
-                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
+                            class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 w-full sm:w-auto">
                             <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Distribute</span>
                         </div>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <!-- Select Template Section -->
-        <div class="bg-white rounded-2xl border border-outline-variant p-6 shadow-sm">
+        <div class="bg-white rounded-2xl border border-outline-variant p-4 sm:p-6 shadow-sm">
             <div class="flex items-center gap-3 mb-6">
                 <div class="w-8 h-8 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
                     <span class="material-symbols-outlined text-[20px]">style</span>
@@ -108,7 +108,7 @@
                     <h4 class="text-headline-md font-bold text-on-surface whitespace-nowrap">Primary Fields</h4>
                     <div class="flex-1 border-t border-outline-variant/40"></div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-start">
                     <!-- Balance -->
                     <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">Balance:</label>
@@ -161,7 +161,7 @@
                     <h4 class="text-headline-md font-bold text-on-surface whitespace-nowrap">Additional Fields</h4>
                     <div class="flex-1 border-t border-outline-variant/40"></div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-start">
                     <!-- Pin -->
                     <div class="space-y-2">
                         <label class="text-on-surface font-semibold text-label-md">Pin:</label>
@@ -243,7 +243,7 @@
             </div>
         </div>
         <!-- Recipients Section -->
-        <div class="bg-white rounded-2xl border border-outline-variant p-6 shadow-sm">
+        <div class="bg-white rounded-2xl border border-outline-variant p-4 sm:p-6 shadow-sm">
             <div class="flex items-center justify-between mb-6">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 bg-blue-50 text-primary rounded-lg flex items-center justify-center">
@@ -262,7 +262,7 @@
             </div>
             <div id="recipients-list" class="space-y-4">
                 <div class="recipient-row flex flex-col md:flex-row md:items-end gap-6">
-                    <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         <div class="space-y-2">
                             <label class="text-on-surface font-semibold text-label-md">First Name:<span
                                     class="text-error">*</span></label>
@@ -284,7 +284,7 @@
                                 placeholder="Enter email address" type="email">
                         </div>
                     </div>
-                    <div class="shrink-0">
+                    <div class="shrink-0 flex justify-end">
                         <button type="button" id="add-recipient"
                             class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center hover:opacity-90 transition-all shadow-md shadow-primary/20">
                             <span class="material-symbols-outlined">add</span>
@@ -294,8 +294,8 @@
             </div>
             <div class="flex justify-end mt-8 pt-6 border-t border-outline-variant/30">
                 <button
-                    class="flex items-center gap-2 bg-[#198754] text-white px-8 py-3 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
-                    <span class="material-symbols-outlined">send</span>
+                    class="flex items-center gap-1.5 sm:gap-2 bg-[#198754] text-white px-4 py-2 sm:px-8 sm:py-3 rounded-lg text-[13px] sm:text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
+                    <span class="material-symbols-outlined text-[18px] sm:text-[24px]">send</span>
                     Send Passes
                 </button>
             </div>

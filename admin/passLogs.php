@@ -205,8 +205,8 @@
               <?php
               // Badge palette helpers (action + status chips)
               $actionStyles = [
-                'blue'   => 'bg-blue-50 text-blue-600',
-                'yellow' => 'bg-amber-100 text-amber-700',
+                'blue'   => 'bg-primary/5 text-primary border-primary/10',
+                'yellow' => 'bg-amber-100 text-amber-700 border-amber-100',
               ];
               $statusStyles = [
                 'amber'  => 'bg-amber-100 text-amber-700',
@@ -372,7 +372,7 @@
                 </td>
                 <!-- Action -->
                 <td class="px-6 py-4" data-label="Action">
-                  <span class="inline-flex items-center rounded-lg px-3 py-1 text-label-md font-semibold whitespace-nowrap <?= $actionStyles[$log['action_color']] ?>"><?= htmlspecialchars($log['action']) ?></span>
+                  <span class="inline-flex items-center rounded-full border px-3 py-1 text-label-md font-semibold whitespace-nowrap <?= $actionStyles[$log['action_color']] ?>"><?= htmlspecialchars($log['action']) ?></span>
                 </td>
                 <!-- Status / API -->
                 <td class="px-6 py-4" data-label="Status / API">
