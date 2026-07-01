@@ -170,15 +170,39 @@
                           <p class="text-label-md text-gray-400 mt-1">This appears at the top of every email you send.</p>
                         </div>
 
-                        <input id="logo-input" type="file" accept="image/png,image/svg+xml,image/jpeg" class="hidden">
+                        <!-- Single box: uploader + inline preview -->
+                        <label data-logo-zone for="logo-input"
+                          class="group relative flex h-44 flex-col items-center justify-center text-center gap-2.5 rounded-2xl px-4 cursor-pointer overflow-hidden border border-outline-variant bg-gradient-to-br from-surface-container-low/60 to-primary/[0.04] hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+                          <span class="relative w-12 h-12 rounded-2xl bg-white shadow-sm ring-1 ring-outline-variant/60 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-[26px]">add_photo_alternate</span>
+                          </span>
+                          <span class="relative">
+                            <span class="block text-body-md font-bold text-on-surface">Click to upload
+                              <span class="text-gray-400 font-normal">or drag &amp; drop</span></span>
+                            <span class="block text-label-sm text-outline mt-0.5">PNG, JPG &bull; up to 2MB</span>
+                          </span>
+                          <input id="logo-input" type="file" accept="image/png,image/svg+xml,image/jpeg" class="hidden">
 
-                        <div class="flex flex-wrap gap-2.5">
-                          <label for="logo-input"
-                            class="inline-flex items-center gap-2 cursor-pointer rounded-lg bg-primary px-4 py-2.5 text-label-md font-bold text-white shadow-sm shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all">
-                            <span class="material-symbols-outlined text-[18px]">upload</span>
-                            Upload Logo
-                          </label>
-                        </div>
+                          <!-- Inline preview (revealed after upload) -->
+                          <div data-logo-preview class="hidden absolute inset-0">
+                            <img data-logo-preview-img alt="Logo preview" class="w-full h-full object-contain bg-white p-3">
+                            <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/70 backdrop-blur-md border-t border-outline-variant/60 rounded-b-2xl">
+                              <span class="flex items-center gap-1.5 min-w-0">
+                                <span class="material-symbols-outlined text-primary text-[18px] shrink-0">image</span>
+                                <span data-logo-name class="text-on-surface text-label-md font-semibold truncate"></span>
+                              </span>
+                              <span class="flex items-center gap-1.5 shrink-0">
+                                <span class="inline-flex items-center gap-1 bg-white border border-outline-variant hover:bg-surface-container-low text-on-surface text-label-sm font-bold px-2.5 py-1.5 rounded-lg shadow-sm transition-all">
+                                  <span class="material-symbols-outlined text-[15px]">sync</span> Change
+                                </span>
+                                <button type="button" data-logo-remove
+                                  class="w-7 h-7 rounded-lg bg-white border border-outline-variant hover:bg-rose-50 text-error flex items-center justify-center shadow-sm transition-all">
+                                  <span class="material-symbols-outlined text-[16px]">delete</span>
+                                </button>
+                              </span>
+                            </div>
+                          </div>
+                        </label>
 
                         <!-- Spec list -->
                         <div class="rounded-xl border border-outline-variant bg-surface-container-low/50 divide-y divide-outline-variant/70 text-label-md">
@@ -214,7 +238,7 @@
                               <!-- Logo header band (editable) -->
                               <!-- <div> -->
                                 <div class="rounded-2xl border border-outline-variant bg-primary/5 px-6 py-10 flex items-center justify-center">
-                                  <img src="<?php echo $mailLogo; ?>" alt="Mail logo preview" class="max-h-16 w-auto object-contain">
+                                  <img data-logo-live src="<?php echo $mailLogo; ?>" data-default-src="<?php echo $mailLogo; ?>" alt="Mail logo preview" class="max-h-16 w-auto object-contain">
                                 </div>
                               <!-- </div> -->
                             </div>
@@ -379,6 +403,47 @@
           if (contentInput) contentInput.addEventListener('input', function () { sync(contentInput, contentPreview, false); });
           if (emailInput) emailInput.addEventListener('input', function () { sync(emailInput, emailPreview, true); });
         }
+      })();
+
+      // Mail logo: single box uploader + inline preview, also drives the live email preview
+      (function () {
+        var zone = document.querySelector('[data-logo-zone]');
+        if (!zone) return;
+        var input = zone.querySelector('#logo-input');
+        var wrap = zone.querySelector('[data-logo-preview]');
+        var img = zone.querySelector('[data-logo-preview-img]');
+        var nameEl = zone.querySelector('[data-logo-name]');
+        var removeBtn = zone.querySelector('[data-logo-remove]');
+        var live = document.querySelector('[data-logo-live]');
+
+        function showLogo(file) {
+          var url = URL.createObjectURL(file);
+          img.src = url;
+          if (nameEl) nameEl.textContent = file.name;
+          if (live) live.src = url;
+          wrap.classList.remove('hidden');
+        }
+        function clearLogo() {
+          input.value = '';
+          wrap.classList.add('hidden');
+          if (live && live.getAttribute('data-default-src')) live.src = live.getAttribute('data-default-src');
+        }
+
+        input.addEventListener('change', function () {
+          if (input.files && input.files[0]) showLogo(input.files[0]);
+        });
+        if (removeBtn) removeBtn.addEventListener('click', function (e) { e.preventDefault(); clearLogo(); });
+
+        ['dragenter', 'dragover'].forEach(function (evt) {
+          zone.addEventListener(evt, function (e) { e.preventDefault(); zone.classList.add('border-primary', 'bg-primary/5'); });
+        });
+        ['dragleave', 'drop'].forEach(function (evt) {
+          zone.addEventListener(evt, function (e) { e.preventDefault(); zone.classList.remove('border-primary', 'bg-primary/5'); });
+        });
+        zone.addEventListener('drop', function (e) {
+          var files = e.dataTransfer && e.dataTransfer.files;
+          if (files && files[0]) { input.files = files; showLogo(files[0]); }
+        });
       })();
     </script>
     <?php include('footer.php'); ?>
