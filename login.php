@@ -6,6 +6,11 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>WePass - Sign in</title>
   <?php include('head.php'); ?>
+  <style>
+    .pass-card {
+      filter: grayscale(0.5) drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
+    }
+  </style>
 </head>
 
 <body class="bg-background text-on-surface selection:bg-primary-container/20 selection:text-primary">
@@ -29,39 +34,20 @@
       <!-- Center content -->
       <div class="relative my-8">
         <!-- Fanned wallet cards -->
-        <div class="relative h-80 mb-16">
+        <div class="relative h-80 mb-16 ml-10 xl:ml-20">
           <?php
             $cards = [
-              ['bg' => 'bg-gradient-to-br from-rose-500 to-rose-700',     'rot' => '-rotate-[14deg]', 'x' => 'left-0',    'y' => 'top-6',  'z' => 'z-10'],
-              ['bg' => 'bg-gradient-to-br from-amber-600 to-amber-800',   'rot' => '-rotate-[8deg]',  'x' => 'left-24',   'y' => 'top-3',  'z' => 'z-20'],
-              ['bg' => 'bg-gradient-to-br from-indigo-600 to-indigo-800', 'rot' => '-rotate-[2deg]',  'x' => 'left-48',   'y' => 'top-1',  'z' => 'z-30'],
-              ['bg' => 'bg-gradient-to-br from-sky-500 to-cyan-600',      'rot' => 'rotate-[5deg]',   'x' => 'left-72',   'y' => 'top-0',  'z' => 'z-40', 'front' => true],
+              ['img' => 'https://drojrh3mlpzqs.cloudfront.net/69067192-2b41-495d-96c7-4fd3c07d3858/images/apple/6.png', 'rot' => '-rotate-[14deg]', 'x' => 'left-0',  'y' => 'top-7', 'z' => 'z-10'],
+              ['img' => 'https://drojrh3mlpzqs.cloudfront.net/69067192-2b41-495d-96c7-4fd3c07d3858/images/apple/4.png', 'rot' => '-rotate-[8deg]',  'x' => 'left-24', 'y' => 'top-3', 'z' => 'z-20'],
+              ['img' => 'https://drojrh3mlpzqs.cloudfront.net/69067192-2b41-495d-96c7-4fd3c07d3858/images/apple/2.png', 'rot' => '-rotate-[2deg]',  'x' => 'left-48', 'y' => 'top-3', 'z' => 'z-30'],
+              ['img' => 'https://drojrh3mlpzqs.cloudfront.net/69067192-2b41-495d-96c7-4fd3c07d3858/images/apple/1.png', 'rot' => 'rotate-[8deg]',   'x' => 'left-72', 'y' => 'top-7', 'z' => 'z-40'],
             ];
             foreach ($cards as $i => $card):
           ?>
-          <div class="absolute <?= $card['x'] ?> <?= $card['y'] ?> w-48 h-72 rounded-[1.4rem] <?= $card['bg'] ?> <?= $card['rot'] ?> <?= $card['z'] ?>
-            shadow-2xl shadow-black/25 ring-1 ring-white/15 p-4 flex flex-col text-white origin-bottom cursor-pointer
-            transition-transform duration-300 ease-out hover:-translate-y-5 hover:scale-[1.04] hover:rotate-0 hover:z-50">
-            <!-- Card header -->
-            <div class="flex items-center gap-2">
-              <span class="w-7 h-7 rounded-lg bg-white/15 flex items-center justify-center">
-                <span class="material-symbols-outlined text-[16px]">confirmation_number</span>
-              </span>
-              <span class="text-[13px] font-extrabold tracking-wide">WePASS</span>
-            </div>
-            <?php if (!empty($card['front'])): ?>
-            <!-- Front card: QR -->
-            <div class="mt-auto self-end">
-              <div class="w-24 h-24 rounded-xl bg-white p-2 shadow-lg">
-                <img alt="QR" class="w-full h-full"
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&margin=0&data=wepass-pass-<?= $i ?>">
-              </div>
-            </div>
-            <?php else: ?>
-            <!-- Back cards: subtle sheen -->
-            <span class="mt-auto block h-1 w-10 rounded-full bg-white/30"></span>
-            <?php endif; ?>
-          </div>
+          <img src="<?= htmlspecialchars($card['img']) ?>" alt="WePass pass card"
+            class="pass-card absolute <?= $card['x'] ?> <?= $card['y'] ?> w-48 h-auto rounded-[0.8rem] <?= $card['rot'] ?> <?= $card['z'] ?>
+            origin-bottom cursor-pointer object-contain opacity-90
+            transition-all duration-300 ease-out hover:-translate-y-5 hover:scale-[1.04] hover:rotate-0 hover:z-50 hover:opacity-100">
           <?php endforeach; ?>
         </div>
 
@@ -75,21 +61,30 @@
         </p>
       </div>
 
-      <!-- Footer chips -->
-      <div class="relative flex items-center gap-3">
-        <span class="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined">favorite</span></span>
-        <span class="w-11 h-11 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center"><span class="material-symbols-outlined">confirmation_number</span></span>
-        <span class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center"><span class="material-symbols-outlined">sell</span></span>
-        <span class="w-11 h-11 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center"><span class="material-symbols-outlined">qr_code_2</span></span>
-        <div class="flex items-center gap-2 ml-2">
-          <span class="inline-flex items-center gap-1.5 bg-on-surface text-white text-label-md font-bold px-4 py-2 rounded-full">
-            <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></svg>
-            Apple
-          </span>
-          <span class="inline-flex items-center gap-1.5 bg-on-surface text-white text-label-md font-bold px-4 py-2 rounded-full">
-            <span class="material-symbols-outlined text-[16px]">play_arrow</span> Google
-          </span>
-        </div>
+      <!-- Footer chips (pass types) -->
+      <?php
+        $passTypes = [
+          ['label' => 'Gift Card',       'icon' => 'card_giftcard',       'c' => 'bg-rose-100 text-rose-600'],
+          ['label' => 'Boarding Pass',   'icon' => 'flight',              'c' => 'bg-sky-100 text-sky-600'],
+          ['label' => 'Coupon',          'icon' => 'local_offer',         'c' => 'bg-amber-100 text-amber-600'],
+          ['label' => 'Event Ticket',    'icon' => 'confirmation_number', 'c' => 'bg-indigo-100 text-indigo-600'],
+          ['label' => 'Loyalty Card',    'icon' => 'favorite',            'c' => 'bg-pink-100 text-pink-600'],
+          ['label' => 'Generic Pass',    'icon' => 'badge',               'c' => 'bg-primary/10 text-primary'],
+          ['label' => 'Membership Card', 'icon' => 'groups',              'c' => 'bg-teal-100 text-teal-600'],
+          ['label' => 'Insurance Pass',  'icon' => 'shield',              'c' => 'bg-emerald-100 text-emerald-600'],
+          ['label' => 'Business Card',   'icon' => 'business_center',     'c' => 'bg-slate-200 text-slate-600'],
+          ['label' => 'Warranty Pass',   'icon' => 'workspace_premium',   'c' => 'bg-violet-100 text-violet-600'],
+          ['label' => 'Loyalty Tier',    'icon' => 'emoji_events',        'c' => 'bg-orange-100 text-orange-600'],
+        ];
+      ?>
+      <div class="relative flex flex-wrap items-center gap-2.5">
+        <?php foreach ($passTypes as $p): ?>
+        <span title="<?= htmlspecialchars($p['label']) ?>"
+          class="group relative w-11 h-11 rounded-xl <?= $p['c'] ?> flex items-center justify-center cursor-default transition-transform hover:-translate-y-1">
+          <span class="material-symbols-outlined text-[22px]"><?= $p['icon'] ?></span>
+          <span class="pointer-events-none absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-on-surface text-white text-label-sm font-semibold px-2.5 py-1 opacity-0 group-hover:opacity-100 transition-opacity"><?= htmlspecialchars($p['label']) ?></span>
+        </span>
+        <?php endforeach; ?>
       </div>
     </section>
 
