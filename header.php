@@ -13,13 +13,13 @@
         placeholder="Search pass templates..." type="text">
     </div>
     </div>
-    <div class="flex items-center gap-4 translate-x-[5px] translate-x-2">
+    <div class="flex items-center gap-4">
     <div class="relative group">
         <button type="button"
             class="material-symbols-outlined text-on-surface-variant group-hover:bg-surface-container group-hover:text-primary rounded-lg p-2 transition-all">help</button>
         <!-- Support Popover -->
         <div
-            class="absolute right-0 mt-3 w-80 origin-top-right rounded-2xl border border-outline-variant/60 bg-white shadow-2xl shadow-black/10 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50 overflow-hidden">
+            class="fixed sm:absolute top-[72px] sm:top-auto left-4 right-4 sm:left-auto sm:right-0 mt-0 sm:mt-3 w-auto sm:w-80 max-w-sm mx-auto sm:mx-0 origin-top-right rounded-2xl border border-outline-variant/60 bg-white shadow-2xl shadow-black/10 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50 overflow-hidden">
             <!-- Header -->
             <div class="relative px-6 pt-7 pb-5 text-center bg-white">
                 <div class="mx-auto w-16 h-16 rounded-full bg-primary/10 ring-8 ring-primary/[0.04] flex items-center justify-center text-primary">

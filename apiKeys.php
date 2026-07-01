@@ -52,8 +52,8 @@
       ?>
 
       <!-- About the WePass API -->
-      <div class="bg-white border border-outline-variant rounded-2xl p-6 flex flex-col gap-5">
-        <div class="flex gap-5 items-start">
+      <div class="bg-white border border-outline-variant rounded-2xl p-4 sm:p-6 flex flex-col gap-5">
+        <div class="flex gap-4 sm:gap-5 items-start">
         <div
             class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
             <span class="material-symbols-outlined text-[28px]">info</span>
@@ -91,7 +91,7 @@
       <!-- Access Keys -->
       <div class="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
         <!-- Card header -->
-        <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/70">
+        <div class="flex flex-wrap items-center gap-3 px-4 sm:px-6 py-5 border-b border-outline-variant/70">
           <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
             <span class="material-symbols-outlined text-[22px]">key</span>
           </span>
@@ -115,7 +115,7 @@
           </div> -->
           <!-- <span class="hidden md:block w-px h-8 bg-outline-variant/70 shrink-0"></span> -->
           <button type="button"
-            class="inline-flex items-center gap-2 bg-brand-gradient text-white px-4 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all shrink-0">
+            class="inline-flex items-center justify-center gap-2 bg-brand-gradient text-white px-4 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all shrink-0 w-full sm:w-auto">
             <span class="material-symbols-outlined text-[20px]">add_circle</span>
             Create New Key
           </button>
@@ -123,7 +123,7 @@
 
         <!-- Keys table -->
         <div class="overflow-x-auto [&:has(.js-menu-panel:not(.hidden))]:overflow-visible">
-          <table class="w-full text-left border-collapse min-w-[1000px]">
+          <table class="responsive-table w-full text-left border-collapse">
             <thead>
               <tr class="text-label-sm font-bold uppercase tracking-wider text-outline bg-surface-container-low/40">
                 <th class="px-6 py-4 text-label-sm text-outline uppercase tracking-widest border-b border-outline-variant">Name</th>
@@ -138,11 +138,11 @@
               <?php foreach ($apiKeys as $key): ?>
               <tr class="group hover:bg-surface-container-low transition-colors">
                 <!-- Name -->
-                <td class="px-6 py-4">
+                <td class="cell-main px-6 py-4">
                   <span class="text-body-md text-on-surface-variant"><?php echo htmlspecialchars($key['name']); ?></span>
                 </td>
                 <!-- Key Secret -->
-                <td class="px-6 py-4">
+                <td class="cell-stack px-6 py-4" data-label="Key Secret">
                   <div class="flex items-center gap-2">
                     <code class="font-mono text-body-md text-primary/90 font-semibold">
                       <?php echo htmlspecialchars($key['prefix']); ?><?php echo htmlspecialchars($key['suffix']); ?>
@@ -155,15 +155,15 @@
                   </div>
                 </td>
                 <!-- Created -->
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">
+                <td class="px-6 py-4 text-label-md text-on-surface-variant" data-label="Created">
                   <?php echo htmlspecialchars($key['created']); ?>
                 </td>
                 <!-- Last Used -->
-                <td class="px-6 py-4 text-label-md text-on-surface-variant">
+                <td class="px-6 py-4 text-label-md text-on-surface-variant" data-label="Last Used">
                   <?php echo htmlspecialchars($key['lastUsed']); ?>
                 </td>
                 <!-- Status -->
-                <td class="px-6 py-4">
+                <td class="px-6 py-4" data-label="Status">
                   <label class="inline-flex items-center gap-2.5 cursor-pointer select-none">
                     <input type="checkbox" class="peer sr-only" <?php echo $key['active'] ? 'checked' : ''; ?>>
                     <span class="relative shrink-0 w-9 h-5 rounded-full bg-rose-500 peer-checked:bg-emerald-500 transition-colors
@@ -173,7 +173,7 @@
                   </label>
                 </td>
                 <!-- Actions -->
-                <td class="px-6 py-4 text-right">
+                <td class="cell-action px-6 py-4 text-right">
                     <div class="relative inline-block js-menu">
                         <button type="button" class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
                             more_vert
@@ -197,7 +197,7 @@
         </div>
         
         <!-- Card footer -->
-        <div class="flex items-center justify-end px-6 py-3.5 border-t border-outline-variant/70 bg-surface-container-low/40">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-end gap-2 px-4 sm:px-6 py-3.5 border-t border-outline-variant/70 bg-surface-container-low/40">
           <p class="flex items-center gap-2 text-label-md text-gray-400 flex-1">
             <span class="material-symbols-outlined text-[18px] text-primary">shield</span>
             Keep your keys secret and never expose them in client-side code.

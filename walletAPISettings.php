@@ -35,7 +35,7 @@
         <!-- ============ GOOGLE WALLET ============ -->
         <form class="js-wallet bg-white rounded-2xl border border-outline-variant shadow-sm flex flex-col">
           <!-- Card header -->
-          <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/70">
+          <div class="flex items-center gap-3 px-4 sm:px-6 py-5 border-b border-outline-variant/70">
             <span class="w-11 h-11 rounded-xl bg-surface-container-low border border-outline-variant/70 flex items-center justify-center shrink-0">
                 <svg viewBox="0 0 24 24" class="w-6 h-6">
                     <rect x="2.5"   y="2"   width="19" height="20"   rx="2.5" fill="#34A853"/>
@@ -55,7 +55,7 @@
           </div>
 
           <!-- Options -->
-          <div class="p-6 space-y-4 flex-1">
+          <div class="p-4 sm:p-6 space-y-4 flex-1">
             <!-- <p class="text-label-sm font-bold uppercase tracking-wider text-outline">Configuration mode</p> -->
             <!-- Default -->
             <label class="js-option relative block cursor-pointer rounded-xl border-2 border-outline-variant p-5 pr-12 transition-all duration-200 hover:border-primary/50 hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary/[0.04] has-[:checked]:shadow-sm">
@@ -93,7 +93,7 @@
             </label>
 
             <!-- Custom fields (revealed when Custom is selected) -->
-            <div class="js-custom-panel hidden rounded-xl border border-outline-variant hover:border-primary/50 p-5 space-y-5">
+            <div class="js-custom-panel hidden rounded-xl border border-outline-variant hover:border-primary/50 p-4 sm:p-5 space-y-5">
               <!-- Issuer ID -->
               <div class="space-y-1.5">
                 <label class="block text-label-md font-semibold text-on-surface">Issuer ID:<span class="text-error">*</span></label>
@@ -149,13 +149,13 @@
           </div>
 
           <!-- Footer / Submit -->
-          <div class="flex items-center gap-3 px-6 py-4 border-t border-outline-variant/70 bg-surface-container-low/40">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-3 px-4 sm:px-6 py-4 border-t border-outline-variant/70 bg-surface-container-low/40">
             <p class="flex items-center gap-1.5 text-label-md text-gray-400 flex-1 min-w-0">
               <span class="material-symbols-outlined text-[18px] text-primary shrink-0">lock</span>
               Credentials are encrypted at rest
             </p>
             <button type="submit"
-              class="flex items-center gap-2 bg-[#198754] text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
+              class="flex items-center justify-center gap-2 bg-[#198754] text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all w-full sm:w-auto">
               <span class="material-symbols-outlined text-[19px]">save</span>
               Save Configuration
             </button>
@@ -165,7 +165,7 @@
         <!-- ============ APPLE WALLET ============ -->
         <form class="js-wallet bg-white rounded-2xl border border-outline-variant shadow-sm flex flex-col">
           <!-- Card header -->
-          <div class="flex items-center gap-3 px-6 py-5 border-b border-outline-variant/70">
+          <div class="flex items-center gap-3 px-4 sm:px-6 py-5 border-b border-outline-variant/70">
             <span class="w-11 h-11 rounded-xl bg-surface-container-low border border-outline-variant/70 flex items-center justify-center text-on-surface shrink-0">
               <svg viewBox="0 0 384 512" class="w-5 h-5 fill-current">
                 <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
@@ -182,7 +182,7 @@
           </div>
 
           <!-- Options -->
-          <div class="p-6 space-y-4 flex-1">
+          <div class="p-4 sm:p-6 space-y-4 flex-1">
             <!-- <p class="text-label-sm font-bold uppercase tracking-wider text-outline">Configuration mode</p> -->
             <!-- Default -->
             <label class="js-option relative block cursor-pointer rounded-xl border-2 border-outline-variant p-5 pr-12 transition-all duration-200 hover:border-primary/50 hover:shadow-sm has-[:checked]:border-primary has-[:checked]:bg-primary/[0.04] has-[:checked]:shadow-sm">
@@ -220,7 +220,7 @@
             </label>
 
             <!-- Custom fields (revealed when Custom is selected) -->
-            <div class="js-custom-panel hidden rounded-xl border border-outline-variant hover:border-primary/50 p-5 space-y-5">
+            <div class="js-custom-panel hidden rounded-xl border border-outline-variant hover:border-primary/50 p-4 sm:p-5 space-y-5">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <!-- Organization Name -->
                 <div class="space-y-1.5">
@@ -341,13 +341,13 @@
           </div>
 
           <!-- Footer / Submit -->
-          <div class="flex items-center gap-3 px-6 py-4 border-t border-outline-variant/70 bg-surface-container-low/40">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-3 px-4 sm:px-6 py-4 border-t border-outline-variant/70 bg-surface-container-low/40">
             <p class="flex items-center gap-1.5 text-label-md text-gray-400 flex-1 min-w-0">
               <span class="material-symbols-outlined text-[18px] text-primary shrink-0">lock</span>
               Credentials are encrypted at rest
             </p>
             <button type="submit"
-              class="flex items-center gap-2 bg-[#198754] text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all">
+              class="flex items-center justify-center gap-2 bg-[#198754] text-white px-7 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all w-full sm:w-auto">
               <span class="material-symbols-outlined text-[19px]">save</span>
               Save Configuration
             </button>
