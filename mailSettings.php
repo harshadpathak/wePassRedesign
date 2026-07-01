@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
  
 <head>
   <meta charset="utf-8">
@@ -312,7 +312,7 @@
 
           <!-- Panel actions -->
           <div class="flex items-center justify-center gap-3 px-6 lg:px-8 pb-7 pt-6 border-t border-outline-variant/70 mx-6 lg:mx-8">
-            <button type="button"
+            <button type="button" data-modal-target="#modal-test-connection"
               class="flex items-center gap-2 bg-white border border-outline-variant text-on-surface px-6 py-3 rounded-lg text-[14px] font-bold hover:bg-surface-container-low transition-all shadow-sm">
               <span class="material-symbols-outlined text-[18px]">cable</span>
               Test Connection
@@ -326,6 +326,73 @@
         </div>
       </form>
     </section>
+
+    <!-- ===== Test Email Connection Modal (Form Modal structure from components.php) ===== -->
+    <div id="modal-test-connection" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-2xl bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <div class="flex items-center justify-between gap-3 px-6 py-5 border-b border-outline-variant/60">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
+              <span class="material-symbols-outlined text-[22px]">forward_to_inbox</span>
+            </div>
+            <div>
+              <h3 class="text-headline-md font-bold text-on-surface">Test Email Connection</h3>
+              <p class="text-body-md text-gray-400">Send a test email to verify your configuration.</p>
+            </div>
+          </div>
+          <button type="button" class="js-modal-close w-9 h-9 rounded-lg text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+        <div class="p-6 space-y-5">
+          <!-- Info note -->
+          <div class="flex items-start gap-3 bg-primary/[0.04] border border-primary/15 rounded-xl p-4">
+            <span class="material-symbols-outlined text-[20px] mt-0.5 text-primary shrink-0">info</span>
+            <p class="text-body-md text-gray-500 leading-relaxed">A test email will be sent using the current SMTP configuration.</p>
+          </div>
+          <!-- Recipient Email -->
+          <div class="space-y-2">
+            <label class="text-on-surface font-bold text-label-md">Recipient Email Address: <span class="text-error">*</span></label>
+            <input type="email" value="savanihd@gmail.com" placeholder="name@example.com" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+            <p class="text-label-md text-gray-400">Enter the email address where you want to receive the test email.</p>
+          </div>
+        </div>
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
+            <span class="material-symbols-outlined text-[18px]">close</span> Cancel
+          </button>
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-[#198754] text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-[18px]">send</span> Send Test Email
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Test Connection modal open/close -->
+    <script>
+      (function () {
+        function openModal(sel) {
+          var m = document.querySelector(sel);
+          if (!m) return;
+          m.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeModal(m) {
+          m.classList.add('hidden');
+          if (!document.querySelector('.js-modal:not(.hidden)')) document.body.style.overflow = '';
+        }
+        document.querySelectorAll('[data-modal-target]').forEach(function (el) {
+          el.addEventListener('click', function (e) { e.preventDefault(); openModal(el.getAttribute('data-modal-target')); });
+        });
+        document.querySelectorAll('.js-modal .js-modal-close').forEach(function (el) {
+          el.addEventListener('click', function () { closeModal(el.closest('.js-modal')); });
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { document.querySelectorAll('.js-modal:not(.hidden)').forEach(closeModal); }
+        });
+      })();
+    </script>
 
     <!-- Mail Settings interactions -->
     <script>

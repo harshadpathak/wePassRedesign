@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -24,17 +24,6 @@
         'email'   => 'wepassdemo@wepass.com',
         'company' => 'Wepass Demo',
         'type'    => 'Company',
-      ];
-      $usage = [
-        ['label' => 'Templates',     'icon' => 'view_quilt',   'icbg' => 'bg-blue-50',    'ic' => 'text-blue-600',    'bar' => 'bg-blue-500',    'used' => 64,  'total' => 300],
-        ['label' => 'Passes',        'icon' => 'wallet',       'icbg' => 'bg-emerald-50',  'ic' => 'text-emerald-600', 'bar' => 'bg-emerald-500', 'used' => 113, 'total' => 300],
-        ['label' => 'Notifications', 'icon' => 'notifications','icbg' => 'bg-amber-50',   'ic' => 'text-amber-600',   'bar' => 'bg-amber-500',   'used' => 73,  'total' => 300],
-      ];
-      $plan = [
-        ['label' => 'Max Templates',          'value' => '300 templates'],
-        ['label' => 'Max Passes',             'value' => '300 passes'],
-        ['label' => 'Max Push Notifications', 'value' => '300 notifications'],
-        ['label' => 'Plan Validity',          'value' => '300 days'],
       ];
     ?>
     <section class="p-margin-desktop space-y-stack-lg pb-16">
@@ -89,7 +78,7 @@
                 <span class="absolute -bottom-10 -left-6 w-24 h-24 rounded-full bg-white/10"></span>
                 <div class="relative">
                   <span class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white text-label-sm font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">
-                    <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span> Active Plan
+                    <span class="material-symbols-outlined text-[16px] font-variation-fill">star</span> Active Plan
                   </span>
                   <h4 class="text-display-md font-bold mt-4 leading-none"><?= htmlspecialchars($account['plan']) ?></h4>
                   <span class="inline-block mt-3 bg-white/20 backdrop-blur-sm text-white text-label-md font-semibold px-3 py-1 rounded-full"><?= htmlspecialchars($account['tier']) ?></span>
@@ -149,25 +138,53 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <?php foreach ($usage as $u):
-                    $pct = $u['total'] > 0 ? round($u['used'] / $u['total'] * 100) : 0;
-                    $left = $u['total'] - $u['used'];
-                  ?>
+                  <!-- Templates -->
                   <div class="border border-outline-variant rounded-2xl p-5 hover:border-primary/40 hover:shadow-sm transition-all">
                     <div class="flex items-center justify-between">
-                      <span class="w-11 h-11 rounded-xl <?= $u['icbg'] ?> <?= $u['ic'] ?> flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined text-[22px]"><?= $u['icon'] ?></span>
+                      <span class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[22px]">view_quilt</span>
                       </span>
-                      <span class="text-label-sm font-bold <?= $u['ic'] ?> <?= $u['icbg'] ?> px-2 py-0.5 rounded-full"><?= $pct ?>%</span>
+                      <span class="text-label-sm font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">21%</span>
                     </div>
-                    <p class="text-label-sm font-bold uppercase tracking-wider text-outline mt-4"><?= htmlspecialchars($u['label']) ?></p>
-                    <p class="text-on-surface font-bold mt-0.5"><span class="text-headline-lg"><?= (int) $u['used'] ?></span> <span class="text-label-md text-outline">/ <?= (int) $u['total'] ?></span></p>
+                    <p class="text-label-sm font-bold uppercase tracking-wider text-outline mt-4">Templates</p>
+                    <p class="text-on-surface font-bold mt-0.5"><span class="text-headline-lg">64</span> <span class="text-label-md text-outline">/ 300</span></p>
                     <div class="mt-3 h-2 rounded-full bg-surface-container-high overflow-hidden">
-                      <div class="h-full rounded-full <?= $u['bar'] ?> transition-all" style="width: <?= $pct ?>%"></div>
+                      <div class="h-full rounded-full bg-blue-500 transition-all w-[21%]"></div>
                     </div>
-                    <p class="text-label-sm text-outline mt-2"><span class="font-semibold text-secondary"><?= $left ?></span> remaining</p>
+                    <p class="text-label-sm text-outline mt-2"><span class="font-semibold text-secondary">236</span> remaining</p>
                   </div>
-                  <?php endforeach; ?>
+
+                  <!-- Passes -->
+                  <div class="border border-outline-variant rounded-2xl p-5 hover:border-primary/40 hover:shadow-sm transition-all">
+                    <div class="flex items-center justify-between">
+                      <span class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[22px]">wallet</span>
+                      </span>
+                      <span class="text-label-sm font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">38%</span>
+                    </div>
+                    <p class="text-label-sm font-bold uppercase tracking-wider text-outline mt-4">Passes</p>
+                    <p class="text-on-surface font-bold mt-0.5"><span class="text-headline-lg">113</span> <span class="text-label-md text-outline">/ 300</span></p>
+                    <div class="mt-3 h-2 rounded-full bg-surface-container-high overflow-hidden">
+                      <div class="h-full rounded-full bg-emerald-500 transition-all w-[38%]"></div>
+                    </div>
+                    <p class="text-label-sm text-outline mt-2"><span class="font-semibold text-secondary">187</span> remaining</p>
+                  </div>
+
+                  <!-- Notifications -->
+                  <div class="border border-outline-variant rounded-2xl p-5 hover:border-primary/40 hover:shadow-sm transition-all">
+                    <div class="flex items-center justify-between">
+                      <span class="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[22px]">notifications</span>
+                      </span>
+                      <span class="text-label-sm font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full">24%</span>
+                    </div>
+                    <p class="text-label-sm font-bold uppercase tracking-wider text-outline mt-4">Notifications</p>
+                    <p class="text-on-surface font-bold mt-0.5"><span class="text-headline-lg">73</span> <span class="text-label-md text-outline">/ 300</span></p>
+                    <div class="mt-3 h-2 rounded-full bg-surface-container-high overflow-hidden">
+                      <div class="h-full rounded-full bg-amber-500 transition-all w-[24%]" ></div>
+                    </div>
+                    <p class="text-label-sm text-outline mt-2"><span class="font-semibold text-secondary">227</span> remaining</p>
+                  </div>
 
                   <!-- API Requests -->
                   <div class="sm:col-span-3 border border-outline-variant rounded-2xl p-5 flex items-center gap-4 hover:border-primary/40 hover:shadow-sm transition-all">
@@ -193,17 +210,49 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <?php foreach ($plan as $p): ?>
+                  <!-- Max Templates -->
                   <div class="flex items-center gap-3 bg-emerald-50/40 border border-emerald-100 rounded-2xl p-4 hover:bg-emerald-50 transition-colors">
                     <span class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0 shadow-sm shadow-emerald-500/30">
                       <span class="material-symbols-outlined text-[18px]">check</span>
                     </span>
                     <div>
-                      <p class="text-label-sm font-semibold uppercase tracking-wider text-emerald-700/70"><?= htmlspecialchars($p['label']) ?></p>
-                      <p class="text-body-md font-bold text-on-surface"><?= htmlspecialchars($p['value']) ?></p>
+                      <p class="text-label-sm font-semibold uppercase tracking-wider text-emerald-700/70">Max Templates</p>
+                      <p class="text-body-md font-bold text-on-surface">300 templates</p>
                     </div>
                   </div>
-                  <?php endforeach; ?>
+
+                  <!-- Max Passes -->
+                  <div class="flex items-center gap-3 bg-emerald-50/40 border border-emerald-100 rounded-2xl p-4 hover:bg-emerald-50 transition-colors">
+                    <span class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0 shadow-sm shadow-emerald-500/30">
+                      <span class="material-symbols-outlined text-[18px]">check</span>
+                    </span>
+                    <div>
+                      <p class="text-label-sm font-semibold uppercase tracking-wider text-emerald-700/70">Max Passes</p>
+                      <p class="text-body-md font-bold text-on-surface">300 passes</p>
+                    </div>
+                  </div>
+
+                  <!-- Max Push Notifications -->
+                  <div class="flex items-center gap-3 bg-emerald-50/40 border border-emerald-100 rounded-2xl p-4 hover:bg-emerald-50 transition-colors">
+                    <span class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0 shadow-sm shadow-emerald-500/30">
+                      <span class="material-symbols-outlined text-[18px]">check</span>
+                    </span>
+                    <div>
+                      <p class="text-label-sm font-semibold uppercase tracking-wider text-emerald-700/70">Max Push Notifications</p>
+                      <p class="text-body-md font-bold text-on-surface">300 notifications</p>
+                    </div>
+                  </div>
+
+                  <!-- Plan Validity -->
+                  <div class="flex items-center gap-3 bg-emerald-50/40 border border-emerald-100 rounded-2xl p-4 hover:bg-emerald-50 transition-colors">
+                    <span class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0 shadow-sm shadow-emerald-500/30">
+                      <span class="material-symbols-outlined text-[18px]">check</span>
+                    </span>
+                    <div>
+                      <p class="text-label-sm font-semibold uppercase tracking-wider text-emerald-700/70">Plan Validity</p>
+                      <p class="text-body-md font-bold text-on-surface">300 days</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

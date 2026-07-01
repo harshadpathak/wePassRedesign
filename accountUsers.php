@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
  
 <head>
   <meta charset="utf-8">
@@ -42,7 +42,7 @@
           <div
               class="flex items-center gap-2.5 bg-white rounded-2xl pl-1 pr-4 py-1 shadow-sm border border-outline-variant/40">
               <div class="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">manage_accounts</span>
+                  <span class="material-symbols-outlined text-[20px] font-variation-fill">manage_accounts</span>
               </div>
               <span class="text-body-md font-bold text-on-surface">Manager</span>
           </div>
@@ -50,7 +50,7 @@
           <div
               class="flex items-center gap-2.5 bg-white rounded-2xl pl-1 pr-4 py-1 shadow-sm border border-outline-variant/40">
               <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+                  <span class="material-symbols-outlined text-[20px] font-variation-fill">visibility</span>
               </div>
               <span class="text-body-md font-bold text-on-surface">Read Only</span>
           </div>
@@ -77,7 +77,7 @@
                 <td class="px-6 py-4">
                   <div class="flex items-center gap-4">
                     <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                      <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">manage_accounts</span>
+                      <span class="material-symbols-outlined font-variation-fill">manage_accounts</span>
                     </div>
                     <div class="min-w-0">
                       <p class="text-body-md font-medium text-on-surface truncate">JENIL VORA</p>
@@ -137,7 +137,7 @@
                 <td class="px-6 py-4">
                   <div class="flex items-center gap-4">
                     <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                      <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">visibility</span>
+                      <span class="material-symbols-outlined font-variation-fill">visibility</span>
                     </div>
                     <div class="min-w-0">
                       <p class="text-body-md font-medium text-on-surface truncate">RAVI PATEL</p>

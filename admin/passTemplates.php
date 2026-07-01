@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -41,7 +41,7 @@
         <div
           class="bg-surface-container-lowest p-4 rounded-xl border border-primary/40 shadow-sm flex items-center gap-4 cursor-pointer relative overflow-hidden group">
           <div class="bg-brand-gradient text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
-            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">apps</span>
+            <span class="material-symbols-outlined font-variation-fill">apps</span>
           </div>
           <div class="relative z-10">
             <p class="text-label-sm text-gray-400 font-medium">All Templates</p>
@@ -51,7 +51,7 @@
         <div
           class="bg-white p-4 rounded-xl border border-outline-variant  transition-colors flex items-center gap-4 cursor-pointer">
           <div class="bg-blue-50 text-blue-600 p-2.5 rounded-lg flex items-center justify-center">
-            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">person</span>
+            <span class="material-symbols-outlined font-variation-fill">person</span>
           </div>
           <div>
             <p class="text-label-sm text-gray-400 font-medium">Personalized Unique</p>
@@ -61,7 +61,7 @@
         <div
           class="bg-white p-4 rounded-xl border border-outline-variant transition-colors flex items-center gap-4 cursor-pointer">
           <div class="bg-tertiary-container/40 text-tertiary p-2.5 rounded-lg flex items-center justify-center">
-            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">campaign</span>
+            <span class="material-symbols-outlined font-variation-fill">campaign</span>
           </div>
           <div>
             <p class="text-label-sm text-gray-400 font-medium">Generic Advertising</p>
@@ -181,7 +181,7 @@
                   <div class="flex items-center gap-3.5">
                     <div class="relative shrink-0">
                       <span class="flex h-10 w-10 items-center justify-center rounded-xl <?= $iconBg ?>">
-                        <span class="material-symbols-outlined text-[20px]" style="font-variation-settings:'FILL' 1;"><?= $iconName ?></span>
+                        <span class="material-symbols-outlined font-variation-fill"><?= $iconName ?></span>
                       </span>
                       <span class="absolute -top-0.5 -right-0.5 h-3 w-3 rounded-full bg-emerald-500 ring-2 ring-white"></span>
                     </div>
@@ -225,7 +225,7 @@
                     </button>
                     <?php endif; ?>
                     <a href="viewPassTemplate.php" class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-gradient text-white shadow-sm hover:opacity-90 active:scale-[0.98] transition" title="View">
-                      <span class="material-symbols-outlined text-[18px]" style="font-variation-settings:'FILL' 1;">visibility</span>
+                      <span class="material-symbols-outlined text-[18px] font-variation-fill">visibility</span>
                     </a>
                   </div>
                 </td>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -83,7 +83,7 @@
               <span class="pointer-events-none absolute -bottom-8 -left-8 h-28 w-28 rounded-full bg-white/10"></span>
               <div class="relative">
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-label-sm font-bold uppercase tracking-wider text-white backdrop-blur-sm">
-                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[16px] font-variation-fill">star</span>
                   Active
                 </span>
                 <h4 class="text-display-md font-bold mt-4 leading-none text-white">Lani Fisher</h4>
@@ -213,8 +213,7 @@
                             <span
                                 class="absolute inset-0 rounded-md bg-emerald-500/10 ring-1 ring-emerald-500/30 opacity-0 transition-opacity duration-200 peer-checked:opacity-100"></span>
                             <span
-                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-emerald-600"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-emerald-600 font-variation-fill">check_circle</span>
                             <span
                                 class="relative text-label-md font-semibold text-secondary transition-colors peer-checked:text-emerald-600">Active</span>
                         </label>
@@ -224,8 +223,7 @@
                             <span
                                 class="absolute inset-0 rounded-md bg-red-500/10 ring-1 ring-red-500/30 opacity-0 transition-opacity duration-200 peer-checked:opacity-100"></span>
                             <span
-                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-red-600"
-                                style="font-variation-settings: 'FILL' 1;">cancel</span>
+                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-red-600 font-variation-fill">cancel</span>
                             <span
                                 class="relative text-label-md font-semibold text-secondary transition-colors peer-checked:text-red-600">Inactive</span>
                         </label>
@@ -238,8 +236,7 @@
                             </span>
 
                             <span
-                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-amber-600"
-                                style="font-variation-settings: 'FILL' 1;">
+                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-amber-600 font-variation-fill">
                                 schedule
                             </span>
 

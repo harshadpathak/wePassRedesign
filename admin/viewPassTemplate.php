@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -71,7 +71,7 @@
             <!-- Identity -->
             <div class="flex items-center gap-4">
               <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-gradient text-white">
-                <span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+                <span class="material-symbols-outlined text-[28px] font-variation-fill">confirmation_number</span>
               </span>
               <div class="min-w-0">
                 <h3 class="text-headline-md font-bold text-on-surface leading-tight">Gift-Card-Update</h3>
@@ -82,11 +82,11 @@
             <div class="flex flex-col gap-2.5 lg:items-end">
               <div class="flex flex-wrap items-center gap-2 lg:justify-end">
                 <span class="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-label-md font-bold text-blue-600">
-                  <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">person</span>Personalized
+                  <span class="material-symbols-outlined text-[15px] font-variation-fill">person</span>Personalized
                 </span>
                 <span class="inline-flex items-center rounded-full border border-blue-200 bg-white px-3 py-1 text-label-md font-bold text-blue-600">Gift Card</span>
                 <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-label-md font-bold text-emerald-600">
-                  <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>Active
+                  <span class="material-symbols-outlined text-[15px] font-variation-fill">check_circle</span>Active
                 </span>
               </div>
               <!-- Template ID -->
@@ -106,10 +106,10 @@
             <?php foreach ($infoCards as $card): $a = $card['accent']; ?>
             <div class="relative overflow-hidden rounded-2xl border border-<?= $a ?>-100 bg-gradient-to-br from-<?= $a ?>-50/70 to-white p-5 shadow-sm">
               <!-- watermark icon -->
-              <span class="material-symbols-outlined pointer-events-none absolute -right-3 -bottom-4 text-[80px] leading-none text-<?= $a ?>-500/10 select-none" style="font-variation-settings: 'FILL' 1;"><?= $card['icon'] ?></span>
+              <span class="material-symbols-outlined pointer-events-none absolute -right-3 -bottom-4 text-[80px] leading-none text-<?= $a ?>-500/10 select-none font-variation-fill"><?= $card['icon'] ?></span>
               <div class="relative">
                 <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-<?= $a ?>-100 text-<?= $a ?>-600 shadow-sm">
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;"><?= $card['icon'] ?></span>
+                  <span class="material-symbols-outlined text-[20px] font-variation-fill"><?= $card['icon'] ?></span>
                 </span>
                 <p class="mt-3 text-label-sm uppercase tracking-wider font-semibold text-<?= $a ?>-700/70"><?= htmlspecialchars($card['label']) ?></p>
                 <p class="text-body-lg font-semibold text-on-surface mt-1 truncate"><?= htmlspecialchars($card['value']) ?></p>
@@ -126,7 +126,7 @@
             <!-- Total Installed -->
             <div class="flex items-center gap-4 rounded-2xl border border-outline-variant/50 bg-white p-4 shadow-sm">
               <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">download_done</span>
+                <span class="material-symbols-outlined text-[24px] font-variation-fill">download_done</span>
               </span>
               <div class="min-w-0">
                 <p class="text-label-sm uppercase tracking-wider text-outline font-bold">Total Installed</p>

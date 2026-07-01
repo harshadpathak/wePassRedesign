@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -226,22 +226,22 @@
                     <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3  mt-4">
                         <!-- Step 1 -->
                         <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Select Template</span>
                         </div>
                         <!-- Step 2 -->
                         <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Fill Pass Details</span>
                         </div>
                         <!-- Step 3 -->
                         <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Add Recipients</span>
                         </div>
                         <!-- Step 4 -->
                         <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Distribute</span>
                         </div>
                     </div>
@@ -377,7 +377,7 @@
                 <img data-image-preview-img alt="Image preview" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20"></div>
                 <!-- glass control bar -->
-                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20">
+                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20 rounded-b-2xl">
                   <span class="flex items-center gap-1.5 min-w-0">
                     <span class="material-symbols-outlined text-white/90 text-[18px] shrink-0">image</span>
                     <span data-image-name class="text-white text-label-md font-semibold truncate"></span>
@@ -409,7 +409,7 @@
             <div class="border border-outline-variant rounded-2xl p-4 flex items-center gap-3">
               <!-- <div class="bg-surface-container-lowest p-4 rounded-xl border border-primary/40 shadow-sm flex items-center gap-4 cursor-pointer relative overflow-hidden group"> -->
                 <div class="bg-brand-gradient text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
-                  <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">apps</span>
+                  <span class="material-symbols-outlined font-variation-fill">apps</span>
                 </div>
                 <div class="relative z-10">
                   <p class="text-label-sm text-gray-400 font-medium">All Templates</p>
@@ -419,7 +419,7 @@
             </div>
             <div class="border border-outline-variant rounded-2xl p-4 flex items-center gap-3">
               <div class="bg-emerald-500 text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
-                  <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">Install_mobile</span>
+                  <span class="material-symbols-outlined font-variation-fill">Install_mobile</span>
                 </div>
                 <div class="relative z-10">
                   <p class="text-label-sm text-gray-400 font-medium">Install</p>
@@ -634,7 +634,7 @@
         <p class="text-body-md text-secondary mt-2 leading-relaxed">This is an informational message. Use it to
           explain a result, share a tip, or guide the user to the next step.</p>
       </div>
-      <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+    <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
         <button type="button" class="js-modal-close flex items-center gap-2 bg-brand-gradient text-on-primary px-6 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
           <span class="material-symbols-outlined text-sm">check</span> Got it
         </button>
@@ -653,7 +653,7 @@
           </div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Add New Item</h3>
-            <p class="text-label-md text-secondary">Fill in the details below</p>
+            <p class="text-body-md text-gray-400">Fill in the details below</p>
           </div>
         </div>
         <button type="button" class="js-modal-close w-9 h-9 rounded-lg text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">

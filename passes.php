@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -168,7 +168,7 @@
           <!-- Header -->
           <div class="flex items-center gap-4 p-5">
             <div class="w-12 h-12 rounded-xl <?= $pass['icon'] === 'campaign' ? 'bg-amber-100 text-amber-700' : 'bg-primary/10 text-primary' ?> flex items-center justify-center shrink-0 ">
-              <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: &quot;FILL&quot; 1;"><?= htmlspecialchars($pass['icon']) ?></span>
+              <span class="material-symbols-outlined text-[24px] font-variation-fill"><?= htmlspecialchars($pass['icon']) ?></span>
             </div>
             <div class="min-w-0 flex-1">
               <p class="text-body-lg font-bold text-on-surface truncate uppercase"><?= htmlspecialchars($pass['name']) ?></p>

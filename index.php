@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -113,8 +113,7 @@
             <!-- Sparkline -->
             <div class="flex items-end gap-1 h-10">
               <?php foreach ($heights as $i => $h): $full = $i === count($heights) - 1; ?>
-              <span class="w-1.5 rounded-full <?= $full ? str_replace('/30', '', str_replace('/40', '', $spark)) : $spark ?>"
-                style="height: <?= $h ?>%;"></span>
+              <span class="w-1.5 rounded-full <?= $full ? str_replace('/30', '', str_replace('/40', '', $spark)) : $spark ?> h-[<?= $h ?>%]"></span>
               <?php endforeach; ?>
             </div>
           </div>
@@ -147,7 +146,7 @@
               foreach ($legend as [$label, $color]):
             ?>
             <span class="flex items-center gap-1.5 text-label-sm font-semibold text-secondary bg-surface-container-low border border-outline-variant/60 rounded-full px-3 py-1">
-              <span class="w-2.5 h-2.5 rounded-full" style="background: <?= $color ?>;"></span><?= $label ?>
+              <span class="w-2.5 h-2.5 rounded-full bg-[<?= $color ?>]"></span><?= $label ?>
             </span>
             <?php endforeach; ?>
           </div>

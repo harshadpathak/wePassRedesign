@@ -109,6 +109,10 @@ tailwind.config = {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+.material-symbols-outlined.font-variation-fill{
+      font-variation-settings: "FILL" 1;
+}
+
 body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
@@ -152,7 +156,8 @@ body {
     padding-right: 0;
 }
 
-.sidebar-collapsed .px-4.mb-4 button {
+.sidebar-collapsed .px-4.mb-4 button,
+.sidebar-collapsed .px-4.mb-4 > a {
     width: 48px;
     height: 48px;
     padding: 0;
@@ -160,7 +165,8 @@ body {
     margin: 0 auto;
 }
 
-.sidebar-collapsed .px-4.mb-4 button span:not(.material-symbols-outlined) {
+.sidebar-collapsed .px-4.mb-4 button span:not(.material-symbols-outlined),
+.sidebar-collapsed .px-4.mb-4 > a span:not(.material-symbols-outlined) {
     display: none;
 }
 

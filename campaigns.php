@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -201,7 +201,7 @@
                   <button type="button" class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">more_vert</button>
                   <div class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                     <div class="py-1.5">
-                      <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="editCampaign.php"><span class="material-symbols-outlined text-secondary text-[20px]">edit</span><span class="font-medium">Edit</span></a>
+                      <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#" data-modal-target="#modal-campaign-disabled"><span class="material-symbols-outlined text-secondary text-[20px]">edit</span><span class="font-medium">Edit</span></a>
                       <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
                       <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">delete</span><span class="font-bold">Delete</span></a>
                     </div>
@@ -243,7 +243,7 @@
                   <button type="button" class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">more_vert</button>
                   <div class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                     <div class="py-1.5">
-                      <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="editCampaign.php"><span class="material-symbols-outlined text-secondary text-[20px]">edit</span><span class="font-medium">Edit</span></a>
+                      <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#" data-modal-target="#modal-campaign-completed"><span class="material-symbols-outlined text-secondary text-[20px]">edit</span><span class="font-medium">Edit</span></a>
                       <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
                       <a class="flex items-center gap-3 px-4 py-2 text-body-md text-error hover:bg-error-container/40 transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">delete</span><span class="font-bold">Delete</span></a>
                     </div>
@@ -382,7 +382,7 @@
               <td class="px-6 py-4">
                 <div class="flex items-center gap-2.5">
                   <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+                    <span class="material-symbols-outlined text-[18px] font-variation-fill">flag</span>
                   </span>
                   <div class="leading-tight">
                     <p class="text-[10px] font-normal uppercase tracking-wider text-outline">Ends in</p>
@@ -434,7 +434,7 @@
               <td class="px-6 py-4">
                 <div class="flex items-center gap-2.5">
                   <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+                    <span class="material-symbols-outlined text-[18px] font-variation-fill">flag</span>
                   </span>
                   <div class="leading-tight">
                     <p class="text-[10px] font-bold uppercase tracking-wider text-outline">Ending Soon</p>
@@ -479,10 +479,77 @@
         </div>
       </div>
     </section>
+
+    <!-- ===== Campaign Disabled Modal (Information modal pattern) ===== -->
+    <div id="modal-campaign-disabled" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-lg bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <div class="p-6 text-center">
+          <div class="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto">
+            <span class="material-symbols-outlined text-[32px]">block</span>
+          </div>
+          <h3 class="text-headline-md font-bold text-on-surface mt-4">Campaign Disabled</h3>
+          <p class="text-body-md text-secondary mt-2 leading-relaxed">This campaign has been disabled and can no longer be edited.</p>
+        </div>
+        <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-brand-gradient text-on-primary px-6 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">check</span> Got it
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Campaign Completed Modal (Information modal pattern) ===== -->
+    <div id="modal-campaign-completed" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-lg bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <div class="p-6 text-center">
+          <div class="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto">
+            <span class="material-symbols-outlined text-[32px]">check_circle</span>
+          </div>
+          <h3 class="text-headline-md font-bold text-on-surface mt-4">Campaign Completed</h3>
+          <p class="text-body-md text-secondary mt-2 leading-relaxed">This campaign has been completed and can no longer be edited.</p>
+        </div>
+        <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-brand-gradient text-on-primary px-6 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">check</span> Got it
+          </button>
+        </div>
+      </div>
+    </div>
+
     <?php include('footer.php'); ?>
   </main>
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
+  <script>
+    (function () {
+      function openModal(sel) {
+        var m = document.querySelector(sel);
+        if (!m) return;
+        m.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal(m) {
+        m.classList.add('hidden');
+        if (!document.querySelector('.js-modal:not(.hidden)')) document.body.style.overflow = '';
+      }
+      document.querySelectorAll('[data-modal-target]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          openModal(el.getAttribute('data-modal-target'));
+        });
+      });
+      document.querySelectorAll('.js-modal .js-modal-close').forEach(function (el) {
+        el.addEventListener('click', function () { closeModal(el.closest('.js-modal')); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.js-modal:not(.hidden)').forEach(closeModal);
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>

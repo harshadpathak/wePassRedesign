@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -47,29 +47,25 @@
                         <!-- Step 1 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Select Template</span>
                         </div>
                         <!-- Step 2 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Fill Pass Details</span>
                         </div>
                         <!-- Step 3 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Add Recipients</span>
                         </div>
                         <!-- Step 4 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Distribute</span>
                         </div>
                     </div>
@@ -224,7 +220,7 @@
                                     class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20"></div>
                                 <!-- glass control bar -->
-                                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20">
+                                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20 rounded-b-2xl">
                                     <span class="flex items-center gap-1.5 min-w-0">
                                         <span class="material-symbols-outlined text-white/90 text-[18px] shrink-0">image</span>
                                         <span id="additional-image-name" class="text-white text-label-md font-semibold truncate"></span>
@@ -261,7 +257,7 @@
             </div>
             <div class="flex items-center gap-2 bg-blue-50/50 border border-blue-100 rounded-lg px-3 py-2 mb-6">
                 <span class="material-symbols-outlined text-blue-600 text-[18px]">info</span>
-                <span class="text-sm font-medium" style="color: #1e40af;">You can add up to 10 recipients at a
+                <span class="text-sm font-medium text-blue-800">You can add up to 10 recipients at a
                     time.</span>
             </div>
             <div id="recipients-list" class="space-y-4">

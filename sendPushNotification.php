@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
  
 <head>
   <meta charset="utf-8">
@@ -132,7 +132,7 @@
           <span class="inline-flex items-center gap-2 bg-primary/5 border border-primary/15 rounded-lg px-3 py-2">
             <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
             <span class="text-label-md text-outline">GEO Locations</span>
-            <a href="#" class="text-label-md font-bold text-primary">Manual</a>
+            <a href="#" data-modal-target="#modal-store-locations" class="text-label-md font-bold text-primary">Manual</a>
             <span class="bg-primary text-white text-label-sm font-bold px-2 py-0.5 rounded-full"><?= (int) $template['geo'] ?></span>
           </span>
         </div>
@@ -155,7 +155,7 @@
             <!-- Connector -->
             <div class="flex-1 flex items-center h-12 px-2 sm:px-3" aria-hidden="true">
               <span class="relative block w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
-                <span class="step-line absolute inset-y-0 left-0 rounded-full bg-primary transition-[width] duration-500 ease-out" style="width:0%"></span>
+                <span class="step-line absolute inset-y-0 left-0 rounded-full bg-primary transition-[width] duration-500 ease-out w-0"></span>
               </span>
             </div>
             <!-- Step 2 -->
@@ -517,7 +517,7 @@
                   <img src="preview.jpg" alt="Apple lock screen preview" class="w-full block">
                   <!-- live notification overlay -->
                   <div class="absolute inset-x-0 top-[35%] p-2 mx-2">
-                    <div class="backdrop-blur-xl rounded-md p-3 shadow-lg ring-1 ring-white/20" style="background: rgba(255, 255, 255, 0.4);">
+                    <div class="backdrop-blur-xl rounded-md p-3 shadow-lg ring-1 ring-white/20 bg-white/40">
                       <div class="flex items-center gap-2.5">
                         <span class="w-9 h-9 rounded-lg bg-white flex items-center justify-center overflow-hidden shrink-0 shadow-sm">
                           <img src="icon.png" alt="" class="w-full h-full object-contain">
@@ -573,7 +573,7 @@
                 <span class="material-symbols-outlined text-[18px]">arrow_back</span>
                 Back
               </button>
-              <button type="button" class="inline-flex items-center gap-2 bg-primary text-white px-7 py-2.5 rounded-lg text-[14px] font-bold hover:bg-primary/90 transition-all shadow-sm shadow-primary/20">
+              <button type="button" data-modal-target="#modal-confirm-push" class="inline-flex items-center gap-2 bg-primary text-white px-7 py-2.5 rounded-lg text-[14px] font-bold hover:bg-primary/90 transition-all shadow-sm shadow-primary/20">
                 <span class="material-symbols-outlined text-[20px]">send</span>
                 Send Now
               </button>
@@ -583,6 +583,240 @@
       </div>
       </div>
     </section>
+
+    <?php
+      // Store locations for the Manual GEO popup
+      $storeLocations = [
+        ['name' => 'Coby Frye', 'city' => 'Rajkot, India'],
+        ['name' => 'Adidas',    'city' => 'Rajkot, India'],
+      ];
+    ?>
+    <!-- ===== Store Locations Modal (Information modal structure) ===== -->
+    <div id="modal-store-locations" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-lg bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <!-- Header -->
+        <div class="flex items-center gap-2.5 px-6 py-4 border-b border-outline-variant/60">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-primary">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+          </span>
+          <h3 class="text-body-lg font-bold text-on-surface">Store Locations</h3>
+        </div>
+        <!-- Body -->
+        <div class="p-5 space-y-3 max-h-[60vh] overflow-y-auto">
+          <?php foreach ($storeLocations as $loc): ?>
+          <div class="flex items-center gap-3 rounded-xl border border-outline-variant/60 bg-white p-3 hover:border-primary/40 transition-colors">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <span class="material-symbols-outlined text-[22px]">storefront</span>
+            </span>
+            <div class="min-w-0">
+              <p class="text-body-md font-bold text-on-surface truncate"><?= htmlspecialchars($loc['name']) ?></p>
+              <p class="flex items-center gap-1 text-label-sm text-outline"><span class="material-symbols-outlined text-[14px]">location_on</span><?= htmlspecialchars($loc['city']) ?></p>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+        <!-- Footer -->
+        <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-brand-gradient text-on-primary px-6 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">check</span> Got it
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Confirm Push Notification Modal (Form Modal structure from components.php) ===== -->
+    <div id="modal-confirm-push" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-3xl max-h-[92vh] flex flex-col bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <!-- Header -->
+        <div class="flex items-center justify-between gap-3 px-6 py-3.5 border-b border-outline-variant/60 shrink-0">
+          <div class="flex items-center gap-3">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-amber-600 shadow-sm">
+              <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+            </span>
+            <div>
+              <h3 class="text-headline-md font-bold text-on-surface">Confirm Push Notification</h3>
+              <p class="text-body-md text-gray-400">Review the details below before sending.</p>
+            </div>
+          </div>
+          <button type="button" class="js-modal-close w-9 h-9 rounded-lg text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="px-6 py-4 space-y-4 overflow-y-auto bg-surface-container-low/20">
+          <!-- Review banner -->
+          <div class="flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50/70 p-4">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-600">
+              <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+            </span>
+            <div>
+              <p class="text-body-lg font-semibold text-on-surface">Review Before Sending</p>
+              <p class="text-label-md text-gray-400 mt-0.5">Review delivery details before sending. Push notifications <span class="font-bold text-gray-400">cannot be edited or recalled</span> once sent.</p>
+            </div>
+          </div>
+
+          <!-- Delivery Schedule + Message Content (Send Now)(two columns) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <!-- Delivery Schedule -->
+            <div class="rounded-2xl border border-outline-variant/60 bg-white p-4 shadow-sm">
+              <p class="flex items-center gap-1.5 text-label-sm uppercase tracking-wider text-outline font-bold mb-3">
+                <span class="material-symbols-outlined text-[15px] text-primary">schedule</span>Delivery Schedule
+              </p>
+              <div class="flex items-center gap-3 rounded-xl border border-amber-200 bg-amber-50/60 p-3">
+                <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-500 text-white shadow-sm shadow-amber-500/30">
+                  <span class="material-symbols-outlined text-[22px]">bolt</span>
+                </span>
+                <div class="min-w-0">
+                  <p class="text-label-sm uppercase tracking-wider text-amber-600/80 font-bold">Delivery</p>
+                  <p class="text-body-md font-semibold text-on-surface">Send Immediately</p>
+                </div>
+              </div>
+              <p class="flex items-start gap-1.5 text-label-md text-gray-400 mt-2.5"><span class="material-symbols-outlined text-[15px] mt-0.5">info</span>The notification will be sent immediately to all targeted devices.</p>
+            </div>
+
+            <!-- Message Content -->
+            <div class="rounded-2xl border border-outline-variant/60 bg-white p-4 shadow-sm">
+              <p class="flex items-center gap-1.5 text-label-sm uppercase tracking-wider text-outline font-bold mb-3">
+                <span class="material-symbols-outlined text-[15px] text-primary">chat_bubble</span>Message Content
+              </p>
+              <div class="space-y-2.5">
+                <div class="rounded-xl border border-outline-variant/50 bg-surface-container-low/40 px-3.5 py-2.5">
+                  <p class="flex items-center gap-1.5 text-label-sm uppercase tracking-wider text-outline font-bold"><span class="material-symbols-outlined text-[14px] text-primary">title</span>Title</p>
+                  <p class="text-body-md font-normal text-on-surface mt-0.5">Notification</p>
+                </div>
+                <div class="rounded-xl border border-outline-variant/50 bg-surface-container-low/40 px-3.5 py-2.5">
+                  <p class="flex items-center gap-1.5 text-label-sm uppercase tracking-wider text-outline font-bold"><span class="material-symbols-outlined text-[14px] text-primary">notes</span>Message</p>
+                  <p class="text-body-md font-normal text-on-surface mt-0.5">Pass Updated</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Delivery Schedule + Message Content (Schedule)(two columns) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <!-- Delivery Schedule -->
+            <div class="rounded-2xl border border-outline-variant/60 bg-white p-4 shadow-sm">
+              <p class="flex items-center gap-1.5 text-label-sm uppercase tracking-wider text-outline font-bold mb-3">
+                <span class="material-symbols-outlined text-[15px] text-primary">schedule</span>Delivery Schedule
+              </p>
+              <div class="flex items-start gap-3 rounded-xl border border-primary/20 bg-primary/5 p-3">
+                <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary text-white shadow-sm shadow-primary/30">
+                  <span class="material-symbols-outlined text-[22px]">calendar_month</span>
+                </span>
+                <div class="min-w-0">
+                  <p class="text-label-sm uppercase tracking-wider text-primary/80 font-bold">Scheduled For</p>
+                  <p class="text-body-md font-semibold text-on-surface">28/07/2026 at 12:15 AM</p>
+                  <p class="flex items-center gap-1 text-label-sm text-primary font-semibold mt-1"><span class="material-symbols-outlined text-[14px]">schedule</span>3 weeks 5 days after</p>
+                  <p class="flex items-center gap-1 text-label-sm text-gray-400 mt-0.5"><span class="material-symbols-outlined text-[14px]">public</span>(GMT+05:30) Asia/Kolkata</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Message Content -->
+            <div class="rounded-2xl border border-outline-variant/60 bg-white p-4 shadow-sm">
+              <p class="flex items-center gap-1.5 text-label-sm uppercase tracking-wider text-outline font-bold mb-3">
+                <span class="material-symbols-outlined text-[15px] text-primary">chat_bubble</span>Message Content
+              </p>
+              <div class="space-y-2.5">
+                <div class="rounded-xl border border-outline-variant/50 bg-surface-container-low/40 px-3.5 py-2.5">
+                  <p class="flex items-center gap-1.5 text-label-sm uppercase tracking-wider text-outline font-bold"><span class="material-symbols-outlined text-[14px] text-primary">title</span>Title</p>
+                  <p class="text-body-md font-normal text-on-surface mt-0.5">Notification</p>
+                </div>
+                <div class="rounded-xl border border-outline-variant/50 bg-surface-container-low/40 px-3.5 py-2.5">
+                  <p class="flex items-center gap-1.5 text-label-sm uppercase tracking-wider text-outline font-bold"><span class="material-symbols-outlined text-[14px] text-primary">notes</span>Message</p>
+                  <p class="text-body-md font-normal text-on-surface mt-0.5">Pass Updated</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Delivery Scope -->
+          <div class="rounded-2xl border border-outline-variant/60 bg-white p-4 shadow-sm">
+            <p class="flex items-center gap-1.5 text-label-sm uppercase tracking-wider text-outline font-bold mb-3">
+              <span class="material-symbols-outlined text-[15px] text-primary">send</span>Delivery Scope
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <!-- Total -->
+              <div class="flex items-center gap-3 rounded-xl border border-primary/20 bg-primary/5 p-3">
+                <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">group</span>
+                </span>
+                <div>
+                  <p class="text-headline-md font-bold text-on-surface leading-none">1</p>
+                  <p class="text-label-sm text-outline mt-1">Total Passes</p>
+                </div>
+              </div>
+              <!-- Wallets -->
+              <div class="rounded-xl border border-outline-variant/50 bg-surface-container-low/40 p-3 space-y-2">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="inline-flex items-center gap-1.5 text-label-md text-secondary font-medium">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4 text-on-surface"><path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></svg>Apple
+                  </span>
+                  <span class="text-body-md font-bold text-on-surface">0</span>
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="inline-flex items-center gap-1.5 text-label-md text-secondary font-medium">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4"><rect x="2.5" y="2" width="19" height="20" rx="2.5" fill="#34A853"/><rect x="2.5" y="4" width="19" height="18" rx="2.5" fill="#FBBC05"/><rect x="2.5" y="6.5" width="19" height="15.5" rx="2.5" fill="#EA4335"/><path d="M2 12.2 C 5.5 10.2 8.5 13.8 12 14 C 15.5 14.2 18.5 10.5 22 10.8 L 22 19.5 Q 22 22 19.5 22 L 4.5 22 Q 2 22 2 19.5 Z" fill="#4285F4"/></svg>Google
+                  </span>
+                  <span class="text-body-md font-bold text-on-surface">1</span>
+                </div>
+              </div>
+              <!-- Status -->
+              <div class="rounded-xl border border-outline-variant/50 bg-surface-container-low/40 p-3 flex flex-col justify-center gap-2">
+                <p class="flex items-center gap-1.5 text-label-md text-emerald-600 font-semibold"><span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>Ready to send</p>
+                <p class="flex items-center gap-1.5 text-label-md text-amber-600 font-semibold"><span class="material-symbols-outlined text-[16px]">bolt</span>Instant delivery</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Campaign -->
+          <div class="rounded-2xl border border-outline-variant/60 bg-white p-4 shadow-sm">
+            <p class="flex items-center gap-1.5 text-label-sm uppercase tracking-wider text-outline font-bold mb-3">
+              <span class="material-symbols-outlined text-[15px] text-primary">folder</span>Campaign
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="flex items-center gap-3 rounded-xl border border-outline-variant/50 bg-surface-container-low/40 p-3">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600"><span class="material-symbols-outlined text-[18px]">folder_open</span></span>
+                <div class="min-w-0">
+                  <p class="text-label-sm uppercase tracking-wider text-outline font-bold">Campaign Name</p>
+                  <p class="text-body-md font-semibold text-on-surface truncate">Loyalty-Tier-27</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 rounded-xl border border-outline-variant/50 bg-surface-container-low/40 p-3">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-violet-50 text-violet-600"><span class="material-symbols-outlined text-[18px]">style</span></span>
+                <div class="min-w-0">
+                  <p class="text-label-sm uppercase tracking-wider text-outline font-bold">Pass Type</p>
+                  <p class="text-body-md font-semibold text-on-surface truncate">Loyalty Tier</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Warning note -->
+          <div class="flex items-center gap-2.5 rounded-xl border border-amber-200 bg-amber-50/70 px-4 py-3">
+            <span class="material-symbols-outlined text-[18px] text-amber-600 shrink-0" style="font-variation-settings: 'FILL' 1;">warning</span>
+            <p class="text-label-md text-amber-700 font-semibold">Push notifications cannot be edited or recalled once sent.</p>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="border-t border-outline-variant/60 bg-surface-container-low/30 px-6 py-3 shrink-0">
+          <div class="flex items-center justify-end gap-3">
+            <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
+              <span class="material-symbols-outlined text-[18px]">close</span> Cancel
+            </button>
+            <button type="button" class="js-modal-close flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold">
+              <span class="material-symbols-outlined text-[18px]">send</span> Send Push Notification
+            </button>
+          </div>
+          <p class="flex items-center justify-end gap-1 text-label-sm text-gray-400 mt-2.5"><span class="material-symbols-outlined text-[14px]">info</span>This action will be logged for audit purposes.</p>
+        </div>
+      </div>
+    </div>
+
     <?php include('footer.php'); ?>
   </main>
   <!-- Micro-interaction Scripts -->
@@ -856,6 +1090,29 @@
 
       radios.forEach(function (r) { r.addEventListener('change', sync); });
       sync();
+    })();
+
+    // Modals: open / close
+    (function () {
+      function openModal(sel) {
+        var m = document.querySelector(sel);
+        if (!m) return;
+        m.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal(m) {
+        m.classList.add('hidden');
+        if (!document.querySelector('.js-modal:not(.hidden)')) document.body.style.overflow = '';
+      }
+      document.querySelectorAll('[data-modal-target]').forEach(function (el) {
+        el.addEventListener('click', function (e) { e.preventDefault(); openModal(el.getAttribute('data-modal-target')); });
+      });
+      document.querySelectorAll('.js-modal .js-modal-close').forEach(function (el) {
+        el.addEventListener('click', function () { closeModal(el.closest('.js-modal')); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { document.querySelectorAll('.js-modal:not(.hidden)').forEach(closeModal); }
+      });
     })();
   </script>
 </body>

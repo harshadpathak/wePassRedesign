@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -91,7 +91,7 @@
             <p class="text-label-md text-gray-400">Manage your webhook endpoint URLs</p>
           </div>
           <!-- <span class="hidden md:block w-px h-8 bg-outline-variant/70 shrink-0"></span> -->
-          <button type="button"
+          <button type="button" data-modal-target="#modal-add-webhook"
             class="inline-flex items-center gap-2 bg-brand-gradient text-white px-4 py-2.5 rounded-lg text-label-md font-bold shadow-md shadow-primary/20 hover:opacity-95 active:scale-[0.98] transition-all shrink-0">
             <span class="material-symbols-outlined text-[20px]">add_circle</span>
             Add Webhook URL
@@ -161,21 +161,16 @@
                 </td>
                 <!-- Action -->
                 <td class="px-6 py-3 text-right">
-                    <div class="relative inline-block js-menu">
-                        <button type="button" class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
-                            more_vert
-                        </button>
-                        <div class="js-menu-panel hidden absolute right-0 mt-1 w-44 bg-white border border-outline-variant rounded-xl shadow-lg py-1.5 z-50">
-                            <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#">
-                                <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
-                                <span class="font-medium">Edit</span>
-                            </a>
-                            <div class="my-1 border-t border-outline-variant/50"></div>
-                                <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-error hover:bg-error/5 transition-colors">
-                                <span class="material-symbols-outlined text-[18px]">delete</span> Delete
-                            </button>
-                        </div>
+                  <div class="relative inline-block js-menu">
+                    <button type="button" class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">
+                        more_vert
+                    </button>
+                    <div class="js-menu-panel hidden absolute right-0 mt-1 w-44 bg-white border border-outline-variant rounded-xl shadow-lg py-1.5 z-50">
+                      <button type="button" class="w-full flex items-center gap-2.5 px-4 py-2 text-label-md text-error hover:bg-error/5 transition-colors">
+                        <span class="material-symbols-outlined text-[18px]">delete</span> Delete
+                      </button>
                     </div>
+                  </div>
                 </td>
               </tr>
               <?php endforeach; ?>
@@ -197,6 +192,52 @@
       </div>
     </section>
 
+    <!-- ===== Add Webhook URL Modal (Form Modal structure from components.php) ===== -->
+    <div id="modal-add-webhook" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-2xl bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <div class="flex items-center justify-between gap-3 px-6 py-5 border-b border-outline-variant/60">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
+              <span class="material-symbols-outlined text-[22px]">link</span>
+            </div>
+            <div>
+              <h3 class="text-headline-md font-bold text-on-surface">Add Webhook URL</h3>
+              <p class="text-label-md text-gray-400">Give your webhook a name and endpoint URL.</p>
+            </div>
+          </div>
+          <button type="button" class="js-modal-close w-9 h-9 rounded-lg text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+        <div class="p-6 space-y-5">
+          <!-- Info note -->
+          <div class="flex items-start gap-3 bg-primary/[0.04] border border-primary/15 rounded-xl p-4">
+            <span class="material-symbols-outlined text-[20px] mt-0.5 text-primary shrink-0">info</span>
+            <p class="text-body-md text-secondary leading-relaxed">WePass sends a <span class="font-bold text-gray-500">POST</span> request to this URL whenever a pass is installed or uninstalled from a user's wallet. Make sure your endpoint returns HTTP 200 within 15 seconds.</p>
+          </div>
+          <!-- Webhook Name -->
+          <div class="space-y-2">
+            <label class="text-on-surface font-bold text-label-md">Webhook Name:</label>
+            <input type="text" placeholder="e.g. Production Webhook, Staging Webhook" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+          </div>
+          <!-- Webhook URL -->
+          <div class="space-y-2">
+            <label class="text-on-surface font-bold text-label-md">Webhook URL:</label>
+            <input type="url" placeholder="https://example.com/webhooks/listener" class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+          </div>
+        </div>
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">
+            <span class="material-symbols-outlined text-[18px]">close</span> Cancel
+          </button>
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-[#198754] text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-[18px]">save</span> Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- Clipboard + menu helpers -->
     <script>
       function flashCopied(btn, labelSelector) {
@@ -214,6 +255,29 @@
       function copyText(text, btn) {
         navigator.clipboard.writeText(text).then(function () { flashCopied(btn, null); });
       }
+
+      // Modals: open / close
+      (function () {
+        function openModal(sel) {
+          var m = document.querySelector(sel);
+          if (!m) return;
+          m.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeModal(m) {
+          m.classList.add('hidden');
+          if (!document.querySelector('.js-modal:not(.hidden)')) document.body.style.overflow = '';
+        }
+        document.querySelectorAll('[data-modal-target]').forEach(function (el) {
+          el.addEventListener('click', function (e) { e.preventDefault(); openModal(el.getAttribute('data-modal-target')); });
+        });
+        document.querySelectorAll('.js-modal .js-modal-close').forEach(function (el) {
+          el.addEventListener('click', function () { closeModal(el.closest('.js-modal')); });
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { document.querySelectorAll('.js-modal:not(.hidden)').forEach(closeModal); }
+        });
+      })();
     </script>
     <?php include('footer.php'); ?>
   </main>

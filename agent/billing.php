@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -77,7 +77,7 @@
                 <span class="absolute -bottom-10 -left-6 w-24 h-24 rounded-full bg-white/10"></span>
                 <div class="relative">
                   <span class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white text-label-sm font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">
-                    <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span> Active Plan
+                    <span class="material-symbols-outlined text-[16px] font-variation-fill">star</span> Active Plan
                   </span>
                   <h4 class="text-display-md font-bold mt-4 leading-none"><?= htmlspecialchars($account['plan']) ?></h4>
                   <span class="inline-block mt-3 bg-white/20 backdrop-blur-sm text-white text-label-md font-semibold px-3 py-1 rounded-full"><?= htmlspecialchars($account['tier']) ?></span>
@@ -151,7 +151,7 @@
                     <p class="text-label-sm font-bold uppercase tracking-wider text-outline mt-4"><?= htmlspecialchars($u['label']) ?></p>
                     <p class="text-on-surface font-bold mt-0.5"><span class="text-headline-lg"><?= (int) $u['used'] ?></span> <span class="text-label-md text-outline">/ <?= (int) $u['total'] ?></span></p>
                     <div class="mt-3 h-2 rounded-full bg-surface-container-high overflow-hidden">
-                      <div class="h-full rounded-full <?= $u['bar'] ?> transition-all" style="width: <?= $pct ?>%"></div>
+                      <div class="h-full rounded-full <?= $u['bar'] ?> transition-all w-[<?= $pct ?>%]"></div>
                     </div>
                     <p class="text-label-sm text-outline mt-2"><span class="font-semibold text-secondary"><?= $left ?></span> remaining</p>
                   </div>

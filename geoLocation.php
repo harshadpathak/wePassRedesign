@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
  
 <head>
   <meta charset="utf-8">
@@ -37,6 +37,11 @@
       $cityConfigEnabled = true;
       $cities = [
         ['name' => 'Rajkot', 'stores' => ['Gary Byrd', 'Jenil Vora']],
+      ];
+      // Stores available for the Add City modal
+      $stores = [
+        ['name' => 'Aatman Infotech', 'city' => 'Rajkot, India', 'logo' => 'Aatman Logo.png'],
+        ['name' => 'Apple Store',     'city' => 'Rajkot, India', 'logo' => 'Apple_logo_grey.png'],
       ];
     ?>
     <!-- Canvas -->
@@ -141,7 +146,7 @@
           <!-- Identity -->
           <div class="flex items-start gap-4">
             <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">apartment</span>
+              <span class="material-symbols-outlined text-[30px] font-variation-fill">apartment</span>
             </div>
             <div class="space-y-1.5">
               <h3 class="text-title-md font-bold text-on-surface tracking-tight">City Configuration</h3>
@@ -187,7 +192,7 @@
               <p class="text-label-md text-gray-400"><?= count($cities) ?> <?= count($cities) === 1 ? 'city' : 'cities' ?> configured</p>
             </div>
           </div>
-          <button type="button"
+          <button type="button" data-modal-target="#modal-add-city"
             class="flex items-center justify-center gap-2 bg-brand-gradient text-on-primary px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
             <span class="material-symbols-outlined text-[18px]">add_location_alt</span>
             Add City
@@ -257,7 +262,7 @@
                     </button>
                     <div class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#" data-modal-target="#modal-edit-city">
                           <span class="material-symbols-outlined text-secondary text-[20px]">edit</span>
                           <span class="font-medium">Edit</span>
                         </a>
@@ -272,6 +277,245 @@
         </div>
       </div>
     </section>
+
+    <!-- ===== Add City Modal (Form Modal pattern from components.php) ===== -->
+    <div id="modal-add-city" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-4xl max-h-[92vh] flex flex-col bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <!-- Header -->
+        <div class="flex items-center justify-between gap-3 px-6 py-5 border-b border-outline-variant/60 shrink-0">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
+              <span class="material-symbols-outlined text-[22px]">add_location_alt</span>
+            </div>
+            <div>
+              <h3 class="text-headline-md font-bold text-on-surface">Add City</h3>
+              <p class="text-body-md text-gray-400">Select up to 10 stores and set their relevant text.</p>
+            </div>
+          </div>
+          <button type="button" class="js-modal-close w-9 h-9 rounded-lg text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="p-6 overflow-y-auto">
+          <!-- Select City -->
+          <div class="space-y-2">
+            <label class="text-on-surface font-bold text-label-md">Select City: <span class="text-red-500">*</span></label>
+            <select class="w-full js-select2" data-placeholder="Select city" data-allow-clear="false">
+              <option value="Rajkot">All Cities</option>
+              <option value="Rajkot" selected>Rajkot</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Surat">Surat</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+            </select>
+          </div>
+
+          <!-- Manage Your Store -->
+          <p class="text-body-md font-bold text-on-surface mt-6 mb-3">Manage Your Store</p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <!-- Available Stores -->
+            <div class="rounded-xl border border-outline-variant bg-white flex flex-col h-[360px] hover:border-primary/50 transition-colors">
+              <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-outline-variant/60">
+                <p class="text-label-md font-bold uppercase tracking-wide text-outline">Available Stores</p>
+                <div class="flex items-center gap-1.5">
+                  <button type="button" onclick="cityStoresSelectAll()" class="group inline-flex items-center gap-1 text-primary font-bold text-label-md">
+                    <span class="material-symbols-outlined text-[16px]">done_all</span>
+                    <span class="group-hover:underline">Select all</span>
+                  </button>
+                  <span class="bg-primary/10 text-primary text-[11px] font-bold px-1.5 py-0.5 rounded-full"><?= count($stores) ?></span>
+                </div>
+              </div>
+              <div class="p-4 pb-2">
+                <div class="relative">
+                  <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+                  <input type="text" id="cityStoreSearch" onkeyup="cityStoresFilter(this.value)" placeholder="Search by store or city…"
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-11 pr-4 py-2.5 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                </div>
+              </div>
+              <div id="cityAvailableList" class="flex-1 overflow-y-auto px-4 pb-4 space-y-2">
+                <?php foreach ($stores as $i => $s): ?>
+                <div data-city-store="<?= $i ?>" data-name="<?= htmlspecialchars($s['name']) ?>" data-city="<?= htmlspecialchars($s['city']) ?>" data-logo="<?= htmlspecialchars($s['logo']) ?>"
+                  class="js-city-store-row flex items-center gap-3 rounded-lg border border-outline-variant/60 bg-surface-container-low/30 p-2.5 hover:border-primary/40 transition-colors">
+                  <img src="<?= htmlspecialchars($s['logo']) ?>" alt="image" class="w-9 h-9 rounded-lg object-contain bg-white border border-outline-variant/60 p-1 shrink-0">
+                  <div class="min-w-0 flex-1">
+                    <p class="text-body-md font-medium text-on-surface truncate"><?= htmlspecialchars($s['name']) ?></p>
+                    <p class="flex items-center gap-1 text-label-sm text-outline"><span class="material-symbols-outlined text-[14px]">location_on</span><?= htmlspecialchars($s['city']) ?></p>
+                  </div>
+                  <button type="button" data-add onclick="cityStoreAdd(this)" class="w-8 h-8 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-white flex items-center justify-center shrink-0 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">add</span>
+                  </button>
+                </div>
+                <?php endforeach; ?>
+                <p id="cityNoAvailable" class="hidden text-center text-label-md text-outline py-6">No stores match your search.</p>
+              </div>
+            </div>
+
+            <!-- Selected Stores -->
+            <div class="rounded-xl border border-outline-variant bg-white flex flex-col h-[360px] hover:border-primary/50 transition-colors">
+              <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-outline-variant/60">
+                <p class="text-label-md font-bold uppercase tracking-wide text-outline">Selected Stores <span class="text-red-500">*</span></p>
+                <span id="cityStoreCount" class="bg-primary text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">0 / 10</span>
+              </div>
+              <div id="citySelectedList" class="flex-1 overflow-y-auto p-4 space-y-2">
+                <div id="citySelectedEmpty" class="h-full flex flex-col items-center justify-center text-center px-6">
+                  <span class="material-symbols-outlined text-[40px] text-outline-variant">wrong_location</span>
+                  <p class="text-body-md font-bold text-on-surface mt-2">No stores selected yet</p>
+                  <p class="text-label-md text-gray-400 mt-0.5">Pick stores from the left to add them here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30 shrink-0">
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">Cancel</button>
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-[#198754] text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-[18px]">save</span> Save
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Edit City Modal ===== -->
+    <div id="modal-edit-city" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-4xl max-h-[92vh] flex flex-col bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <!-- Header -->
+        <div class="flex items-center justify-between gap-3 px-6 py-5 border-b border-outline-variant/60 shrink-0">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
+              <span class="material-symbols-outlined text-[22px]">location_on</span>
+            </div>
+            <div>
+              <h3 class="text-headline-md font-bold text-on-surface">Edit City</h3>
+              <p class="text-label-md text-gray-400">Update the stores linked to Rajkot.</p>
+            </div>
+          </div>
+          <button type="button" class="js-modal-close w-9 h-9 rounded-lg text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="p-6 overflow-y-auto">
+          <!-- Select City (read-only) -->
+          <div class="space-y-2">
+            <label class="text-on-surface font-bold text-label-md">Select City: <span class="text-red-500">*</span></label>
+            <input type="text" value="Rajkot" readonly
+              class="w-full bg-surface-container-low border-outline-variant rounded-lg py-3 px-4 text-body-md text-gray font-normal cursor-not-allowed focus:outline-none">
+          </div>
+
+          <!-- Manage Your Store -->
+          <p class="text-body-md font-bold text-on-surface mt-6 mb-3">Manage Your Store</p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <!-- Available Stores -->
+            <div class="rounded-xl border border-outline-variant bg-white flex flex-col h-[360px] hover:border-primary/50 transition-colors">
+              <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-outline-variant/60">
+                <p class="text-label-md font-bold uppercase tracking-wide text-outline">Available Stores</p>
+                <div class="flex items-center gap-1.5">
+                  <button type="button" onclick="editCityStoresSelectAll()" class="group inline-flex items-center gap-1 text-primary font-bold text-label-md">
+                    <span class="material-symbols-outlined text-[16px]">done_all</span>
+                    <span class="group-hover:underline">Select all</span>
+                  </button>
+                  <span class="bg-primary/10 text-primary text-[11px] font-bold px-1.5 py-0.5 rounded-full"><?= count($stores) ?></span>
+                </div>
+              </div>
+              <div class="p-4 pb-2">
+                <div class="relative">
+                  <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+                  <input type="text" id="editCityStoreSearch" onkeyup="editCityStoresFilter(this.value)" placeholder="Search by store or city…"
+                    class="w-full bg-surface-container-low border-outline-variant rounded-lg pl-11 pr-4 py-2.5 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                </div>
+              </div>
+              <div id="editCityAvailableList" class="flex-1 overflow-y-auto px-4 pb-4 space-y-2">
+                <?php foreach ($stores as $i => $s): ?>
+                <div data-edit-city-store="<?= $i ?>" data-name="<?= htmlspecialchars($s['name']) ?>" data-city="<?= htmlspecialchars($s['city']) ?>" data-logo="<?= htmlspecialchars($s['logo']) ?>"
+                  class="js-edit-city-store-row flex items-center gap-3 rounded-lg border border-outline-variant/60 bg-surface-container-low/30 p-2.5 hover:border-primary/40 transition-colors">
+                  <img src="<?= htmlspecialchars($s['logo']) ?>" alt="image" class="w-9 h-9 rounded-lg object-contain bg-white border border-outline-variant/60 p-1 shrink-0">
+                  <div class="min-w-0 flex-1">
+                    <p class="text-body-md font-medium text-on-surface truncate"><?= htmlspecialchars($s['name']) ?></p>
+                    <p class="flex items-center gap-1 text-label-sm text-outline"><span class="material-symbols-outlined text-[14px]">location_on</span><?= htmlspecialchars($s['city']) ?></p>
+                  </div>
+                  <button type="button" data-add onclick="editCityStoreAdd(this)" class="w-8 h-8 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-white flex items-center justify-center shrink-0 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">add</span>
+                  </button>
+                </div>
+                <?php endforeach; ?>
+                <p id="editCityNoAvailable" class="hidden text-center text-label-md text-outline py-6">No stores match your search.</p>
+              </div>
+            </div>
+
+            <!-- Selected Stores -->
+            <div class="rounded-xl border border-outline-variant bg-white flex flex-col h-[360px] hover:border-primary/50 transition-colors">
+              <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-outline-variant/60">
+                <p class="text-label-md font-bold uppercase tracking-wide text-outline">Selected Stores <span class="text-red-500">*</span></p>
+                <span id="editCityStoreCount" class="bg-primary text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">0 / 10</span>
+              </div>
+              <div id="editCitySelectedList" class="flex-1 overflow-y-auto p-4 space-y-2">
+                <div id="editCitySelectedEmpty" class="h-full flex flex-col items-center justify-center text-center px-6">
+                  <span class="material-symbols-outlined text-[40px] text-outline-variant">wrong_location</span>
+                  <p class="text-body-md font-bold text-on-surface mt-2">No stores selected yet</p>
+                  <p class="text-label-md text-gray-400 mt-0.5">Pick stores from the left to add them here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30 shrink-0">
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">Cancel</button>
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-[#198754] text-white px-5 py-2.5 rounded-lg text-[14px] shadow-lg shadow-[#198754]/20 hover:opacity-95 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-[18px]">save</span> Save
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Disable City Configuration Confirmation ===== -->
+    <div id="modal-disable-config" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-2xl bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <div class="px-8 py-10 text-center">
+          <div class="w-16 h-16 rounded-full bg-error/10 text-error flex items-center justify-center mx-auto">
+            <span class="material-symbols-outlined text-[32px]">warning</span>
+          </div>
+          <h3 class="text-headline-md font-bold text-on-surface mt-5 max-w-md mx-auto leading-snug">Are you sure you want to disable city-based store configuration?</h3>
+          <p class="text-body-md text-secondary mt-3 leading-relaxed max-w-md mx-auto">Once disabled, stores will no longer be managed city-wise for this pass. Existing city-wise store settings may no longer apply.</p>
+        </div>
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">Cancel</button>
+          <button type="button" id="confirmDisableConfig" class="js-modal-close flex items-center gap-2 bg-error text-white px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-error/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">power_settings_new</span> Disable
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Enable City Configuration Confirmation ===== -->
+    <div id="modal-enable-config" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-2xl bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <div class="px-8 py-10 text-center">
+          <div class="w-16 h-16 rounded-full bg-error/10 text-error flex items-center justify-center mx-auto">
+            <span class="material-symbols-outlined text-[32px]">warning</span>
+          </div>
+          <h3 class="text-headline-md font-bold text-on-surface mt-5 max-w-md mx-auto leading-snug">Are you sure you want to enable city-wise store configuration?</h3>
+          <p class="text-body-md text-secondary mt-3 leading-relaxed max-w-md mx-auto">Once enabled, you can add stores based on city and manage them separately for each pass.</p>
+        </div>
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-white border border-outline-variant/50 text-on-surface px-6 py-2.5 rounded-lg text-[14px] hover:bg-surface-container-low transition-all font-bold shadow-sm">Cancel</button>
+          <button type="button" id="confirmEnableConfig" class="js-modal-close flex items-center gap-2 bg-brand-gradient text-on-primary px-4 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">power_settings_new</span> Enable
+          </button>
+        </div>
+      </div>
+    </div>
+
     <?php include('footer.php'); ?>
   </main>
   <!-- Micro-interaction Scripts -->
@@ -291,8 +535,7 @@
       const statusCore = statusPill && statusPill.querySelector('.js-status-core');
       const statusText = statusPill && statusPill.querySelector('.js-status-text');
 
-      btn.addEventListener('click', function () {
-        const enabled = btn.dataset.enabled !== '1';
+      function applyState(enabled) {
         btn.dataset.enabled = enabled ? '1' : '0';
         btn.setAttribute('aria-checked', enabled ? 'true' : 'false');
 
@@ -345,7 +588,231 @@
 
           statusText.textContent = enabled ? 'Enabled' : 'Disabled';
         }
+      }
+
+      btn.addEventListener('click', function () {
+        var wantEnabled = btn.dataset.enabled !== '1';
+        // Confirm either way with the matching modal
+        var m = document.getElementById(wantEnabled ? 'modal-enable-config' : 'modal-disable-config');
+        if (m) { m.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
       });
+
+      var confirmDisable = document.getElementById('confirmDisableConfig');
+      if (confirmDisable) confirmDisable.addEventListener('click', function () { applyState(false); });
+      var confirmEnable = document.getElementById('confirmEnableConfig');
+      if (confirmEnable) confirmEnable.addEventListener('click', function () { applyState(true); });
+    })();
+
+    // ---- Modals: open / close ----
+    (function () {
+      function openModal(sel) {
+        var m = document.querySelector(sel);
+        if (!m) return;
+        m.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal(m) {
+        m.classList.add('hidden');
+        if (!document.querySelector('.js-modal:not(.hidden)')) document.body.style.overflow = '';
+      }
+      document.querySelectorAll('[data-modal-target]').forEach(function (btn) {
+        btn.addEventListener('click', function (e) { e.preventDefault(); openModal(btn.getAttribute('data-modal-target')); });
+      });
+      document.querySelectorAll('.js-modal .js-modal-close').forEach(function (el) {
+        el.addEventListener('click', function () { closeModal(el.closest('.js-modal')); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.js-modal:not(.hidden)').forEach(closeModal);
+        }
+      });
+    })();
+
+    // ---- Add City modal: store picker ----
+    (function () {
+      var LIMIT = 10;
+      var selectedList = document.getElementById('citySelectedList');
+      var selectedEmpty = document.getElementById('citySelectedEmpty');
+      var badge = document.getElementById('cityStoreCount');
+      if (!selectedList) return;
+
+      function count() { return selectedList.querySelectorAll('[data-selected-item]').length; }
+      function update() {
+        var n = count();
+        badge.textContent = n + ' / ' + LIMIT;
+        selectedEmpty.classList.toggle('hidden', n > 0);
+      }
+
+      window.cityStoreAdd = function (btn) {
+        if (count() >= LIMIT) return;
+        var row = btn.closest('[data-city-store]');
+        row.classList.add('hidden');
+        var defaultMsg = 'You are near ' + row.dataset.name + '. Tap to view your pass.';
+        var item = document.createElement('div');
+        item.setAttribute('data-selected-item', '');
+        item.dataset.ref = row.dataset.cityStore;
+        item.className = 'rounded-xl border border-outline-variant bg-white shadow-sm p-3';
+        item.innerHTML =
+          '<div class="flex items-center gap-3">' +
+            '<img src="' + row.dataset.logo + '" alt="' + row.dataset.name + '" class="w-10 h-10 rounded-lg object-contain bg-white border border-outline-variant/60 p-1 shrink-0">' +
+            '<div class="min-w-0 flex-1">' +
+              '<p class="text-body-md font-bold text-on-surface truncate">' + row.dataset.name + '</p>' +
+              '<p class="flex items-center gap-1 text-label-sm text-outline"><span class="material-symbols-outlined text-[14px]">location_on</span>' + row.dataset.city + '</p>' +
+            '</div>' +
+            '<button type="button" data-edit-btn onclick="cityStoreToggleEdit(this)" title="Edit text" class="w-8 h-8 rounded-full text-outline hover:bg-primary/10 hover:text-primary flex items-center justify-center shrink-0 transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>' +
+            '<button type="button" onclick="cityStoreRemove(this)" title="Remove" class="w-8 h-8 rounded-full text-outline hover:bg-rose-50 hover:text-rose-600 flex items-center justify-center shrink-0 transition-colors"><span class="material-symbols-outlined text-[20px]">close</span></button>' +
+          '</div>' +
+          '<div class="mt-3 rounded-lg border border-outline-variant/60 bg-surface-container-low/40 p-3 !pb-1">' +
+            '<div class="flex items-center gap-1.5 mb-1.5">' +
+              '<span class="inline-flex items-center gap-1.5 text-label-sm font-bold text-secondary"><span class="material-symbols-outlined text-[15px] text-primary">wallet</span>Relevant Text (Apple)</span>' +
+            '</div>' +
+            '<p data-view class="text-body-md text-on-surface leading-relaxed">' + defaultMsg + '</p>' +
+            '<textarea data-edit name="relevant_text[' + row.dataset.cityStore + ']" rows="2" maxlength="120" placeholder="Message shown on the pass when the user is near this store" class="hidden w-full bg-white border border-outline-variant rounded-lg py-2 px-3 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none">' + defaultMsg + '</textarea>' +
+          '</div>';
+        selectedList.appendChild(item);
+        update();
+      };
+
+      window.cityStoreRemove = function (btn) {
+        var item = btn.closest('[data-selected-item]');
+        var row = document.querySelector('[data-city-store="' + item.dataset.ref + '"]');
+        if (row) row.classList.remove('hidden');
+        item.remove();
+        update();
+      };
+
+      window.cityStoreToggleEdit = function (btn) {
+        var item = btn.closest('[data-selected-item]');
+        var view = item.querySelector('[data-view]');
+        var edit = item.querySelector('[data-edit]');
+        var icon = btn.querySelector('.material-symbols-outlined');
+        if (edit.classList.contains('hidden')) {
+          view.classList.add('hidden');
+          edit.classList.remove('hidden');
+          edit.focus();
+          icon.textContent = 'check';
+          btn.title = 'Save';
+        } else {
+          view.textContent = edit.value.trim() || '—';
+          edit.classList.add('hidden');
+          view.classList.remove('hidden');
+          icon.textContent = 'edit';
+          btn.title = 'Edit text';
+        }
+      };
+
+      window.cityStoresSelectAll = function () {
+        document.querySelectorAll('[data-city-store]:not(.hidden)').forEach(function (row) {
+          cityStoreAdd(row.querySelector('[data-add]'));
+        });
+      };
+
+      window.cityStoresFilter = function (q) {
+        q = q.toLowerCase().trim();
+        var visible = 0;
+        document.querySelectorAll('.js-city-store-row').forEach(function (row) {
+          if (document.querySelector('[data-selected-item][data-ref="' + row.dataset.cityStore + '"]')) return;
+          var match = (row.dataset.name + ' ' + row.dataset.city).toLowerCase().indexOf(q) !== -1;
+          row.classList.toggle('hidden', !match);
+          if (match) visible++;
+        });
+        document.getElementById('cityNoAvailable').classList.toggle('hidden', visible > 0);
+      };
+
+      update();
+    })();
+
+    // ---- Edit City modal: store picker (Aatman Infotech pre-selected) ----
+    (function () {
+      var LIMIT = 10;
+      var selectedList = document.getElementById('editCitySelectedList');
+      var selectedEmpty = document.getElementById('editCitySelectedEmpty');
+      var badge = document.getElementById('editCityStoreCount');
+      if (!selectedList) return;
+
+      function count() { return selectedList.querySelectorAll('[data-selected-item]').length; }
+      function update() {
+        var n = count();
+        badge.textContent = n + ' / ' + LIMIT;
+        selectedEmpty.classList.toggle('hidden', n > 0);
+      }
+
+      window.editCityStoreAdd = function (btn) {
+        if (count() >= LIMIT) return;
+        var row = btn.closest('[data-edit-city-store]');
+        row.classList.add('hidden');
+        var defaultMsg = 'You are near ' + row.dataset.name + '. Tap to view your pass.';
+        var item = document.createElement('div');
+        item.setAttribute('data-selected-item', '');
+        item.dataset.ref = row.dataset.editCityStore;
+        item.className = 'rounded-xl border border-outline-variant bg-white shadow-sm p-3';
+        item.innerHTML =
+          '<div class="flex items-center gap-3">' +
+            '<img src="' + row.dataset.logo + '" alt="' + row.dataset.name + '" class="w-10 h-10 rounded-lg object-contain bg-white border border-outline-variant/60 p-1 shrink-0">' +
+            '<div class="min-w-0 flex-1">' +
+              '<p class="text-body-md font-bold text-on-surface truncate">' + row.dataset.name + '</p>' +
+              '<p class="flex items-center gap-1 text-label-sm text-outline"><span class="material-symbols-outlined text-[14px]">location_on</span>' + row.dataset.city + '</p>' +
+            '</div>' +
+            '<button type="button" data-edit-btn onclick="editCityStoreToggleEdit(this)" title="Edit text" class="w-8 h-8 rounded-full text-outline hover:bg-primary/10 hover:text-primary flex items-center justify-center shrink-0 transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>' +
+            '<button type="button" onclick="editCityStoreRemove(this)" title="Remove" class="w-8 h-8 rounded-full text-outline hover:bg-rose-50 hover:text-rose-600 flex items-center justify-center shrink-0 transition-colors"><span class="material-symbols-outlined text-[20px]">close</span></button>' +
+          '</div>' +
+          '<div class="mt-3 rounded-lg border border-outline-variant/60 bg-surface-container-low/40 p-3 !pb-1">' +
+            '<div class="flex items-center gap-1.5 mb-1.5">' +
+              '<span class="inline-flex items-center gap-1.5 text-label-sm font-bold text-secondary"><span class="material-symbols-outlined text-[15px] text-primary">wallet</span>Relevant Text (Apple)</span>' +
+            '</div>' +
+            '<p data-view class="text-body-md text-on-surface leading-relaxed">' + defaultMsg + '</p>' +
+            '<textarea data-edit name="edit_relevant_text[' + row.dataset.editCityStore + ']" rows="1" maxlength="120" placeholder="Message shown on the pass when the user is near this store" class="hidden w-full bg-white border border-outline-variant rounded-lg py-2 px-3 text-body-md text-on-surface placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none">' + defaultMsg + '</textarea>' +
+          '</div>';
+        selectedList.appendChild(item);
+        update();
+      };
+
+      window.editCityStoreRemove = function (btn) {
+        var item = btn.closest('[data-selected-item]');
+        var row = document.querySelector('[data-edit-city-store="' + item.dataset.ref + '"]');
+        if (row) row.classList.remove('hidden');
+        item.remove();
+        update();
+      };
+
+      window.editCityStoreToggleEdit = function (btn) {
+        var item = btn.closest('[data-selected-item]');
+        var view = item.querySelector('[data-view]');
+        var edit = item.querySelector('[data-edit]');
+        var icon = btn.querySelector('.material-symbols-outlined');
+        if (edit.classList.contains('hidden')) {
+          view.classList.add('hidden'); edit.classList.remove('hidden'); edit.focus();
+          icon.textContent = 'check'; btn.title = 'Save';
+        } else {
+          view.textContent = edit.value.trim() || '—';
+          edit.classList.add('hidden'); view.classList.remove('hidden');
+          icon.textContent = 'edit'; btn.title = 'Edit text';
+        }
+      };
+
+      window.editCityStoresSelectAll = function () {
+        document.querySelectorAll('[data-edit-city-store]:not(.hidden)').forEach(function (row) {
+          editCityStoreAdd(row.querySelector('[data-add]'));
+        });
+      };
+
+      window.editCityStoresFilter = function (q) {
+        q = q.toLowerCase().trim();
+        var visible = 0;
+        document.querySelectorAll('.js-edit-city-store-row').forEach(function (row) {
+          if (document.querySelector('#editCitySelectedList [data-selected-item][data-ref="' + row.dataset.editCityStore + '"]')) return;
+          var match = (row.dataset.name + ' ' + row.dataset.city).toLowerCase().indexOf(q) !== -1;
+          row.classList.toggle('hidden', !match);
+          if (match) visible++;
+        });
+        document.getElementById('editCityNoAvailable').classList.toggle('hidden', visible > 0);
+      };
+
+      // Pre-select the first store (Aatman Infotech) by default
+      var firstRow = document.querySelector('[data-edit-city-store="0"]');
+      if (firstRow) editCityStoreAdd(firstRow.querySelector('[data-add]'));
+
+      update();
     })();
   </script>
 </body>

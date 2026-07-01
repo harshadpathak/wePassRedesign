@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -82,7 +82,7 @@
                   <span class="material-symbols-outlined text-[16px]">sell</span> Coupon
                 </span>
                 <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-600 text-label-sm font-bold px-3 py-1 rounded-full">
-                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span> Active
+                  <span class="material-symbols-outlined text-[16px] font-variation-fill">check_circle</span> Active
                 </span>
               </div>
             </div>
@@ -149,7 +149,7 @@
             <div class="flex flex-col gap-4 px-6 py-5 border-b border-outline-variant/60 sm:flex-row sm:items-center sm:justify-between">
               <div class="flex items-center gap-3">
                 <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+                  <span class="material-symbols-outlined text-[22px] font-variation-fill">bar_chart</span>
                 </span>
                 <div>
                   <h4 class="text-headline-md font-bold text-on-surface leading-tight">Wallet Installation Overview</h4>
@@ -187,7 +187,7 @@
                     <td class="px-6 py-4">
                       <div class="flex items-center gap-3">
                         <span class="flex h-10 w-10 items-center justify-center rounded-xl <?= $m['icbg'] ?> <?= $m['ic'] ?>">
-                          <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;"><?= $m['icon'] ?></span>
+                          <span class="material-symbols-outlined text-[20px] font-variation-fill"><?= $m['icon'] ?></span>
                         </span>
                         <div class="leading-tight">
                           <p class="text-body-md font-bold text-on-surface"><?= htmlspecialchars($m['label']) ?></p>
@@ -216,22 +216,22 @@
             <div class="m-6 mt-0 rounded-2xl border border-primary/15 bg-primary/[0.04] p-5">
               <div class="flex items-start gap-3">
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-gradient text-white shadow-sm">
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+                  <span class="material-symbols-outlined text-[20px] font-variation-fill">lightbulb</span>
                 </span>
                 <div>
                   <h5 class="text-headline-md font-bold text-on-surface leading-tight">How Generic Advertising Pass Works</h5>
                   <p class="text-label-md text-gray-500 mt-0.5">This is a shared pass template &mdash; all users install the same pass. Content is managed from the Pass Template, not individual records.</p>
                   <ul class="mt-3 space-y-2">
                     <li class="flex items-start gap-2 text-label-md text-gray-500">
-                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0 font-variation-fill" >check_circle</span>
                       <span>Edit the <span class="font-bold text-gray-500">Pass Template</span> to update content &mdash; changes apply to all installed passes automatically.</span>
                     </li>
                     <li class="flex items-start gap-2 text-label-md text-gray-500">
-                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0 font-variation-fill">check_circle</span>
                       <span><span class="font-bold text-gray-500">Apple Wallet</span> receives silent updates &mdash; passes refresh on device without any notification.</span>
                     </li>
                     <li class="flex items-start gap-2 text-label-md text-gray-500">
-                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0 font-variation-fill">check_circle</span>
                       <span>Use <span class="font-bold text-gray-500">Push Messages</span> to send visible notifications to all installed passes for promotions.</span>
                     </li>
                   </ul>

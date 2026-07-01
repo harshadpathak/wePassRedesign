@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -52,15 +52,15 @@
             <!-- Steps -->
             <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3 mt-4">
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                 <span class="text-body-md font-bold text-gray-600">Scan QR Code</span>
               </div>
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                 <span class="text-body-md font-bold text-gray-600">Share Link</span>
               </div>
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                 <span class="text-body-md font-bold text-gray-600 ">Add to Wallet</span>
               </div>
             </div>
