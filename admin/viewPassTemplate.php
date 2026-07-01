@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -109,7 +109,7 @@
               <span class="material-symbols-outlined pointer-events-none absolute -right-3 -bottom-4 text-[80px] leading-none text-<?= $a ?>-500/10 select-none" style="font-variation-settings: 'FILL' 1;"><?= $card['icon'] ?></span>
               <div class="relative">
                 <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-<?= $a ?>-100 text-<?= $a ?>-600 shadow-sm">
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;"><?= $card['icon'] ?></span>
+                  <span class="material-symbols-outlined text-[20px] font-variation-fill"><?= $card['icon'] ?></span>
                 </span>
                 <p class="mt-3 text-label-sm uppercase tracking-wider font-semibold text-<?= $a ?>-700/70"><?= htmlspecialchars($card['label']) ?></p>
                 <p class="text-body-lg font-semibold text-on-surface mt-1 truncate"><?= htmlspecialchars($card['value']) ?></p>

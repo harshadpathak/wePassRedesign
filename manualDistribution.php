@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -203,7 +203,7 @@
                     </div>
                     <!-- Additional Image -->
                     <div class="space-y-2">
-                        <label class="text-on-surface font-semibold text-label-md">Additional Image:</label>
+                        <label class="text-on-surface font-bold text-label-md">Additional Image:</label>
                         <!-- Single box: upload control + inline preview -->
                         <label id="additional-image-zone" for="additional-image-input"
                             class="group relative flex h-40 flex-col items-center justify-center text-center gap-2.5 rounded-2xl px-4 cursor-pointer overflow-hidden border border-outline-variant bg-gradient-to-br from-surface-container-low/60 to-primary/[0.04] transition-all duration-300">
@@ -224,7 +224,7 @@
                                     class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20"></div>
                                 <!-- glass control bar -->
-                                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20">
+                                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20 rounded-b-2xl">
                                     <span class="flex items-center gap-1.5 min-w-0">
                                         <span class="material-symbols-outlined text-white/90 text-[18px] shrink-0">image</span>
                                         <span id="additional-image-name" class="text-white text-label-md font-semibold truncate"></span>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="en" style="">
+<html class="light" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -171,7 +171,7 @@
         <div class="px-6 py-5 border-b border-outline-variant/60">
           <div class="flex items-center gap-2 mb-4">
             <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
-              <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">history</span>
+              <span class="material-symbols-outlined text-[16px] font-variation-fill">history</span>
             </span>
             <h4 class="text-body-lg font-bold text-on-surface">Last Login Session</h4>
             <span class="inline-flex items-center rounded-full bg-surface-container-high px-2.5 py-0.5 text-label-sm font-semibold text-secondary">5 hours ago</span>
