@@ -634,7 +634,7 @@
           </div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Add New Item</h3>
-            <p class="text-label-md text-secondary">Fill in the details below</p>
+            <p class="text-body-md text-gray-400">Fill in the details below</p>
           </div>
         </div>
         <button type="button" class="js-modal-close w-9 h-9 rounded-lg text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">

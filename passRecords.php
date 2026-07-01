@@ -317,7 +317,7 @@
                             <span class="font-medium">View Pass</span>
                           </a>
                           <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors"
-                            href="#">
+                            href="#" data-modal-target="#modal-mail-status">
                             <span class="material-symbols-outlined text-secondary text-[20px]">forward_to_inbox</span>
                             <span class="font-medium"> Resend Email</span>
                           </a>
@@ -348,8 +348,42 @@
         </div>
       </div>
     </section>
+
+    <!-- ===== Mail Status Modal (Information modal pattern) ===== -->
+    <div id="modal-mail-status" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-lg bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <!-- Header -->
+        <div class="flex items-center gap-2 px-6 py-4 border-b border-outline-variant/60">
+          <span class="material-symbols-outlined text-[20px] text-primary">mail</span>
+          <h3 class="text-body-lg font-bold text-on-surface">Mail Status</h3>
+        </div>
+        <!-- Body -->
+        <div class="px-6 py-5 text-center">
+          <span class="js-success-icon material-symbols-outlined text-emerald-600 text-[88px] leading-none inline-block" style="font-variation-settings: 'FILL' 1;">verified</span>
+          <h4 class="text-headline-md font-bold text-on-surface mt-3">Success</h4>
+          <p class="text-body-md text-secondary mt-1.5">Email sent successfully.</p>
+        </div>
+        <!-- Footer -->
+        <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+          <button type="button" class="js-modal-close inline-flex items-center gap-2 bg-brand-gradient text-on-primary px-8 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all">
+            <span class="material-symbols-outlined text-sm">check</span> Done
+          </button>
+        </div>
+      </div>
+    </div>
+
     <?php include('footer.php'); ?>
   </main>
+  <style>
+    @keyframes successPop {
+      0%   { transform: scale(0) rotate(-20deg); opacity: 0; }
+      60%  { transform: scale(1.15) rotate(6deg); opacity: 1; }
+      80%  { transform: scale(0.94) rotate(-3deg); }
+      100% { transform: scale(1) rotate(0); }
+    }
+    .js-success-icon.is-animating { animation: successPop 0.6s cubic-bezier(0.4, 0, 0.2, 1) both; }
+  </style>
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
   <script>
@@ -375,6 +409,39 @@
             document.body.removeChild(ta); done();
           }
         });
+      });
+
+      // Modals: open / close
+      function openModal(sel) {
+        var m = document.querySelector(sel);
+        if (!m) return;
+        m.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        // Replay the success icon pop animation each time the modal opens
+        var ic = m.querySelector('.js-success-icon');
+        if (ic) {
+          ic.classList.remove('is-animating');
+          void ic.offsetWidth; // force reflow to restart the animation
+          ic.classList.add('is-animating');
+        }
+      }
+      function closeModal(m) {
+        m.classList.add('hidden');
+        if (!document.querySelector('.js-modal:not(.hidden)')) document.body.style.overflow = '';
+      }
+      document.querySelectorAll('[data-modal-target]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          openModal(el.getAttribute('data-modal-target'));
+        });
+      });
+      document.querySelectorAll('.js-modal .js-modal-close').forEach(function (el) {
+        el.addEventListener('click', function () { closeModal(el.closest('.js-modal')); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.js-modal:not(.hidden)').forEach(closeModal);
+        }
       });
     })();
   </script>
