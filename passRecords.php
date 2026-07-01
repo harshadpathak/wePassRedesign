@@ -156,7 +156,7 @@
           <span class="inline-flex items-center gap-2 bg-primary/5 border border-primary/15 rounded-lg px-3 py-2">
             <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
             <span class="text-label-md text-outline">GEO Locations</span>
-            <a href="#" class="text-label-md font-bold text-primary">Manual</a>
+            <a href="#" data-modal-target="#modal-store-locations" class="text-label-md font-bold text-primary">Manual</a>
             <span class="bg-primary text-white text-label-sm font-bold px-2 py-0.5 rounded-full"><?= (int) $template['geo'] ?></span>
           </span>
         </div>
@@ -227,7 +227,7 @@
           <!-- Stat tiles + Import -->
           <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             <?php foreach ($stats as $stat): ?>
-            <div class="bg-white border border-outline-variant rounded-2xl p-3 flex items-center gap-3 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <div class="bg-white border border-outline-variant rounded-2xl p-3 flex items-center gap-3">
               <span class="w-10 h-10 rounded-xl <?= $stat['icbg'] ?> <?= $stat['ic'] ?> flex items-center justify-center shrink-0">
                 <span class="material-symbols-outlined text-[20px]"><?= $stat['icon'] ?></span>
               </span>
@@ -368,6 +368,47 @@
         <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
           <button type="button" class="js-modal-close inline-flex items-center gap-2 bg-brand-gradient text-on-primary px-8 py-2.5 rounded-lg text-[14px] font-bold shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all">
             <span class="material-symbols-outlined text-sm">check</span> Done
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <?php
+      // Store locations for the Manual GEO popup
+      $storeLocations = [
+        ['name' => 'Coby Frye', 'city' => 'Rajkot, India'],
+        ['name' => 'Adidas',    'city' => 'Rajkot, India'],
+      ];
+    ?>
+    <!-- ===== Store Locations Modal (Information modal structure) ===== -->
+    <div id="modal-store-locations" class="js-modal hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="js-modal-close absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="relative w-full max-w-lg bg-white rounded-2xl border border-outline-variant shadow-2xl overflow-hidden">
+        <!-- Header -->
+        <div class="flex items-center gap-2.5 px-6 py-4 border-b border-outline-variant/60">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-50 text-primary">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+          </span>
+          <h3 class="text-body-lg font-bold text-on-surface">Store Locations</h3>
+        </div>
+        <!-- Body -->
+        <div class="p-5 space-y-3 max-h-[60vh] overflow-y-auto">
+          <?php foreach ($storeLocations as $loc): ?>
+          <div class="flex items-center gap-3 rounded-xl border border-outline-variant/60 bg-white p-3 hover:border-primary/40 transition-colors">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <span class="material-symbols-outlined text-[22px]">storefront</span>
+            </span>
+            <div class="min-w-0">
+              <p class="text-body-md font-bold text-on-surface truncate"><?= htmlspecialchars($loc['name']) ?></p>
+              <p class="flex items-center gap-1 text-label-sm text-outline"><span class="material-symbols-outlined text-[14px]">location_on</span><?= htmlspecialchars($loc['city']) ?></p>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+        <!-- Footer -->
+        <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+          <button type="button" class="js-modal-close flex items-center gap-2 bg-brand-gradient text-on-primary px-6 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
+            <span class="material-symbols-outlined text-sm">check</span> Got it
           </button>
         </div>
       </div>

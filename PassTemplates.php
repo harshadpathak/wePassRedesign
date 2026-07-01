@@ -199,7 +199,7 @@
                     <button type="button" class="js-menu-toggle material-symbols-outlined text-outline hover:text-primary transition-colors p-1 rounded-lg hover:bg-surface-container-high">more_vert</button>
                     <div class="js-menu-panel hidden absolute right-0 mt-2 w-48 border border-outline-variant/50 rounded-xl shadow-xl transition-all duration-200 z-50 overflow-hidden bg-white">
                       <div class="py-1.5">
-                        <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">visibility</span><span class="font-medium">View</span></a>
+                        <a class="js-drawer-open flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#" data-drawer-target="#drawer-pass-preview" data-drawer-name="<?= htmlspecialchars($t['name']) ?>" data-drawer-icon="<?= $t['type'] === 'Advertising' ? 'campaign' : 'how_to_reg' ?>"><span class="material-symbols-outlined text-secondary text-[20px]">visibility</span><span class="font-medium">View</span></a>
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">edit</span><span class="font-medium">Edit</span></a>
                         <a class="flex items-center gap-3 px-4 py-2 text-body-md text-on-surface hover:bg-surface-container-low transition-colors" href="geoLocation.php"><span class="material-symbols-outlined text-secondary text-[20px]">location_on</span><span class="font-medium">GEO location</span></a>
                         <div class="border-t border-outline-variant/30 my-1 mx-2"></div>
@@ -231,10 +231,166 @@
         </div>
       </div>
     </section>
+
+    <!-- ===== Pass Preview Drawer (slides in from left) ===== -->
+    <div id="drawer-pass-preview" class="js-drawer hidden fixed inset-0 z-[100]">
+      <div class="js-drawer-close absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+      <aside class="js-drawer-panel absolute left-0 top-0 h-full w-full max-w-[820px] bg-white shadow-2xl flex flex-col -translate-x-full transition-transform duration-300 ease-out">
+        <!-- Header -->
+        <div class="flex items-center justify-between gap-3 px-6 py-5 border-b border-outline-variant/60 shrink-0">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-gradient text-white flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
+              <span class="js-drawer-icon material-symbols-outlined text-[22px]">how_to_reg</span>
+            </div>
+            <div>
+              <h3 class="js-drawer-title text-headline-md font-bold text-on-surface">Gift-Card-01</h3>
+              <p class="text-body-md text-gray-400">Pass preview</p>
+            </div>
+          </div>
+          <button type="button" class="js-drawer-close w-9 h-9 rounded-lg text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 overflow-y-auto px-6 pt-12 pb-10 flex flex-col items-center">
+          <!-- Platform tabs -->
+          <div class="flex items-center gap-2 mb-5">
+            <button type="button" class="inline-flex items-center gap-1.5 rounded-full bg-primary text-white px-3.5 py-1.5 text-label-md font-bold shadow-sm">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></svg>Apple
+            </button>
+            <button type="button" class="inline-flex items-center gap-1.5 rounded-full bg-surface-container-low border border-outline-variant text-secondary px-3.5 py-1.5 text-label-md font-bold">
+              <svg viewBox="0 0 24 24" class="h-4 w-4"><rect x="2.5" y="2" width="19" height="20" rx="2.5" fill="#34A853"/><rect x="2.5" y="4" width="19" height="18" rx="2.5" fill="#FBBC05"/><rect x="2.5" y="6.5" width="19" height="15.5" rx="2.5" fill="#EA4335"/><path d="M2 12.2 C 5.5 10.2 8.5 13.8 12 14 C 15.5 14.2 18.5 10.5 22 10.8 L 22 19.5 Q 22 22 19.5 22 L 4.5 22 Q 2 22 2 19.5 Z" fill="#4285F4"/></svg>Google
+            </button>
+          </div>
+
+          <!-- Pass card (flip) -->
+          <div class="pass-flip w-[260px]">
+            <div class="pass-flip-inner">
+              <!-- Front -->
+              <div class="pass-face rounded-[22px] overflow-hidden shadow-xl bg-[#DD3D1F] min-h-[350px]">
+                <div class="px-4 pt-3 pb-5 text-white">
+                  <!-- Brand header -->
+                  <div class="flex items-center gap-2 border-b border-white/50 pb-3 mb-4">
+                    <img src="favicon-new.png" alt="" class="h-10 w-10 rounded-full bg-white p-px object-contain shrink-0">
+                    <h4 class="text-[15px] font-normal tracking-normal text-white">Titan Watches</h4>
+                  </div>
+                  <!-- Balance -->
+                  <p class="text-[17px] mb-4">Gift card: ISK1004</p>
+                  <!-- Valid till -->
+                  <p class="text-[10px] tracking-[0.15em] text-white/90">VALID TILL</p>
+                  <p class="text-xs font-bold mb-4">25/06/2026</p>
+                  <!-- QR -->
+                  <div class="bg-white rounded-lg p-2 w-[132px] mx-auto">
+                    <img class="w-full h-full" alt="QR code" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=0&data=HARSH1234">
+                  </div>
+                  <p class="text-center text-[13px] font-normal mt-2 truncate">HARSH1234...</p>
+                </div>
+                <!-- Strip image -->
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=60" alt="" class="w-full h-32 object-cover">
+              </div>
+              <!-- Back -->
+              <div class="pass-face pass-face-back rounded-[22px] overflow-hidden shadow-xl bg-white p-6">
+                <img src="favicon-new.png" alt="" class="h-10 w-10 rounded-full bg-white p-px object-contain mb-3">
+                <h4 class="text-[22px] font-medium leading-tight text-black mb-4">Gift Card: <span>ISK1004</span></h4>
+                <div class="space-y-3">
+                  <div>
+                    <strong class="text-sm font-medium text-black">Updated</strong><br>
+                    <span class="text-xs font-normal text-black">Jun 04, 2026, 08:32 AM</span>
+                  </div>
+                  <div>
+                    <strong class="text-sm font-medium text-black">Pin</strong><br>
+                    <span class="break-words text-xs font-normal text-black">455</span>
+                  </div>
+                  <div>
+                    <strong class="text-sm font-medium text-black">Event Number</strong><br>
+                    <span class="break-words text-xs font-normal text-black">5436</span>
+                  </div>
+                  <div>
+                    <strong class="text-sm font-medium text-black">VALID TILL</strong><br>
+                    <span class="text-xs font-normal text-black">25/06/2026</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flip -->
+          <button type="button" id="flip-pass" class="mt-5 inline-flex items-center gap-1.5 rounded-lg border border-primary/40 text-primary text-[13px] font-bold px-5 py-2 hover:bg-primary/5 transition-colors">
+            Flip <span class="material-symbols-outlined text-[18px]">cached</span>
+          </button>
+        </div>
+      </aside>
+    </div>
+
     <?php include('footer.php'); ?>
   </main>
+  <style>
+    /* 3D flip for the pass preview */
+    .pass-flip { perspective: 1200px; }
+    .pass-flip-inner {
+      position: relative;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    .pass-flip.is-flipped .pass-flip-inner { transform: rotateY(180deg); }
+    .pass-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .pass-face-back { position: absolute; inset: 0; transform: rotateY(180deg); background: #fff; }
+  </style>
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
+  <script>
+    (function () {
+      // Flip the pass preview
+      var flipBtn = document.getElementById('flip-pass');
+      var card = document.querySelector('.pass-flip');
+      if (flipBtn && card) {
+        flipBtn.addEventListener('click', function () { card.classList.toggle('is-flipped'); });
+      }
+
+      function openDrawer(sel) {
+        var d = document.querySelector(sel);
+        if (!d) return;
+        d.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        // next frame → slide in
+        requestAnimationFrame(function () {
+          var panel = d.querySelector('.js-drawer-panel');
+          if (panel) panel.classList.remove('-translate-x-full');
+        });
+      }
+      function closeDrawer(d) {
+        var panel = d.querySelector('.js-drawer-panel');
+        if (panel) panel.classList.add('-translate-x-full');
+        setTimeout(function () {
+          d.classList.add('hidden');
+          if (!document.querySelector('.js-drawer:not(.hidden)')) document.body.style.overflow = '';
+        }, 300);
+      }
+      document.querySelectorAll('[data-drawer-target]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          var target = el.getAttribute('data-drawer-target');
+          var d = document.querySelector(target);
+          if (d) {
+            var name = el.getAttribute('data-drawer-name');
+            var icon = el.getAttribute('data-drawer-icon');
+            var titleEl = d.querySelector('.js-drawer-title');
+            var iconEl = d.querySelector('.js-drawer-icon');
+            if (name && titleEl) titleEl.textContent = name;
+            if (icon && iconEl) iconEl.textContent = icon;
+          }
+          openDrawer(target);
+        });
+      });
+      document.querySelectorAll('.js-drawer .js-drawer-close').forEach(function (el) {
+        el.addEventListener('click', function () { closeDrawer(el.closest('.js-drawer')); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { document.querySelectorAll('.js-drawer:not(.hidden)').forEach(closeDrawer); }
+      });
+    })();
+  </script>
 </body>
 
 </html>

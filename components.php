@@ -634,7 +634,7 @@
         <p class="text-body-md text-secondary mt-2 leading-relaxed">This is an informational message. Use it to
           explain a result, share a tip, or guide the user to the next step.</p>
       </div>
-      <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+    <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
         <button type="button" class="js-modal-close flex items-center gap-2 bg-brand-gradient text-on-primary px-6 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
           <span class="material-symbols-outlined text-sm">check</span> Got it
         </button>
