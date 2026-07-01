@@ -165,7 +165,7 @@
                   <div class="flex items-center gap-3.5">
                     <div class="relative shrink-0">
                       <span class="w-11 h-11 rounded-xl <?= $cfg['avatarBg'] ?> <?= $cfg['iconColor'] ?> flex items-center justify-center">
-                        <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;"><?= $cfg['icon'] ?></span>
+                        <span class="material-symbols-outlined text-[22px] font-variation-fill"><?= $cfg['icon'] ?></span>
                       </span>
                       <span class="absolute -top-0.5 -right-0.5 w-3 h-3 rounded-full <?= $statusDot[$u['status']] ?> ring-2 ring-white"></span>
                     </div>

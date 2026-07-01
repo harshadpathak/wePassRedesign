@@ -148,7 +148,7 @@
           <div class="flex flex-wrap items-center gap-2.5">
             <div class="inline-flex items-center gap-2.5 rounded-xl border border-outline-variant/60 bg-surface-container-low/60 px-3.5 py-2">
               <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-primary">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">apartment</span>
+                <span class="material-symbols-outlined text-[18px] font-variation-fill">apartment</span>
               </span>
               <div>
                 <p class="text-label-sm uppercase tracking-wider text-outline font-bold">User Type</p>
@@ -157,7 +157,7 @@
             </div>
             <div class="inline-flex items-center gap-2.5 rounded-xl border border-outline-variant/60 bg-surface-container-low/60 px-3.5 py-2">
               <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+                <span class="material-symbols-outlined text-[18px] font-variation-fill">calendar_today</span>
               </span>
               <div>
                 <p class="text-label-sm uppercase tracking-wider text-outline font-bold">Member Since</p>
@@ -180,7 +180,7 @@
             <?php foreach ($loginInfo as $info): ?>
             <div class="flex items-center gap-3.5 rounded-xl border border-outline-variant/50 bg-white p-4">
               <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl <?= $info['bg'] ?> <?= $info['color'] ?>">
-                <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;"><?= $info['icon'] ?></span>
+                <span class="material-symbols-outlined text-[22px] font-variation-fill" ><?= $info['icon'] ?></span>
               </span>
               <div class="min-w-0">
                 <p class="text-label-sm uppercase tracking-wider text-gray-400 font-semibold"><?= htmlspecialchars($info['label']) ?></p>
@@ -246,7 +246,7 @@
                 <!-- Status -->
                 <td class="px-6 py-4">
                   <span class="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-label-md font-bold <?= $st['pill'] ?>">
-                    <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;"><?= $st['icon'] ?></span><?= htmlspecialchars($log['status']) ?>
+                    <span class="material-symbols-outlined text-[15px] font-variation-fill"><?= $st['icon'] ?></span><?= htmlspecialchars($log['status']) ?>
                   </span>
                 </td>
                 <!-- Method -->
@@ -298,7 +298,7 @@
                         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                           <div class="flex items-center gap-3.5 rounded-xl border border-outline-variant/50 bg-white p-4">
                             <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-amber-600">
-                              <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                              <span class="material-symbols-outlined text-[22px] font-variation-fill">location_on</span>
                             </span>
                             <div class="min-w-0">
                               <p class="text-label-sm uppercase tracking-wider text-gray-400 font-semibold">Location</p>
@@ -307,7 +307,7 @@
                           </div>
                           <div class="flex items-center gap-3.5 rounded-xl border border-outline-variant/50 bg-white p-4">
                             <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-                              <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">devices</span>
+                              <span class="material-symbols-outlined text-[22px] font-variation-fill">devices</span>
                             </span>
                             <div class="min-w-0">
                               <p class="text-label-sm uppercase tracking-wider text-gray-400 font-semibold">Device &amp; Browser</p>
@@ -316,7 +316,7 @@
                           </div>
                           <div class="flex items-center gap-3.5 rounded-xl border border-outline-variant/50 bg-white p-4">
                             <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
-                              <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">memory</span>
+                              <span class="material-symbols-outlined text-[22px] font-variation-fill">memory</span>
                             </span>
                             <div class="min-w-0">
                               <p class="text-label-sm uppercase tracking-wider text-gray-400 font-semibold">Operating System</p>
@@ -325,7 +325,7 @@
                           </div>
                           <div class="flex items-center gap-3.5 rounded-xl border border-outline-variant/50 bg-white p-4">
                             <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
-                              <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+                              <span class="material-symbols-outlined text-[22px] font-variation-fill">lock</span>
                             </span>
                             <div class="min-w-0">
                               <p class="text-label-sm uppercase tracking-wider text-gray-400 font-semibold">Auth Method</p>

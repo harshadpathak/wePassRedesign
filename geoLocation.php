@@ -141,7 +141,7 @@
           <!-- Identity -->
           <div class="flex items-start gap-4">
             <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">apartment</span>
+              <span class="material-symbols-outlined text-[30px] font-variation-fill">apartment</span>
             </div>
             <div class="space-y-1.5">
               <h3 class="text-title-md font-bold text-on-surface tracking-tight">City Configuration</h3>

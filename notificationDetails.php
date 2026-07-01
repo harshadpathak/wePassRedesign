@@ -212,7 +212,7 @@
             <div class="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div class="flex items-center gap-4">
                 <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-gradient text-white shadow-md shadow-primary/20">
-                  <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">event</span>
+                  <span class="material-symbols-outlined text-[24px] font-variation-fill">event</span>
                 </span>
                 <div class="min-w-0">
                   <p class="text-label-sm font-bold uppercase tracking-wider text-primary/70">Scheduled For</p>

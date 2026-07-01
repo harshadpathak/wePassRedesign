@@ -382,7 +382,7 @@
               <td class="px-6 py-4">
                 <div class="flex items-center gap-2.5">
                   <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+                    <span class="material-symbols-outlined text-[18px] font-variation-fill">flag</span>
                   </span>
                   <div class="leading-tight">
                     <p class="text-[10px] font-normal uppercase tracking-wider text-outline">Ends in</p>
@@ -434,7 +434,7 @@
               <td class="px-6 py-4">
                 <div class="flex items-center gap-2.5">
                   <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+                    <span class="material-symbols-outlined text-[18px] font-variation-fill">flag</span>
                   </span>
                   <div class="leading-tight">
                     <p class="text-[10px] font-bold uppercase tracking-wider text-outline">Ending Soon</p>
