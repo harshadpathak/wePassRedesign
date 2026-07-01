@@ -634,7 +634,7 @@
         <p class="text-body-md text-secondary mt-2 leading-relaxed">This is an informational message. Use it to
           explain a result, share a tip, or guide the user to the next step.</p>
       </div>
-      <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
+    <div class="flex items-center justify-center px-6 py-4 border-t border-outline-variant/60 bg-surface-container-low/30">
         <button type="button" class="js-modal-close flex items-center gap-2 bg-brand-gradient text-on-primary px-6 py-2.5 rounded-lg text-[14px] shadow-lg shadow-primary/20 hover:shadow-xl hover:opacity-90 active:scale-[0.98] transition-all font-bold">
           <span class="material-symbols-outlined text-sm">check</span> Got it
         </button>
@@ -653,7 +653,7 @@
           </div>
           <div>
             <h3 class="text-headline-md font-bold text-on-surface">Add New Item</h3>
-            <p class="text-label-md text-secondary">Fill in the details below</p>
+            <p class="text-body-md text-gray-400">Fill in the details below</p>
           </div>
         </div>
         <button type="button" class="js-modal-close w-9 h-9 rounded-lg text-outline hover:bg-surface-container-low hover:text-on-surface flex items-center justify-center transition-all">
