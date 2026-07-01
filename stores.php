@@ -375,8 +375,15 @@
                 <!-- Name + location -->
                 <td class="px-6 py-4">
                   <div class="flex items-center gap-3.5">
-                    <img src=""
-                      class="material-symbols-outlined w-11 h-11 rounded-xl object-contain bg-white border border-outline-variant/60 p-1.5 shrink-0">
+                    <img
+                      src="your-image.png"
+                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                      class="w-11 h-11 rounded-xl object-contain bg-white border border-outline-variant/60 p-1.5 shrink-0"
+                    >
+                    <span
+                      class="text-primary material-symbols-outlined flex items-center justify-center w-11 h-11 rounded-xl bg-white border border-outline-variant/60 shrink-0 text-[26px]">
+                      store
+                    </span>
                     <div class="min-w-0">
                       <p class="text-body-md font-medium text-on-surface truncate uppercase">Coza Store</p>
                       <p class="flex items-center gap-1 text-label-sm text-outline font-medium mt-0.5">
