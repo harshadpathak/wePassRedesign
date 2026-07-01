@@ -102,7 +102,7 @@
             <div class="flex items-center gap-4 min-w-0">
               <div class="relative shrink-0">
                 <div class="w-14 h-14 rounded-2xl bg-brand-gradient text-on-primary flex items-center justify-center shadow-md shadow-primary/20">
-                  <span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
+                  <span class="material-symbols-outlined text-[32px] font-variation-fill">how_to_reg</span>
                 </div>
                 <span class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-emerald-500 ring-[3px] ring-white" title="Active"></span>
               </div>
@@ -151,7 +151,7 @@
               </div>
               <div class="relative mt-3">
                 <div class="h-1.5 w-full overflow-hidden rounded-full bg-emerald-500/15">
-                  <div class="h-full rounded-full bg-emerald-500" style="width: <?= $tRetention ?>%"></div>
+                  <div class="h-full rounded-full bg-emerald-500 w-[<?= $tRetention ?>%]"></div>
                 </div>
                 <div class="mt-2 flex items-center justify-between text-label-sm font-medium text-emerald-700/80">
                   <span><?= number_format($tActive) ?> active</span>
@@ -179,7 +179,7 @@
 
               <div class="relative mt-3">
                 <div class="h-1.5 w-full overflow-hidden rounded-full bg-sky-500/15">
-                  <div class="h-full rounded-full bg-sky-500" style="width: <?= $aRate ?>%"></div>
+                  <div class="h-full rounded-full bg-sky-500 w-[<?= $aRate ?>%]"></div>
                 </div>
                 <div class="mt-2 flex items-center justify-between text-label-sm font-medium text-sky-700/80">
                   <span><?= number_format($aActive) ?> active</span>
@@ -210,7 +210,7 @@
 
               <div class="relative mt-3">
                 <div class="h-1.5 w-full overflow-hidden rounded-full bg-violet-500/15">
-                  <div class="h-full rounded-full bg-violet-500" style="width: <?= $gRate ?>%"></div>
+                  <div class="h-full rounded-full bg-violet-500 w-[<?= $gRate ?>%]"></div>
                 </div>
                 <div class="mt-2 flex items-center justify-between text-label-sm font-medium text-violet-700/80">
                   <span><?= number_format($gActive) ?> active</span>
@@ -339,7 +339,7 @@
             <div class="flex items-baseline justify-between gap-6 py-3 border-t border-outline-variant/40">
               <dt class=" text-label-sm font-bold uppercase tracking-wider text-outline">Background</dt>
                 <div class="flex items-center gap-2 px-2.5 py-1">
-                  <span class="w-4 h-4 rounded-md border border-black/10 shadow-sm" style="background-color: <?= htmlspecialchars($pass['background']) ?>;"></span>
+                  <span class="w-4 h-4 rounded-md border border-black/10 shadow-sm bg-[<?= htmlspecialchars($pass['background']) ?>]"></span>
                   <span class="text-body-md font-mono font-semibold text-on-surface truncate"><?= htmlspecialchars($pass['background']) ?></span>
                 </div>
             </div>
@@ -490,7 +490,7 @@
           <div class="flex items-center justify-between gap-6 border-b border-outline-variant/40 py-3.5">
             <dt class="text-label-sm font-bold uppercase tracking-wider text-outline">Background</dt>
             <dd class="flex items-center gap-2">
-              <span class="w-4 h-4 rounded-md border border-black/10 shadow-sm" style="background-color: <?= htmlspecialchars($pass['background']) ?>;"></span>
+              <span class="w-4 h-4 rounded-md border border-black/10 shadow-sm bg-[<?= htmlspecialchars($pass['background']) ?>]"></span>
               <span class="text-body-md font-semibold text-on-surface truncate"><?= htmlspecialchars($pass['background']) ?></span>
             </dd>
           </div>

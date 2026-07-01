@@ -179,8 +179,7 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
     <!-- Footer Nav -->
     <div class="absolute bottom-0 left-0 w-full p-4 space-y-1 bg-surface">
     <!-- API Documentation -->
-    <a class="flex items-center gap-3 px-4 py-2 hover:text-primary transition-colors group" href="apiDocumentation.php"
-        style="color: #94a3b8;">
+    <a class="flex items-center gap-3 px-4 py-2 hover:text-primary transition-colors group text-slate-400" href="apiDocumentation.php">
         <span class="material-symbols-outlined text-[18px]">menu_book</span>
         <span class="font-display text-[14px]">API Documentation</span>
     </a>
@@ -190,8 +189,7 @@ class="fixed left-0 top-0 h-full w-[300px] flex flex-col border-r border-outline
         class="relative bg-surface-container-low rounded-2xl flex items-center gap-3 border border-outline-variant/30 p-2.5">
         <!-- Status Indicator -->
         <div class="flex items-center justify-center">
-        <span class="material-symbols-outlined text-[10px]"
-            style="font-variation-settings: &quot;FILL&quot; 1, &quot;wght&quot; 700; color: rgb(76, 105, 255); padding-left: 5px;">circle</span>
+        <span class="material-symbols-outlined text-[10px] font-variation-fill text-[#4C69FF] pl-[5px]">circle</span>
         </div>
 
         <!-- Company Name -->

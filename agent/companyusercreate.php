@@ -49,22 +49,19 @@
                         <!-- Step 1 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Fill Company Details</span>
                         </div>
                         <!-- Step 2 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Set Login Password</span>
                         </div>
                         <!-- Step 3 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Account Active Instantly</span>
                         </div>
                     </div>

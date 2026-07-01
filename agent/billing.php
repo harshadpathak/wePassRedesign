@@ -151,7 +151,7 @@
                     <p class="text-label-sm font-bold uppercase tracking-wider text-outline mt-4"><?= htmlspecialchars($u['label']) ?></p>
                     <p class="text-on-surface font-bold mt-0.5"><span class="text-headline-lg"><?= (int) $u['used'] ?></span> <span class="text-label-md text-outline">/ <?= (int) $u['total'] ?></span></p>
                     <div class="mt-3 h-2 rounded-full bg-surface-container-high overflow-hidden">
-                      <div class="h-full rounded-full <?= $u['bar'] ?> transition-all" style="width: <?= $pct ?>%"></div>
+                      <div class="h-full rounded-full <?= $u['bar'] ?> transition-all w-[<?= $pct ?>%]"></div>
                     </div>
                     <p class="text-label-sm text-outline mt-2"><span class="font-semibold text-secondary"><?= $left ?></span> remaining</p>
                   </div>

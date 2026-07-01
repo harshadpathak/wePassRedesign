@@ -43,29 +43,25 @@
                         <!-- Step 1 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Mail Logo</span>
                         </div>
                         <!-- Step 2 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Subject & Sender</span>
                         </div>
                         <!-- Step 3 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Email Body</span>
                         </div>
                         <!-- Step 4 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40 transition-transform">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Download Button</span>
                         </div>
                     </div>
@@ -160,8 +156,8 @@
                   </div>
 
                   <?php if ($tab['type'] === 'logo'): ?>
-                    <!-- Mail Logo: live in-context email preview + editor -->
-                    <div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-6 items-start">
+                    <!-- Mail Logo: uploader + editor -->
+                    <div class="max-w-xl">
 
                       <!-- Editor controls -->
                       <div class="space-y-4">
@@ -223,27 +219,6 @@
                           <span class="material-symbols-outlined text-[15px] text-emerald-600 shrink-0">tips_and_updates</span>
                           Use a transparent background so the logo blends with the email header.
                         </p>
-                      </div>
-
-                      <!-- Live email preview -->
-                      <div>
-                        <div class="flex items-center gap-2 mb-2.5">
-                          <span class="material-symbols-outlined text-[18px] text-outline">visibility</span>
-                          <span class="text-label-md font-bold tracking-wide text-outline uppercase">Live Preview</span>
-                        </div>
-                        <div class="rounded-2xl border border-outline-variant overflow-hidden shadow-sm bg-white">
-                          <!-- Email body -->
-                          <div class="bg-surface-container-low/60 p-4 sm:p-6">
-                            <div class="mx-auto max-w-md rounded-xl overflow-hidden">
-                              <!-- Logo header band (editable) -->
-                              <!-- <div> -->
-                                <div class="rounded-2xl border border-outline-variant bg-primary/5 px-6 py-10 flex items-center justify-center">
-                                  <img data-logo-live src="<?php echo $mailLogo; ?>" data-default-src="<?php echo $mailLogo; ?>" alt="Mail logo preview" class="max-h-16 w-auto object-contain">
-                                </div>
-                              <!-- </div> -->
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
 
@@ -414,19 +389,15 @@
         var img = zone.querySelector('[data-logo-preview-img]');
         var nameEl = zone.querySelector('[data-logo-name]');
         var removeBtn = zone.querySelector('[data-logo-remove]');
-        var live = document.querySelector('[data-logo-live]');
 
         function showLogo(file) {
-          var url = URL.createObjectURL(file);
-          img.src = url;
+          img.src = URL.createObjectURL(file);
           if (nameEl) nameEl.textContent = file.name;
-          if (live) live.src = url;
           wrap.classList.remove('hidden');
         }
         function clearLogo() {
           input.value = '';
           wrap.classList.add('hidden');
-          if (live && live.getAttribute('data-default-src')) live.src = live.getAttribute('data-default-src');
         }
 
         input.addEventListener('change', function () {

@@ -113,8 +113,7 @@
             <!-- Sparkline -->
             <div class="flex items-end gap-1 h-10">
               <?php foreach ($heights as $i => $h): $full = $i === count($heights) - 1; ?>
-              <span class="w-1.5 rounded-full <?= $full ? str_replace('/30', '', str_replace('/40', '', $spark)) : $spark ?>"
-                style="height: <?= $h ?>%;"></span>
+              <span class="w-1.5 rounded-full <?= $full ? str_replace('/30', '', str_replace('/40', '', $spark)) : $spark ?> h-[<?= $h ?>%]"></span>
               <?php endforeach; ?>
             </div>
           </div>
