@@ -155,7 +155,7 @@
             <!-- Connector -->
             <div class="flex-1 flex items-center h-12 px-2 sm:px-3" aria-hidden="true">
               <span class="relative block w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
-                <span class="step-line absolute inset-y-0 left-0 rounded-full bg-primary transition-[width] duration-500 ease-out" style="width:0%"></span>
+                <span class="step-line absolute inset-y-0 left-0 rounded-full bg-primary transition-[width] duration-500 ease-out w-0"></span>
               </span>
             </div>
             <!-- Step 2 -->
@@ -517,7 +517,7 @@
                   <img src="preview.jpg" alt="Apple lock screen preview" class="w-full block">
                   <!-- live notification overlay -->
                   <div class="absolute inset-x-0 top-[35%] p-2 mx-2">
-                    <div class="backdrop-blur-xl rounded-md p-3 shadow-lg ring-1 ring-white/20" style="background: rgba(255, 255, 255, 0.4);">
+                    <div class="backdrop-blur-xl rounded-md p-3 shadow-lg ring-1 ring-white/20 bg-white/40">
                       <div class="flex items-center gap-2.5">
                         <span class="w-9 h-9 rounded-lg bg-white flex items-center justify-center overflow-hidden shrink-0 shadow-sm">
                           <img src="icon.png" alt="" class="w-full h-full object-contain">

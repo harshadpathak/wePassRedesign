@@ -281,7 +281,7 @@
               <div class="flex flex-col items-center text-center">
                 <div class="relative w-56 h-56">
                   <!-- soft glow -->
-                  <div class="absolute inset-3 rounded-full bg-primary/10 blur-2xl" style="animation: ringGlow 2.4s ease-in-out infinite;"></div>
+                  <div class="absolute inset-3 rounded-full bg-primary/10 blur-2xl animate-[ringGlow_2.4s_ease-inout_infinite"></div>
                   <svg class="relative w-full h-full -rotate-90" viewBox="0 0 120 120">
                     <defs>
                       <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">

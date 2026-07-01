@@ -313,7 +313,7 @@
                 <div class="flex flex-wrap items-center gap-x-5 gap-y-2 mb-2">
                     <?php foreach ($ccSeries as $s): ?>
                     <span class="inline-flex items-center gap-1.5 text-label-md font-semibold text-secondary">
-                    <span class="w-2.5 h-2.5 rounded-full" style="background: <?= $s['color'] ?>;"></span><?= htmlspecialchars($s['name']) ?>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[<?= $s['color'] ?>]"></span><?= htmlspecialchars($s['name']) ?>
                     </span>
                     <?php endforeach; ?>
                 </div>
@@ -430,7 +430,7 @@
                     </div>
                     <div class="flex items-center gap-3">
                         <div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
-                        <div class="h-full rounded-full <?= $p['dot'] ?> transition-all" style="width: <?= (int) $p['pct'] ?>%;"></div>
+                        <div class="h-full rounded-full <?= $p['dot'] ?> transition-all w-[<?= (int)$p['pct'] ?>%]"></div>
                         </div>
                         <span class="text-label-sm font-semibold text-outline w-9 text-right"><?= (int) $p['pct'] ?>%</span>
                     </div>
