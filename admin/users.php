@@ -135,7 +135,7 @@
           <div
               class="flex items-center gap-2.5 bg-white rounded-2xl pl-1 pr-4 py-1 shadow-sm border border-outline-variant/40">
               <div class="w-9 h-9 rounded-xl <?= $cfg['avatarBg'] ?> <?= $cfg['iconColor'] ?> flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;"><?= $cfg['icon'] ?></span>
+                  <span class="material-symbols-outlined text-[20px] font-variation-fill"><?= $cfg['icon'] ?></span>
               </div>
               <span class="text-body-md font-bold text-on-surface"><?= $roleName ?></span>
           </div>
