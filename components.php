@@ -409,7 +409,7 @@
             <div class="border border-outline-variant rounded-2xl p-4 flex items-center gap-3">
               <!-- <div class="bg-surface-container-lowest p-4 rounded-xl border border-primary/40 shadow-sm flex items-center gap-4 cursor-pointer relative overflow-hidden group"> -->
                 <div class="bg-brand-gradient text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
-                  <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">apps</span>
+                  <span class="material-symbols-outlined font-variation-fill">apps</span>
                 </div>
                 <div class="relative z-10">
                   <p class="text-label-sm text-gray-400 font-medium">All Templates</p>
@@ -419,7 +419,7 @@
             </div>
             <div class="border border-outline-variant rounded-2xl p-4 flex items-center gap-3">
               <div class="bg-emerald-500 text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
-                  <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">Install_mobile</span>
+                  <span class="material-symbols-outlined font-variation-fill">Install_mobile</span>
                 </div>
                 <div class="relative z-10">
                   <p class="text-label-sm text-gray-400 font-medium">Install</p>

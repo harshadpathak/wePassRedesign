@@ -41,7 +41,7 @@
         <div
           class="bg-surface-container-lowest p-4 rounded-xl border border-primary/40 shadow-sm flex items-center gap-4 cursor-pointer relative overflow-hidden group">
           <div class="bg-brand-gradient text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
-            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">credit_card</span>
+            <span class="material-symbols-outlined font-variation-fill">credit_card</span>
           </div>
           <div class="relative z-10">
             <p class="text-label-sm text-gray-400 font-medium">All Passes</p>
@@ -143,7 +143,7 @@
                   <div class="flex items-center gap-4">
                     <div class="relative shrink-0">
                       <div class="w-10 h-10 rounded-xl <?= $avatarBg ?> flex items-center justify-center">
-                        <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;"><?= $avatarIcon ?></span>
+                        <span class="material-symbols-outlined font-variation-fill"><?= $avatarIcon ?></span>
                       </div>
                       <span class="absolute -top-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-white" title="Active"></span>
                     </div>
