@@ -168,7 +168,7 @@
 
                         <!-- Single box: uploader + inline preview -->
                         <label data-logo-zone for="logo-input"
-                          class="group relative flex h-44 flex-col items-center justify-center text-center gap-2.5 rounded-2xl px-4 cursor-pointer overflow-hidden border border-outline-variant bg-gradient-to-br from-surface-container-low/60 to-primary/[0.04] hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+                          class="group relative flex h-40 flex-col items-center justify-center text-center gap-2.5 rounded-2xl px-4 cursor-pointer overflow-hidden border border-outline-variant bg-gradient-to-br from-surface-container-low/60 to-primary/[0.04] hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
                           <span class="relative w-12 h-12 rounded-2xl bg-white shadow-sm ring-1 ring-outline-variant/60 flex items-center justify-center text-primary">
                             <span class="material-symbols-outlined text-[26px]">add_photo_alternate</span>
                           </span>
@@ -177,11 +177,11 @@
                               <span class="text-gray-400 font-normal">or drag &amp; drop</span></span>
                             <span class="block text-label-sm text-outline mt-0.5">PNG, JPG &bull; up to 2MB</span>
                           </span>
-                          <input id="logo-input" type="file" accept="image/png,image/svg+xml,image/jpeg" class="hidden">
+                          <input id="logo-input" type="file" accept="image/png,image/svg+xml,image/jpeg" class="hidden object-contain">
 
                           <!-- Inline preview (revealed after upload) -->
                           <div data-logo-preview class="hidden absolute inset-0">
-                            <img data-logo-preview-img alt="Logo preview" class="w-full h-full object-contain bg-white p-3">
+                            <img data-logo-preview-img alt="Logo preview" class="w-full h-full object-contain bg-white">
                             <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/70 backdrop-blur-md border-t border-outline-variant/60 rounded-b-2xl">
                               <span class="flex items-center gap-1.5 min-w-0">
                                 <span class="material-symbols-outlined text-primary text-[18px] shrink-0">image</span>

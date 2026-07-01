@@ -374,7 +374,7 @@
 
               <!-- Inline preview (revealed after upload) -->
               <div data-image-preview class="hidden absolute inset-0">
-                <img data-image-preview-img alt="Image preview" class="w-full h-full object-cover">
+                <img data-image-preview-img alt="Image preview" class="w-full h-full object-contain">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20"></div>
                 <!-- glass control bar -->
                 <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20 rounded-b-2xl">
