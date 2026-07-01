@@ -13,7 +13,7 @@
         placeholder="Search pass templates..." type="text">
     </div>
     </div>
-    <div class="flex items-center gap-4 translate-x-[10px] translate-x-2" style="transform: translateX(5px);">
+    <div class="flex items-center gap-4 translate-x-[5px] translate-x-2">
     <div class="relative group">
         <button type="button"
             class="material-symbols-outlined text-on-surface-variant group-hover:bg-surface-container group-hover:text-primary rounded-lg p-2 transition-all">help</button>
@@ -58,8 +58,7 @@
     </div>
     <div class="relative group">
         <div
-        class="flex items-center gap-3 p-1.5 pr-3 transition-all duration-300 cursor-pointer group/profile"
-        style="padding: 0.5rem;">
+        class="flex items-center gap-3 p-2 transition-all duration-300 cursor-pointer group/profile">
         <div class="relative">
             <div
             class="w-9 h-9 rounded-md bg-brand-gradient flex items-center justify-center text-on-primary font-bold text-sm shadow-sm ring-2 ring-surface ring-offset-1 ring-offset-outline-variant/20">

@@ -257,7 +257,7 @@
             </div>
             <div class="flex items-center gap-2 bg-blue-50/50 border border-blue-100 rounded-lg px-3 py-2 mb-6">
                 <span class="material-symbols-outlined text-blue-600 text-[18px]">info</span>
-                <span class="text-sm font-medium" style="color: #1e40af;">You can add up to 10 recipients at a
+                <span class="text-sm font-medium text-blue-800">You can add up to 10 recipients at a
                     time.</span>
             </div>
             <div id="recipients-list" class="space-y-4">

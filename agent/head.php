@@ -109,6 +109,10 @@ tailwind.config = {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+.material-symbols-outlined.font-variation-fill{
+      font-variation-settings: "FILL" 1;
+}
+
 body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
