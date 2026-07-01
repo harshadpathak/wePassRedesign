@@ -278,13 +278,10 @@
 
               <div class="space-y-2">
                 <label class="flex items-center text-on-surface font-semibold text-label-md">Mail Password: <span class="text-error">*</span></label>
-                <div class="flex items-stretch rounded-lg border border-outline-variant bg-surface-container-low overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
-                  <input type="password" placeholder="••••••••••••••••" id="smtp-password"
-                    class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md font-body-md focus:border-primary transition-all focus:ring-0 focus:outline-none">
-                  <button type="button" data-toggle-pw="smtp-password" class="flex items-center px-4 bg-surface-container-low  border-outline-variant text-outline hover:text-on-surface transition-colors">
-                    <span class="material-symbols-outlined text-[20px]">visibility</span>
-                  </button>
-                </div>
+                <div class="relative">
+                        <input type="password" id="confirm_password" placeholder="Enter Mail Password" class="w-full bg-surface-container-low border-outline-variant placeholder:text-slate-400 rounded-lg py-3 px-4 text-body-md focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                        <button type="button" data-toggle-password="confirm_password" class="material-symbols-outlined text-[20px] text-outline absolute right-3.5 top-1/2 -translate-y-1/2 hover:text-on-surface transition-colors cursor-pointer">visibility</button>
+                    </div>
                 <p class="flex items-center gap-1.5 text-label-md text-gray-400">
                   <span class="material-symbols-outlined text-[15px] text-emerald-600">verified_user</span>
                   Credentials are encrypted at rest and never exposed in logs
@@ -378,6 +375,17 @@
   </main>
   <!-- Micro-interaction Scripts -->
    <?php include('script.php'); ?>
+   <script>
+     document.querySelectorAll('[data-toggle-password]').forEach(function (btn) {
+       btn.addEventListener('click', function () {
+         var input = document.getElementById(btn.getAttribute('data-toggle-password'));
+         if (!input) return;
+         var show = input.type === 'password';
+         input.type = show ? 'text' : 'password';
+         btn.textContent = show ? 'visibility_off' : 'visibility';
+       });
+     });
+   </script>
 </body>
  
 </html>
