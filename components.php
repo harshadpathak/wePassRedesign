@@ -358,7 +358,7 @@
                 <img data-image-preview-img alt="Image preview" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20"></div>
                 <!-- glass control bar -->
-                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20">
+                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20 rounded-b-2xl">
                   <span class="flex items-center gap-1.5 min-w-0">
                     <span class="material-symbols-outlined text-white/90 text-[18px] shrink-0">image</span>
                     <span data-image-name class="text-white text-label-md font-semibold truncate"></span>
