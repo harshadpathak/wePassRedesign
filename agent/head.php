@@ -156,7 +156,8 @@ body {
     padding-right: 0;
 }
 
-.sidebar-collapsed .px-4.mb-4 button {
+.sidebar-collapsed .px-4.mb-4 button,
+.sidebar-collapsed .px-4.mb-4 > a {
     width: 48px;
     height: 48px;
     padding: 0;
@@ -164,7 +165,8 @@ body {
     margin: 0 auto;
 }
 
-.sidebar-collapsed .px-4.mb-4 button span:not(.material-symbols-outlined) {
+.sidebar-collapsed .px-4.mb-4 button span:not(.material-symbols-outlined),
+.sidebar-collapsed .px-4.mb-4 > a span:not(.material-symbols-outlined) {
     display: none;
 }
 

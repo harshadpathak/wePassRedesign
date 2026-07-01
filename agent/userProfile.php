@@ -272,6 +272,32 @@
                   </button>
                 </div>
               </div>
+              <!-- Google (after connect) -->
+              <div class="rounded-2xl border border-outline-variant p-5">
+                <div class="flex items-start gap-3">
+                  <span class="w-10 h-10 rounded-xl bg-white border border-outline-variant/60 flex items-center justify-center shrink-0 shadow-sm">
+                    <svg viewBox="0 0 24 24" class="w-5 h-5">
+                      <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47a5.54 5.54 0 0 1-2.4 3.64v3h3.86c2.26-2.09 3.56-5.17 3.56-8.88z"/>
+                      <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09A11.997 11.997 0 0 0 12 24z"/>
+                      <path fill="#FBBC05" d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29A11.997 11.997 0 0 0 0 12c0 1.94.46 3.77 1.29 5.38l3.98-3.09z"/>
+                      <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.69 1.29 6.62l3.98 3.09C6.22 6.86 8.87 4.75 12 4.75z"/>
+                    </svg>
+                  </span>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-body-lg font-bold text-on-surface">Google Account</h4>
+                    <p class="text-label-md text-secondary">Connect your Google account once to sign in and access Google Console.</p>
+                  </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-outline-variant/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <p class="flex items-center gap-1.5 text-label-md text-gray-400">
+                    <span class="material-symbols-outlined text-emerald-500 text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span> <span class="leading-none">Google Console connected.</span>
+                  </p>
+                  <button type="button" class="inline-flex items-center justify-center gap-2 bg-white border border-red-600 text-red-600 font-bold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-red-50 transition-all shrink-0">
+                    <span class="material-symbols-outlined text-[16px] text-red-600" style="font-variation-settings: 'FILL' 1;">cancel</span>
+                    <span class="leading-none">Remove Access</span>
+                  </button>
+                </div>
+              </div>
 
               <!-- Microsoft -->
               <div class="rounded-2xl border border-outline-variant p-5">
@@ -301,6 +327,32 @@
                       <path fill="#FFB900" d="M13 13h10v10H13z"/>
                     </svg>
                     Connect with Microsoft
+                  </button>
+                </div>
+              </div>
+              <!-- Microsoft (after connect) -->
+              <div class="rounded-2xl border border-outline-variant p-5">
+                <div class="flex items-start gap-3">
+                  <span class="w-10 h-10 rounded-xl bg-white border border-outline-variant/60 flex items-center justify-center shrink-0 shadow-sm">
+                    <svg viewBox="0 0 24 24" class="w-5 h-5">
+                      <path fill="#F25022" d="M1 1h10v10H1z"/>
+                      <path fill="#7FBA00" d="M13 1h10v10H13z"/>
+                      <path fill="#00A4EF" d="M1 13h10v10H1z"/>
+                      <path fill="#FFB900" d="M13 13h10v10H13z"/>
+                    </svg>
+                  </span>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-body-lg font-bold text-on-surface">Microsoft Account</h4>
+                    <p class="text-label-md text-secondary">Connect your Microsoft account once to sign in to your dashboard.</p>
+                  </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-outline-variant/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <p class="flex items-center gap-1.5 text-label-md text-gray-400">
+                    <span class="material-symbols-outlined text-emerald-500 text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span> <span class="leading-none">Microsoft account connected.</span>
+                  </p>
+                  <button type="button" class="inline-flex items-center justify-center gap-2 bg-white border border-red-600 text-red-600 font-bold text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-red-50 transition-all shrink-0">
+                    <span class="material-symbols-outlined text-[16px] text-red-600" style="font-variation-settings: 'FILL' 1;">cancel</span>
+                    <span class="leading-none">Remove Access</span>
                   </button>
                 </div>
               </div>
