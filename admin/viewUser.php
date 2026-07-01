@@ -160,8 +160,7 @@
                             <span
                                 class="absolute inset-0 rounded-md bg-emerald-500/10 ring-1 ring-emerald-500/30 opacity-0 transition-opacity duration-200 peer-checked:opacity-100"></span>
                             <span
-                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-emerald-600"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-emerald-600 font-variation-fill">check_circle</span>
                             <span
                                 class="relative text-label-md font-semibold text-secondary transition-colors peer-checked:text-emerald-600">Active</span>
                         </label>
@@ -171,8 +170,7 @@
                             <span
                                 class="absolute inset-0 rounded-md bg-red-500/10 ring-1 ring-red-500/30 opacity-0 transition-opacity duration-200 peer-checked:opacity-100"></span>
                             <span
-                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-red-600"
-                                style="font-variation-settings: 'FILL' 1;">cancel</span>
+                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-red-600 font-variation-fill">cancel</span>
                             <span
                                 class="relative text-label-md font-semibold text-secondary transition-colors peer-checked:text-red-600">Inactive</span>
                         </label>
@@ -185,8 +183,7 @@
                             </span>
 
                             <span
-                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-amber-600"
-                                style="font-variation-settings: 'FILL' 1;">
+                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-amber-600 font-variation-fill">
                                 schedule
                             </span>
 
@@ -209,8 +206,7 @@
                             <span
                                 class="absolute inset-0 rounded-md bg-emerald-500/10 ring-1 ring-emerald-500/30 opacity-0 transition-opacity duration-200 peer-checked:opacity-100"></span>
                             <span
-                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-emerald-600"
-                                style="font-variation-settings: 'FILL' 1;">manage_accounts</span>
+                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-emerald-600 font-variation-fill">manage_accounts</span>
                             <span
                                 class="relative text-label-md font-semibold text-secondary transition-colors peer-checked:text-emerald-600">Manager</span>
                         </label>
@@ -220,8 +216,7 @@
                             <span
                                 class="absolute inset-0 rounded-md bg-emerald-500/10 ring-1 ring-emerald-500/30 opacity-0 transition-opacity duration-200 peer-checked:opacity-100"></span>
                             <span
-                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-emerald-600"
-                                style="font-variation-settings: 'FILL' 1;">visibility</span>
+                                class="relative material-symbols-outlined text-[16px] text-outline transition-colors peer-checked:text-emerald-600 font-variation-fill">visibility</span>
                             <span
                                 class="relative text-label-md font-semibold text-secondary transition-colors peer-checked:text-emerald-600">Read Only</span>
                         </label>

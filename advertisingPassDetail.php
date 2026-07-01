@@ -149,7 +149,7 @@
             <div class="flex flex-col gap-4 px-6 py-5 border-b border-outline-variant/60 sm:flex-row sm:items-center sm:justify-between">
               <div class="flex items-center gap-3">
                 <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+                  <span class="material-symbols-outlined text-[22px] font-variation-fill">bar_chart</span>
                 </span>
                 <div>
                   <h4 class="text-headline-md font-bold text-on-surface leading-tight">Wallet Installation Overview</h4>
@@ -223,15 +223,15 @@
                   <p class="text-label-md text-gray-500 mt-0.5">This is a shared pass template &mdash; all users install the same pass. Content is managed from the Pass Template, not individual records.</p>
                   <ul class="mt-3 space-y-2">
                     <li class="flex items-start gap-2 text-label-md text-gray-500">
-                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0 font-variation-fill" >check_circle</span>
                       <span>Edit the <span class="font-bold text-gray-500">Pass Template</span> to update content &mdash; changes apply to all installed passes automatically.</span>
                     </li>
                     <li class="flex items-start gap-2 text-label-md text-gray-500">
-                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0 font-variation-fill">check_circle</span>
                       <span><span class="font-bold text-gray-500">Apple Wallet</span> receives silent updates &mdash; passes refresh on device without any notification.</span>
                     </li>
                     <li class="flex items-start gap-2 text-label-md text-gray-500">
-                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                      <span class="material-symbols-outlined text-[16px] text-emerald-600 shrink-0 font-variation-fill">check_circle</span>
                       <span>Use <span class="font-bold text-gray-500">Push Messages</span> to send visible notifications to all installed passes for promotions.</span>
                     </li>
                   </ul>

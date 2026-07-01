@@ -102,7 +102,7 @@
             <div class="flex items-center gap-4 min-w-0">
               <div class="relative shrink-0">
                 <div class="w-14 h-14 rounded-2xl bg-brand-gradient text-on-primary flex items-center justify-center shadow-md shadow-primary/20">
-                  <span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
+                  <span class="material-symbols-outlined text-[32px] font-variation-fill">how_to_reg</span>
                 </div>
                 <span class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-emerald-500 ring-[3px] ring-white" title="Active"></span>
               </div>

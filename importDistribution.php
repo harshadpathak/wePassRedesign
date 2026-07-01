@@ -44,19 +44,19 @@
             <!-- Steps -->
             <div class="bg-primary/5 rounded-2xl p-2 flex flex-wrap items-center gap-3 mt-4">
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                 <span class="text-body-md font-bold text-gray-600">Upload File</span>
               </div>
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                 <span class="text-body-md font-bold text-gray-600">Map Columns</span>
               </div>
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                 <span class="text-body-md font-bold text-gray-600">Preview Data</span>
               </div>
               <div class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                <span class="material-symbols-outlined text-emerald-500 text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                 <span class="text-body-md font-bold text-gray-600">Distribute</span>
               </div>
             </div>
@@ -324,7 +324,7 @@
                     d="M 50.0 2.0 L 56.41 9.5 L 64.83 4.35 L 68.61 13.47 L 78.21 11.17 L 78.99 21.01 L 88.83 21.79 L 86.53 31.39 L 95.65 35.17 L 90.5 43.59 L 98.0 50.0 L 90.5 56.41 L 95.65 64.83 L 86.53 68.61 L 88.83 78.21 L 78.99 78.99 L 78.21 88.83 L 68.61 86.53 L 64.83 95.65 L 56.41 90.5 L 50.0 98.0 L 43.59 90.5 L 35.17 95.65 L 31.39 86.53 L 21.79 88.83 L 21.01 78.99 L 11.17 78.21 L 13.47 68.61 L 4.35 64.83 L 9.5 56.41 L 2.0 50.0 L 9.5 43.59 L 4.35 35.17 L 13.47 31.39 L 11.17 21.79 L 21.01 21.01 L 21.79 11.17 L 31.39 13.47 L 35.17 4.35 L 43.59 9.5 Z"></path>
                 </svg>
                 <!-- check icon -->
-                <span class="material-symbols-outlined absolute text-white text-[48px]" style="font-variation-settings: 'FILL' 1;">check</span>
+                <span class="material-symbols-outlined absolute text-white text-[48px] font-variation-fill">check</span>
               </div>
               <h3 class="mt-6 text-headline-lg font-bold text-on-surface tracking-tight animate-[rise_0.5s_ease-out_0.1s_both]">Import Successful!</h3>
               <p class="mt-2 text-body-lg text-gray-500 leading-relaxed animate-[rise_0.5s_ease-out_0.15s_both]">Your passes have been imported and are ready to distribute. You can now view and manage them in your records.</p>

@@ -159,7 +159,7 @@
 
           <!-- Status line (shows after a location is set) -->
           <div id="locStatus" class="hidden items-center gap-1.5 text-emerald-600 font-bold text-label-md">
-            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            <span class="material-symbols-outlined text-[18px] font-variation-fill">check_circle</span>
             Location confirmed
           </div>
 
@@ -175,7 +175,7 @@
               <div id="mapPin" class="hidden flex-col items-center">
                 <div class="relative flex items-center justify-center">
                   <span class="absolute inline-flex h-12 w-12 rounded-full bg-primary/20 animate-ping"></span>
-                  <span class="relative material-symbols-outlined text-primary text-[44px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                  <span class="relative material-symbols-outlined text-primary text-[44px] font-variation-fill">location_on</span>
                 </div>
               </div>
             </div>
@@ -196,11 +196,11 @@
                 <!-- Header -->
                 <div class="flex items-center gap-3 pb-3 border-b border-outline-variant/50">
                   <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                    <span class="material-symbols-outlined text-[24px] font-variation-fill">location_on</span>
                   </div>
                   <div class="min-w-0 flex-1">
                     <span class="inline-flex items-center gap-1 text-emerald-600 text-[10px] font-bold uppercase tracking-wider">
-                      <span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                      <span class="material-symbols-outlined text-[13px] font-variation-fill">check_circle</span>
                       Selected location
                     </span>
                     <h4 class="text-body-lg font-bold text-on-surface leading-tight">Dropped pin</h4>
@@ -330,7 +330,7 @@
           <!-- Location Summary -->
           <div class="bg-surface-container-low/60 border border-outline-variant/50 rounded-xl p-5 hover:border-primary/50 transition-colors">
             <div class="flex items-center gap-2 mb-4">
-              <span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+              <span class="material-symbols-outlined text-primary text-[20px] font-variation-fill">location_on</span>
               <h4 class="text-body-lg font-bold text-on-surface">Location summary</h4>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-4">

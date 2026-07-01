@@ -181,7 +181,7 @@
                   <div class="flex items-center gap-3.5">
                     <div class="relative shrink-0">
                       <span class="flex h-10 w-10 items-center justify-center rounded-xl <?= $iconBg ?>">
-                        <span class="material-symbols-outlined text-[20px]" style="font-variation-settings:'FILL' 1;"><?= $iconName ?></span>
+                        <span class="material-symbols-outlined font-variation-fill"><?= $iconName ?></span>
                       </span>
                       <span class="absolute -top-0.5 -right-0.5 h-3 w-3 rounded-full bg-emerald-500 ring-2 ring-white"></span>
                     </div>
@@ -225,7 +225,7 @@
                     </button>
                     <?php endif; ?>
                     <a href="viewPassTemplate.php" class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-gradient text-white shadow-sm hover:opacity-90 active:scale-[0.98] transition" title="View">
-                      <span class="material-symbols-outlined text-[18px]" style="font-variation-settings:'FILL' 1;">visibility</span>
+                      <span class="material-symbols-outlined text-[18px] font-variation-fill">visibility</span>
                     </a>
                   </div>
                 </td>

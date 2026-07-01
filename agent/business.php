@@ -44,22 +44,19 @@
                         <!-- Step 1 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Update Business Info</span>
                         </div>
                         <!-- Step 2 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Manage Account Name</span>
                         </div>
                         <!-- Step 3 -->
                         <div
                             class="flex items-center gap-2.5 bg-white rounded-full pl-2.5 pr-5 py-2 shadow-sm border border-outline-variant/40">
-                            <span class="material-symbols-outlined text-emerald-500 text-[22px]"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="material-symbols-outlined text-emerald-500 text-[22px] font-variation-fill">check_circle</span>
                             <span class="text-body-md font-bold text-gray-600">Change Password</span>
                         </div>
                     </div>

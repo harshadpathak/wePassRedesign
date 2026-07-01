@@ -478,7 +478,7 @@
             <div class="rounded-2xl border border-outline-variant p-6 hover:border-primary/40 transition-all">
                 <div class="flex items-center gap-3 mb-5">
                     <span class="w-10 h-10 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+                    <span class="material-symbols-outlined text-[22px] font-variation-fill">lightbulb</span>
                     </span>
                     <div>
                     <h3 class="text-headline-md font-bold text-on-surface">Insights</h3>
