@@ -377,7 +377,7 @@
                 <img data-image-preview-img alt="Image preview" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20"></div>
                 <!-- glass control bar -->
-                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20">
+                <div class="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 py-2.5 bg-white/10 backdrop-blur-md border-t border-white/20 rounded-b-2xl">
                   <span class="flex items-center gap-1.5 min-w-0">
                     <span class="material-symbols-outlined text-white/90 text-[18px] shrink-0">image</span>
                     <span data-image-name class="text-white text-label-md font-semibold truncate"></span>
@@ -409,7 +409,7 @@
             <div class="border border-outline-variant rounded-2xl p-4 flex items-center gap-3">
               <!-- <div class="bg-surface-container-lowest p-4 rounded-xl border border-primary/40 shadow-sm flex items-center gap-4 cursor-pointer relative overflow-hidden group"> -->
                 <div class="bg-brand-gradient text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
-                  <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">apps</span>
+                  <span class="material-symbols-outlined font-variation-fill">apps</span>
                 </div>
                 <div class="relative z-10">
                   <p class="text-label-sm text-gray-400 font-medium">All Templates</p>
@@ -419,7 +419,7 @@
             </div>
             <div class="border border-outline-variant rounded-2xl p-4 flex items-center gap-3">
               <div class="bg-emerald-500 text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
-                  <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">Install_mobile</span>
+                  <span class="material-symbols-outlined font-variation-fill">Install_mobile</span>
                 </div>
                 <div class="relative z-10">
                   <p class="text-label-sm text-gray-400 font-medium">Install</p>

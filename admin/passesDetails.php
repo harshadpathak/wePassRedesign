@@ -114,7 +114,7 @@
             <!-- Badges -->
             <div class="flex flex-wrap items-center gap-2">
               <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1.5 text-label-md font-bold text-emerald-600">
-                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="material-symbols-outlined text-[16px] font-variation-fill">check_circle</span>
                 <?= htmlspecialchars($pass['status']) ?>
               </span>
               <span class="inline-flex items-center gap-1.5 rounded-full bg-primary/10 border border-primary/20 px-3 py-1.5 text-label-md font-bold text-primary">

@@ -82,7 +82,7 @@
                   <span class="material-symbols-outlined text-[16px]">sell</span> Coupon
                 </span>
                 <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-600 text-label-sm font-bold px-3 py-1 rounded-full">
-                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span> Active
+                  <span class="material-symbols-outlined text-[16px] font-variation-fill">check_circle</span> Active
                 </span>
               </div>
             </div>
@@ -187,7 +187,7 @@
                     <td class="px-6 py-4">
                       <div class="flex items-center gap-3">
                         <span class="flex h-10 w-10 items-center justify-center rounded-xl <?= $m['icbg'] ?> <?= $m['ic'] ?>">
-                          <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;"><?= $m['icon'] ?></span>
+                          <span class="material-symbols-outlined text-[20px] font-variation-fill"><?= $m['icon'] ?></span>
                         </span>
                         <div class="leading-tight">
                           <p class="text-body-md font-bold text-on-surface"><?= htmlspecialchars($m['label']) ?></p>
@@ -216,7 +216,7 @@
             <div class="m-6 mt-0 rounded-2xl border border-primary/15 bg-primary/[0.04] p-5">
               <div class="flex items-start gap-3">
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-gradient text-white shadow-sm">
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+                  <span class="material-symbols-outlined text-[20px] font-variation-fill">lightbulb</span>
                 </span>
                 <div>
                   <h5 class="text-headline-md font-bold text-on-surface leading-tight">How Generic Advertising Pass Works</h5>

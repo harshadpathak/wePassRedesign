@@ -117,7 +117,7 @@
                 <span class="block text-label-md font-semibold invisible select-none" aria-hidden="true">Tips</span>
                 <div class="bg-primary/5 border border-primary/20 rounded-xl p-4">
                   <div class="flex items-center gap-2 text-primary mb-2">
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+                    <span class="material-symbols-outlined text-[20px] font-variation-fill">lightbulb</span>
                     <span class="text-body-md font-bold">Tips</span>
                   </div>
                   <p class="text-body-md text-gray-500">Keep it short and action-focused.</p>

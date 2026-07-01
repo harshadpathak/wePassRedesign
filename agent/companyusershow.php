@@ -83,7 +83,7 @@
               <span class="pointer-events-none absolute -bottom-8 -left-8 h-28 w-28 rounded-full bg-white/10"></span>
               <div class="relative">
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-label-sm font-bold uppercase tracking-wider text-white backdrop-blur-sm">
-                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[16px] font-variation-fill">star</span>
                   Active
                 </span>
                 <h4 class="text-display-md font-bold mt-4 leading-none text-white">Lani Fisher</h4>

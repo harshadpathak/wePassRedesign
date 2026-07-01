@@ -47,7 +47,7 @@
         <div
           class="bg-surface-container-lowest p-4 rounded-xl border border-primary/40 shadow-sm flex items-center gap-4 cursor-pointer relative overflow-hidden group">
           <div class="bg-brand-gradient text-on-primary p-2.5 rounded-lg shadow-sm flex items-center justify-center">
-            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">apps</span>
+            <span class="material-symbols-outlined font-variation-fill">apps</span>
           </div>
           <div class="relative z-10">
             <p class="text-label-sm text-gray-400 font-medium">All Templates</p>
@@ -57,7 +57,7 @@
         <div
           class="bg-white p-4 rounded-xl border border-outline-variant  transition-colors flex items-center gap-4 cursor-pointer">
           <div class="bg-primary/10 text-primary p-2.5 rounded-lg flex items-center justify-center">
-            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">how_to_reg</span>
+            <span class="material-symbols-outlined font-variation-fill">how_to_reg</span>
           </div>
           <div>
             <p class="text-label-sm text-gray-400 font-medium">Personalized Unique</p>
@@ -67,7 +67,7 @@
         <div
           class="bg-white p-4 rounded-xl border border-outline-variant transition-colors flex items-center gap-4 cursor-pointer">
           <div class="bg-amber-100 text-amber-700 p-2.5 rounded-lg flex items-center justify-center">
-            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">campaign</span>
+            <span class="material-symbols-outlined font-variation-fill">campaign</span>
           </div>
           <div>
             <p class="text-label-sm text-gray-400 font-medium">Generic Advertising</p>
@@ -181,7 +181,7 @@
                 <td class="cell-main px-6 py-4">
                   <div class="flex items-center gap-4">
                     <div class="w-10 h-10 rounded-xl <?= $t['iconbg'] ?> flex items-center justify-center">
-                      <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;"><?= $t['icon'] ?></span>
+                      <span class="material-symbols-outlined font-variation-fill"><?= $t['icon'] ?></span>
                     </div>
                     <div>
                       <p class="text-body-md text-on-surface font-medium"><?= htmlspecialchars($t['name']) ?></p>
